@@ -1,0 +1,70 @@
+ Memory usage: 11,570,812 KB
+
+ Total number of clients: 350,000
+
+ ####################  PROJECT1  ####################
+
+ Simulation ends in 100 h (360,000 sec)
+
+ Scheduling server 0:	Busy: 13.4%
+ Scheduling server 1:	Busy: 13.4%
+ Data server 0:		Busy: 12.2%
+ Data server 1:		Busy: 12.2%
+
+  Number of clients: 300,000
+  Messages received: 		32,227,795 (work requests received + results received)
+  Work requests received: 	16,179,688
+  Results created: 		16,179,689 (100.0%)
+  Results sent: 		16,179,688 (100.0%)
+  Results received: 		16,048,107 (99.2%)
+  Results analyzed: 		16,048,107 (100.0%)
+  Results success: 		15,245,637 (95.0%)
+  Results failed: 		802,470 (5.0%)
+  Results too late: 		0 (0.0%)
+  Results valid: 		13,616,636 (84.8%)
+  Workunits total: 		7,716,639
+  Workunits completed: 		6,863,142 (88.9%)
+  Workunits not completed: 	853,497 (11.1%)
+  Workunits valid: 		6,808,318 (88.2%)
+  Workunits error: 		54,824 (0.7%)
+  Throughput: 			89.5 mens/s
+  Credit granted: 		231,482,812 credits
+  FLOPS average: 		285,949 GFLOPS
+
+ ####################  PROJECT2  ####################
+
+ Simulation ends in 100 h (360,000 sec)
+
+ Scheduling server 0:	Busy: 1.7%
+ Data server 0:		Busy: 100.0%
+ Data server 1:		Busy: 100.0%
+ Data server 2:		Busy: 100.0%
+
+  Number of clients: 250,000
+  Messages received: 		2,070,120 (work requests received + results received)
+  Work requests received: 	1,161,080
+  Results created: 		1,161,081 (100.0%)
+  Results sent: 		1,161,080 (100.0%)
+  Results received: 		909,040 (78.3%)
+  Results analyzed: 		909,040 (100.0%)
+  Results success: 		863,710 (95.0%)
+  Results failed: 		45,330 (5.0%)
+  Results too late: 		0 (0.0%)
+  Results valid: 		743,688 (81.8%)
+  Workunits total: 		559,384
+  Workunits completed: 		374,713 (67.0%)
+  Workunits not completed: 	184,671 (33.0%)
+  Workunits valid: 		371,844 (66.5%)
+  Workunits error: 		2,869 (0.5%)
+  Throughput: 			5.8 mens/s
+  Credit granted: 		35,697,024 credits
+  FLOPS average: 		42,968 GFLOPS
+
+ Group 0. Average speed: 6.704465 GFLOPS. Available: 62.1% Not available 37.9%
+ Group 1. Average speed: 5.455870 GFLOPS. Available: 55.3% Not available 44.7%
+ Group 2. Average speed: 6.110686 GFLOPS. Available: 57.0% Not available 43.0%
+
+ Clients. Average speed: 5.906157 GFLOPS. Available: 57.5% Not available 42.5%
+
+ Execution time:
+ 0 days 7 hours 51 min 49 s

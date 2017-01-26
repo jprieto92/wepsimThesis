@@ -1,0 +1,77 @@
+\lhead[\thepage]{CHAPTER \thechapter. INTRODUCTION}
+\chead[]{}
+\rhead[A Complete Simulator for Volunteer Computing Environments\leftmark]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{}
+\renewcommand{\footrulewidth}{0pt}
+
+%% This is an example first chapter.  You should put chapter/appendix that you
+%% write into a separate file, and add a line \include{yourfilename} to
+%% main.tex, where `yourfilename.tex' is the name of the chapter/appendix file.
+%% You can process specific files by typing their names in at the 
+%% \files=
+%% prompt when you run the file main.tex through LaTeX.
+\chapter{Introducción}
+\label{ch:introduction}
+\markboth{}{INTRODUCTION}
+
+This first chapter briefly presents the project, including the key characteristics of a the project and its motivation (Section \ref{sec:background_and_motivation}, \textit{\nameref{sec:background_and_motivation}}), the project objectives (Section \ref{sec:objectives}, \textit{\nameref{sec:objectives}}), and the entire structure of the document (Section \ref{sec:document_structure}, \textit{\nameref{sec:document_structure}}).
+
+\section{Motivación}
+\label{sec:background_and_motivation}
+Explicamos la motivación de realizar un simulador interactivo.
+
+
+
+\section{Objetivos}
+\label{sec:objectives}
+
+Explicamos los objetivos que ha tenido el proyecto:
+
+\begin{itemize}
+
+\item Providing a complete specification of the simulation parameters in each execution.
+
+\item Optimizing the simulator to be efficient in terms of time.
+
+\item Allowing simulations with hundreds of thousands of volunteer clients.
+
+\item Breaking down the simulator structure into discrete modules that allow to easily add new functionalities in the future.
+
+\item Implementing an scheduler on the client side that is close to the actual planning of the \gls{boinc} client.
+
+\item Creating a generator that allows the user to compile and generate the files (executables, platform, and deployment) required for each simulation.
+
+\end{itemize}
+
+\section{Estructura del documento}
+\label{sec:document_structure}
+
+Explicamos la estructura que tendrá el documento, lo que se explicará en cada capítulo.
+The document contains the following chapters:
+
+\begin{itemize}
+
+\item Chapter \ref{ch:introduction}, \textit{\nameref{ch:introduction}}, presents a brief description of the document contents. It also includes the motivation and the objectives of the project.
+
+\item Chapter \ref{ch:state_of_the_art}, \textit{\nameref{ch:state_of_the_art}}, includes a description of the different types of current distributed computing and presents the related work.
+
+\item Chapter \ref{ch:analysis}, \textit{\nameref{ch:analysis}}, briefly describes the project, explains the chosen solution, sets the requirements, and presents the regulatory \gls{framework} of the project.
+
+\item Chapter \ref{ch:design}, \textit{\nameref{ch:design}}, details the design of the system, including all of its components.
+
+\item Chapter \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}}, includes the implementation details of the main parts of the developed software and the necessary features for the application deployment.
+
+\item Chapter \ref{ch:verification_validation_and_evaluation}, \textit{\nameref{ch:verification_validation_and_evaluation}}, details a complete verification and validation of the project. It also shows an evaluation of different test cases using  the simulator.
+
+\item Chapter \ref{ch:planning_and_budget}, \textit{\nameref{ch:planning_and_budget}}, presents the concepts related to the followed planning, breaks down all the project costs, and describes the socio-economic environment.
+
+\item Chapter \ref{ch:conclusions_and_future_work}, \textit{\nameref{ch:conclusions_and_future_work}}, includes the contributions of the project, explains the main conclusions of the project and presents future work.
+
+\item Appendix \ref{ch:user_manual}, \textit{\nameref{ch:user_manual}}, includes a complete user manual for the application. It contains a tutorial for the installation of the tools used, and a number of practical and educational examples to learn how to perform simulations using the developed software. 
+
+\end{itemize}
+

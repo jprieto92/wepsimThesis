@@ -1,0 +1,253 @@
+% -*- Mode:TeX -*-
+
+%% IMPORTANT: The official thesis specifications are available at:
+%%            http://libraries.mit.edu/archives/thesis-specs/
+%%
+%%            Please verify your thesis' formatting and copyright
+%%            assignment before submission.  If you notice any
+%%            discrepancies between these templates and the 
+%%            MIT Libraries' specs, please let us know
+%%            by e-mailing thesis@mit.edu
+
+%% The documentclass options along with the pagestyle can be used to generate
+%% a technical report, a draft copy, or a regular thesis.  You may need to
+%% re-specify the pagestyle after you \include  cover.tex.  For more
+%% information, see the first few lines of mitthesis.cls. 
+
+%\documentclass[12pt,vi,twoside]{mitthesis}
+%%
+%%  If you want your thesis copyright to you instead of MIT, use the
+%%  ``vi'' option, as above.
+%%
+%\documentclass[12pt,twoside,leftblank]{mitthesis}
+%%
+%% If you want blank pages before new chapters to be labelled ``This
+%% Page Intentionally Left Blank'', use the ``leftblank'' option, as
+%% above. 
+
+\documentclass[11pt,twoside]{mitthesis}
+\usepackage{lgrind, afterpage}
+\usepackage{fancyhdr}
+\usepackage[sc]{mathpazo}
+%% These have been added at the request of the MIT Libraries, because
+%% some PDF conversions mess up the ligatures.  -LB, 1/22/2014
+\usepackage{cmap}
+\usepackage{tabto}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{appendix}
+\usepackage{eurosym}
+\usepackage{subcaption}
+\usepackage{epigraph}
+\usepackage{amsmath} % equations
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage[textfont=it]{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[acronym]{glossaries}
+\usepackage{array,booktabs,makecell,rotating,ragged2e} % nice tables
+\usepackage{pifont}	% check
+\usepackage{listings} % linux commands
+\usepackage[utf8]{inputenc}
+\makeglossaries
+\pagestyle{plain}
+
+  \makeglossaries
+  
+% Traceability matrix
+\renewcommand*\theadfont{\bfseries}
+\settowidth\rotheadsize{\theadfont Infrastructure}
+\renewcommand\theadgape{}
+\renewcommand\theadalign{lc}
+\renewcommand\rotheadgape{}
+
+% epigraph
+\setlength\epigraphwidth{8cm}
+\setlength\epigraphrule{0pt}
+
+% pseudocode
+\makeatletter
+\renewcommand{\ALG@name}{Pseudocode}
+\makeatother
+\renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}% Algorithm # is <chapter>.<algorithm>
+\makeatletter\@addtoreset{algorithm}{chapter}\makeatother
+\makeatletter
+\renewcommand{\ALG@beginalgorithmic}{\normalsize}
+\makeatother
+
+% xml
+\usepackage{color}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,type}% list your attributes here
+}
+
+\usepackage{etoolbox}
+
+% hyphenation
+\hyphenation {ma-yo-res}
+
+
+\makeatletter
+\patchcmd{\epigraph}{\@epitext{#1}}{\itshape\@epitext{#1}}{}{}
+\makeatother
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% encabezados
+\lhead[\thepage]{\rightmark}
+\chead[]{}
+\rhead[A Complete Simulator for Volunteer Computing Environments\leftmark]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \newpage}
+
+% pie de pagina
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{}
+\renewcommand{\footrulewidth}{0pt}
+
+% primera pagina de un capitulo
+\fancypagestyle{plain}{
+\fancyhead[L]{}
+\fancyhead[C]{}
+\fancyhead[R]{}
+\fancyfoot[L]{}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\cfoot{\thepage}
+}
+
+\pagestyle{fancy}
+
+% Authors margins
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+\include{glossary}
+\include{acronyms}
+
+% Acronyms
+
+%% This bit allows you to either specify only the files which you wish to
+%% process, or `all' to process all files which you \include.
+%% Krishna Sethuraman (1990).
+
+%\typein [\files]{Enter file names to process, (chap1,chap2 ...), or `all' to
+%process all files:}
+\def\all{all}
+%\ifx\files\all \typeout{Including all files.} \else \typeout{Including only \files.} \includeonly{\files} \fi
+
+\begin{document}
+\pagenumbering{roman} %
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+     
+        \Large
+        Universidad Carlos III de Madrid\\
+        Escuela Politécnica Superior\\
+        Bachelor's Degree in Computer Science and Engineering
+        
+        \vspace{0.8cm}
+        
+        \centering        
+        \includegraphics[width=0.3\textwidth]{figures/uc3m}
+        
+        \vspace{1.5cm}
+        
+        \LARGE
+        Bachelor Thesis
+        
+        \Huge
+        %\textbf{A Volunteer Computing Environments Simulator}
+        \textbf{WepSIM: Simulador de procesador elemental con unidad de control microprogramada}
+        
+        \vspace{0.5cm}
+        
+        \vspace{1.5cm}
+        
+        \Large
+        \begin{changemargin}{3.8cm}{3.8cm}
+        Author:\hfill Javier Prieto Cepeda\\
+        Supervisor:\hfill Félix García Carballeira\\
+        \end{changemargin}
+		\begin{changemargin}{3.8cm}{3.8cm}
+		\begin{flushright}		        
+        \vspace{0.5cm}
+        Leganés, Madrid, Spain\\
+        November 2016
+ 		\end{flushright}
+        \end{changemargin}
+        
+        \vfill
+        
+    \end{center}
+\end{titlepage}
+
+\include{cover}
+% Some departments (e.g. 5) require an additional signature page.  See
+% signature.tex for more information and uncomment the following line if
+% applicable.
+% \include{signature}
+\pagestyle{plain}
+\include{contents}
+\pagenumbering{arabic}
+
+\include{chapters/chap1}
+\include{chapters/chap2}
+\include{chapters/chap3}
+\include{chapters/chap4}
+\include{chapters/chap5}
+\include{chapters/chap6}
+\include{chapters/chap7}
+\include{chapters/chap8}
+
+\include{appendixa}
+
+%\printglossary[type=\acronymtype,title=Abbreviations]
+%\printglossary
+
+%Some text between the list of acronyms and the glossary.
+
+\printglossary
+\addcontentsline{toc}{chapter}{Glossary}
+
+\printglossary[type=\acronymtype]
+\addcontentsline{toc}{chapter}{Acronyms}
+
+\cleardoublepage
+\phantomsection
+\include{biblio}
+
+\end{document}

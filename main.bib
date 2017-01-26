@@ -1,0 +1,4862 @@
+%%%%%%%%%%%
+%                          %
+% BIBLIOGRAPHY %
+%                          %
+%%%%%%%%%%%
+
+% http://ccm.ucdenver.edu/wiki/How_to_write_BibTeX_files
+
+%%%%%%%%%
+% Introduction %
+%%%%%%%%%
+
+@inproceedings{Schmuck02GPFS,
+  author = {Frank Schmuck and Roger Haskin},
+  title = {{GPFS}: A Shared-Disk File System for Large Computing Clusters},
+  BookTitle = {Proceedings of the First Conference on File and Storage Technologies (FAST)},
+  Pages = {231-244},
+  Month = jan,
+  year = {2002},
+ language={english},
+}
+@InProceedings{PVFS,
+  author = "W.B.~Ligon and R.B.~Ross",
+  title =  "{An Overview of the Parallel Virtual File System}",
+  booktitle = "{Proceedings of the Extreme Linux Workshop}",
+  month = jun,
+  year = "1999"
+}
+@misc{PVFS2,
+  language = {english},
+  key="PVFS2",
+  title = {The parallel virtual file system 2 ({PVFS2})},
+  author = {{Argonne National Laboratory}},
+  month = apr,
+  year = {2011},
+  url = {http://www.pvfs.org/}, 
+}
+@Misc{lustre,
+  author = {{Cluster File Systems Inc.}},
+  key = {CFS},
+  title = {Lustre: A Scalable, High-Performance File System},
+  year = {2002},
+  month = {November},
+  howpublished = {Cluster File Systems Inc. white paper, version 1.0},
+  URL = {http://www.lustre.org/docs/whitepaper.pdf},
+  keywords = {object-based storage, distributed file system, parallel file
+  system, pario-bib},
+  comment = {Describes an open-source project to develop an object-based file
+  system for clusters. Related to the NASD project at CMU
+  (http://www.pdl.cs.cmu.edu/NASD/).}
+}
+@Manual{HDF,
+  author = {{The HDF group}},
+  title =  {HDF5 Reference Manual},
+  url =    {http://www.hdfgroup.org/HDF5/doc/RM/RM_H5Front.html},
+  year =   {2012},
+}
+@inproceedings{NetCDF,
+ author = {Jianwei Li and Wei Keng Liao and Alok Choudhary and Robert Ross and Rajeev Thakur and William Gropp and Rob Latham and Andrew Siegel and Brad Gallagher and Michael Zingale},
+ title = "{Parallel netCDF: A High-Performance Scientific I/O Interface}",
+ booktitle = {SC '03: Proceedings of the 2003 ACM/IEEE conference on Supercomputing},
+ year = {2003},
+ isbn = {1-58113-695-1},
+ pages = {39},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ }
+@InProceedings{NK+96,
+  author = "N.~Nieuwejaar and  D.~Kotz and A.~Purakayastha and C.S.~Ellis and M.L.~Best",
+  title =  "{File Access Characteristics of Parallel Scientific Workloads}",
+  booktitle = "{IEEE Transactions on Parallel and Distributed Systems, 7(10)}", 
+  month = oct,
+  year = "1996",
+  pages = {1075--1089}
+}
+
+@InProceedings{bruno2014,
+  author = "Rodrigo Bruno and Paulo Ferreira",
+  title =  "{freeCycles: efficient data distribution for volunteer computing}",
+  booktitle = "{CloudDP'14 Proceedings of the Fourth International Workshop on Cloud Data and Platforms}", 
+  month = apr,
+  year = "2014",
+}
+
+
+
+
+@InProceedings{SR98,
+  author = "H.~Simitici and D.A.~Reed",
+  title =  "{A Comparison of Logical and Physical Parallel I/O Patterns}",
+  booktitle = "{International Journal of High Performance Computing Applications, special issue (I/O in Parallel Applications), 12(3)}", 
+  year = "1998",
+  pages = {364--380}
+}
+
+
+%%%%%%%%%%%
+% State of the Art %
+%%%%%%%%%%%
+
+% Supercomputing
+
+%MISC{Wikipedia2012Supercomputer,
+%  author = {Wikipedia},
+%  title = {Supercomputer},
+%  url = {http://en.wikipedia.org/wiki/Supercomputer},
+%  year = {2012}
+%}
+
+@Book{National1989Supercomputers,
+ editor = {Computer Science and Technology Board},
+ title = {Supercomputers},
+ publisher = {National Academy Press},
+ year = {1989},
+ address = {Washington},
+ isbn = {0309040884}
+ }
+
+
+ @Book{kelly2008,
+ author = {Kelly, Ian and  Taulor, Ian},
+ title = {Bridging the Data Management Gap Between Service and Desktop Grids. In: Distributed and
+Parallel Systems In Focus: Desktop Grid Computing, Peter Kacsuk, Robert Lovas and Zsolt Nemeth (Editors)},
+ publisher = {Springer},
+ year = {2008},
+ }
+
+
+
+
+
+ 
+ @Book{hill2000readings,
+ author = {Hill, Mark},
+ title = {Readings in Computer Architecture},
+ publisher = {Morgan Kaufmann},
+ year = {2000},
+ address = {San Diego},
+ isbn = {1558605398}
+ }
+ 
+ @Book{prodan2007grid,
+ author = {Prodan, Radu},
+ title = {Grid Computing: Experiment Management, Tool Integration, and Scientific Workflows},
+ publisher = {Springer},
+ year = {2007},
+ address = {Berlin},
+ isbn = {3540692614}
+ }
+
+@inproceedings{Niu2005Performance,
+ author = {Niu, Yanwei and Hu, Ziang and Barner, Kenneth and Gao, Guang R.},
+ title = {Performance modelling and optimization of memory access on cellular computer architecture cyclops64},
+ booktitle = {Proceedings of the 2005 IFIP international conference on Network and Parallel Computing},
+ series = {NPC'05},
+ year = {2005},
+ isbn = {3-540-29810-X, 978-3-540-29810-6}, 
+ location = {Beijing, China},
+ pages = {132--143},
+ numpages = {12},
+ url = {http://dx.doi.org/10.1007/11577188_18},
+ doi = {10.1007/11577188\_18},
+ acmid = {2099648},
+ publisher = {Springer-Verlag},
+ address = {Berlin, Heidelberg},
+}
+
+@article{Tan2011Analysis,
+ author = {Tan, Guangming and Sreedhar, Vugranam C. and Gao, Guang R.},
+ title = {Analysis and performance results of computing betweenness centrality on IBM Cyclops64},
+ journal = {J. Supercomput.},
+ issue_date = {April     2011},
+ volume = {56},
+ issue = {1},
+ month = {April},
+ year = {2011},
+ issn = {0920-8542},
+ pages = {1--24},
+ numpages = {24},
+ url = {http://dx.doi.org/10.1007/s11227-009-0339-9},
+ doi = {10.1007/s11227-009-0339-9},
+ acmid = {1969569},
+ publisher = {Kluwer Academic Publishers},
+ address = {Hingham, MA, USA},
+ keywords = {Betweenness centrality, Just-in-time locality, Many-core architecture, Multi-grain parallelism},
+}
+
+
+
+@article{balicki2015,
+ author = {Balicki, Jerzy and Kortub, Waldemar and Paluszak, Jacek},
+ title = {Big Data Processing by Volunteer Computing Supported by Intelligent Agents},
+ journal = {Pattern Recognition and Machine Intelligence. Lecture Notes in Computer Science},
+ issue_date = {June 2015},
+ volume = {9124},
+ month = {june},
+ year = {2015},
+ issn = {0302-9743},
+ pages = {268-–278},
+ doi = {10.1007/978-3-319-19941-2_26},
+ publisher = {Springer},
+}
+
+
+@article{elwaer2011,
+ author = {Elwaer, Abdelhamind and Taylor, Ian J. and Rana, Omer},
+ title = {Optimizing data distribution in volunteer computing systems using resources of participants},
+ journal = {Scalable Computing:Practice and Experience},
+ issue_date = {211},
+ volume = {12},
+ issue = {2},
+ year = {2011},
+ issn = {1895-1767},
+ pages = {193–-208},
+ url = {http://dx.doi.org/10.1007/s11227-009-0339-9},
+}
+
+
+
+@MISC{NewYorkTimes2011Japanese,
+  author = {{The New York Times}},
+  title = {Japanese `K' Computer Is Ranked Most Powerful},
+  url = {http://www.nytimes.com/2011/06/20/technology/20computer.html?_r=1},
+  year = {2011}
+}
+
+%MISC{Wikipedia2012High-throughput,
+%  author = {Wikipedia},
+%  title = {High-throughput computing},
+%  url = {http://en.wikipedia.org/wiki/High-throughput_computing},
+%  year = {2012}
+%}
+
+@MISC{Beck1997High,
+  author = {Beck, Alan},
+  title = {High Throughput Computing: An Interview with Miron Livny},
+  url = {http://www.hpcwire.com/hpc-bin/artread.pl?direction=Current&articlenumber=11444},
+  year = {1997}
+}
+
+% Large-scale distributed systems
+
+%MISC{Wikipedia2012Distributed,
+%  author = {Wikipedia},
+%  title = {Distributed systems},
+%  url = {http://en.wikipedia.org/wiki/Distributed_systems},
+%  year = {2012}
+%}
+
+@book{Lynch1996Distributed,
+ author = {Lynch, Nancy A.},
+ title = {Distributed Algorithms},
+ year = {1996},
+ isbn = {1558603484},
+ publisher = {Morgan Kaufmann Publishers Inc.},
+ address = {San Francisco, CA, USA},
+}
+
+@book{Andrews1999Foundations,
+  added-at = {2008-11-22T10:38:47.000+0100},
+  author = {Andrews, G.R.},
+  biburl = {http://www.bibsonomy.org/bibtex/2e06e2d148e60f17ba111244f0bbb67ac/mokukkon},
+  interhash = {3b4f489a93d717ff260f01d0b0d8daa5},
+  intrahash = {e06e2d148e60f17ba111244f0bbb67ac},
+  keywords = {imported programming},
+  publisher = {Addison-Wesley},
+  timestamp = {2008-11-22T10:38:47.000+0100},
+  title = {{Foundations of Multithreaded, Parallel, and Distributed Programming}},
+  year = {1999}
+}
+
+@book{Dolev2000Self-Stabilization,
+  author    = {Shlomi Dolev},
+  title     = {Self-Stabilization},
+  publisher = {MIT Press},
+  year      = {2000},
+  isbn      = {0-262-04178-2},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@book{Ghosh2006Distributed,
+ author = {Sukumar Ghosh},
+ title = {Distributed Systems: An Algorithmic Approach},
+ year = {2006},
+ publisher = {Chapman \& Hall/CRC}
+}
+
+@book{Peleg2000Distributed,
+ author = {Peleg, David},
+ title = {Distributed computing: a locality-sensitive approach},
+ year = {2000},
+ isbn = {0-89871-464-8},
+ publisher = {Society for Industrial and Applied Mathematics},
+ address = {Philadelphia, PA, USA},
+}
+
+@book{Coulouris2005Distributed,
+ author = {George Coulouris and Jean Dollimore and Tim Kindberg},
+ title = {Distributed systems (4th ed.): concepts and design},
+ year = {2005},
+ publisher = {Addison-Wesley Longman Publishing Co., Inc.},
+ address = {Boston, MA, USA}
+}
+
+@book{Tanenbaum2007Distributed,
+ author = {Andrew Tanenbaum and Maarten van Steen},
+ title = {Distributed Systems: Principles and Paradigms (2nd ed.)},
+ year = {2007},
+ publisher = {Prentice Hall}
+}
+
+
+% Web
+
+@MISC{TechTerms.com-Web,
+  author = {{TechTerms.com}},
+  title = {{WWW}},
+  howpublished = {\url{http://www.techterms.com/definition/www}, Last visited},
+  month = apr,
+  year = {2016},
+  url = {http://www.techterms.com/definition/www},
+}
+
+@MISC{W3C2004Architecture,
+  author = {{W3C Technical Architecture Group}},
+  title = {Architecture of the World Wide Web, Volume One},
+  url = {http://www.w3.org/TR/webarch/},
+  year = {2004}
+}
+
+
+% For Grid concepts and architecture
+
+@article{Foster:2001:AnatomyOfTheGrid,
+author = {Foster, Ian and Kesselman, Carl and Tuecke, Steven},
+ title = {The Anatomy of the Grid: Enabling Scalable Virtual Organizations},
+ journal = {Int. J. High Perform. Comput. Appl.},
+ volume = {15},
+ issue = {3},
+ month = {August},
+ year = {2001},
+ issn = {1094-3420},
+ pages = {200--222},
+ numpages = {23},
+ url = {http://dl.acm.org/citation.cfm?id=1080644.1080667},
+ doi = {10.1177/109434200101500302},
+ acmid = {1080667},
+ publisher = {Sage Publications, Inc.},
+ address = {Thousand Oaks, CA, USA}
+}
+
+@misc{Foster02thephysiology,
+  added-at = {2007-01-28T17:18:58.000+0100},
+  biburl = {http://www.bibsonomy.org/bibtex/2b615d5805b2d6f5fb347ad97317d96e4/lysander07},
+  booktitle = {Open Grid Service Infrastructure WG, Global Grid Forum},
+  date = {June 22, 2002},
+  description = {The Physiology of the Grid: An Open Grid Services Architecture for Distributed Systems Integration},
+  author = {Foster, I. and Kesselman, C. and Nick, J. and Tuecke, S.},
+  interhash = {3c63f65490c224e7d696e203e99c686e},
+  intrahash = {b615d5805b2d6f5fb347ad97317d96e4},
+  keywords = {SOGOS Semantic_Web grid},
+  timestamp = {2007-01-28T17:18:58.000+0100},
+  title = {The Physiology of the Grid: An Open Grid Services Architecture for Distributed Systems Integration},
+  url = {http://www.globus.org/alliance/publications/papers/ogsa.pdf},
+  year = {2002}
+}
+
+@book{foster2004grid,
+  title={The grid: blueprint for a new computing infrastructure},
+  author={Foster, Ian and Kesselman, Carl},
+  isbn={9781558609334},
+  lccn={2004044068},
+  series={The Morgan Kaufmann Series in Computer Architecture and Design Series},
+  url={http://books.google.es/books?id=8-0BofIhoU0C},
+  year={2004},
+  publisher={Elsevier}
+}
+
+@ARTICLE{Catlett1992Insearch,
+author={Catlett, C.E.},
+journal={Communications Magazine, IEEE},
+title={In search of gigabit applications},
+year={1992},
+month={april },
+volume={30},
+number={4},
+pages={42 -51},
+abstract={Applications in existing specialized, metacomputer environments and those yet to be developed for services such as telecommunications, distributed data, and image transfer that will require networks which can handle volumes of data on the order of gigabits per second are discussed. Specific examples are presented from the fields of computational science, data navigation, and collaborative environments and instrument control. It is concluded that distributed computing and collaborative environments that support the interaction of multiple computers, as well as the interaction of computers with humans, are the paradigms that will characterize gigabit applications.<>},
+keywords={collaborative environments;computational science;data navigation;distributed computing;distributed data;gigabit applications;gigabit networks;image transfer;instrument control;metacomputer;telecommunications;computer networks;computer science;computerised control;computerised instrumentation;digital communication systems;distributed processing;groupware;telecommunications computing;},
+doi={10.1109/35.135788},
+ISSN={0163-6804},}
+
+@article{Smarr:1992:Metacomputing,
+ author = {Smarr, Larry and Catlett, Charles E.},
+ title = {Metacomputing},
+ journal = {Commun. ACM},
+ volume = {35},
+ issue = {6},
+ month = {June},
+ year = {1992},
+ issn = {0001-0782},
+ pages = {44--52},
+ numpages = {9},
+ url = {http://doi.acm.org/10.1145/129888.129890},
+ doi = {10.1145/129888.129890},
+ acmid = {129890},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@inproceedings{Beiriger:2000:Constructing,
+ author = {Beiriger, Judy I. and Bivens, Hugh P. and Humphreys, Steven L. and Johnson, Wilbur R. and Rhea, Ronald E.},
+ title = {Constructing the ASCI Computational Grid},
+ booktitle = {Proceedings of the 9th IEEE International Symposium on High Performance Distributed Computing},
+ series = {HPDC '00},
+ year = {2000},
+ isbn = {0-7695-0783-2},
+ pages = {193--},
+ url = {http://dl.acm.org/citation.cfm?id=822085.823324},
+ acmid = {823324},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+}
+
+@MISC{Brunett98applicationexperiences,
+    author = {Sharon Brunett and Karl Czajkowski and Steven Fitzgerald and Ian Foster and Andrew Johnson and Carl Kesselman and Jason Leigh and Steven Tuecke},
+    title = {Application Experiences with the Globus Toolkit},
+    year = {1998}
+}
+
+@inproceedings{Johnston:1999:Grids,
+ author = {Johnston, William E. and Gannon, Dennis and Nitzberg, Bill},
+ title = {Grids as Production Computing Environments: The Engineering Aspects of NASA's Information Power Grid},
+ booktitle = {Proceedings of the 8th IEEE International Symposium on High Performance Distributed Computing},
+ series = {HPDC '99},
+ year = {1999},
+ isbn = {0-7695-0287-3},
+ pages = {34--},
+ url = {http://dl.acm.org/citation.cfm?id=822084.823281},
+ acmid = {823281},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+}
+
+@article{Stevens:1997:From,
+ author = {Stevens, Rick and Woodward, Paul and DeFanti, Tom and Catlett, Charlie},
+ title = {From the I-WAY to the National Technology Grid},
+ journal = {Commun. ACM},
+ issue_date = {Nov. 1997},
+ volume = {40},
+ issue = {11},
+ month = {November},
+ year = {1997},
+ issn = {0001-0782},
+ pages = {50--60},
+ numpages = {11},
+ url = {http://doi.acm.org/10.1145/265684.265692},
+ doi = {10.1145/265684.265692},
+ acmid = {265692},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+%For the Globus Toolkit in general
+
+@article{Foster2005GT4Intro,
+    abstract = {{The Globus Toolkit (GT) has been developed since the late 1990s to support the development of service-oriented distributed computing applications and infrastructures. Core GT components address, within a common framework, basic issues relating to security, resource access, resource management, data movement, resource discovery, and so forth. These components enable a broader  Globus ecosystem  of tools and components that build on, or interoperate with, core GT functionality to provide a wide range of useful application-level functions. These tools have in turn been used to develop a wide range of both  Grid  infrastructures and distributed applications. I summarize here the principal characteristics of the latest release, the Web services-based GT4, which provides significant improvements over previous releases in terms of robustness, performance, usability, documentation, standards compliance, and functionality.}},
+    address = {Berlin, Heidelberg},
+    author = {Foster, Ian},
+    booktitle = {Network and Parallel Computing},
+    chapter = {2},
+    citeulike-article-id = {4304695},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1007/11577188\_2},
+    citeulike-linkout-1 = {http://www.springerlink.com/content/p75p28l430100041},
+    doi = {10.1007/11577188\_2},
+    editor = {Jin,, Hai and Reed,, Daniel and Jiang,, Wenbin},
+    isbn = {978-3-540-29810-6},
+    issn = {0302-9743 (Print) 1611-3349 (Online)},
+    journal = {Network and Parallel Computing, LNCS},
+    keywords = {globus},
+    pages = {2--13},
+    posted-at = {2009-09-08 12:15:39},
+    priority = {3},
+    publisher = {Springer Berlin / Heidelberg},
+    series = {Lecture Notes in Computer Science},
+    title = {{Globus Toolkit Version 4: Software for Service-Oriented Systems}},
+    url = {http://dx.doi.org/10.1007/11577188\_2},
+    volume = {3779/2005},
+    year = {2005}
+}
+
+@ARTICLE{Foster96globus:ametacomputing,
+    author = {Ian Foster and Carl Kesselman},
+    title = {Globus: A Metacomputing Infrastructure Toolkit},
+    journal = {International Journal of Supercomputer Applications},
+    year = {1996},
+    volume = {11},
+    pages = {115--128}
+}
+
+@misc{Foster2005GTPrimer,
+  author = {Foster, Ian},
+  title = {A Globus Toolkit Primer},
+  url = {http://www.globus.org/toolkit/docs/4.0/key/GT4_Primer_0.6.pdf},
+  year = {2005}
+}
+
+@article{Kesselman:2001:Internet,
+  title={Internet X.509 Public Key Infrastructure Proxy Certificate Profile},
+  journal={IETF},
+  publisher={IETF},
+  author={Kesselman, C},
+  year={2001}
+}
+
+@techreport{tuecke2004proxy,
+    author = {Tuecke, Steven and Welch, Von and Engert, Doug and Pearlman, Laura and Thompson, Mary},
+    citeulike-article-id = {4545002},
+    howpublished = {IETF RFC 3820},
+    keywords = {certificate, proxy\_certificate, x509},
+    month = jun,
+    posted-at = {2009-05-19 14:27:02},
+    priority = {0},
+    title = {Internet {X.509} Public Key Infrastructure {(PKI)} Proxy Certificate Profile},
+    url={http://www.ietf.org/rfc/rfc3820.txt},
+    institution = {IETF},
+    number={3820},
+    publisher={IETF},
+    year = {2004}
+}
+
+@article{Foster:2002:Grid,
+ author = {Foster, Ian and Kesselman, Carl and Nick, Jeffrey M. and Tuecke, Steven},
+ title = {Grid Services for Distributed System Integration},
+ journal = {Computer},
+ volume = {35},
+ issue = {6},
+ month = {June},
+ year = {2002},
+ issn = {0018-9162},
+ pages = {37--46},
+ numpages = {10},
+ url = {http://dx.doi.org/10.1109/MC.2002.1009167},
+ doi = {10.1109/MC.2002.1009167},
+ acmid = {621997},
+ publisher = {IEEE Computer Society Press},
+ address = {Los Alamitos, CA, USA},
+}
+
+@article{BernersLee:2001:Thesemantic,
+    author = {Berners-Lee, T. and Hendler, J. and Lassila, O.},
+    citeulike-article-id = {240496},
+    journal = {Scientific American},
+    keywords = {bibtex-import},
+    month = may,
+    posted-at = {2005-06-30 04:32:22},
+    priority = {0},
+    title = {{The semantic web}},
+    year = {2001}
+}
+
+@TechReport{Horn:2001:TheIBMvision,
+  author = {Horn, P.},
+  title = {The \mbox{IBM} vision for autonomic computing},
+  institution = {IBM},
+  year = {2001},
+  url = {http://www.research.ibm.com/autonomic/manifesto}
+}
+
+
+%gLite
+
+@MISC{gLite,
+  author = {{EGEE Project}},
+  title = {{gLite}},
+  howpublished = {Last visited},
+  month = apr,
+  year = {2016},
+  url = {http://glite.cern.ch/},
+}
+
+%MISC{Wikipedia2012gLite,
+%  author = {Wikipedia},
+%  title = {\mbox{gLite}},
+%  url = {http://en.wikipedia.org/wiki/GLite},
+%  year = {2012}
+%}
+
+% Volunteer Computing and Desktop Grids; BOINC
+
+@TechReport{Choi2008,
+author = {Sungjin Choi and Rajkumar Buyya and Hongsoo Kim and Eunjoung Byun and Maengsoon Baik and Joonmin Gil and Chanyeol Park},
+title = {A Taxonomy of Desktop Grids and its Mapping to State-of-the-Art Systems},
+institution = {Grid Computing and Distributed Systems Laboratory, The University of Melbourne, Australia},
+year = {2008},
+number = {GRIDS-TR-2008-3},
+month = feb,
+url = {http://www.cloudbus.org/reports/DesktopGridTaxonomy2008.pdf}
+}
+
+@MISC{INRIA/IN2P32008XtremWeb,
+  author = {INRIA/IN2P3},
+  title = {\mbox{XtremWeb}: the Open Source Platform for Desktop Grids},
+  howpublished = {\url{http://www.xtremweb.net/}, Last visited},
+  url = {http://www.xtremweb.net/},
+  year = {2016}
+}
+
+@MISC{GIMPS,
+  author = {{Mersenne Research, Inc.}},
+  title = {{G}reat {I}nternet {M}ersenne {P}rime {S}earch},
+  howpublished = {\url{http://www.mersenne.org/}, Last visited},
+  month = apr,
+  year = {2016},
+  url = {http://www.mersenne.org/},
+}
+
+@MISC{distributed.net,
+  author = {distributed.net},
+  title = {distributed.net},
+  howpublished = {\url{http://distributed.net}, Last visited},
+  month = apr,
+  year = {2016},
+  url = {http://distributed.net},
+}
+
+@InCollection{Larson2003Folding@home,
+author = {Stefan M. Larson and Christopher D. Snow and Michael R. Shirts and Vijay S. Pande},
+title = {{Folding@Home} and {Genome@Home}: Using distributed computing to tackle previously intractable problems in computational biology},
+booktitle = {Computational Genomics: Theory and Application},
+crossref = {grant2004computational},
+publisher = {Horizon Bioscience},
+year = {2004},
+editor = {Richard P. Grant},
+}
+url = {http://folding.stanford.edu/English/Papers#ntoc105}
+@article{larson.distributed.comp.2002,
+  added-at = {2009-01-11T05:35:18.000+0100},
+  author = {Larson, Stefan M. and Snow, Christopher D. and Shirts, Michael and Pande, Vijay S.},
+  biburl = {http://www.bibsonomy.org/bibtex/2f746a7c288281530b3a64f469f1de8a5/huiyangsfsu},
+  description = {folding.bib},
+  interhash = {23c3cc3f90f671379a4ca5f81d1e4919},
+  intrahash = {f746a7c288281530b3a64f469f1de8a5},
+  journal = {Computational Genomics, Richard Grant, editor, Horizon Press},
+  keywords = {imported},
+  timestamp = {2009-01-11T05:35:18.000+0100},
+  title = {Folding@Home and Genome@Home: Using distributed computing to tackle previously intractable problems in computational biology},
+  year = {2002}
+}
+@book{grant2004computational,
+  title={Computational Genomics: Theory And Application},
+  author={Grant, Richard P.},
+  isbn={978-1-904933-01-4},
+  lccn={2007295234},
+  url={http://books.google.com.do/books?id=f0JkQgAACAAJ},
+  year={2004},
+  publisher={Horizon Bioscience}
+}
+
+@InProceedings{Beberg2009,
+author = {Adam L. Beberg and Daniel L. Ensign and Guha Jayachandran and Siraj Khaliq and Vijay S. Pande},
+title = {Folding@home: Lessons from eight years of volunteer distributed computing},
+booktitle = {Proceedings of the IEEE International Parallel \& Distributed Processing Symposium (IPDPS 2009)},
+volume = {0},
+isbn = {978-1-4244-3751-1},
+year = {2009},
+pages = {1-8},
+doi = {10.1109/IPDPS.2009.5160922},
+url = {http://doi.ieeecomputersociety.org/10.1109/IPDPS.2009.5160922},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+}
+
+@ARTICLE{Werthimer01seti@home,
+ author = {Werthimer, Dan and Cobb, Jeff and Lebofsky, Matt and Anderson, David and Korpela, Eric},
+ title = {{SETI@HOME}---massively distributed computing for {SETI}},
+ journal = {Computing in Science and Engineering},
+ volume = {3},
+ number = {1},
+ year = {2001},
+ issn = {1521-9615},
+ pages = {78--83},
+ doi = {10.1109/5992.895191},
+ publisher = {IEEE Educational Activities Department},
+ address = {Piscataway, NJ, USA},
+ }
+
+@ARTICLE{Anderson2002SETI@home,
+ author = {Anderson, David P. and Cobb, Jeff and Korpela, Eric and Lebofsky, Matt and Werthimer, Dan},
+ title = {{SETI@home: an experiment in public-resource computing}},
+ journal = {Commun. ACM},
+ volume = {45},
+ number = {11},
+ year = {2002},
+ issn = {0001-0782},
+ pages = {56--61},
+ doi = {10.1145/581571.581573},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+@ARTICLE{Pragyansmita02seti@home,
+ author = {Paul, Pragyansmita},
+ title = {{SETI@home} project and its website},
+ journal = {Crossroads},
+ volume = {8},
+ number = {3},
+ year = {2002},
+ issn = {1528-4972},
+ pages = {3--5},
+ doi = {10.1145/567162.567164},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+@INPROCEEDINGS{Chase2000,
+   author = "J. S. Chase and D. C. Anderson and A. M. Vahdat",
+   title = "Interposed request routing for scalable network storage",
+   booktitle = "Fourth Symposium on Operating System Design and Implementation (OSDI2000)",
+   year = "2000",
+   month = "October",
+   pages = "259--272",
+}
+
+@inproceedings{Anderson2004BOINC,
+ author = {Anderson, David P.},
+ title = {{BOINC: A System for Public-Resource Computing and Storage}},
+ booktitle = {GRID '04: Proceedings of the 5th IEEE/ACM International Workshop on Grid Computing},
+ year = {2004},
+ isbn = {0-7695-2256-4},
+ pages = {4--10},
+ doi = {10.1109/GRID.2004.14},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ }
+
+@INPROCEEDINGS{Anderson2005High-performance,
+title={High-performance task distribution for volunteer computing},
+author={Anderson, D.P. and Korpela, E. and Walton, R.},
+booktitle={e-Science and Grid Computing, 2005. First International Conference on},
+year={2005},
+month={July},
+volume={},
+number={},
+pages={8 pp.-203},
+keywords={file servers, middleware, peer-to-peer computingBOINC, CPU time measurement, client-server system, disk I/O, high-performance task distribution, middleware system, volunteer computing, work management},
+doi={10.1109/E-SCIENCE.2005.51},
+ISSN={}, }
+
+@INPROCEEDINGS{Anderson2006,
+title={The Computational and Storage Potential of \textbf{Volunteer Computing}},
+author={Anderson, D.P. and Fedak, G.},
+booktitle={Cluster Computing and the Grid, 2006. CCGRID 06. Sixth IEEE International Symposium on},
+year={2006},
+month={May},
+volume={1},
+number={},
+pages={ 73-80},
+doi={10.1109/CCGRID.2006.101},
+ISSN={}, }
+
+@inproceedings{anderson2007,
+  title={Local scheduling for volunteer computing},
+  author={Anderson, David P},
+  booktitle={Parallel and Distributed Processing Symposium, 2007. IPDPS 2007. IEEE International},
+  pages={1--8},
+  year={2007},
+  organization={IEEE}
+}
+
+@INPROCEEDINGS{Costa2008,
+title={Optimizing the data distribution layer of BOINC with BitTorrent},
+author={Costa, F. and Silva, L. and Kelley, I. and Fedak, G.},
+booktitle={Parallel and Distributed Processing, 2008. IPDPS 2008. IEEE International Symposium on},
+year={2008},
+month={April},
+volume={},
+number={},
+pages={1-8},
+keywords={middleware, network servers, peer-to-peer computingBOINC middleware, BitTorrent, CPU usage, data distribution layer, server-side efficiency, task distribution},
+doi={10.1109/IPDPS.2008.4536446},
+ISSN={1530-2075}
+}
+
+
+@ARTICLE{Costa2012b,
+ author = {Costa, F. and Silva, J. and Veiga, L. and Ferreria, P.},
+ title = {Large-Scale Volunteer Computing Over the Internet},
+ journal = {Journal of Internet Services and  Applications},
+ volume = {3},
+ year = {2012},
+ issn = {1867-4828},
+ pages = {329--346},
+ publisher = {Springer},
+ }
+
+@MISC{Berkeley2007,
+  title = {Volunteer Computing (BOINC)},  
+  author = {{University of California, Berkeley}},
+  howpublished = {\url{http://boinc.berkeley.edu/trac/wiki/VolunteerComputing}, Last visited},
+  month = dec,
+  year = {2015},
+  url = {http://boinc.berkeley.edu/trac/wiki/VolunteerComputing},
+}
+
+@MISC{climateprediction,
+ title = {Climateprediction.net},
+ author = {{Oxford University}},
+ howpublished = {\url{http://climateprediction.net}, Last visited},
+ month = apr,
+ year = {2016},
+ url = {http://climateprediction.net},
+}
+
+@ARTICLE{Collaboration-2009-79,
+  author = {{LIGO Scientific Collaboration}},
+  title = {{Einstein@Home} search for periodic gravitational waves in {LIGO} {S4} data},
+  journal = {Physical Review D},
+  volume = {79},
+  pages = {022001},
+  url = {doi:10.1103/PhysRevD.79.022001},
+  year = {2009}
+}
+
+@ARTICLE{Collaboration-2009-80,
+  author = {{LIGO Scientific Collaboration} and David P. Anderson},
+  title = {{Einstein@Home} search for periodic gravitational waves in early {S5} {LIGO} data},
+  journal = {Physical Review D},
+  volume = {80},
+  pages = {042003},
+  url = {doi:10.1103/PhysRevD.80.042003},
+  year = {2009}
+}
+
+@MISC{Einstein@home,
+ title = {Einstein@Home},
+ author = {American Physical Society},
+ howpublished = {\url{http://www.einsteinathome.org}, Last visited},
+ month = apr,
+ year = {2016},
+ url = {http://www.einsteinathome.org},
+}
+
+@article{Kubiatowicz2000,
+ author = {Kubiatowicz, John and Bindel, David and Chen, Yan and Czerwinski, Steven and Eaton, Patrick and Geels, Dennis and Gummadi, Ramakrishna and Rhea, Sean and Weatherspoon, Hakim and Wells, Chris and Zhao, Ben},
+ title = {OceanStore: an architecture for global-scale persistent storage},
+ journal = {SIGARCH Comput. Archit. News},
+ volume = {28},
+ number = {5},
+ year = {2000},
+ issn = {0163-5964},
+ pages = {190--201},
+ doi = {10.1145/378995.379239},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+@article{Rowstron2001,
+ author = {Rowstron, Antony and Druschel, Peter},
+ title = {Storage management and caching in PAST, a large-scale, persistent peer-to-peer storage utility},
+ journal = {SIGOPS Oper. Syst. Rev.},
+ volume = {35},
+ number = {5},
+ year = {2001},
+ issn = {0163-5980},
+ pages = {188--201},
+ doi = {10.1145/502059.502053},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+
+% Cloud
+
+%http://science.energy.gov/ascrS
+@book{ASCR2011Magellan,
+  author = {{U.S. Department of Energy}},
+  publisher = {{Office of Advance Scientific Computing Research (ASCR)}},
+  title = {The Magellan Report On Cloud Computing for Science},
+  year = {2011},
+  url = {http://science.energy.gov/~/media/ascr/pdf/program-documents/docs/Magellan_Final_Report.pdf},
+}
+
+@inproceedings{Li:2010:eScience,
+  added-at = {2011-02-07T00:00:00.000+0100},
+  author = {Li, Jie and Humphrey, Marty and Agarwal, Deborah A. and Jackson, Keith R. and van Ingen, Catharine and Ryu, Youngryel},
+  biburl = {http://www.bibsonomy.org/bibtex/22935b2d39cacdad21d32e5e6fe72289e/dblp},
+  booktitle = {IPDPS},
+  ee = {http://dx.doi.org/10.1109/IPDPS.2010.5470418},
+  doi = {10.1109/IPDPS.2010.5470418},
+  interhash = {0762ed9d6ee937c4ef6c2dd8725cad73},
+  intrahash = {2935b2d39cacdad21d32e5e6fe72289e},
+  keywords = {dblp},
+  pages = {1-10},
+  publisher = {IEEE},
+  timestamp = {2011-02-07T00:00:00.000+0100},
+  title = {eScience in the cloud: A MODIS satellite data reprojection and reduction pipeline in the Windows Azure platform.},
+  url = {http://dblp.uni-trier.de/db/conf/ipps/ipdps2010.html#LiHAJIR10},
+  year = {2010}
+}
+%  crossref = {conf/ipps/2010},
+
+@inproceedings{Qiu:2009:CloudTechnologies,
+ author = {Qiu, Xiaohong and Ekanayake, Jaliya and Beason, Scott and Gunarathne, Thilina and Fox, Geoffrey and Barga, Roger and Gannon, Dennis},
+ title = {Cloud technologies for bioinformatics applications},
+ booktitle = {Proceedings of the 2nd Workshop on Many-Task Computing on Grids and Supercomputers},
+ series = {MTAGS '09},
+ year = {2009},
+ isbn = {978-1-60558-714-1},
+ location = {Portland, Oregon},
+ pages = {6:1--6:10},
+ articleno = {6},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/1646468.1646474},
+ doi = {10.1145/1646468.1646474},
+ acmid = {1646474},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Dryad, Hadoop, MPI, bioinformatics, cloud, multicore},
+}
+
+@MISC{Ekanayake:2010:CloudTechnologies,
+    author = {Jaliya Ekanayake and Thilina Gunarathne and Judy Qiu},
+    title = {Cloud Technologies for Bioinformatics Applications},
+    year = {2010}
+}
+
+@MISC{Indiana:2012:Futuregrid,
+  author = {{Indiana University}},
+  title = {Futuregrid Portal},
+  howpublished = {Last visited},
+  month = may,
+  year = {2016},
+  url = {https://portal.futuregrid.org/},
+}
+
+@inproceedings{Rimal:2009:TSC:1683301.1684085,
+ author = {Rimal, Bhaskar Prasad and Choi, Eunmi and Lumb, Ian},
+ title = {A Taxonomy and Survey of Cloud Computing Systems},
+ booktitle = {Proceedings of the 2009 Fifth International Joint Conference on INC, IMS and IDC},
+ series = {NCM '09},
+ year = {2009},
+ isbn = {978-0-7695-3769-6},
+ pages = {44--51},
+ numpages = {8},
+ url = {http://dx.doi.org/10.1109/NCM.2009.218},
+ doi = {10.1109/NCM.2009.218},
+ acmid = {1684085},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {Cloud Computing, Distributed Computing, Taxonomy, Evolution, Massive Data, Large Scale Processors},
+}
+
+@article{DBLP:journals/corr/abs-1007-0066,
+  author    = {Anton Beloglazov and
+               Rajkumar Buyya and
+               Young Choon Lee and
+               Albert Y. Zomaya},
+  title     = {A Taxonomy and Survey of Energy-Efficient Data Centers and
+               Cloud Computing Systems},
+  journal   = {CoRR},
+  volume    = {abs/1007.0066},
+  year      = {2010},
+  ee        = {http://arxiv.org/abs/1007.0066},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+% Internet of Things
+
+@article{Atzori2010,
+title = "The {I}nternet of {T}hings: A survey ",
+journal = "Computer Networks ",
+volume = "54",
+number = "15",
+pages = "2787 - 2805",
+year = "2010",
+note = "",
+issn = "1389-1286",
+doi = "10.1016/j.comnet.2010.05.010",
+url = "http://www.sciencedirect.com/science/article/pii/S1389128610001568",
+author = "Luigi Atzori and Antonio Iera and Giacomo Morabito",
+keywords = "Internet of Things",
+keywords = "Pervasive computing",
+keywords = "RFID systems ",
+abstract = "This paper addresses the Internet of Things. Main enabling factor of this promising paradigm is the integration of several technologies and communications solutions. Identification and tracking technologies, wired and wireless sensor and actuator networks, enhanced communication protocols (shared with the Next Generation Internet), and distributed intelligence for smart objects are just the most relevant. As one can easily imagine, any serious contribution to the advance of the Internet of Things must necessarily be the result of synergetic activities conducted in different fields of knowledge, such as telecommunications, informatics, electronics and social science. In such a complex scenario, this survey is directed to those who want to approach this complex discipline and contribute to its development. Different visions of this Internet of Things paradigm are reported and enabling technologies reviewed. What emerges is that still major issues shall be faced by the research community. The most relevant among them are addressed in details."
+}
+
+@book{giusto2010internet,
+  title={The {I}nternet of {T}hings: 20th Tyrrhenian workshop on digital communications},
+  author={Giusto, Daniel and Iera, Antonio and Morabito, Giacomo and Atzori, Luigi},
+  year={2010},
+  publisher={Springer Science \& Business Media},
+  isbn={978-1-4419-1673-0},
+  doi={10.1007/978-1-4419-1674-7}
+}
+
+@TechReport{Bassi2008,
+author = {Alessandro Bassi and Hitachi Europe and Geir Horn},
+title = {Internet of Things in 2020, Roadmap for the Future},
+institution = {INFSO D.4 Networked Enterprise \& RFID INFSO G.2 Micro \& Nanosystems, in co-operation with the RFID Working Group of the European Technology Platform on Smart Systems Integration {(EPoSS)}},
+year = {2008},
+month = sep,
+url = {http://www.smart-systems-integration.org/public/documents/publications/Internet-of-Things_in_2020_EC-EPoSS_Workshop_Report_2008_v3.pdf}
+}
+
+@MISC{autoidlabs,
+ title = {{Auto-ID} {L}abs},
+ author = {Sanjay Sarma and Elgar Fleisch},
+ howpublished = {Last visited},
+ month = dec,
+ year = {2015},
+ url = {http://www.autoidlabs.org/},
+}
+
+@article{Gubbi2013,
+title = "Internet of {T}hings {(IoT)}: A vision, architectural elements, and future directions ",
+journal = "Future Generation Computer Systems",
+volume = "29",
+number = "7",
+pages = "1645 - 1660",
+year = "2013",
+note = "Including Special sections: Cyber-enabled Distributed Computing for Ubiquitous Cloud and Network Services &amp; Cloud Computing and Scientific Applications — Big Data, Scalable Analytics, and Beyond",
+issn = "0167-739X",
+doi = "10.1016/j.future.2013.01.010",
+url = "http://www.sciencedirect.com/science/article/pii/S0167739X13000241",
+author = "Jayavardhana Gubbi and Rajkumar Buyya and Slaven Marusic and Marimuthu Palaniswami",
+keywords = "Internet of Things",
+keywords = "Ubiquitous sensing",
+keywords = "Cloud computing",
+keywords = "Wireless sensor networks",
+keywords = "RFID",
+keywords = "Smart environments ",
+abstract = "Abstract Ubiquitous sensing enabled by Wireless Sensor Network (WSN) technologies cuts across many areas of modern day living. This offers the ability to measure, infer and understand environmental indicators, from delicate ecologies and natural resources to urban environments. The proliferation of these devices in a communicating–actuating network creates the Internet of Things (IoT), wherein sensors and actuators blend seamlessly with the environment around us, and the information is shared across platforms in order to develop a common operating picture (COP). Fueled by the recent adaptation of a variety of enabling wireless technologies such as \{RFID\} tags and embedded sensor and actuator nodes, the IoT has stepped out of its infancy and is the next revolutionary technology in transforming the Internet into a fully integrated Future Internet. As we move from www (static pages web) to web2 (social networking web) to web3 (ubiquitous computing web), the need for data-on-demand using sophisticated intuitive queries increases significantly. This paper presents a Cloud centric vision for worldwide implementation of Internet of Things. The key enabling technologies and application domains that are likely to drive IoT research in the near future are discussed. A Cloud implementation using Aneka, which is based on interaction of private and public Clouds is presented. We conclude our IoT vision by expanding on the need for convergence of WSN, the Internet and distributed computing directed at technological research community."
+}
+
+% Sensor networks
+
+%MISC{Wikipedia2012Wireless,
+%  author = {Wikipedia},
+%  title = {Wireless sensor network},
+%  url = {http://en.wikipedia.org/wiki/Wireless_sensor_network},
+%  year = {2012}
+%}
+
+@Book{dargie2010fundamentals,
+ author = {Dargie, Waltenegus},
+ title = {Fundamentals of Wireless Sensor Networks},
+ publisher = {Wiley},
+ year = {2010},
+ address = {New York},
+ isbn = {9780470997659}
+ }
+ 
+@Book{sohraby2007wireless,
+ author = {Sohraby, Kazem},
+ title = {Wireless Sensor Networks},
+ publisher = {Wiley},
+ year = {2007},
+ address = {New York},
+ isbn = {9780471743002}
+ }
+ 
+ % Peer-to-peer
+ 
+%MISC{Wikipedia2012Peer-to-peer,
+%  author = {Wikipedia},
+%  title = {Peer-to-peer},
+%  url = {http://en.wikipedia.org/wiki/Peer-to-peer},
+%  year = {2012}
+%}
+
+@INPROCEEDINGS{Schollmeier2001Peer,
+author={Schollmeier, R\"{u}diger},
+booktitle={Peer-to-Peer Computing, 2001. Proceedings. First International Conference on},
+title={A definition of peer-to-peer networking for the classification of peer-to-peer architectures and applications},
+year={2001},
+month={aug},
+volume={},
+number={},
+pages={101 -102},
+abstract={This paper offers a definition for peer-to-peer networking and makes the differences to common so called client server-architectures clear. With this definition we are able to classifiy currently existing networking concepts in the Internet either as "pure" peer-to-peer, or "hybrid" peer-to-peer or client server architecture},
+keywords={Internet;client server-architectures;networking concepts;peer-to-peer architectures;peer-to-peer networking;client-server systems;computer networks;},
+doi={10.1109/P2P.2001.990434},
+ISSN={},}
+
+
+%%%%%%%%%%%%%%%%%%%
+% Storage, and data access model %
+%%%%%%%%%%%%%%%%%%%
+
+% ByteIO
+
+@TechReport{Morgan2005,
+author = {Mark Morgan},
+title = {{ByteIO} Specification 1.0},
+institution = {Open Grid Forum},
+year = {2005},
+number = {draft-ggf-byteio-rec-v1-1},
+month = oct,
+url = {http://www.gridforum.org/Public_Comment_Docs/Documents/Feb-2006/draft-byteio-rec-doc-v1-1.pdf}
+}
+
+@TechReport{Morgan2006,
+author = {Mark Morgan},
+title = {{ByteIO} Specification 1.0},
+institution = {Open Grid Forum},
+year = {2006},
+number = {GFD-R-P.087},
+month = oct,
+url = {http://www.ogf.org/documents/GFD.87.pdf}
+}
+
+@TechReport{Chue2009,
+author = {Neil P. {Chue Hong} and Michel Drescher and Amy Krause and M. Shahbaz Memon and Mark Morgan},
+title = {{OGSA} {ByteIO} Implementations -- Experiences Document},
+institution = {Open Grid Forum},
+year = {2009},
+number = {GFD-E.146},
+month = mar,
+url = {http://www.ogf.org/documents/GFD.146.pdf}
+}
+
+% Data Grids
+
+@article{Venugopal2006ATaxonomy,
+ author = {Venugopal, Srikumar and Buyya, Rajkumar and Ramamohanarao, Kotagiri},
+ title = {A taxonomy of Data Grids for distributed data sharing, management, and processing},
+ journal = {ACM Comput. Surv.},
+ issue_date = {2006},
+ volume = {38},
+ number = {1},
+ month = jun,
+ year = {2006},
+ issn = {0360-0300},
+ articleno = {3},
+ url = {http://doi.acm.org/10.1145/1132952.1132955},
+ doi = {10.1145/1132952.1132955},
+ acmid = {1132955},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Grid computing, data-intensive applications, replica management, virtual organizations},
+}
+
+@TechReport{Venugopal2005,
+author = {Srikumar Venugopal and Rajkumar Buyya and Kotagiri Ramamohanarao},
+title = {A Taxonomy of Data Grids for Distributed Data Sharing, Management and Processing},
+institution = {Grid Computing and Distributed Systems Laboratory, University of Melbourne, Australia},
+year = {2005},
+number = {GRIDS-TR-2005-3},
+month = apr,
+url = {http://www.cloudbus.org/reports/DataGridTaxonomy.pdf}
+}
+
+
+@inproceedings{Rajasekar:2003:DataGrids,
+ author = {Rajasekar, Arcot and Wan, Michael and Moore, Reagan and Kremenek, George and Guptil, Tom},
+ title = {Data Grids, Collections, and Grid Bricks},
+ booktitle = {Proceedings of the 20 th IEEE/11 th NASA Goddard Conference on Mass Storage Systems and Technologies (MSS'03)},
+ series = {MSS '03},
+ year = {2003},
+ isbn = {0-7695-1914-8},
+ pages = {2--},
+ url = {http://dl.acm.org/citation.cfm?id=824467.825010},
+ acmid = {825010},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+}
+
+@article{Hey:2002:UEC:765837.765841,
+ author = {Hey, Tony and Trefethen, Anne E.},
+ title = {The {UK} e-{S}cience {C}ore {P}rogramme and the {G}rid},
+ journal = {Future Gener. Comput. Syst.},
+ issue_date = {October 2002},
+ volume = {18},
+ number = {8},
+ month = oct,
+ year = {2002},
+ issn = {0167-739X},
+ pages = {1017--1031},
+ numpages = {15},
+ url = {http://dx.doi.org/10.1016/S0167-739X(02)00082-1},
+ doi = {10.1016/S0167-739X(02)00082-1},
+ acmid = {765841},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+ keywords = {core programme, e-science, grid},
+}
+
+@ARTICLE{Chervenak99thedata,
+    author = {Ann Chervenak and Ian Foster and Carl Kesselman and Charles Salisbury and Steven Tuecke},
+    title = {The {D}ata {G}rid: {T}owards an {A}rchitecture for the {D}istributed {M}anagement and {A}nalysis of {L}arge {S}cientific {D}atasets},
+    journal = {Journal of Network and Computer Applications},
+    year = {1999},
+    volume = {23},
+    pages = {187--200}
+}
+
+@inproceedings{Hoschek:2000:DMI:645440.652836,
+ author = {Hoschek, Wolfgang and Ja{\'e}n-Mart\'{\i}nez, Francisco Javier and Samar, Asad and Stockinger, Heinz and Stockinger, Kurt},
+ title = {Data {M}anagement in an {I}nternational {D}ata {G}rid {P}roject},
+ booktitle = {Proceedings of the First IEEE/ACM International Workshop on Grid Computing},
+ series = {GRID '00},
+ year = {2000},
+ isbn = {3-540-41403-7},
+ pages = {77--90},
+ numpages = {14},
+ url = {http://dl.acm.org/citation.cfm?id=645440.652836},
+ acmid = {652836},
+ publisher = {Springer-Verlag},
+ address = {London, UK, UK},
+}
+
+@article{Krauter:2002:TSG:565293.565296,
+ author = {Klaus Krauter and Rajkumar Buyya and Muthucumaru Maheswaran},
+ title = {A {T}axonomy and {S}urvey of {G}rid {R}esource {M}anagement {S}ystems for {D}istributed {C}omputing},
+ journal = {Softw. Pract. Exper.},
+ issue_date = {February 2002},
+ volume = {32},
+ number = {2},
+ month = feb,
+ year = {2002},
+ issn = {0038-0644},
+ pages = {135--164},
+ numpages = {30},
+ url = {http://dx.doi.org/10.1002/spe.432},
+ doi = {10.1002/spe.432},
+ acmid = {565296},
+ publisher = {John Wiley \& Sons, Inc.},
+ address = {New York, NY, USA},
+ keywords = {distributed computing, grids, resource management, scheduling, taxonomies},
+key = {{$\!\!$}} ,
+}
+
+@InBook{Bunn2003Grid,
+author = {Bunn, Julian J. and Newman, Harvey B.},
+title = {{G}rid {C}omputing: {M}aking the {G}lobal {I}nfrastructure a {R}eality},
+chapter = {39: {D}ata-intensive {G}rids for high-energy physics},
+publisher = {John Wiley \& Sons, Inc.},
+year = {2003},
+}
+%editor = {Berman, Fran and Fox, Geoffrey C. and Hey, Anthony J. G.},
+
+@TechReport{Qin03datagrid:,
+    author = {Xiao Qin and Hong Jiang},
+    title = {{D}ata {G}rid: {S}upporting {D}ata-{I}ntensive applications in {W}ide-{A}rea {N}etworks},
+    institution = {University of Nebraska-Lincoln},
+    address = {Lincoln, NE},
+    month = {May},
+    year = {2003},
+    number = {TR-03-05-01},
+}
+
+@Misc{Moore2003Persistent,
+author = {Reagan W. Moore and Andre Merzky},
+title = {Persistent {A}rchive {C}oncepts},
+url = {http://www.ggf.org/documents/GFD.26.pdf},
+month = {December},
+year = {2003},
+note = {No. GFD.26},
+}
+
+@article {Finkelstein:2004:Relating,
+   author = {Finkelstein, Anthony and Gryce, Clare and Lewis-Bowen, Joe},
+   affiliation = {University College London Gower Street WC1E 6BT London UK},
+   title = {Relating {R}equirements and {A}rchitectures: {A} {S}tudy of {D}ata-{G}rids},
+   journal = {Journal of Grid Computing},
+   publisher = {Springer Netherlands},
+   issn = {1570-7873},
+   keyword = {Computer Science},
+   pages = {207-222},
+   volume = {2},
+   issue = {3},
+   url = {http://dx.doi.org/10.1007/s10723-004-6745-6},
+   doi = {10.1007/s10723-004-6745-6},
+   year = {2004}
+}
+
+@inproceedings{Mattmann:2005:UG:2154570.2154596,
+ author = {Mattmann, Chris A. and Medvidovic, Nenad and Ramirez, Paul M. and Jakobac, Vladimir},
+ title = {Unlocking the {G}rid},
+ booktitle = {Proceedings of the 8th international conference on Component-Based Software Engineering},
+ series = {CBSE'05},
+ year = {2005},
+ isbn = {3-540-25877-9, 978-3-540-25877-3},
+ location = {St. Louis, MO},
+ pages = {322--336},
+ numpages = {15},
+ url = {http://dx.doi.org/10.1007/11424529_22},
+ doi = {10.1007/11424529\_22},
+ acmid = {2154596},
+ publisher = {Springer-Verlag},
+ address = {Berlin, Heidelberg},
+}
+
+
+% CDN
+
+@article{Davison:2001:WCP:613349.613621,
+ author = {Davison, Brian D.},
+ title = {A {W}eb {C}aching {P}rimer},
+ journal = {IEEE Internet Computing},
+ issue_date = {July 2001},
+ volume = {5},
+ number = {4},
+ month = jul,
+ year = {2001},
+ issn = {1089-7801},
+ pages = {38--45},
+ numpages = {8},
+ url = {http://dx.doi.org/10.1109/4236.939449},
+ doi = {10.1109/4236.939449},
+ acmid = {613621},
+ publisher = {IEEE Educational Activities Department},
+ address = {Piscataway, NJ, USA},
+}
+
+@article{Dilley:2002:GDC:613356.613741,
+ author = {Dilley, John and Maggs, Bruce and Parikh, Jay and Prokop, Harald and Sitaraman, Ramesh and Weihl, Bill},
+ title = {Globally {D}istributed {C}ontent {D}elivery},
+ journal = {IEEE Internet Computing},
+ issue_date = {September 2002},
+ volume = {6},
+ number = {5},
+ month = sep,
+ year = {2002},
+ issn = {1089-7801},
+ pages = {50--58},
+ numpages = {9},
+ url = {http://dx.doi.org/10.1109/MIC.2002.1036038},
+ doi = {10.1109/MIC.2002.1036038},
+ acmid = {613741},
+ publisher = {IEEE Educational Activities Department},
+ address = {Piscataway, NJ, USA},
+}
+
+@inproceedings{Krishnamurthy:2001:UPC:505202.505224,
+ author = {Krishnamurthy, Balachander and Wills, Craig and Zhang, Yin},
+ title = {On the {U}se and {P}erformance of {C}ontent {D}istribution {N}etworks},
+ booktitle = {Proceedings of the 1st ACM SIGCOMM Workshop on Internet Measurement},
+ series = {IMW '01},
+ year = {2001},
+ isbn = {1-58113-435-5},
+ location = {San Francisco, California, USA},
+ pages = {169--182},
+ numpages = {14},
+ url = {http://doi.acm.org/10.1145/505202.505224},
+ doi = {10.1145/505202.505224},
+ acmid = {505224},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@TechReport{Pathan2007taxonomy,
+author = {Al-Mukaddim Khan Pathan and Rajkumar Buyya},
+title = {A Taxonomy and Survey of Content Delivery Networks},
+institution = {Grid Computing and Distributed Systems Laboratory, The University of Melbourne, Australia},
+year = {2007},
+number = {GRIDS-TR-2007-4},
+month = feb,
+url = {http://www.cloudbus.org/reports/CDN-Taxonomy.pdf}
+}
+
+
+% P2P
+
+@book{Oram:2001:PHP:558412,
+ editor = {Oram, Andy},
+ title = {{Peer-to-Peer}: {H}arnessing the {P}ower of {D}isruptive {T}echnologies},
+ year = {2001},
+ isbn = {059600110X},
+ publisher = {O'Reilly \& Associates, Inc.},
+ address = {Sebastopol, CA, USA},
+}
+
+@inproceedings{Buyya:2001:CPM:560889.792354,
+ author = {Buyya, Rajkumar and Vazhkudai, Sudharshan},
+ title = {Compute {P}ower {M}arket: {T}owards a {M}arket-{O}riented {G}rid},
+ booktitle = {Proceedings of the 1st International Symposium on Cluster Computing and the Grid},
+ series = {CCGRID '01},
+ year = {2001},
+ isbn = {0-7695-1010-8},
+ pages = {574--},
+ url = {http://dl.acm.org/citation.cfm?id=560889.792354},
+ acmid = {792354},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {Grids, Computational Economy, Markets, Internet Computing},
+}
+
+@book{Subramanian:2005:PPC:1051729,
+ author = {Subramanian, Ramesh and Goodman, Brian D.},
+ title = {Peer to {P}eer {C}omputing: {T}he {E}volution of a {D}isruptive {T}echnology},
+ year = {2005},
+ isbn = {1591404290},
+ publisher = {IGI Publishing},
+ address = {Hershey, PA, USA},
+}
+
+@Misc{Jabber,
+  author = {Jabber.org},
+  title = {Jabber},
+  howpublished = {Last visited},
+  month = apr,
+  year = {2016},
+  url = {http://www.jabber.org},
+}
+
+@TECHREPORT{Milojicic03peer-to-peercomputing,
+    author = {Dejan S. Milojicic and Vana Kalogeraki and Rajan Lukose and Kiran Nagaraja and Jim Pruyne and Bruno Richard and Sami Rollins and Zhichen Xu},
+    title = {{Peer-to-peer} {C}omputing},
+    number = {HPL-2002-57 (R.1)},
+    institution = {HP Laboratories Palo Alto},
+    year = {2003}
+}
+
+@article{Androutsellis-Theotokis:2004:SPC:1041680.1041681,
+ author = {Androutsellis-Theotokis, Stephanos and Spinellis, Diomidis},
+ title = {A {S}urvey of {P}eer-to-{P}eer {C}ontent {D}istribution {T}echnologies},
+ journal = {ACM Comput. Surv.},
+ issue_date = {December 2004},
+ volume = {36},
+ number = {4},
+ month = dec,
+ year = {2004},
+ issn = {0360-0300},
+ pages = {335--371},
+ numpages = {37},
+ url = {http://doi.acm.org/10.1145/1041680.1041681},
+ doi = {10.1145/1041680.1041681},
+ acmid = {1041681},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Content distribution, DHT, DOLR, grid computing, p2p, peer-to-peer},
+}
+
+@book{ceri1984distributed,
+  title={Distributed Databases: Principles and Systems},
+  author={Ceri, S. and Pelagatti, G.},
+  isbn={9780070108295},
+  lccn={84000770},
+  series={McGraw-Hill Computer Science Series},
+  url={http://books.google.es/books?id=sepQAAAAMAAJ},
+  year={1984},
+  publisher={McGraw-Hill}
+}
+
+@book{Ozsu1999principles,
+  title={Principles of distributed database systems},
+  author={{\"O}zsu, T. and Valduriez, P.},
+  isbn={9780136597070},
+  lccn={98011901},
+  url={http://books.google.es/books?id=K89QAAAAMAAJ},
+  year={1999},
+  publisher={Prentice Hall}
+}
+
+@article{Sheth:1990:FDS:96602.96604,
+ author = {Sheth, Amit P. and Larson, James A.},
+ title = {Federated database systems for managing distributed, heterogeneous, and autonomous databases},
+ journal = {ACM Comput. Surv.},
+ issue_date = {Sept. 1990},
+ volume = {22},
+ number = {3},
+ month = sep,
+ year = {1990},
+ issn = {0360-0300},
+ pages = {183--236},
+ numpages = {54},
+ url = {http://doi.acm.org/10.1145/96602.96604},
+ doi = {10.1145/96602.96604},
+ acmid = {96604},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@inproceedings{Corbett:2012:SGG:2387880.2387905,
+ author = {Corbett, James C. and Dean, Jeffrey and Epstein, Michael and Fikes, Andrew and Frost, Christopher and Furman, J. J. and Ghemawat, Sanjay and Gubarev, Andrey and Heiser, Christopher and Hochschild, Peter and Hsieh, Wilson and Kanthak, Sebastian and Kogan, Eugene and Li, Hongyi and Lloyd, Alexander and Melnik, Sergey and Mwaura, David and Nagle, David and Quinlan, Sean and Rao, Rajesh and Rolig, Lindsay and Saito, Yasushi and Szymaniak, Michal and Taylor, Christopher and Wang, Ruth and Woodford, Dale},
+ title = {Spanner: Google's globally-distributed database},
+ booktitle = {Proceedings of the 10th USENIX conference on Operating Systems Design and Implementation},
+ series = {OSDI'12},
+ year = {2012},
+ isbn = {978-1-931971-96-6},
+ location = {Hollywood, CA, USA},
+ pages = {251--264},
+ numpages = {14},
+ url = {http://dl.acm.org/citation.cfm?id=2387880.2387905},
+ acmid = {2387905},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+}
+
+
+% Big Data
+
+@article{Lynch2008,
+author={Lynch, Clifford},
+year={2008},
+month={Sep 04},
+title={How do your data grow?},
+journal={Nature},
+volume={455},
+number={7209},
+pages={28-9},
+keywords={Consortia; Humans; Information Management -- organization & administration; Databases, Factual -- standards; Information Management -- economics; Research Design; Information Management -- standards; Environmental Studies; Databases, Factual -- economics; Information Storage & Retrieval -- methods; Research -- economics; Archives; Information Storage & Retrieval -- economics; Time Factors; Data bases; Academic libraries; Community; Research -- organization & administration; Resource allocation; Research -- standards; Information storage; Educational leadership; Information Management -- methods; Technological obsolescence; Archives & records; Colleges & universities; Information Storage & Retrieval -- standards},
+isbn={00280836},
+language={English},
+doi={10.1038/455028a},
+}
+note={Copyright - Copyright Nature Publishing Group Sep 4, 2008; Características del documento - Photographs; Última actualización - 2013-02-19; CODEN - NATUAS; DOI - 1556827421; 40382691; 28221; NATUAS; GNAA; 18769419; INNNGNAA0000180668; 1. www.lib.umn.edu/about/scieval/documents.html; 2. www.library.ucsb.edu/informatics/documents.html; 3. www.ctwatch.org/quarterly/articles/2005/02/scientificdata- management; 4. ARL Workshop on New Collaborative Relationships Report to the National Science Foundation. To Stand the Test of Time: Long-Term Stewardship of Digital Data Sets in Science and Engineering (2006); 3. www.ctwatch.org/quarterly/articles/2005/02/scientific-data-management},
+abstract={National and international projects such as the Large Hadron Collider (LHC) at CERN, Europe's particlephysics laboratory near Geneva in Switzerland, or the Large Synoptic Survey Telescope planned for northern Chile, are frequently cited for the way they will challenge the state of the art in computation, networking and data storage. In a sense, landmark international projects like the LHC are the least problematic: the costs of data management are explicit in the budget and tend to be dominated by technology expenses that decline over time. ...] in the United States, for example, there are also other focused archives connected to some disciplines, including the collections at the NIH's National Center for Biotechnology Information, the social science archive of the Inter-University Consortium for Political and Social Research based at the University of Michigan in Ann Arbor, and the Protein Data Bank, which holds structural data for proteins and nucleic acids.},
+url={http://search.proquest.com/docview/204545713?accountid=14501},
+
+
+@article{Howe2008,
+author={Howe,Doug and Costanzo,Maria and Fey,Petra and Gojobori,Takashi and Hannick,Linda and Hide,Winston and Hill,David P. and Kania,Renate and Schaeffer,Mary and St Pierre,Susan and Twigger,Simon and White,Owen and Rhee,Seung Y.},
+year={2008},
+month={Sep 04},
+title={The future of biocuration},
+journal={Nature},
+volume={455},
+number={7209},
+pages={47-50},
+abstract={Large-scale sequencing centres, high-throughput analytical facilities and individual laboratories produce vast amounts of data such as nucleotide and protein sequences, protein crystal structures, gene-expression measurements, protein and genetic interactions and phenotype studies. For a paper about the molecular biology of a particular gene, process or pathway, such information might include gene-expression patterns, mutant phenotypes, results of biochemical assays, protein-complex membership and the authors' inferences about the functions and roles of the gene products studied. Biocuration requires a blend of skills and experience, including advanced scientific research and competence in database management systems, multiple operating systems and scripting languages.},
+keywords={Animals; Humans; Computational Biology -- methods; Internet -- trends; Computer science; Data base management systems; Environmental Studies; Molecular biology; Information Storage & Retrieval -- methods; Databases, Factual -- utilization; Biological Science Disciplines -- methods; Journals; Computational Biology -- trends; Community; Databases, Factual -- trends; Biological Science Disciplines -- trends; Computational Biology -- education; Data mining; Career Choice; Education, Graduate; Publishing -- trends; Internet -- utilization; Biomedical research; Information Storage & Retrieval -- trends; Bioinformatics; Genomics},
+isbn={00280836},
+language={English},
+doi={10.1038/455047a},
+}
+note={Copyright - Copyright Nature Publishing Group Sep 4, 2008; Características del documento - Photographs; Tables; Última actualización - 2013-02-19; CODEN - NATUAS; DOI - 1556827531; 40382691; 28221; NATUAS; GNAA; 18769432; INNNGNAA0000180681; 1. Benson, D. A., Karsch-Mizrachi, I., Lipman, D. J., Ostell, J. \& Wheeler, D. L. Nucl. Acid. Res. 36, D25.D30 (2008); 2. Wheeler, D. L. et al. Nucl. Acid. Res. 36, D13.D21 (2008); 3. Salimi, N. \& Vita, R. PLoS Comput. Biol. 2, e125 (2006); 4. Brazma, A. et al. Nature Genet. 29, 365.371 (2001); 5. Deutsch, E. W. et al. Nature Biotechnol. 26, 305.312 (2008); 6. Field, D. et al. Nature Biotechnol. 26, 541.547 (2008); 7. Jenkins, H. et al. Nature Biotechnol. 22, 1601.1606 (2004); 8. Orchard, S. et al. Nature Biotechnol. 25, 894.898 (2007); 9. Taylor, C. F. et al. Nature Biotechnol. 25, 887.893 (2007); 10. Bourne, P. PLoS Comput. Biol. 1, 179.181 (2005); 11. Seringhaus, M. R. \& Gerstein, M. B. BMC Bioinformatics 8, 17 (2007); 12. Seringhaus, M. \& Gerstein, M. FEBS Lett. 582, 1170 (2008); 13. Ort, D. R. \& Grennan, A. K. Plant Physiol. 146, 1022.1023 (2008); 14. Burkhardt, K., Schneider, B. \& Ory, J. PLoS Comput. Biol. 2, e99 (2006); 15. Rhee, S. Y. Plant Physiol. 134, 543.547 (2004); 16. Mons, B. et al. Genome Biol. 9, R89 (2008); 17. Huss, J. W. et al. PLoS Biol. 6, e175 (2008); 18. Palmer, C. L., Heidorn, P. B., Wright, D. \& Cragin, M. H. Int. J. Dig. Curation 2, 31.40 (2007); 1. Benson, D. A., Karsch-Mizrachi, I., Lipman, D. J., Ostell, J. \& Wheeler, D. L. Nucl. Acid. Res. 36, D25-D30 (2008); 10. Bourne, P. PLoS Comput. Biol. 1, 179-181 (2005); 4. Brazma, A. et al. Nature Genet. 29, 365-371 (2001); 5. Deutsch, E. W. et al. Nature Biotechnol. 26, 305-312 (2008); 6. Field, D. et al. Nature Biotechnol. 26, 541-547 (2008); 7. Jenkins, H. et al. Nature Biotechnol. 22, 1601-1606 (2004); 8. Orchard, S. et al. Nature Biotechnol. 25, 894-898 (2007); 13. Ort, D. R. \& Grennan, A. K. Plant Physiol. 146, 1022-1023 (2008); 18. Palmer, C. L., Heidorn, P. B., Wright, D. \& Cragin, M. H. Int. J. Dig. Curation 2, 31-40 (2007); 15. Rhee, S. Y. Plant Physiol. 134, 543-547 (2004); Taylor, Chris F.; Paton, Norman W.; Lilley, Kathryn S.; Binz, Pierre-Alain; et al. The minimum information about a proteomics experiment (MIAPE) NATURE BIOTECHNOLOGY, 25. 8 (2007): 887-893. NATURE PUBLISHING GROUP; 2. Wheeler, D. L. et al. Nucl. Acid. Res. 36, D13-D21 (2008)},
+url={http://search.proquest.com/docview/204546673?accountid=14501},
+
+
+@article{Manyika2011,
+  title={Big data: The next frontier for innovation, competition, and productivity},
+  author={Manyika, James and Chui, Michael and Brown, Brad and Bughin, Jacques and Dobbs, Richard and Roxburgh, Charles and Byers, Angela Hung},
+  journal={McKinsey Global Institute},
+  pages={1--137},
+  year={2011}
+}
+
+@Misc{Kusnetzky2010,
+author = {Dan Kusnetzky},
+title = {What is ``{B}ig {D}ata?''},
+howpublished = {ZDNet},
+month = feb,
+year = {2010},
+url = {http://www.zdnet.com/blog/virtualization/what-is-big-data/1708},
+}
+
+@Misc{MIKE2.0,
+author = {{MIKE2.0}},
+title = {{B}ig {D}ata Definition},
+howpublished = {Last visited},
+month = apr,
+year = {2016},
+url = {http://mike2.openmethodology.org/wiki/Big_Data_Definition},
+}
+
+
+% MapReduce
+
+@inproceedings{Ghemawat2003a,
+ author = {Ghemawat, Sanjay and Gobioff, Howard and Leung, Shun-Tak},
+ title = {The Google File System},
+ booktitle = {Proceedings of the Nineteenth ACM Symposium on Operating Systems Principles},
+ series = {SOSP '03},
+ year = {2003},
+ isbn = {1-58113-757-5},
+ location = {Bolton Landing, NY, USA},
+ pages = {29--43},
+ numpages = {15},
+ url = {http://doi.acm.org/10.1145/945445.945450},
+ doi = {10.1145/945445.945450},
+ acmid = {945450},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {clustered storage, data storage, fault tolerance, scalability}
+} 
+
+@article{Ghemawat2003b,
+ author = {Ghemawat, Sanjay and Gobioff, Howard and Leung, Shun-Tak},
+ title = {The Google file system},
+ journal = {SIGOPS Operating Systems Review},
+ issue_date = {December 2003},
+ volume = {37},
+ issue = {5},
+ month = oct,
+ year = {2003},
+ issn = {0163-5980},
+ pages = {29--43},
+ numpages = {15},
+ url = {http://doi.acm.org/10.1145/1165389.945450},
+ doi = {10.1145/1165389.945450},
+ acmid = {945450},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {clustered storage, data storage, fault tolerance, scalability},
+}
+
+@inproceedings{Dean2004,
+ author = {Dean, Jeffrey and Ghemawat, Sanjay},
+ title = {{MapReduce}: Simplified Data Processing on Large Clusters},
+ booktitle = {Proceedings of the 6th Symposium on Opearting Systems Design \& Implementation - Volume 6},
+ series = {OSDI'04},
+ year = {2004},
+ location = {San Francisco, CA},
+ pages = {137--150},
+ numpages = {13},
+ url = {http://dl.acm.org/citation.cfm?id=1251254.1251264},
+ acmid = {1251264},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA}
+} 
+
+@article{Dean2008,
+ author = {Dean, Jeffrey and Ghemawat, Sanjay},
+ title = {{MapReduce}: Simplified Data Processing on Large Clusters},
+ journal = {Communications of the ACM},
+ issue_date = {January 2008},
+ volume = {51},
+ number = {1},
+ month = jan,
+ year = {2008},
+ issn = {0001-0782},
+ pages = {107--113},
+ numpages = {7},
+ url = {http://doi.acm.org/10.1145/1327452.1327492},
+ doi = {10.1145/1327452.1327492},
+ acmid = {1327492},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+
+@article{Dean2010,
+ author = {Dean, Jeffrey and Ghemawat, Sanjay},
+ title = {{MapReduce}: A Flexible Data Processing Tool},
+ journal = {Communications of the ACM},
+ issue_date = {January 2010},
+ volume = {53},
+ number = {1},
+ month = jan,
+ year = {2010},
+ issn = {0001-0782},
+ pages = {72--77},
+ numpages = {6},
+ url = {http://doi.acm.org/10.1145/1629175.1629198},
+ doi = {10.1145/1629175.1629198},
+ acmid = {1629198},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+
+  @book{White2011,
+  author        = "Tom White",
+  title         = "Hadoop: The Definitive Guide",
+  edition       = "Second",
+  publisher     = "O'Reilly",
+  year          = "2011"
+  }
+  address       = "Sebastopol, CA, USA",
+
+  @misc{Hadoop,
+    author        = "{{The Apache Software Foundation}}",
+    title         = "{{A}pache {H}adoop}",
+    howpublished  = {Last visited},
+    month         = nov,
+    year          = {2015},
+    url           = "http://hadoop.apache.org/",
+  }
+  
+  @misc{HDFS,
+    author        = "{{The Apache Software Foundation}}",
+    title         = "{{HDFS} {A}rchitecture {G}uide}",
+    howpublished  = {Last visited},
+    month         = nov,
+    year          = {2015},
+    url           = "https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html",
+  }
+  
+
+
+
+%%%%%%%%%%%%%%%%%
+% Data transport technologies %
+%%%%%%%%%%%%%%%%%
+
+@MISC{Fielding:1999:HTP:RFC2616,
+ author = {Fielding, R. and Gettys, J. and Mogul, J. and Frystyk, H. and Masinter, L. and Leach, P. and Berners-Lee, T.},
+ title = {Hypertext {T}ransfer {P}rotocol -- {HTTP/1.1}},
+ year = {1999},
+ publisher = {RFC Editor},
+ address = {United States},
+}
+
+@PhdThesis{Fielding2000Phd,
+author = {Roy Thomas Fielding},
+title = {Architectural Styles and the Design of Network-based Software Architectures},
+school = {University of California, Irvine},
+year = {2000},
+url = {http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm}
+}
+
+@article{Fielding:2002:PDM,
+ author = {Fielding, Roy T. and Taylor, Richard N.},
+ title = {Principled design of the modern Web architecture},
+ journal = {ACM Transactions on Internet Technology (TOIT)},
+ issue_date = {May 2002},
+ volume = {2},
+ number = {2},
+ month = may,
+ year = {2002},
+ issn = {1533-5399},
+ pages = {115--150},
+ numpages = {36},
+ url = {http://doi.acm.org/10.1145/514183.514185},
+ doi = {10.1145/514183.514185},
+ acmid = {514185},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Network-based applications, REST, World Wide Web},
+}
+
+@inproceedings{Bester:1999:GDM:301816.301839,
+ author = {Bester, Joseph and Foster, Ian and Kesselman, Carl and Tedesco, Jean and Tuecke, Steven},
+ title = {{GASS}: {A} {D}ata {M}ovement and {A}ccess {S}ervice for {W}ide {A}rea {C}omputing {S}ystems},
+ booktitle = {Proceedings of the sixth workshop on I/O in parallel and distributed systems},
+ series = {IOPADS '99},
+ year = {1999},
+ isbn = {1-58113-123-2},
+ location = {Atlanta, Georgia, United States},
+ pages = {78--88},
+ numpages = {11},
+ url = {http://doi.acm.org/10.1145/301816.301839},
+ doi = {10.1145/301816.301839},
+ acmid = {301839},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@MISC{Plank99theinternet,
+    author = {James S. Plank and Micah Beck and Wael R. Elwasif and Terence Moore and Martin Swany and Rich Wolski},
+    title = {The {I}nternet {B}ackplane {P}rotocol: {S}torage in the {N}etwork},
+    year = {1999}
+}
+
+@INPROCEEDINGS{Bassi02theinternet,
+    author = {Alessandro Bassi and Micah Beck and Graham Fagg and Terry Moore and James S. Plank and et al.},
+    title = {The {I}nternet {B}ackplane {P}rotocol: {A} {S}tudy in {R}esource {S}haring},
+    booktitle = {Future Generation Computing Systems},
+    year = {2002},
+    pages = {551--561},
+    publisher = {}
+}
+
+@MISC{Postel85filetransfer,
+    author = {J. Postel and J. Reynolds},
+    title = {File {T}ransfer {P}rotocol ({FTP})},
+    year = {1985},
+    publisher = {RFC Editor},
+    address = {United States},
+}
+
+@INPROCEEDINGS{Allcock2001secureefficient,
+   author={Allcock, B. and Bester, J. and Bresnahan, J. and Chervenak, A.L. and Kesselman, C. and Meder, S. and Nefedova, V. and Quesnel, D. and Tuecke, S. and Foster, I.},
+   booktitle={Mass Storage Systems and Technologies, 2001. MSS '01. Eighteenth IEEE Symposium on Mass Storage Systems and Technologies},
+   title={Secure, Efficient Data Transport and Replica Management for High-Performance Data-Intensive Computing},
+   year={2001},
+   pages={13-13},
+   keywords={Access protocols;Computational modeling;Data mining;Data security;Dispersion;Electronic mail;Physics;Supercomputers;Transport protocols;Web and internet services},
+   doi={10.1109/MSS.2001.10001},
+   ISSN={2160-195X},
+   url={http://toolkit.globus.org/alliance/publications/papers/msc01.pdf}
+}
+@inproceedings{Allcock2001globus,
+  title={Globus toolkit support for distributed data-intensive science},
+  author={Allcock, William and Chervenak, A and Foster, Ian and Pearlman, Laura and Welch, Von and Wilde, Michael},
+  booktitle={International Conference on Computing in High Energy and Nuclear Physics, Beijing, China},
+  year={2001},
+  url={http://toolkit.globus.org/alliance/publications/papers/Globus.CHEP01.pdf}
+}
+@article{Allcock02datamanagement,
+ author = {Allcock, Bill and Bester, Joe and Bresnahan, John and Chervenak, Ann L. and Foster, Ian and Kesselman, Carl and Meder, Sam and Nefedova, Veronika and Quesnel, Darcy and Tuecke, Steven},
+ title = {Data management and transfer in high-performance computational grid environments},
+ journal = {Parallel Computing},
+ issue_date = {May 2002},
+ volume = {28},
+ number = {5},
+ month = may,
+ year = {2002},
+ issn = {0167-8191},
+ pages = {749--771},
+ numpages = {23},
+ doi = {10.1016/S0167-8191(02)00094-7},
+ url = {http://toolkit.globus.org/alliance/publications/papers/dataMgmt.pdf},
+ acmid = {605726},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+ keywords = {GridFTP, data grid, globus, replica management}
+}
+@misc{Allcock:2003:GFD.020GridFTP,
+  title={{GridFTP}: {P}rotocol {E}xtensions to {FTP} for the {G}rid},
+  url={http://www.ggf.org/documents/GFD.20.pdf},
+  number={August},
+  journal={Security},
+  publisher={Open Grid Forum},
+  author={Allcock, William and Bester, Joe and Bresnahan, John and Meder, Sam and Tuecke, Steve},
+  year={2003}, pages={2010--2010}
+}
+@misc{Mandrichenko:2005:GridFTPv2,
+  title={{GridFTP} v2 {P}rotocol {D}escription},
+  url={http://www.ggf.org/documents/GFD.47.pdf},
+  number={May},
+  publisher={Open Grid Forum},
+  author={Mandrichenko, I. and Allcock, W. and Perelmutov, T.},
+  year={2005},
+}
+@INPROCEEDINGS{Allcock:2005:XIO,
+  author={Allcock, W. and Bresnahan, J. and Kettimuthu, R. and Link, J.}, 
+  booktitle={Parallel and Distributed Processing Symposium, 2005. Proceedings. 19th IEEE International}, 
+  title={The {G}lobus e{X}tensible {I}nput/{O}utput {S}ystem ({XIO}): {A} protocol independent {IO} system for the {G}rid}, 
+  year={2005}, 
+  pages={8 pp.-}, 
+  keywords={application program interfaces;grid computing;performance evaluation;protocols;abstraction layer;application program interfaces;distributed heterogeneous grid environment;globus extensible input-output system;protocol independent IO system;Access protocols;Application software;Communication system control;Computer bugs;Computer science;Delay;Fabrics;Libraries;Mathematics;Transport protocols}, 
+  doi={10.1109/IPDPS.2005.429}, 
+  month={April}
+}
+  crossref  = {DBLP:conf/pdpta/2008},
+@inproceedings{kettimuthu2008gridftp,
+  author    = {Rajkumar Kettimuthu and
+               Liu Wantao and
+               Joseph M. Link and
+               John Bresnahan},
+  title     = {A {GridFTP} {T}ransport {D}river for {G}lobus {XIO}},
+  booktitle = {Proceedings of the International Conference on Parallel and Distributed
+               Processing Techniques and Applications, {PDPTA} 2008, Las Vegas, Nevada,
+               USA, July 14-17, 2008, 2 Volumes},
+  pages     = {843--849},
+  year      = {2008},
+  timestamp = {Thu, 29 Oct 2009 22:18:13 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/pdpta/KettimuthuWLB08},
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  url={http://toolkit.globus.org/alliance/publications/papers/gridftp_transport_driver_xio.pdf}
+}
+
+
+% Data Replication
+
+@article{Amjad2012,
+title = "A survey of dynamic replication strategies for improving data availability in data grids",
+journal = "Future Generation Computer Systems",
+volume = "28",
+number = "2",
+pages = "337 - 349",
+year = "2012",
+note = "",
+issn = "0167-739X",
+doi = "10.1016/j.future.2011.06.009",
+url = "http://www.sciencedirect.com/science/article/pii/S0167739X11001208",
+author = "Tehmina Amjad and Muhammad Sher and Ali Daud",
+keywords = "Data grid",
+keywords = "Data replication",
+keywords = "Dynamic replication techniques",
+keywords = "Replication strategies"
+}
+
+@INPROCEEDINGS{Ranganathan2001,
+    author = {Kavitha Ranganathan and Ian Foster},
+    title = {Design and Evaluation of Dynamic Replication Strategies for a High-Performance Data Grid},
+    booktitle = {International Conference on Computing in High Energy and Nuclear Physics},
+    year = {2001}
+}
+
+@INPROCEEDINGS{Yuan2007,
+author={Yulai Yuan and Yongwei Wu and Guangwen Yang and Feng Yu},
+booktitle={Proceedings of the Sixth International Conference on Grid and Cooperative Computing (GCC 2007)},
+title={Dynamic Data Replication based on Local Optimization Principle in Data Grid},
+year={2007},
+pages={815-822},
+keywords={grid computing;optimisation;bandwidth consumption reduction;data access;data grid;dynamic replication strategy;local optimization principle;storage capability;Bandwidth;Computer applications;Computer science;Costs;Distributed computing;Frequency;Grid computing;Information science;Laboratories;Topology},
+doi={10.1109/GCC.2007.62}
+}
+
+@INPROCEEDINGS{Lamehamedi2003,
+author={Lamehamedi, H. and Shentu, Z. and Szymanski, B. and Deelman, E.},
+booktitle={Proceedings of the International Parallel and Distributed Processing Symposium (IPDPS'03)},
+title={Simulation of dynamic data replication strategies in Data Grids},
+year={2003},
+pages={10-},
+keywords={cache storage;digital simulation;middleware;workstation clusters;Data Grid simulator;Data Grids;GridNet;Internet;caching;cost-estimation model;dynamic data replication strategies;dynamic memory middleware;network latency;replica placement;replica size;replication algorithm;Algorithm design and analysis;Bandwidth;Costs;Delay;Internet;Large-scale systems;Mesh generation;Network topology;Runtime;Statistical distributions},
+doi={10.1109/IPDPS.2003.1213206},
+ISSN={1530-2075}
+}
+
+@INPROCEEDINGS{Byoung-Dai2001,
+author={Byoung-Dai Lee and Weissman, J.B.},
+booktitle={Proceedings of the 10th IEEE International Symposium on High Performance Distributed Computing},
+title={Dynamic replica management in the service grid},
+year={2001},
+pages={433-434},
+keywords={Internet;replicated databases;resource allocation;shared memory systems;Internet;connected servers;dynamic network sharing;dynamic replica management;dynamic replication;high-demand services;service deletion;service grid;simple connectivity;sophisticated services;Algorithm design and analysis;Cities and towns;Computer science;Context-aware services;Decision making;Delay;Network servers;Protocols;Samarium;Scalability},
+doi={10.1109/HPDC.2001.945213},
+ISSN={1082-8907}
+}
+
+@INPROCEEDINGS{Loukopoulos2000,
+author={Loukopoulos, T. and Ahmad, I.},
+booktitle={Distributed Computing Systems, 2000. Proceedings. 20th International Conference on},
+title={Static and adaptive data replication algorithms for fast information access in large distributed systems},
+year={2000},
+pages={385-392},
+keywords={database theory;distributed algorithms;genetic algorithms;heuristic programming;replicated databases;NP-complete;adaptive data replication algorithms;bandwidth;data replication;fast information access;frequently accessed object replicas;genetic algorithm;greedy heuristic;heuristics;large distributed systems;network traffic;read patterns;read-intensive network;static data replication algorithms;user response time;write patterns;Broadcasting;Communication system control;Computer science;Constraint optimization;Costs;Equations;Marine vehicles;Writing},
+doi={10.1109/ICDCS.2000.840950},
+ISSN={1063-6927},
+}
+
+@article{Padmanabhan2008,
+ author = {Padmanabhan, Prasanna and Gruenwald, Le and Vallur, Anita and Atiquzzaman, Mohammed},
+ title = {A survey of data replication techniques for mobile ad hoc network databases},
+ journal = {The VLDB Journal},
+ issue_date = {August 2008},
+ volume = {17},
+ number = {5},
+ month = aug,
+ year = {2008},
+ issn = {1066-8888},
+ pages = {1143--1164},
+ numpages = {22},
+ url = {http://dx.doi.org/10.1007/s00778-007-0055-0},
+ doi = {10.1007/s00778-007-0055-0},
+ acmid = {1388514},
+ publisher = {Springer-Verlag New York, Inc.},
+ address = {Secaucus, NJ, USA},
+ keywords = {Data replication, Mobile ad hoc network databases, Mobile databases},
+}
+
+@article{Khan2008,
+title = "Comparison and analysis of ten static heuristics-based Internet data replication techniques",
+journal = "Journal of Parallel and Distributed Computing",
+volume = "68",
+number = "2",
+pages = "113 - 136",
+year = "2008",
+note = "",
+issn = "0743-7315",
+doi = "10.1016/j.jpdc.2007.06.009",
+url = "http://www.sciencedirect.com/science/article/pii/S0743731507001153",
+author = "Samee Ullah Khan and Ishfaq Ahmad",
+keywords = "Internet",
+keywords = "Data replication",
+keywords = "Static allocation",
+keywords = "Informed searching "
+}
+
+
+% Distributed Storage
+
+@Book{Pessach2013,
+author = {Yaniv Pessach},
+title = {Distributed Storage: Concepts, Algorithms, and Implementations},
+publisher = {Amazon},
+year = {2013}
+}
+
+@TechReport{Placek2006,
+author = {Martin Placek and Rajkumar Buyya},
+title = {A Taxonomy of Distributed Storage Systems},
+institution = {Grid Computing and Distributed Systems Laboratory, The University of Melbourne, Australia},
+year = {2006},
+number = {GRIDS-TR-2006-11},
+month = jul,
+url = {http://www.cloudbus.org/reports/DistributedStorageTaxonomy.pdf}
+}
+
+@INPROCEEDINGS{Chapin99thelegion,
+    author = {Steve J. Chapin and Dimitrios Katramatos and John Karpovich and Andrew S. Grimshaw},
+    title = {The {L}egion {R}esource {M}anagement {S}ystem},
+    booktitle = {Proceedings of the 5 th Workshop on Job Scheduling Strategies for Parallel Processing},
+    year = {1999},
+    pages = {162--178},
+    publisher = {Springer Verlag}
+}
+
+@INPROCEEDINGS{White00grid-basedfile,
+    author = {Brian White and Andrew S. Grimshaw and Anh Nguyen-tuong},
+    title = {{Grid-Based} {F}ile {A}ccess: {T}he {L}egion {I/O} {M}odel},
+    booktitle = {Proceedings of the Ninth IEEE Symposium on High Performance Distributed Computing},
+    year = {2000},
+    pages = {165--173}
+}
+
+@inproceedings{Tatebe2002,
+ author = {Tatebe, Osamu and Morita, Youhei and Matsuoka, Satoshi and Soda, Noriyuki and Sekiguchi, Satoshi},
+ title = {Grid Datafarm Architecture for Petascale Data Intensive Computing},
+ booktitle = {Proceedings of the 2nd IEEE/ACM International Symposium on Cluster Computing and the Grid},
+ series = {CCGRID '02},
+ year = {2002},
+ isbn = {0-7695-1582-7},
+ pages = {102--},
+ url = {http://dl.acm.org/citation.cfm?id=872748.873272},
+ acmid = {873272},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA}
+}
+
+@inproceedings{Tatebe2004,
+  title={Gfarm v2: A Grid file system that supports high-performance distributed and parallel data computing},
+  author={Tatebe, Osamu and Soda, Noriyuki and Morita, Youhei and Matsuoka, Satoshi and Sekiguchi, Satoshi},
+  booktitle={Proceedings of the 2004 Computing in High Energy and Nuclear Physics},
+  year={2004}
+}
+@inproceedings{Tatebe2005,
+      author         = "Tatebe, Osamu and Soda, Noriyuki and Morita, Youhei and Matsuoka,
+                        Satoshi and Sekiguchi, Satoshi",
+      title          = "{Gfarm v2: A grid file system that supports
+                        high-performance distributed and parallel data computing}",
+      booktitle      = "{Proceedings of the 14th International Conference on Computing in High Energy Physics and Nuclear Physics (CHEP'04), Interlaken, Switzerland,
+                        September 27-October 1, 2004}",
+      url            = "http://doc.cern.ch/yellowrep/2005/2005-002/p1172.pdf",
+      year           = "2005",
+      pages          = "1172-1175",
+      SLACcitation   = "%%CITATION = INSPIRE-707486;%%"
+}
+
+@article{Tatebe2010,
+year={2010},
+issn={0288-3635},
+journal={New Generation Computing},
+volume={28},
+number={3},
+doi={10.1007/s00354-009-0089-5},
+title={Gfarm Grid File System},
+url={http://dx.doi.org/10.1007/s00354-009-0089-5},
+publisher={Verlag Omsha Tokio},
+keywords={Distributed File System; Global File System; Distributed Data Intensive Computing},
+author={Tatebe, Osamu and Hiraga, Kohei and Soda, Noriyuki},
+pages={257-275},
+language={English}
+}
+
+@Misc{GFAL,
+author = {{CERN}},
+title = {Grid File Access Library 2.0},
+howpublished = {Last visited},
+month = nov,
+year = {2015},
+url = {https://dmc.web.cern.ch/projects/gfal-2/home}
+}
+
+@Misc{GFALlcg,
+author = {{European Middleware Initiative}},
+title = {Grid File Access Library 2.0},
+howpublished = {Last visited},
+month = nov,
+year = {2015},
+url = {http://www.eu-emi.eu/emi-2-matterhorn-products/-/asset_publisher/B4Rk/content/gfal-lcg-util}
+}
+
+@Misc{GFALlcggfal2,
+author = {{European Middleware Initiative}},
+title = {Grid File Access Library 2.0},
+howpublished = {Last visited},
+month = apr,
+year = {2016},
+url = {https://svnweb.cern.ch/trac/lcgutil/wiki/gfal2}
+}
+
+@Misc{GFALlcgDesc,
+author = {{European Middleware Initiative}},
+title = {GFAL Functional Description},
+howpublished = {Last visited},
+month = apr,
+year = {2016},
+url = {https://svnweb.cern.ch/trac/lcgutil/wiki/GFAL}
+}
+
+@inproceedings{Weil:2004,
+  title={Dynamic metadata management for petabyte-scale file systems},
+  author={Weil, Sage A and Pollack, Kristal T and Brandt, Scott A and Miller, Ethan L},
+  booktitle={Proceedings of the 2004 ACM/IEEE conference on Supercomputing},
+  pages={4},
+  year={2004},
+  organization={IEEE Computer Society}
+}
+
+@inproceedings{Weil:2006:Ceph,
+ author = {Weil, Sage A. and Brandt, Scott A. and Miller, Ethan L. and Long, Darrell D. E. and Maltzahn, Carlos},
+ title = {Ceph: A Scalable, High-performance Distributed File System},
+ booktitle = {Proceedings of the 7th Symposium on Operating Systems Design and Implementation},
+ series = {OSDI '06},
+ year = {2006},
+ isbn = {1-931971-47-1},
+ location = {Seattle, Washington},
+ pages = {307--320},
+ numpages = {14},
+ url = {http://dl.acm.org/citation.cfm?id=1298455.1298485},
+ acmid = {1298485},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA}
+}
+
+@inproceedings{Weil:2006:CRUSH,
+  title={{CRUSH}: Controlled, scalable, decentralized placement of replicated data},
+  author={Weil, Sage A. and Brandt, Scott A. and Miller, Ethan L. and Maltzahn, Carlos},
+  booktitle={Proceedings of the 2006 ACM/IEEE conference on Supercomputing},
+  pages={122},
+  year={2006},
+  organization={ACM}
+}
+
+@inproceedings{Wang:2013:PerformanceCeph,
+ author = {Wang, Feiyi and Nelson, Mark and Oral, Sarp and Atchley, Scott and Weil, Sage and Settlemyer, Bradley W. and Caldwell, Blake and Hill, Jason},
+ title = {Performance and Scalability Evaluation of the Ceph Parallel File System},
+ booktitle = {Proceedings of the 8th Parallel Data Storage Workshop},
+ series = {PDSW '13},
+ year = {2013},
+ isbn = {978-1-4503-2505-9},
+ location = {Denver, Colorado},
+ pages = {14--19},
+ numpages = {6},
+ url = {http://doi.acm.org/10.1145/2538542.2538562},
+ doi = {10.1145/2538542.2538562},
+ acmid = {2538562},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+
+@article{Duan2015CSTORE,
+title = "CSTORE: A desktop-oriented distributed public cloud storage system ",
+journal = "Computers \& Electrical Engineering ",
+volume = "42",
+number = "",
+pages = "60 - 73",
+year = "2015",
+note = "",
+issn = "0045-7906",
+doi = "10.1016/j.compeleceng.2014.11.001",
+url = "http://www.sciencedirect.com/science/article/pii/S0045790614002705",
+author = "Hancong Duan and Shiyao Yu and Mei Mei and Wenhan Zhan and Lin Li",
+keywords = "Desktop-oriented",
+keywords = "Metadata",
+keywords = "Hash-rule",
+keywords = "Bucket",
+keywords = "Storage ",
+abstract = "Abstract Previous distributed file systems aim at storing very large data sets. Their architectures are often designed to support large-scale data-intensive applications, which cannot cope with massive daily users who want to store their data on the Internet. In this paper, \{CSTORE\} is proposed to support mass data storage for a large number of users. The user-independent metadata management can ensure data security through assigning an independent namespace to every user. Operating logs are applied to synchronize simultaneous sessions of the same user and resolve conflicts. We also implement a block-level deduplication strategy based on our three-level mapping hash method for the large quantity of repeated data. The migration and rank extension on the hash rules are defined to achieve load balancing and capacity expansion. Performance measurements under a variety of workloads show that \{CSTORE\} offers the better scalability and performance than other public cloud storage systems."
+}
+
+@inproceedings{karger1997consistent,
+  title={Consistent hashing and random trees: Distributed caching protocols for relieving hot spots on the World Wide Web},
+  author={Karger, David and Lehman, Eric and Leighton, Tom and Panigrahy, Rina and Levine, Matthew and Lewin, Daniel},
+  booktitle={Proceedings of the twenty-ninth annual ACM symposium on Theory of computing},
+  pages={654--663},
+  year={1997},
+  organization={ACM}
+}
+
+@Misc{GlusterFS,
+author = {{Red Hat, Inc}},
+title = {Gluster: Storage for your Cloud},
+howpublished = {Last visited},
+month = nov,
+year = {2016},
+url = {http://www.gluster.org/}
+}
+
+@INPROCEEDINGS{Noronha2008IMCa, 
+author={Noronha, R. and Panda, D.K.}, 
+booktitle={Parallel Processing, 2008. ICPP '08. 37th International Conference on}, 
+title={IMCa: A High Performance Caching Front-End for GlusterFS on InfiniBand}, 
+year={2008}, 
+pages={462-469}, 
+keywords={cache storage;computer architecture;GlusterFS;IMCa;InfiniBand;Lustre file system;cache bank;cache servers;client-servers;high performance caching front-ends;intermediate cache architecture;Computer science;Delay;Explosions;File servers;File systems;IP networks;Network servers;Parallel processing;Scalability;Sun;InfiniBand;Lustre;System Area Networks}, 
+doi={10.1109/ICPP.2008.84}, 
+ISSN={0190-3918}, 
+month={Sept}
+}
+
+inbook{Boyer2012,
+place={United States},
+title={GlusterFS One Storage Server to Rule Them All},
+url={http://www.osti.gov/scitech/servlets/purl/1048672},
+abstractNote={GlusterFS is a Linux based distributed file system, designed to be highly scalable and serve many clients. Some reasons to use GlusterFS are: No centralized metadata server, Scalability, Open Source, Dynamic and live service modifications, Can be used over Infiniband or Ethernet, Can be tuned for speed and/or resilience and Flexible administration. It’s useful for enterprise environments - virtualization; high performance computing (HPC) and it works with Mac, Linux and Windows clients. Conclusions are: (1) GlusterFS proved to have widespread capabilities as a virtual file system; (2) Scalability is very dependent upon the underlying hardware; (3) Lack of built-in encryption and security paradigm; and (4) Best suited in a general purpose computing environment.},
+author={Boyer, Eric B. and Broomfield, Matthew C. and Perrotti, Terrell A.},
+year={2012},
+month=jul
+}
+
+@TechReport{Beloglazov2012,
+author = {Anton Beloglazov and Sareh Fotuhi Piraghaj and Mohammed Alrokayan and Rajkumar Buyya},
+title = {Deploying {OpenStack} on {CentOS} Using the {KVM} Hypervisor and {GlusterFS} Distributed File System},
+institution = {Cloud Computing and Distributed Systems Laboratory, The University of Melbourne},
+year = {2012},
+type = {Technical Report},
+number = {CLOUDS-TR-2012-3},
+month = aug
+}
+
+@article{Donvito2014,
+  author={Giacinto Donvito and Giovanni Marzulli and Domenico Diacono},
+  title={Testing of several distributed file-systems (HDFS, Ceph and GlusterFS) for supporting the HEP experiments analysis},
+  journal={Journal of Physics: Conference Series},
+  volume={513},
+  number={4},
+  pages={042014},
+  url={http://stacks.iop.org/1742-6596/513/i=4/a=042014},
+  year={2014},
+  abstract={The activity of testing new storage solution is of great importance in order to provide both features and performance evaluation and give few hints to small-medium sites that are interested in exploiting new storage technologies. In particular this work will cover storage solutions that provide both standard POSIX storage access and cloud technologies; we focused our attention and our test on HDFS, Ceph, and GlusterFS.}
+}
+
+
+@inproceedings{Chervenak2002,
+ author = {Chervenak, Ann and Deelman, Ewa and Foster, Ian and Guy, Leanne and Hoschek, Wolfgang and Iamnitchi, Adriana and Kesselman, Carl and Kunszt, Peter and Ripeanu, Matei and Schwartzkopf, Bob and Stockinger, Heinz and Stockinger, Kurt and Tierney, Brian},
+ title = {Giggle: A Framework for Constructing Scalable Replica Location Services},
+ booktitle = {Proceedings of the 2002 ACM/IEEE conference on Supercomputing},
+ series = {Supercomputing '02},
+ year = {2002},
+ location = {Baltimore, Maryland},
+ pages = {1--17},
+ numpages = {17},
+ url = {http://dl.acm.org/citation.cfm?id=762761.762798},
+ acmid = {762798},
+ publisher = {IEEE Computer Society Press},
+ address = {Los Alamitos, CA, USA},
+}
+
+@article{Howard:1988:SPD,
+ author = {Howard, John H. and Kazar, Michael L. and Menees, Sherri G. and Nichols, David A. and Satyanarayanan, M. and Sidebotham, Robert N. and West, Michael J.},
+ title = {Scale and performance in a distributed file system},
+ journal = {ACM Transactions on Computer Systems (TOCS)},
+ issue_date = {Feb. 1988},
+ volume = {6},
+ number = {1},
+ month = feb,
+ year = {1988},
+ issn = {0734-2071},
+ pages = {51--81},
+ numpages = {31},
+ url = {http://doi.acm.org/10.1145/35037.35059},
+ doi = {10.1145/35037.35059},
+ acmid = {35059},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@ARTICLE{Satyanarayanan1990Coda,
+author={Mahadev Satyanarayanan and Kistler, James J. and Kumar, Puneet and Okasaki, Maria E. and Siegel, Ellen H. and Steere, David C.},
+journal={IEEE Transactions on Computers},
+title={Coda: a highly available file system for a distributed workstation environment},
+year={1990},
+volume={39},
+number={4},
+pages={447-459},
+keywords={distributed processing;file organisation;workstations;Coda;Unix workstations;caching site;disconnected operation;distributed workstation environment;highly available file system;prototype;replication site;server replication;Availability;Costs;Design optimization;Distributed computing;File servers;File systems;Large-scale systems;Network servers;Prototypes;Workstations},
+doi={10.1109/12.54838},
+ISSN={0018-9340},
+publisher={IEEE}
+}
+
+@article{Kistler92,
+ author = {Kistler, James J. and Satyanarayanan, M.},
+ title = {Disconnected operation in the Coda File System},
+ journal = {ACM Transactions on Computer Systems (TOCS)},
+ issue_date = {Feb. 1992},
+ volume = {10},
+ number = {1},
+ month = feb,
+ year = {1992},
+ issn = {0734-2071},
+ pages = {3--25},
+ numpages = {23},
+ url = {http://doi.acm.org/10.1145/146941.146942},
+ doi = {10.1145/146941.146942},
+ acmid = {146942},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {disconnected operation, hoarding, optimistic replication, reintegration, second-class replication, server emulation},
+}
+
+@article{Anderson1995serverless,
+  title={Serverless network file systems},
+  author={Anderson, Thomas E and Dahlin, Michael D and Neefe, Jeanna M and Patterson, David A and Roselli, Drew S and Wang, Randolph Y},
+  journal={ACM SIGOPS Operating Systems Review},
+  volume={29},
+  number={5},
+  pages={109--126},
+  year={1995}
+}
+
+@article{Anderson1996SNFS,
+ author = {Anderson, Thomas E. and Dahlin, Michael D. and Neefe, Jeanna M. and Patterson, David A. and Roselli, Drew S. and Wang, Randolph Y.},
+ title = {Serverless network file systems},
+ journal = {ACM Transactions on Computer Systems (TOCS) - Special issue on operating system principles},
+ issue_date = {Feb. 1996},
+ volume = {14},
+ number = {1},
+ month = feb,
+ year = {1996},
+ issn = {0734-2071},
+ pages = {41--79},
+ numpages = {39},
+ url = {http://doi.acm.org/10.1145/225535.225537},
+ doi = {10.1145/225535.225537},
+ acmid = {225537},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {RAID, log cleaning, log structured, log-based striping, logging, redundant data storage, scalable performance},
+}
+
+@inproceedings{Soltis1996global,
+  title={The Global File System1},
+  author={Soltis, Steven R and Ruwart, Thomas M and O’keefe, Matthew T},
+  booktitle={Proceedings of the Fifth NASA Goddard Conference on Mass Storage Systems and Technologies},
+  volume={1},
+  pages={319},
+  month=sep,
+  year={1996},
+  organization={NASA}
+}
+
+@misc{Soltis2002global,
+  title={Global file system and data storage device locks},
+  author={Soltis, Steven R and O'keefe, Matthew T and Ruwart, Thomas M and Houlder, Gerald A and Coomes, James A and Miller, Michael H and Soltis, Edward A and Gilson, Raymond W and Preslan, Kenneth W and others},
+  year={2002},
+  month=dec,
+  publisher={Google Patents},
+  note={US Patent 6,493,804}
+}
+
+
+%%%%%%%%%%%%%%
+% Simulation %
+%%%%%%%%%%%%%%
+
+@ARTICLE{Bagrodia98,
+author={Rajive Bagrodia and Richard Meyer and Mineo Takai and Yu-An Chen and Xiang Zeng and Jay Martin and Ha Yoon Song},
+journal={Computer},
+title={Parsec: a parallel simulation environment for complex systems},
+month=oct,
+year={1998},
+volume={31},
+number={10},
+pages={77-85},
+keywords={graphical user interfaces;parallel languages;parallel processing;performance evaluation;simulation languages;software portability;virtual machines;Parsec;Pave GUI;complex systems;parallel model execution;parallel simulation environment;parallel simulation language;performance evaluation;portable runtime system;simulation algorithms;system performance metrics;system simulation;Analytical models;Computational modeling;Computer networks;Concurrent computing;Costs;Discrete event simulation;Parallel architectures;Predictive models;Protocols;Wireless networks},
+doi={10.1109/2.722293},
+ISSN={0018-9162},
+}
+
+@inproceedings{Varga2001,
+  title={The {OMNeT++} discrete event simulation system},
+  author={Varga, Andr{\'a}s},
+  booktitle={Proceedings of the European Simulation Multiconference (ESM'2001)},
+  volume={9},
+  month=jun,
+  year={2001},
+  address = {Prague, Czech Republic}
+}
+
+@inproceedings{Varga2008,
+ author = {Varga, Andr\'{a}s and Hornig, Rudolf},
+ title = {An overview of the OMNeT++ simulation environment},
+ booktitle = {Proceedings of the 1st international conference on Simulation tools and techniques for communications, networks and systems \& workshops},
+ series = {Simutools '08},
+ year = {2008},
+ isbn = {978-963-9799-20-2},
+ location = {Marseille, France},
+ pages = {60:1--60:10},
+ articleno = {60},
+ numpages = {10},
+ url = {http://dl.acm.org/citation.cfm?id=1416222.1416290},
+ acmid = {1416290},
+ publisher = {ICST (Institute for Computer Sciences, Social-Informatics and Telecommunications Engineering)},
+ address = {ICST, Brussels, Belgium, Belgium},
+ keywords = {computer systems, discrete simulation, hierarchical, integrated development environment, network simulation, performance analysis, simulation tools, telecommunications},
+}
+
+@incollection{Varga2010,
+year={2010},
+isbn={978-3-642-12330-6},
+booktitle={Modeling and Tools for Network Simulation},
+editor={Wehrle, Klaus and G\"{u}ne\c{s}, Mesut and Gross, James},
+doi={10.1007/978-3-642-12331-3_3},
+title={OMNeT++},
+publisher={Springer Berlin Heidelberg},
+author={Varga, Andras},
+pages={35-59}
+}
+url={http://dx.doi.org/10.1007/978-3-642-12331-3_3},
+@InBook{Varga2010b,
+author = {Varga, Andr\'{a}s},
+title = {OMNeT++},
+chapter = {in book ``Modeling and tools for network simulation'', K. Wehrle, M. G\"{u}ne\c{s}, and J. Gross (editors)},
+pages = {35-59},
+publisher = {Springer Verlag},
+year = {2010},
+isbn = {978-3-642-12330-6},
+doi={10.1007/978-3-642-12331-3_3}
+}
+@InBook{Wehrle2010,
+editor = {Klaus Wehrle and Mesut G\"{u}ne\c{s} and James Gross},
+title = {Modeling and tools for network simulation},
+chapter = {OMNeT++},
+pages = {35-59},
+publisher = {Springer Verlag},
+year = {2010},
+isbn = {978-3-642-12330-6},
+doi={10.1007/978-3-642-12331-3_3}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packet-level simulation %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@Misc{Varga2013,
+author = {Varga, Andr{\'a}s},
+title = {The {INET} Framework},
+howpublished = {\url{http://inet.omnetpp.org/}, Last visited},
+month = apr,
+year = {2016},
+url = {http://inet.omnetpp.org/}
+}
+
+@article{McDonald91a,
+ author = {McDonald, Chris},
+ title = {A network specification language and execution environment for undergraduate teaching},
+ journal = {ACM SIGCSE Bulletin},
+ issue_date = {Mar. 1991},
+ volume = {23},
+ number = {1},
+ month = mar,
+ year = {1991},
+ issn = {0097-8418},
+ pages = {25--34},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/107005.107012},
+ doi = {10.1145/107005.107012},
+ acmid = {107012},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@inproceedings{McDonald91b,
+ author = {McDonald, Chris},
+ title = {A network specification language and execution environment for undergraduate teaching},
+ booktitle = {Proceedings of the twenty-second SIGCSE technical symposium on Computer science education},
+ series = {SIGCSE '91},
+ year = {1991},
+ isbn = {0-89791-377-9},
+ location = {San Antonio, Texas, USA},
+ pages = {25--34},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/107004.107012},
+ doi = {10.1145/107004.107012},
+ acmid = {107012},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@TECHREPORT{Bajaj99,
+    author = {Sandeep Bajaj and Lee Breslau and Deborah Estrin and Kevin Fall and Sally Floyd and Padma Haldar and Mark Handley and Ahmed Helmy and John Heidemann and Polly Huang and Satish Kumar and Steven McCanne and Reza Rejaie and Puneet Sharma and Kannan Varadhan and Ya Xu and Haobo Yu and Daniel Zapalla},
+    title = {Improving simulation for network research},
+    institution = {University of Southern California, Computer Science Department},
+    number = {99-702},
+    month = mar,
+    year = {1999}
+}
+
+@inproceedings{Henderson2006,
+ author = {Henderson, Thomas R. and Roy, Sumit and Floyd, Sally and Riley, George F.},
+ title = {ns-3 project goals},
+ booktitle = {Proceeding from the 2006 workshop on ns-2: the IP network simulator},
+ series = {WNS2 '06},
+ year = {2006},
+ isbn = {1-59593-508-8},
+ location = {Pisa, Italy},
+ articleno = {13},
+ url = {http://doi.acm.org/10.1145/1190455.1190468},
+ doi = {10.1145/1190455.1190468},
+ acmid = {1190468},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@InProceedings{Henderson2008,
+author = {Henderson, Thomas R. and Lacage, Mathieu and Riley, George F. and Dowell, Craig and Kopena, Joseph B.},
+title = {Network simulations with the ns-3 simulator},
+booktitle = {Demonstrations of the ACM SIGCOMM 2008 conference on Data communication},
+crossref = {Bahl:2008:1402958},
+month = aug,
+year = {2008},
+series = {SIGCOMM'08},
+address = {Seattle, Washington, USA}
+}
+@proceedings{Bahl:2008:1402958,
+ title = {SIGCOMM '08: Proceedings of the ACM SIGCOMM 2008 conference on Data communication},
+ year = {2008},
+ isbn = {978-1-60558-175-0},
+ location = {Seattle, WA, USA},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+% note = {80800804},
+
+@Misc{NS3,
+author = {{The NS-3 Consortium}},
+title = {ns-3},
+howpublished = {Last visited},
+month = apr,
+year = {2016},
+url = {http://www.nsnam.org/}
+}
+
+@INPROCEEDINGS{Liu2001,
+author={Benyuan Liu and Figueiredo, D.R. and Yang Guo and Kurose, J. and Towsley, D.},
+booktitle={INFOCOM 2001. Twentieth Annual Joint Conference of the IEEE Computer and Communications Societies. Proceedings. IEEE},
+title={A study of networks simulation efficiency: fluid simulation vs. packet-level simulation},
+year={2001},
+volume={3},
+pages={1244-1253 vol.3},
+keywords={computer networks;packet switching;queueing theory;scheduling;simulation;telecommunication traffic;WFQ scheduling discipline;boundary condition;complexity;computational effort;flow aggregation;fluid simulation;network model;network performance evaluation;networks simulation efficiency;packet-level simulation;ripple effect;simulation event rate;tandem queueing system;Analytical models;Boundary conditions;Computational modeling;Computer networks;Computer science;Computer simulation;Discrete event simulation;Power system modeling;Telecommunication traffic;Traffic control},
+doi={10.1109/INFCOM.2001.916619},
+ISSN={0743-166X},
+}
+
+@Misc{USC2011,
+author = {{The University of Southern California}},
+title = {The Network Simulator - ns-2},
+howpublished = {Web page},
+month = Nov,
+year = {2011},
+url = {http://www.isi.edu/nsnam/ns/}
+}
+
+@INPROCEEDINGS{Cowie99a,
+    author = {James Cowie and Hongbo Liu and Jason Liu and David Nicol and Andy Ogielski},
+    title = {Towards Realistic Million-Node Internet Simulations},
+    booktitle = {Proceedings of the 1999 International Conference on Parallel and Distributed Processing Techniques and Applications (PDPTA'99)},
+    month = jun,
+    year = {1999},
+    location = {Las Vegas, Nevada},
+    pages = {2129--2135},
+    masid = {628938},
+    crossref  = {DBLP:conf/pdpta/1999},
+    bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@proceedings{DBLP:conf/pdpta/1999,
+  editor    = {Hamid R. Arabnia},
+  title     = {Proceedings of the International Conference on Parallel
+               and Distributed Processing Techniques and Applications,
+               PDPTA 1999, June 28 - July 1, 1999, Las Vegas, Nevada,
+               USA},
+  booktitle = {PDPTA},
+  publisher = {CSREA Press},
+  year      = {1999},
+  isbn      = {1-892512-15-7},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+@ARTICLE{Cowie99b,
+author={Cowie, James H. and Nicol, David M. and Ogielski, Andy T.},
+journal={Computing in Science \& Engineering},
+title={Modeling the Global Internet},
+month = jan,
+year={1999},
+volume={1},
+number={1},
+pages={42--50},
+keywords={Internet;discrete event simulation;parallel programming;telecommunication computing;SSF;global Internet modeling;multidomain multiprotocol Internet models;scalable network modeling framework;scalable parallel discrete event simulators;scalable parallel simulations;scalable simulation framework;simulation research;software designs;Computational modeling;Computer networks;IP networks;Intelligent networks;Internet;Network topology;Peer to peer computing;Routing;Telecommunication traffic;Traffic control},
+doi={10.1109/5992.743621},
+acmid = {615662},
+ISSN={1521-9615},
+}
+
+@inproceedings{NTakpe2006,
+ author = {N'Takp\'{e}, Tchimou and Suter, Fr\'{e}d\'{e}ric},
+ title = {Critical Path and Area Based Scheduling of Parallel Task Graphs on Heterogeneous Platforms},
+ booktitle = {Proceedings of the 12th International Conference on Parallel and Distributed Systems},
+ series = {ICPADS '06},
+ month = jul,
+ year = {2006},
+ issn = {1521-9097},
+ isbn = {0-7695-2612-8},
+ volume = {1},
+ pages = {3--10},
+ numpages = {8},
+ doi = {10.1109/ICPADS.2006.32},
+ url = {http://doi.ieeecomputersociety.org/10.1109/ICPADS.2006.32},
+ acmid = {1157508},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+}
+
+@inproceedings{Liu2003,
+ author = {Liu, Xin and Chien, Andrew A.},
+ title = {Traffic-based Load Balance for Scalable Network Emulation},
+ booktitle = {Proceedings of the 2003 ACM/IEEE conference on Supercomputing},
+ series = {SC '03},
+ year = {2003},
+ isbn = {1-58113-695-1},
+ location = {Phoenix, AZ, USA},
+ pages = {40--},
+ url = {http://doi.acm.org/10.1145/1048935.1050190},
+ doi = {10.1145/1048935.1050190},
+ acmid = {1050190},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@book{Snir98,
+ author = {Snir, Marc and Otto, Steve and Huss-Lederman, Steven and Walker, David and Dongarra, Jack},
+ title = {{MPI}-The Complete Reference, Volume 1: The {MPI} Core},
+ year = {1998},
+ isbn = {0262692155},
+ edition = {2nd. (Revised)},
+ publisher = {MIT Press},
+ address = {Cambridge, MA, USA},
+}
+
+@article{Song2000,
+ author = {Song, H. J. and Liu, X. and Jakobsen, D. and Bhagwan, R. and Zhang, X. and Taura, K. and Chien, A.},
+ title = {The {MicroGrid}: A scientific tool for modeling Computational Grids},
+ journal = {Scientific Programming},
+ issue_date = {August 2000},
+ volume = {8},
+ number = {3},
+ month = aug,
+ year = {2000},
+ issn = {1058-9244},
+ pages = {127--141},
+ numpages = {15},
+ url = {http://dl.acm.org/citation.cfm?id=1239907.1239908},
+ acmid = {1239908},
+ publisher = {IOS Press},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+}
+
+@article{Vahdat2002,
+ author = {Vahdat, Amin and Yocum, Ken and Walsh, Kevin and Mahadevan, Priya and Kosti\'{c}, Dejan and Chase, Jeff and Becker, David},
+ title = {Scalability and accuracy in a large-scale network emulator},
+ journal = {ACM SIGOPS Operating Systems Review - OSDI '02: Proceedings of the 5th symposium on Operating systems design and implementation},
+ issue_date = {Winter 2002},
+ volume = {36},
+ number = {SI},
+ month = dec,
+ year = {2002},
+ issn = {0163-5980},
+ pages = {271--284},
+ numpages = {14},
+ url = {http://doi.acm.org/10.1145/844128.844154},
+ doi = {10.1145/844128.844154},
+ acmid = {844154},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@INPROCEEDINGS{Takefusa99,
+author={Takefusa, A. and Matsuoka, S. and Nakada, H. and Aida, K. and Nagashima, U.},
+booktitle={Proceedings of the 8th IEEE International Symposium on High Performance Distributed Computing (HPDC)}, title={Overview of a performance evaluation system for global computing scheduling algorithms},
+year={1999},
+pages={97-104},
+keywords={processor scheduling;software performance evaluation;virtual machines;Bricks performance evaluation system;NWS;Network Weather Service;foreign interface;global computing scheduling algorithms;high-performance global computing systems behaviour forecasting;large-scale benchmarks;networks;partitioning;resource scheduling algorithms;system components;Computational modeling;Computer networks;High performance computing;Large-scale systems;Partitioning algorithms;Performance analysis;Processor scheduling;Proposals;Scheduling algorithm;Weather forecasting},
+doi={10.1109/HPDC.1999.805287},
+ISSN={1082-8907},
+}
+
+@article{Sulistio2007,
+ author = {Sulistio, Anthony and Poduval, Gokul and Buyya, Rajkumar and Tham, Chen-Khong},
+ title = {On incorporating differentiated levels of network service into GridSim},
+ journal = {Future Gener. Comput. Syst.},
+ issue_date = {May, 2007},
+ volume = {23},
+ number = {4},
+ month = may,
+ year = {2007},
+ issn = {0167-739X},
+ pages = {606--615},
+ numpages = {10},
+ url = {http://dx.doi.org/10.1016/j.future.2006.10.006},
+ doi = {10.1016/j.future.2006.10.006},
+ acmid = {1225178},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+ keywords = {Differentiated network service, Grid computing, Grid simulation},
+}
+
+@INPROCEEDINGS{Cameron2004,
+    author = {D. G. Cameron and R. Carvajal-Schiaffino and A. P. Millar and C. Nicholson and K. Stockinger and F. Zini},
+    title = {{OptorSim}: A simulation tool for scheduling and replica optimisation in Data Grids},
+    booktitle = {Proceedings of the Computing in High Energy and Nuclear Physics (CHEP) conference},
+    year = {2004}
+}
+
+@inproceedings{Dumitrescu2005,
+ author = {Dumitrescu, C. L. and Foster, I.},
+ title = {{GangSim}: A simulator for grid scheduling studies},
+ booktitle = {Proceedings of the Fifth IEEE International Symposium on Cluster Computing and the Grid (CCGrid'05) - Volume 2 - Volume 02},
+ series = {CCGRID '05},
+ year = {2005},
+ isbn = {0-7803-9074-1},
+ pages = {1151--1158},
+ numpages = {8},
+ url = {http://dl.acm.org/citation.cfm?id=1169223.1169632},
+ acmid = {1169632},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+}
+
+@Article{Urban2002,
+   abstract    = {Peter Urban, Xavier Defago and Andre Schiper Neko: A
+                 Single Environment to Simulate and Prototype Distributed
+                 Algorithms Designing, tuning, and analyzing the
+                 performance of distributed algorithms and protocols are
+                 complex tasks. A major factor that contributes to this
+                 complexity is the fact that there is no single
+                 environment to support all phases of the development of a
+                 distributed algorithm. This paper presents Neko, an easy
+                 to use Java platform that provides a uniform and
+                 extensible environment for various phases of algorithm
+                 design and performance evaluation: prototyping, tuning,
+                 simulation, deployment, etc. Keywords: simulation,
+                 prototyping, distributed algorithms, message passing,
+                 middleware, Java, protocol layers. },
+   affiliation = {EPFL},
+   author      = {Urb\'an, P\'eter and D\'efago, Xavier and Schiper, Andr\'e},
+   details     = {http://infoscience.epfl.ch/record/49956},
+   documenturl = {http://infoscience.epfl.ch/record/49956/files/UDS02.pdf},
+   journal     = {Journal of {I}nformation {S}cience and {E}ngineering},
+   number      = {6},
+   oai-id      = {oai:infoscience.epfl.ch:49956},
+   oai-set     = {driver},
+   pages       = {981--997},
+   status      = {PUBLISHED},
+   title       = {Neko: {A} {S}ingle {E}nvironment to {S}imulate and
+                 {P}rototype {D}istributed {A}lgorithms},
+   unit        = {LSR},
+   volume      = {18},
+   year        = 2002
+}
+
+@INPROCEEDINGS{Phatanapherom2003,
+author={Phatanapherom, S. and Uthayopas, P. and Kachitvichyanukul, V.},
+booktitle={Proceedings of the 2003 Winter Simulation Conference},
+title={Fast simulation model for grid scheduling using HyperSim},
+year={2003},
+volume={2},
+pages={1494-1500 vol.2},
+keywords={discrete event simulation;grid computing;scheduling;software libraries;HyperSim;discrete event simulation library;event graph model;fast simulation model;grid scheduling;job scheduling problem;Computational modeling;Discrete event simulation;Grid computing;High performance computing;Job shop scheduling;Libraries;Processor scheduling;Resource management;Scalability;Testing},
+doi={10.1109/WSC.2003.1261594},
+}
+
+@InProceedings{Quetier2005,
+author = {B. Quetier and F. Cappello},
+title = {A survey of Grid research tools: simulators, emulators and real life platforms},
+booktitle = {Proceedings of the 17th IMACS World Congress (IMACS)},
+month = jul,
+year = {2005},
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Flow-based simulation %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{Padhye:1998:MTT:285243.285291,
+ author = {Padhye, Jitendra and Firoiu, Victor and Towsley, Don and Kurose, Jim},
+ title = {Modeling {TCP} throughput: a simple model and its empirical validation},
+ journal = {ACM SIGCOMM Computer Communication Review},
+ issue_date = {Oct. 1998},
+ volume = {28},
+ number = {4},
+ month = oct,
+ year = {1998},
+ issn = {0146-4833},
+ pages = {303--314},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/285243.285291},
+ doi = {10.1145/285243.285291},
+ acmid = {285291},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+
+@inproceedings{Padhye98,
+ author = {Padhye, Jitendra and Firoiu, Victor and Towsley, Don and Kurose, Jim},
+ title = {Modeling {TCP} throughput: a simple model and its empirical validation},
+ booktitle = {Proceedings of the ACM SIGCOMM '98 conference on Applications, technologies, architectures, and protocols for computer communication},
+ series = {SIGCOMM '98},
+ year = {1998},
+ isbn = {1-58113-003-1},
+ location = {Vancouver, British Columbia, Canada},
+ pages = {303--314},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/285237.285291},
+ doi = {10.1145/285237.285291},
+ acmid = {285291},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+
+@article{Mathis97,
+ author = {Mathis, Matthew and Semke, Jeffrey and Mahdavi, Jamshid and Ott, Teunis},
+ title = {The macroscopic behavior of the {TCP} congestion avoidance algorithm},
+ journal = {ACM SIGCOMM Computer Communication Review},
+ issue_date = {July 1997},
+ volume = {27},
+ number = {3},
+ month = jul,
+ year = {1997},
+ issn = {0146-4833},
+ pages = {67--82},
+ numpages = {16},
+ url = {http://doi.acm.org/10.1145/263932.264023},
+ doi = {10.1145/263932.264023},
+ acmid = {264023},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+
+@inproceedings{Ott97,
+author = {T. Ott and J. Kemperman and M. Mathis},
+title =  {Window Size Behavior in {TCP/IP} with Constant Loss Probability},
+booktitle = {Proceedings of 4th IEEE Workshop on High-Performance Communication Systems (HPCS)},
+month = jun,
+year = {1997}
+}
+
+@article{Massoulie2002,
+ author = {Massouli{\'e}, Laurent and Roberts, James},
+ title = {Bandwidth sharing: objectives and algorithms},
+ journal = {IEEE/ACM Transactions on Networking (TON)},
+ issue_date = {June 2002},
+ volume = {10},
+ number = {3},
+ month = jun,
+ year = {2002},
+ issn = {1063-6692},
+ pages = {320--328},
+ numpages = {9},
+ url = {http://dx.doi.org/10.1109/TNET.2002.1012364},
+ doi = {10.1109/TNET.2002.1012364},
+ acmid = {581852},
+ publisher = {IEEE Press},
+ address = {Piscataway, NJ, USA},
+ keywords = {congestion control, distributed random search, fixed-size window control, max-min fairness, potential delay minimization, proportional fairness}
+}
+
+@article{Kelly97,
+    author = {Kelly, Frank P.},
+    citeulike-article-id = {333977},
+    journal = {European Transactions on Telecommunications},
+    keywords = {congestion, control, nonlinear, optimization, pricing, programming},
+    posted-at = {2005-09-28 17:28:13},
+    priority = {3},
+    title = {Charging and Rate Control for Elastic Traffic},
+    volume = {8},
+    pages = {33--37},
+    year = {1997},
+    url = {http://www.statslab.cam.ac.uk/\~{}frank/elastic.html}
+}
+
+@inproceedings{Chiu2000,
+ author = {Chiu, Dah Ming},
+ title = {Some Observations on Fairness of Bandwidth Sharing},
+ booktitle = {Proceedings of the Fifth IEEE Symposium on Computers and Communications (ISCC 2000)},
+ series = {ISCC '00},
+ month = jul,
+ year = {2000},
+ isbn = {0-7695-0722-0},
+ pages = {125--131},
+ doi={10.1109/ISCC.2000.860626},
+ url = {http://dl.acm.org/citation.cfm?id=844383.845579},
+ acmid = {845579},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA}
+}
+
+@article{Floyd99,
+ author = {Floyd, Sally and Fall, Kevin},
+ title = {Promoting the use of end-to-end congestion control in the Internet},
+ journal = {IEEE/ACM Transactions on Networking (TON)},
+ issue_date = {Aug. 1999},
+ volume = {7},
+ number = {4},
+ month = aug,
+ year = {1999},
+ issn = {1063-6692},
+ pages = {458--472},
+ numpages = {15},
+ url = {http://dx.doi.org/10.1109/90.793002},
+ doi = {10.1109/90.793002},
+ acmid = {316740},
+ publisher = {IEEE Press},
+ address = {Piscataway, NJ, USA}
+}
+
+
+%%%%%%%%%%%
+% SimGrid %
+%%%%%%%%%%%
+
+@Misc{Simgrid,
+ author = {{The SimGrid Team}},
+ title = {SimGrid},
+ howpublished = {\url{http://simgrid.gforge.inria.fr/}, Last visited},
+ month = jan,
+ year = {2016},
+ url = {http://simgrid.gforge.inria.fr/}
+}
+
+@INPROCEEDINGS{Casanova2001,
+    author = {Henri Casanova},
+    title = {{Simgrid}: a Toolkit for the Simulation of Application Scheduling},
+    booktitle = {Proceedings of the First IEEE/ACM International Symposium on Cluster Computing and the Grid (CCGrid 2001},
+    year = {2001},
+    pages = {430--437}
+}
+
+%% inria-00071989, version 1
+%% http://hal.inria.fr/inria-00071989
+@techreport{Casanova2002,
+    hal_id = {inria-00071989},
+    url = {http://hal.inria.fr/inria-00071989},
+    title = {{A Network Model for Simulation of Grid Application}},
+    author = {Casanova, Henri and Marchal, Loris},
+    abstract = {{In this work we investigate network models that can be potentially employed in the simulation of scheduling algorithms for distributed computing applicati- ons. We seek to develop a model of TCP communication which is both high-level and realistic. Previous research works show that accurate and global modeling of wide-area networks, such as the Internet, faces a number of challenging issues. However, some global models of fairness and bandwidth-s- haring exist, and can be link with the behavior of TCP. Using both previous results and simulation (with NS), we attempt to understand the macroscopic behavior of TCP communications. We then propose a global model of the network for the Grid platform. We perform partial validation of this model in simulation. The model leads to an algorithm for computing bandwidth-sharing. This algorithm can then be implemented as part of Grid application simulations. We provide such an implementation for the simulation toolkit.}},
+    keywords = {GRID APPLICATION / SIMULATION / TCP MODELING / BANDWITH-SHARING / FAIRNESS / SIMGRID},
+    language = {Anglais},
+    affiliation = {REMAP - INRIA Rh{\^o}ne-Alpes / LIP Laboratoire de l'Informatique du Parall{\'e}lisme},
+    type = {Rapport de recherche},
+    institution = {INRIA},
+    number = {RR-4596},
+    year = {2002},
+    month = Oct,
+    pdf = {http://hal.inria.fr/inria-00071989/PDF/RR-4596.pdf},
+}
+
+@TechReport{Legrand2002,
+author = {Arnaud Legrand and Julien Lerouge},
+title = {{MetaSimGrid}: Towards Realistic Scheduling Simulation of Distributed Applications},
+institution = {Laboratoire de l'Informatique du Parall\'elisme (LIP), \'Ecole Normale Sup\'erieure de Lyon},
+number = {2002-28},
+month = jul,
+year = {2002},
+}
+
+@INPROCEEDINGS{Legrand2003,
+author={Arnaud Legrand and Loris Marchal and Henri Casanova},
+booktitle={Proceedings of the 3rd IEEE/ACM International Symposium on Cluster Computing and the Grid (CCGrid’03)},
+title={Scheduling distributed applications: the {SimGrid} simulation framework},
+year={2003},
+pages={138--145},
+keywords={digital simulation;distributed algorithms;grid computing;processor scheduling;SimGrid simulation framework;distributed computer system;distributed computing environment;distributed scheduling agents;scheduling strategies;tightly-coupled platforms;Application software;Computational modeling;Computer networks;Computer simulation;Concurrent computing;Distributed computing;Grid computing;Network topology;Optimal scheduling;Processor scheduling},
+doi={10.1109/CCGRID.2003.1199362}
+}
+
+@MastersThesis{Fujiwara2007,
+ author = {Kayo Fujiwara},
+ title = {Cost and Accuracy of Packet-Level vs. Analytical Network Simulations: an Empirical Study},
+ school = {University of Hawai'i},
+ year = {2007},
+ month = may
+}
+
+@inproceedings{FujiwaraCasanova2007,
+ author = {Fujiwara, Kayo and Casanova, Henri},
+ title = {Speed and accuracy of network simulation in the {SimGrid} framework},
+ booktitle = {Proceedings of the 2nd international conference on Performance evaluation methodologies and tools},
+ series = {ValueTools '07},
+ year = {2007},
+ month = oct,
+ isbn = {978-963-9799-00-4},
+ location = {Nantes, France},
+ pages = {12:1--12:10},
+ articleno = {12},
+ numpages = {10},
+ url = {http://dl.acm.org/citation.cfm?id=1345263.1345279},
+ acmid = {1345279},
+ publisher = {ICST (Institute for Computer Sciences, Social-Informatics and Telecommunications Engineering)},
+ address = {ICST, Brussels, Belgium, Belgium},
+}
+
+@InProceedings{Casanova2008,
+        author =  {Casanova, Henri and Legrand, Arnaud and Quinson, Martin},
+        title =  {{SimGrid}: a Generic Framework for Large-Scale Distributed Experiments},
+        booktitle = {Proceedings of the Tenth International Conference on Computer Modeling and Simulation},
+        series = {UKSIM '08},
+        month = mar,
+        year = {2008},
+        isbn = {978-0-7695-3114-4},
+        pages = {126--131},
+        numpages = {6},
+        url = {http://dx.doi.org/10.1109/UKSIM.2008.28},
+        doi = {10.1109/UKSIM.2008.28},
+        acmid = {1398183},
+        publisher = {IEEE Computer Society},
+        address = {Washington, DC, USA},
+}
+
+@inproceedings{Velho2009,
+ author = {Velho, Pedro and Legrand, Arnaud},
+ title = {Accuracy study and improvement of network simulation in the {SimGrid} framework},
+ booktitle = {Proceedings of the 2nd International Conference on Simulation Tools and Techniques},
+ series = {Simutools '09},
+ year = {2009},
+ isbn = {978-963-9799-45-5},
+ location = {Rome, Italy},
+ pages = {13:1--13:10},
+ articleno = {13},
+ numpages = {10},
+ url = {http://dx.doi.org/10.4108/ICST.SIMUTOOLS2009.5592},
+ doi = {10.4108/ICST.SIMUTOOLS2009.5592},
+ acmid = {1537632},
+ publisher = {ICST (Institute for Computer Sciences, Social-Informatics and Telecommunications Engineering)},
+ address = {ICST, Brussels, Belgium, Belgium},
+ keywords = {network simulation},
+}
+
+@inproceedings{Donassolo2010,
+ author = {Donassolo, Bruno and Casanova, Henri and Legrand, Arnaud and Velho, Pedro},
+ title = {Fast and scalable simulation of volunteer computing systems using {SimGrid}},
+ booktitle = {Proceedings of the 19th ACM International Symposium on High Performance Distributed Computing},
+ series = {HPDC '10},
+ year = {2010},
+ isbn = {978-1-60558-942-8},
+ location = {Chicago, Illinois},
+ pages = {605--612},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/1851476.1851565},
+ doi = {10.1145/1851476.1851565},
+ acmid = {1851565},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+%% hal-00646896, version 1
+%% http://hal.inria.fr/hal-00646896
+@techreport{Velho2011,
+    hal_id = {hal-00646896},
+    url = {http://hal.inria.fr/hal-00646896},
+    title = {{Flow-level network models: have we reached the limits?}},
+    author = {Velho, Pedro and Schnorr, Lucas and Casanova, Henri and Legrand, Arnaud},
+    abstract = {{Researchers in the area of distributed computing conduct many of their experiments in simulation. While packet-level simulation is often used to study network protocols, it can be too costly to simulate network communications for large-scale systems and applications. The alternative is to simulate the network based on less costly flow-level models. Surprisingly, in the literature, validation of these flow-level models is at best a mere verification for a few simple cases. Consequently, although distributed computing simulators are widely used, their ability to produce scientifically meaningful results is in doubt. In this work we focus on the validation of state-of-the-art flow-level network models of TCP communication, via comparison to packet-level simulation. While it is straightforward to show cases in which previously proposed models lead to good results, instead we systematically seek cases that lead to invalid results. Careful analysis of these cases reveal fundamental flaws and also suggest improvements. One contribution of this work is that these improvements lead to a new model that, while far from being perfect, improves upon all previously proposed models. A more important contribution, perhaps, is provided by the pitfalls and unexpected behaviors encountered in this work, leading to a number of enlightening lessons. In particular, this work shows that model validation cannot be achieved solely by exhibiting (possibly many) ''good cases.'' Confidence in the quality of a model can only be strengthened through an invalidation approach that attempts o prove the model wrong.}},
+    keywords = {Simulation, fluid network models, validity, methodology},
+    language = {Anglais},
+    affiliation = {MESCAL - INRIA Grenoble Rh{\^o}ne-Alpes / LIG laboratoire d'Informatique de Grenoble , Concurrency Research Group - CoRG , Laboratoire d'Informatique de Grenoble - LIG},
+    pages = {24},
+    type = {Rapport de recherche},
+    institution = {INRIA},
+    number = {RR-7821},
+    year = {2011},
+    month = Nov,
+    pdf = {http://hal.inria.fr/hal-00646896/PDF/rr-validity.pdf},
+}
+
+@inproceedings{Quinson2012,
+ author = {Quinson, Martin and Rosa, Cristian and Thiery, Christophe},
+ title = {Parallel Simulation of Peer-to-Peer Systems},
+ booktitle = {Proceedings of the 2012 12th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (ccgrid 2012)},
+ series = {CCGRID '12},
+ year = {2012},
+ month = May,
+ isbn = {978-0-7695-4691-9},
+ pages = {668--675},
+ numpages = {8},
+ url = {http://hal.inria.fr/inria-00602216},
+ doi = {10.1109/CCGrid.2012.115},
+ pdf = {http://hal.inria.fr/inria-00602216/PDF/simix2\_conference.pdf},
+ acmid = {2310122},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {Parallel Discrete Event Simulation, Peer-to-Peer},
+}
+
+@article{Casanova2014,
+      hal_id = {hal-01017319},
+      url = {http://hal.inria.fr/hal-01017319},
+      title = {Versatile, Scalable, and Accurate Simulation of Distributed Applications and Platforms},
+      author = {Casanova, Henri and Giersch, Arnaud and Legrand, Arnaud and Quinson, Martin and Suter, Fr{\'e}d{\'e}ric},
+      publisher = {Elsevier},
+      pages = {2899-2917},
+      journal = {Journal of Parallel and Distributed Computing},
+      volume = {74},
+      number = {10},
+      year = {2014},
+      month = Jun,
+      pdf = {http://hal.inria.fr/hal-01017319/PDF/simgrid3-journal.pdf}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+% Refs. for SimGrid %
+%%%%%%%%%%%%%%%%%%%%%
+
+@book{Bertsekas92,
+ author = {Bertsekas, Dimitri and Gallager, Robert},
+ title = {Data networks (2nd ed.)},
+ year = {1992},
+ isbn = {0-13-200916-1},
+ publisher = {Prentice-Hall, Inc.},
+ address = {Upper Saddle River, NJ, USA},
+ url = {http://web.mit.edu/dimitrib/www/datanets.html}
+}
+
+@article{Low2003,
+ author = {Low, Steven H.},
+ title = {A duality model of {TCP} and queue management algorithms},
+ journal = {IEEE/ACM Transactions on Networking},
+ issue_date = {August 2003},
+ volume = {11},
+ number = {4},
+ month = aug,
+ year = {2003},
+ issn = {1063-6692},
+ pages = {525--536},
+ numpages = {12},
+ url = {http://dx.doi.org/10.1109/TNET.2003.815297},
+ doi = {10.1109/TNET.2003.815297},
+ acmid = {941377},
+ publisher = {IEEE Press},
+ address = {Piscataway, NJ, USA},
+ keywords = {AQM, TCP, congestion control, duality model, utility maximization},
+}
+
+@inproceedings{Riley2003,
+ author = {Riley, George F.},
+ title = {The {G}eorgia {T}ech {N}etwork {S}imulator},
+ booktitle = {Proceedings of the ACM SIGCOMM workshop on Models, methods and tools for reproducible network research},
+ series = {MoMeTools '03},
+ year = {2003},
+ isbn = {1-58113-748-6},
+ location = {Karlsruhe, Germany},
+ pages = {5--12},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/944773.944775},
+ doi = {10.1145/944773.944775},
+ acmid = {944775},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Distributed Simulation, Large-Scale Simulations, Network Simulation},
+}
+
+
+%%%%%%%
+% ENV %
+%%%%%%%
+
+@inproceedings{Shao99,
+  author    = {Gary Shao and
+               Francine Berman and
+               Richard Wolski},
+  title     = {Using {E}ffective {N}etwork {V}iews to Promote Distributed Application Performance},
+  booktitle = {Proceedings of the 1999 International Conference on Parallel and Distributed Processing Techniques and Applications (PDPTA)},
+  year      = {1999},
+  pages     = {2649-2656},
+  crossref  = {DBLP:conf/pdpta/1999},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  doi       = {10.1.1.75.1067}
+}
+proceedings{DBLP:conf/pdpta/1999,
+  editor    = {Hamid R. Arabnia},
+  title     = {Proceedings of the International Conference on Parallel
+               and Distributed Processing Techniques and Applications,
+               PDPTA 1999, June 28 - July 1, 1999, Las Vegas, Nevada,
+               USA},
+  booktitle = {PDPTA},
+  publisher = {CSREA Press},
+  year      = {1999},
+  isbn      = {1-892512-15-7},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@TechReport{Legrand03,
+author = {Arnaud Legrand and Martin Quinson},
+title = {Automatic Deployment of the {N}etwork {W}eather {S}ervice Using the {E}ffective {N}etwork {V}iew},
+institution = {Laboratoire de l'Informatique du Parall\'elisme (LIP), \'Ecole Normale Sup\'erieure de Lyon},
+number = {2003-42},
+month = sep,
+year = {2003},
+}
+
+@inproceedings{Legrand04,
+  author    = {Arnaud Legrand and
+               Martin Quinson},
+  title     = {Automatic Deployment of the {N}etwork {W}eather {S}ervice Using the {E}ffective {N}etwork {V}iew},
+  booktitle = {Proceedings of the 18th International Parallel and Distributed Processing Symposium (IPDPS)},
+  year      = {2004},
+  pages     = {272-},
+  ee        = {http://doi.ieeecomputersociety.org/10.1109/IPDPS.2004.1303348},
+  doi       = {10.1109/IPDPS.2004.1303348},
+  crossref  = {DBLP:conf/ipps/2004},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  url       = {http://hal.inria.fr/inria-00119253},
+}
+proceedings{DBLP:conf/ipps/2004,
+  title     = {18th International Parallel and Distributed Processing Symposium
+               (IPDPS 2004), CD-ROM / Abstracts Proceedings, 26-30 April
+               2004, Santa Fe, New Mexico, USA},
+  booktitle = {IPDPS},
+  publisher = {IEEE Computer Society},
+  year      = {2004},
+  isbn      = {0-7695-2132-0},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Topology generators %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+% Waxman
+@ARTICLE{Waxman88,
+author={Waxman, B.M.},
+journal={IEEE Journal on Selected Areas in Communications},
+title={Routing of multipoint connections},
+month=dec,
+year={1988},
+volume={6},
+number={9},
+pages={1617-1622},
+keywords={packet switching;telecommunication networks;telecommunication traffic;trees (mathematics);Steiner tree problem;large-scale packet-switched network;multipoint communications;multipoint connections;routing;traffic;weighted greedy algorithm;Bandwidth;Cost function;Greedy algorithms;Joining processes;Large-scale systems;Packet switching;Performance analysis;Routing;Shortest path problem;Switching circuits},
+doi={10.1109/49.12889},
+ISSN={0733-8716}
+}
+
+% Tier
+@INPROCEEDINGS{Doar1996,
+author={Doar, M.B.},
+booktitle={Global Telecommunications Conference. GLOBECOM '96. 'Communications: The Key to Global Prosperity},
+title={A better model for generating test networks},
+year={1996},
+pages={86-93},
+keywords={computer networks;data communication;graph theory;network topology;packet switching;telecommunication channels;telecommunication network routing;LAN;MAN;WAN;data communication networks;hierarchy;multicast packet routing;network generation algorithm;network topology;random graphs;redundancy;routing algorithms;test network generation model;topological graph;Costs;Data communication;Euclidean distance;IP networks;Multicast algorithms;Network topology;Routing;Testing;Tree graphs;USA Councils},
+doi={10.1109/GLOCOM.1996.586131}
+}
+
+% Brite
+@article{Medina2000,
+ author = {Medina, Alberto and Matta, Ibrahim and Byers, John},
+ title = {On the origin of power laws in Internet topologies},
+ journal = {ACM SIGCOMM Computer Communication Review},
+ issue_date = {April 2000},
+ volume = {30},
+ number = {2},
+ month = apr,
+ year = {2000},
+ issn = {0146-4833},
+ pages = {18--28},
+ numpages = {11},
+ url = {http://doi.acm.org/10.1145/505680.505683},
+ doi = {10.1145/505680.505683},
+ acmid = {505683},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+
+@inproceedings{Medina2001,
+ author = {Medina, Alberto and Lakhina, Anukool and Matta, Ibrahim and Byers, John},
+ title = {BRITE: An Approach to Universal Topology Generation},
+ booktitle = {Proceedings of the Ninth International Symposium in Modeling, Analysis and Simulation of Computer and Telecommunication Systems},
+ series = {MASCOTS '01},
+ year = {2001},
+ pages = {346--},
+ url = {http://dl.acm.org/citation.cfm?id=882459.882563},
+ acmid = {882563},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {topology generation, graph models, network topology, growth models, annotated topologies, simulation environments.}
+}
+
+@Misc{BostonUniversity,
+author = {{Boston University}},
+title = {{BRITE}: {B}oston university {R}epresentative {I}nternet {T}opology g{E}nerator},
+howpublished = {Web page},
+year = {2002},
+url = {http://www.cs.bu.edu/brite/}
+}
+
+
+%%%%%%%%%%
+% Expand %
+%%%%%%%%%%
+
+@INPROCEEDINGS{Sandberg85,
+   author = "R. Sandberg and D. Goldberg and S. Kleiman and D. Walsh and B. Lyon",
+   title = "{D}esign and implementation of the {SUN} network filesystem",
+   booktitle = "Proceddings of the 1985 {USENIX} Conference",
+   pages = "119--130",
+   year = 1985,
+   organization = "USENIX",
+}
+@INPROCEEDINGS{Carns2000,
+    author = {Philip H. Carns and Walter B. {Ligon III} and Robert B. Ross and Rajeev Thakur},
+    title = {{PVFS}: A Parallel File System for Linux Clusters},
+    booktitle = {Proceedings of the 4th Annual Linux Showcase and Conference},
+    year = {2000},
+    pages = {317--327},
+    publisher = {USENIX Association},
+    note = "ANL/MCS-P804-0400",
+}
+@ARTICLE{Corbett93,
+   author = "P. Corbett and S. Johnson and D. Feitelson",
+   title = "Overview of the Vesta Prallel file system",
+   journal = "ACM Computer Architecture News",
+   year = 1993,
+   volume = 21,
+   number = 5,
+   pages = "7--15",
+   month = dec,
+}
+@inproceedings{corbett95mpiio,
+  language = {english},
+  author = "Peter Corbett and Dror Feitelson and 
+	     Sam Fineberg and Yarsun Hsu and 
+	     Bill Nitzberg and Jean-Pierre Prost and 
+	     Marc Snir and Bernard Traversat and 
+	     Parkson Wong",
+  title = {Overview of the {{MPI-IO}} Parallel {I/O} Interface},
+  booktitle = {Proceedings of the IPPS~'95 Workshop on Input/Output in Parallel
+  and Distributed Systems},
+  year = {1995},
+  pages = {1--15},
+  later = {corbett:mpi-overview-book},
+  keywords = {parallel {I/O}, multiprocessor file system interface, pario-bib}
+}
+
+%
+% Expand
+%
+@InProceedings{Garcia2002a,
+  language = {english},
+  key    = {Garcia2002a},
+  author = "F. {Garc\'ia Carballeira} and A. Calder\'on and J. Carretero and J. Fern\'andez and J. M. P\'erez",
+  title  = "Parallel File System Based on {NFS} Servers for Heterogeneous Clusters",
+  booktitle = "3rd ACIS International Conference on Software Engineering, Artificial Intelligence Networking and Parallel/Distributed Computing, SNPD02",
+  year   = "2002"
+}
+
+@incollection{Calderon2002,
+year={2002},
+isbn={978-3-540-44296-7},
+booktitle={Recent Advances in Parallel Virtual Machine and Message Passing Interface},
+volume={2474},
+series={Lecture Notes in Computer Science},
+editor={Kranzlmüller, Dieter and Volkert, Jens and Kacsuk, Peter and Dongarra, Jack},
+doi={10.1007/3-540-45825-5_47},
+title={An Implementation of MPI-IO on Expand: A Parallel File System Based on NFS Servers},
+url={http://dx.doi.org/10.1007/3-540-45825-5_47},
+publisher={Springer Berlin Heidelberg},
+keywords={Parallel File System; NFS; data declustering; clusters; b_eff_io},
+author={Calder\'on, Alejandro and Garc\'ia, F\'elix and Carretero, Jes\'us and P\'erez, Jose M. and Fern\'andez, Javier},
+pages={306-313},
+language={English}
+}
+
+@InProceedings{Calderon2002b,
+  language = {english},
+ author = {Alejandro Calder\'on and F\'elix Garc\'ia and Jes\'us Carretero and Jose M. P\'erez and Javier Fern\'andez},
+ title = {An Implementation of {MPI-IO} on {E}xpand: A Parallel File System Based on {NFS} Servers},
+ booktitle = {Proceedings of the 9th European PVM/MPI Users' Group Meeting on Recent Advances in Parallel Virtual Machine and Message Passing Interface},
+ year = {2002},
+ isbn = {3-540-44296-0},
+ pages = {306--313},
+ publisher = {Springer-Verlag},
+ address = {London, UK}
+}
+
+@article{Garcia2003,
+author = {{Garc\'ia Carballeira}, Félix and Calder\'on, Alejandro and Carretero, Jes\'us and Fern\'andez, Javier and P\'erez, Jose M.}, 
+title = {The Design of the {E}xpand Parallel File System},
+volume = {17}, 
+number = {1}, 
+pages = {21-37}, 
+year = {2003}, 
+doi = {10.1177/1094342003017001003}, 
+abstract ={This article describes an implementation of MPI-IO using a new parallel file system,                called Expand (Expandable Parallel File System), which is based on NFS servers.                Expand combines multiple NFS servers to create a distributed partition where files                are striped. Expand requires no changes to the NFS server and uses RPC operations to                provide parallel access to the same file. Expand is also independent of the clients,                because all operations are implemented using RPC and NFS protocols. Using this                system, we can join heterogeneous servers (Linux, Solaris, Windows 2000, etc.) to                provide a parallel and distributed partition. The article describes the design,                implementation and evaluation of Expand with MPI-IO. This evaluation has been made                in Linux clusters and compares Expand and PVFS.}, 
+URL = {http://hpc.sagepub.com/content/17/1/21.abstract}, 
+eprint = {http://hpc.sagepub.com/content/17/1/21.full.pdf+html}, 
+journal = {International Journal of High Performance Computing Applications} 
+}
+
+%  booktitle = "VECPAR 2002, 5th International Meeting on High Performance Computing for Computational Science",
+%  booktitle = {High Performance Computing for Computational Science - VECPAR 2002, 5th International Conference, 
+%	       Porto, Portugal, June 26-28, 2002, Selected Papers and Invited Talks}
+%  booktitle = {VECPAR 2002, Selected Papers and Invited Talks},
+@InProceedings{Garcia2003b,
+ author = {F. {Garc\'ia Carballeira} and A. Calder\'on and J. Carretero and J. M. P\'erez and J. Fern\'andez},
+ title = {An expandable parallel file system using {NFS} servers},
+ booktitle = {Proceedings of the 5th international conference on High performance computing for computational science},
+ series = {VECPAR'02},
+ year = {2003},
+ isbn = {3-540-00852-7},
+ location = {Porto, Portugal},
+ pages = {565--578},
+ numpages = {14},
+ url = {http://dl.acm.org/citation.cfm?id=1766851.1766897},
+ acmid = {1766897},
+ publisher = {Springer-Verlag},
+ address = {Berlin, Heidelberg},
+}
+
+@InProceedings{Garcia2003c,
+  language = {english},
+  author = "F. {Garc\'ia Carballeira} and A. Calder\'on and J. Carretero and J. M. P\'erez and J. Fern\'andez",
+  title  = "A Parallel and Fault Tolerant File System Based on {NFS} Server",
+  booktitle   = "Euromicro Conference on Parallel Distributed and Network based Processing",
+  year   = "2003"
+}
+
+@InProceedings{Calderon2003,
+  language = {english},
+  author = "A. Calder\'on and F. {Garc\'ia Carballeira} and J. Carretero and J. M. P\'erez. and J. Fern\'andez",
+  title  = "Soporte de tolerancia a fallos en Expand",
+  booktitle   = "XIV Jornadas de Paralelismo",
+  year   = "2003"
+}
+
+@MastersThesis{LuismiPFC03,
+author = {Luis Miguel {S\'anchez Garc\'ia}},
+title = {Dise\~no, implementaci\'on y evaluaci\'on del sistema de ficheros paralelo {Expand} 2.0},
+school = {Computer Science department, Universidad Carlos III de Madrid},
+year = {2003},
+type = {Bachelor's thesis}
+}
+
+@InProceedings{lmsan-Jornadas04,
+  language = {english},
+  author = {L. M. {S\'anchez Garc\'ia} and J. M. P\'erez and A. Calder\'on and F. {Garc\'ia Carballeira} and J. Carretero},
+  title  = "Arquitectura escalable para {E/S} de altas prestaciones en sistemas heterog\'eneos",
+  booktitle   = "XV Jornadas de Paralelismo",
+  year   = "2004"
+}
+
+@article{xpnJava05,
+author = {Jos{\'e} M. P{\'e}rez and L. M. S{\'a}nchez and F{\'e}lix Garc{\'i}a and Alejandro Calder{\'o}n and Jes{\'u}s Carretero},
+title = {High Performance {J}ava {I}nput/{O}utput for Heterogeneous Distributed Computing},
+journal ={2012 IEEE Symposium on Computers and Communications (ISCC)},
+volume = {0},
+issn = {1530-1346},
+year = {2005},
+pages = {969-974},
+doi = {10.1109/ISCC.2005.79},
+url = {http://doi.ieeecomputersociety.org/10.1109/ISCC.2005.79},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA}
+}
+
+@PhdThesis{CalderonPhd05,
+author = {Alejandro Calder\'on},
+title = {T\'ecnicas de tolerancia a fallos en sistemas de ficheros paralelos para clusters},
+school = {Computer Science department, Universidad Carlos III de Madrid},
+year = {2005}
+}
+
+@MastersThesis{BorjaPFC06,
+author = {Borja {Bergua Guerra}},
+title = {Adaptaci\'on del sistema de ficheros paralelo \textit{Expand} 2.0 a entornos {G}rid},
+school = {Computer Science department, Universidad Carlos III de Madrid},
+year = {2006},
+month = sep,
+type = {Bachelor's thesis}
+}
+
+@article{Garcia2007,
+author = {F\'elix {Garc\'ia Carballeira} and Jes\'us Carretero and Alejandro Calder\'on and J. Daniel Garc\'ia and Luis Miguel S\'anchez},
+title = {A global and parallel file system for grids},
+journal = {Future Generation Computer Systems},
+issue_date = {January 2007},
+volume = {23},
+number = {1},
+pages = {116--122},
+numpages = {7},
+month = jan,
+year = {2007},
+issn = {0167-739X},
+doi = {10.1016/j.future.2006.06.004},
+url = {http://www.sciencedirect.com/science/article/pii/S0167739X06001282},
+acmid = {1276063},
+publisher = {Elsevier Science Publishers B. V.},
+address = {Amsterdam, The Netherlands, The Netherlands},
+keywords = {Data grids},
+keywords = {Parallel I/O},
+keywords = {Data declustering},
+keywords = {High performance I/O},
+keywords = {GridFTP},
+keywords = {\{RNS\}}
+}
+
+@INPROCEEDINGS{Bergua2007, 
+author = {Borja Bergua and F\'elix {Garc\'ia Carballeira} and Luis Miguel S\'anchez and Alejandro Calder\'on and Jes\'us Carretero}, 
+booktitle = {XVIII Jornadas de Paralelismo}, 
+title = {Adaptaci\'on del sistema de ficheros paralelo Expand a entornos Grid}, 
+year = {2007}, 
+month = sep,
+pages = {}, 
+ISBN = {84-9732-593-6}
+}
+
+@INPROCEEDINGS{Luismi2008, 
+author={Luis Miguel S\'anchez and Borja Bergua and Alejandro Calder\'on and F\'elix García and Jes\'us Carretero}, 
+booktitle={XIX Jornadas de Paralelismo}, 
+title={Descripci\'on de una nueva arquitectura de E/S para grandes clusters}, 
+year={2008}, 
+month=sep,
+pages={550-555}, 
+ISBN={978-84-8021-6}
+}
+
+@INPROCEEDINGS{Calderon2008, 
+author={Alejandro Calder\'on and Borja Bergua and Luis Miguel S\'anchez and F\'elix García}, 
+booktitle={XIX Jornadas de Paralelismo}, 
+title={Un nuevo enfoque para implementaciones MPI en entornos Grid}, 
+year={2008}, 
+month=sep,
+pages={33--38}, 
+ISBN={978-84-8021-6}
+}
+
+@inproceedings{Bergua2008,
+ author = {Borja Bergua and Felix {Garc\'{i}a Carballeira} and Alejandro Calder\'{o}n and Luis Miguel S\'{a}nchez and Jes\'{u}s Carretero},
+ title = {Comparing {G}rid {D}ata {T}ransfer {T}echnologies in the {E}xpand {P}arallel {F}ile {S}ystem},
+ booktitle = {Proceedings of the 16th Euromicro Conference on Parallel, Distributed and Network-Based Processing (PDP 2008)},
+ series = {PDP '08},
+ year = {2008},
+ isbn = {978-0-7695-3089-5},
+ issn = {1066-6192},
+ pages = {110--114},
+ numpages = {5},
+ url = {http://dx.doi.org/10.1109/PDP.2008.51},
+ doi = {10.1109/PDP.2008.51},
+ acmid = {1343879},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {data, management, grid, GridFTP, Expand, parallel, file, system}
+}
+
+@INPROCEEDINGS{Bergua2009Ibergrid, 
+author={Borja Bergua and F\'elix {Garc\'ia Carballeira} and Luis Miguel S\'anchez and Alejandro Calder\'on and Alejandra Rodr\'iguez and Jes\'us Carretero}, 
+booktitle={3rd Iberian Grid Infrastructure Conference (IBERGRID 2009)}, 
+title={Architecture for improving data transfers in grid using the Expand parallel file system}, 
+year={2009}, 
+month=may,
+pages={315-326}, 
+ISBN={978-84-9745-406-3}
+}
+
+@INPROCEEDINGS{Rodriguez.ISCC.2009, 
+author={Rodriguez, A. and Carretero, J. and Bergua, B. and Garcia, F.}, 
+booktitle={Computers and Communications, 2009. ISCC 2009. IEEE Symposium on}, 
+title={Resource selection for fast large-scale Virtual Appliances Propagation}, 
+year={2009}, 
+month=jul,
+pages={824-829}, 
+keywords={distributed processing;grid computing;resource allocation;deployment algorithm;dynamic virtual infrastructures usage;geometric propagation;large-scale distributed systems;large-scale virtual appliances propagation;node performance;resource selection;virtual appliances images;Cloud computing;Collaboration;Commercialization;Computer architecture;Distributed computing;Home appliances;Large-scale systems;Page description languages;Resource virtualization;Virtual machining}, 
+doi={10.1109/ISCC.2009.5202254}, 
+ISSN={1530-1346}
+}
+
+@inproceedings{DBLP:conf/pdpta/RodriguezCNBCG09,
+  author    = {Alejandra Rodr{\'{\i}}guez and
+               Jes{\'{u}}s Carretero and
+               Alberto Nu{\~{n}}ez and
+               Borja Bergua and
+               F{\'{e}}lix Garc{\'{\i}}a Carballeira and
+               Jos{\'{e}} Daniel Garc{\'{\i}}a},
+  title     = {An Efficient Deployment Strategy for Large Sets of Virtual Appliances},
+  booktitle = {Proceedings of the International Conference on Parallel and Distributed
+               Processing Techniques and Applications, {PDPTA} 2009, Las Vegas, Nevada,
+               USA, July 13-17, 2009, 2 Volumes},
+  pages     = {645--651},
+  year      = {2009},
+  crossref  = {DBLP:conf/pdpta/2009},
+  timestamp = {Thu, 23 May 2013 12:17:34 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/pdpta/RodriguezCNBCG09},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@PhdThesis{LuismiPhd09,
+author = {Luis Miguel {S\'anchez Garc\'ia}},
+title = {Sistema de ficheros paralelo escalable para entornos ``cluster''},
+school = {Computer Science department, Universidad Carlos III de Madrid},
+year = {2009},
+month = nov,
+url = {http://hdl.handle.net/10016/6738},
+}
+%url = {http://e-archivo.uc3m.es/handle/10016/6738},
+
+@PROCEEDINGS{DBLP:conf/eScience/2009,
+  title     = {Fifth International Conference on e-Science, e-Science 2009, 9-11
+               December 2009, Oxford, {UK}},
+  publisher = {{IEEE} Computer Society},
+  year      = {2009},
+  url       = {http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=5379698},
+  isbn      = {978-0-7695-3877-8},
+  timestamp = {Thu, 06 Nov 2014 17:05:37 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/eScience/2009},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@InProceedings{Bergua2009eScience,
+author = {Borja Bergua and F\'elix {Garc\'ia Carballeira} and Alejandro Calder\'on and Luis Miguel S\'anchez and Jes\'us Carretero},
+title = {Improving the performance of the {BOINC} volunteer computing platform using the \textit{Expand} parallel file system (poster)},
+booktitle = {Fifth IEEE International Conference on e-Science},
+year = {2009},
+month = dec,
+publisher = {{IEEE} Computer Society},
+note = {Poster session}
+}
+
+@INPROCEEDINGS{Bergua2010, 
+author={Borja Bergua and F\'elix {Garc\'ia Carballeira} and Alejandro Calder\'on and Luis Miguel S\'anchez and Jes\'us Carretero}, 
+booktitle={XXI Jornadas de Paralelismo (JP2010)}, 
+title={Mejora del entorno de computaci\'on voluntaria {BOINC} usando el sistema de ficheros paralelo {E}xpand}, 
+year={2010},
+month=sep,
+pages={},
+ISBN={}
+}
+
+@article{Diaz2011,
+title = "A novel methodology for the monitoring of the agricultural production process based on wireless sensor networks ",
+journal = "Computers and Electronics in Agriculture ",
+volume = "76",
+number = "2",
+pages = "252 - 265",
+year = "2011",
+note = "",
+issn = "0168-1699",
+doi = "http://dx.doi.org/10.1016/j.compag.2011.02.004",
+url = "http://www.sciencedirect.com/science/article/pii/S0168169911000548",
+author = "Soledad Escolar Díaz and Jesús Carretero Pérez and Alejandro Calderón Mateos and Maria-Cristina Marinescu and Borja Bergua Guerra",
+keywords = "Wireless sensor networks",
+keywords = "Agricultural monitoring",
+keywords = "Ubiquitous computing",
+keywords = "Development methodology",
+keywords = "Winemaking ",
+abstract = "Precision agriculture is a field which provides one of the most suitable scenarios for the deployment of wireless sensor networks (WSNs). The particular characteristics of agricultural environments – which may vary significantly with location – make \{WSNs\} a key technology able to provide accurate knowledge to farmers. This knowledge represents a valuable resource because it enables real-time decision making with regard to issues such as establishing water saving policies while providing adequate irrigation and choosing the right time to harvest the fruit based on its maturity. This article proposes a methodology consisting of a set of well-defined phases that cover the complete life cycle of \{WSN\} applications for agricultural monitoring. We have studied different existing real-world scenarios where \{WSNs\} are being applied. Based on this study we have discovered that there exist significant commonalities but no methodology that specifies the best practices that should be used in the general, crop-independent case. The lack of a general methodology negatively impacts the amount of effort, development time, and cost of developing applications. "
+}
+
+@INPROCEEDINGS{Llopis2012, 
+author={Llopis, P. and Martin, G. and Bergua, B. and Carretero, J.}, 
+booktitle={Parallel and Distributed Processing with Applications (ISPA), 2012 IEEE 10th International Symposium on}, 
+title={Virtual I/O Forwarding for Cloud-based HPC Applications}, 
+year={2012}, 
+month=jul,
+pages={869-870}, 
+keywords={cloud computing;virtual machines;virtualisation;cloud-based HPC application;distributed I/O forwarding backend architecture;flexible I/O virtualization;power proportionality;virtual I/O forwarding;Computer architecture;Graphics processing unit;Libraries;Scalability;Virtual machine monitors;Virtual machining;HPC;I/O;cloud;virtualization}, 
+doi={10.1109/ISPA.2012.139}
+}
+
+@INPROCEEDINGS{Gonzalez2012, 
+author={Gonzalez, J.L. and Sosa-Sosa, V. and Bergua, B. and Sanchez, L.M. and Carretero, J.}, 
+booktitle={Internet Technology And Secured Transactions, 2012 International Conference for}, 
+title={Fault-tolerant middleware based on multistream pipeline for private storage services}, 
+year={2012}, 
+month=dec,
+pages={548-555}, 
+keywords={middleware;multiprocessing systems;pipeline processing;software fault tolerance;storage management;chunk placement engine;client-server model;client-side API;data availability;fault-tolerant middleware;fault-tolerant online distributed solutions;in site disaster scenarios;multiple cores;multistream pipeline;private file hosting systems;private storage services;public file hosting systems;server-side API;site failure scenarios;storage resources;Libraries;Measurement;Organizations;Pipelines;Servers;Sockets;Fault tolerance;Optimization;Privacy;Storage Services;Virtualization}
+}
+
+@article{Calderon2012,
+title = "Expanding the volunteer computing scenario: A novel approach to use parallel applications on volunteer computing ",
+journal = "Future Generation Computer Systems ",
+volume = "28",
+number = "6",
+pages = "881 - 889",
+year = "2012",
+note = "Including Special sections SS: Volunteer Computing and Desktop Grids and SS: Mobile Ubiquitous Computing ",
+issn = "0167-739X",
+doi = "http://dx.doi.org/10.1016/j.future.2011.04.004",
+url = "http://www.sciencedirect.com/science/article/pii/S0167739X11000550",
+author = "Alejandro Calderón and Felix García-Carballeira and Borja Bergua and Luis Miguel Sánchez and Jesús Carretero",
+keywords = "Volunteer computing",
+keywords = "High throughput computing",
+keywords = "High performance computing",
+keywords = "MPI",
+keywords = "Parallel application ",
+abstract = "Nowadays, high performance computing is being improved thanks to different platforms like clusters, grids, and volunteer computing environments. Volunteer computing is a type of distributed computing paradigm in which a large number of computers, volunteered by members of the general public, provide computing and storage resources for the execution of scientific projects. Currently, volunteer computing is used for high throughput computing, but it is not used for parallel applications based on \{MPI\} due to the difficulty in communicating among computing peers. As Sarmenta and Hirano (1999) [2] said, there are several research issues to be solved in volunteer computing platforms, one of them is ‘implementing other types of applications’. In fact, the \{BOINC\} team (the well known volunteer computing development platform) is requesting ‘MPI-like support’ for volunteer computing as one of its hot topics. This paper proposes an extension of the usual capabilities of volunteer computing and desktop grid systems by allowing the execution of parallel applications, based on MPI, on these types of platforms. The goal of this paper is to describe a method to transform and adapt \{MPI\} applications in order to allow the execution of this type of applications on volunteer computing platforms and desktop grids. The proposed approach does not require an \{MPI\} installation on the client’s side, which keeps the software to be installed on the client quite lightweight. The paper describes the prototype built, and also shows the evaluation made of this prototype, in order to test the viability of the idea proposed in this article, with promising results. "
+}
+
+@inproceedings{Calderon2013,
+ author = {Calder\'{o}n, Alejandro and Carretero, Jes\'{u}s and Garc\'{\i}a-Carballeira, Felix and Fernandez, Javier and Higuero, Daniel and Bergua, Borja},
+ title = {Improving MPI Applications with a New MPI_Info and the Use of the Memoization},
+ booktitle = {Proceedings of the 20th European MPI Users' Group Meeting},
+ series = {EuroMPI '13},
+ year = {2013},
+ isbn = {978-1-4503-1903-4},
+ location = {Madrid, Spain},
+ pages = {7--12},
+ numpages = {6},
+ url = {http://doi.acm.org/10.1145/2488551.2488554},
+ doi = {10.1145/2488551.2488554},
+ acmid = {2488554},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {MPI, high performance computing, memoization}
+} 
+
+@article{Gonzalez2015,
+title = "SkyCDS: A resilient content delivery service based on diversified cloud storage ",
+journal = "Simulation Modelling Practice and Theory ",
+volume = "54",
+number = "",
+pages = "64 - 85",
+year = "2015",
+note = "",
+issn = "1569-190X",
+doi = "http://dx.doi.org/10.1016/j.simpat.2015.03.006",
+url = "http://www.sciencedirect.com/science/article/pii/S1569190X15000477",
+author = "J.L. Gonzalez and Jesus Carretero Perez and Victor J. Sosa-Sosa and Luis M. Sanchez and Borja Bergua",
+keywords = "Content delivery",
+keywords = "Multi-cloud storage",
+keywords = "Pub/Sub overlay",
+keywords = "Virtualization",
+keywords = "Diversification",
+keywords = "Risk management ",
+abstract = "Abstract Cloud-based storage is a popular outsourcing solution for organizations to deliver contents to end-users. However, there is a need for contingency plans to ensure service provision when the provider either suffers outages or is going out of business. This paper presents SkyCDS: a resilient content delivery service based on a publish/subscribe overlay over diversified cloud storage. SkyCDS splits the content delivery into metadata and content storage flow layers. The metadata flow layer is based on publish–subscribe patterns for insourcing the metadata control back to content owner. The storage layer is based on dispersal information over multiple cloud locations with which organizations outsource content storage in a controlled manner. In SkyCDS, the content dispersion is performed on the publisher side and the content retrieving process on the end-user side (the subscriber), which reduces the load on the organization side only to metadata management. SkyCDS also lowers the overhead of the content dispersion and retrieving processes by taking advantage of multi-core technology. A new allocation strategy based on cloud storage diversification and failure masking mechanisms minimize side effects of temporary, permanent cloud-based service outages and vendor lock-in. We developed a SkyCDS prototype that was evaluated by using synthetic workloads and a study case with real traces. Publish/subscribe queuing patterns were evaluated by using a simulation tool based on characterized metrics taken from experimental evaluation. The evaluation revealed the feasibility of SkyCDS in terms of performance, reliability and storage space profitability. It also shows a novel way to compare the storage/delivery options through risk assessment. "
+}
+
+
+%
+% ParFiSys
+%
+@article{Carretero96,
+  language = {english},
+  author  = "J. Carretero and F. P\'erez and P. de Miguel and F. Garc\'ia and L. Alonso",
+  title   = "{ParFiSys}: A Parallel File System for {MPP}",
+  journal = "ACM Operating Systems Review, 30(2):74--80",
+  year    = "1996"
+}
+
+@article{Perez97,
+  language = {english},
+  author  = "F. P\'erez and J. Carretero and F. Garc\'ia and P. de Miguel and L. Alonso",
+  title   = "Evaluating {ParFiSys}: a High-Performance and Distributed File System",
+  journal = "Journal of Systems Architecture. Elsevier. Vol. 43",
+  pages   = "533--542",
+  year    = "1997"
+}
+
+%
+% Expand chapter
+%
+@TechReport{Eckardt90,
+author = {H. Eckardt},
+title = {Investigation of distributed disk {I/O} concepts},
+institution = {ESPRIT PUMA, Siemens},
+year = {1990},
+}
+@ARTICLE{hwang99,
+  language = {english},
+  author  = {Kai Hwang and Hai Jin and Chow, E. and Cho-Li Wang and Zhiwei Xu},
+  title	  = {Designing {SSI} Clusters with Hierarchical Checkpointing and Single {I/O} Space},
+  journal = {IEEE Concurrency},
+  volume  = {7},
+  number  = {1},
+  pages   = {60--69},
+  year	  = {1999},
+  doi     = {10.1109/4434.749136},
+  ISSN    = {1092-3063},}
+}
+@inproceedings{Nieuwejaar:1996:GPF,
+ author = {Nieuwejaar, Nils and Kotz, David},
+ title = {The Galley Parallel File System},
+ booktitle = {Proceedings of the 10th International Conference on Supercomputing},
+ series = {ICS '96},
+ year = {1996},
+ isbn = {0-89791-803-7},
+ location = {Philadelphia, Pennsylvania, USA},
+ pages = {374--381},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/237578.237639},
+ doi = {10.1145/237578.237639},
+ acmid = {237639},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+@InProceedings{Nieuwejaar96,
+  language = {english},
+  author = "N.~Nieuwejaar and D.~Kotz",
+  title  = "Performance of the Galley Parallel File System",
+  booktitle   = "Fourth Workshop on Input/Output in Parallel and Distributed Systems",
+  pages  = "83--94",
+  year   = "1996"
+}
+@article{Nieuwejaar97,
+title = "The Galley parallel file system",
+journal = "Parallel Computing",
+volume = "23",
+number = "4–5",
+pages = "447--476",
+year = "1997",
+note = "Parallel I/O ",
+issn = "0167-8191",
+doi = "10.1016/S0167-8191(97)00009-4",
+url = "http://www.sciencedirect.com/science/article/pii/S0167819197000094",
+author = "Nils Nieuwejaar and David Kotz",
+keywords = "Parallel I/O",
+keywords = "Multiprocessor file system",
+keywords = "Performance evaluation",
+keywords = "IBM SP-2",
+keywords = "Scientific computing",
+abstract = "Most current multiprocessor file systems are designed to use multiple disks in parallel, using the high aggregate bandwidth to meet the growing I/O requirements of parallel scientific applications. Many multiprocessor file systems provide applications with a conventional Unix-like interface, allowing the application to access multiple disks transparently. This interface conceals the parallelism within the file system, increasing the ease of programmability, but making it difficult or impossible for sophisticated programmers and libraries to use knowledge about their I/O needs to exploit that parallelism. In addition to providing an insufficient interface, most current multiprocessor file systems are optimized for a different workload than they are being asked to support. We introduce Galley, a new parallel file system that is intended to efficiently support realistic scientific multiprocessor workloads. We discuss Galley's file structure and application interface, as well as the performance advantages offered by that interface."
+}
+@InProceedings{Moyer94,
+  language = {english},
+  author = {S. A. Moyer and V. S. Sunderam},
+  title  = {{PIOUS}: A Scalable Parallel {I/O} System for Distributed Computing Environments},
+  booktitle = {Proceedings of the Scalable High-Performance Computing Conferece},
+  pages  = {71--78},
+  year   = {1994}
+}
+@InProceedings{oldfield98armada,
+  author = {Ron Oldfield and David Kotz},
+  title = {{Armada}: A parallel file system for computational grids},
+  booktitle = {Proceedings of the First IEEE/ACM International Symposium on Cluster Computing and the Grid},
+  year = {2001},
+  month = {May},
+  pages = {194--201},
+  publisher = {IEEE Computer Society Press}
+}
+% ROMIO
+% thakur99implementing,
+@inproceedings{TGL99a,
+ author = {Thakur, Rajeev and Gropp, William and Lusk, Ewing},
+ title = {On Implementing {MPI-IO} Portably and with High Performance},
+ booktitle = {Proceedings of the Sixth Workshop on I/O in Parallel and Distributed Systems},
+ series = {IOPADS '99},
+ year = {1999},
+ isbn = {1-58113-123-2},
+ location = {Atlanta, Georgia, USA},
+ pages = {23--32},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/301816.301826},
+ doi = {10.1145/301816.301826},
+ acmid = {301826},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+% MPI-IO
+%MPIIO99HP
+@techreport{TGL99b,
+    language = {english},
+    author = "Rajeev Thakur and William Gropp and Ewing Lusk",
+    title = "Achieving High Performance with {MPI-IO}",
+    number="ANL/MCS-P742-0299",
+    institution="Argonne National Laboratory",
+    year="1999"
+}
+% Optimización E/S: cribado de datos (data sieving)
+@inproceedings{TGL99c,
+  language = {english},
+    author    = "Rajeev Thakur and William Gropp and Ewing Lusk",
+    title     = "Data sieving and collective {I/O} in {ROMIO}",
+    booktitle = "Proceedings of the 7th Symposium on the Frontiers of Massively Parallel Computation",
+    publisher = {Argonne National Laboratory}, 
+    pages     = "182--189",
+    year      = "1999"
+}
+@inproceedings{Pierce89,
+  language = {english},
+  author = {Paul Pierce},
+  title  = {A Concurrent File System for a Highly Parallel Mass Storage Subsystem},
+  booktitle = {Proceedings of the Fourth Conference on Hypercubes Concurrent Computers and Applications (HCCA)},
+  pages  = {155--161},
+  year   = {1989}
+}
+@phdthesis{Krieger94,
+  language = {english},
+  author = {Orran Krieger},
+  title  = {{HFS}: A Flexible File System for Shared-Memory Multiprocessors},
+  school = {Department of Electrical and Computer Engineering, University of Toronto},
+  year   = {1994}
+}
+@TechReport{Gibson95,
+author = {Garth A. {Gibson}},
+title = {The {Scotch} Paralell Storage Systems},
+institution = {Scholl of Computer Science, Carnegie Mellon University},
+year = {1995},
+number = {CMU-CS-95-107},
+address = {Pittsburgh, Pennsylvania},
+}
+@phdthesis{Madhyastha97,
+  title={Automatic classification of input/output access patterns},
+  author={Madhyastha, Tara Maja},
+  school = {Graduate College of the University of Illinois at Urbana-Champaign},
+  year = {1997}
+}
+@article{Carretero97,
+  language = {english},
+  author  = "J. Carretero and F. P\'erez and P. de Miguel and F. Garc\'ia and L. Alonso",
+  title   = "Performance Increase Mechanisms for Parallel and Distributed File Systems",
+  journal = "Parallel Computing: Special Issue on Parallel {I/O} Systems. Elsevier",
+  volume  = "23",
+  number =  "3",
+  pages   = "525--542",
+  year    = "1997"
+}
+% Bigfoot-NFS
+@misc{Kim94,
+  language = {english},
+    author = "Kim, Gene H and Minnich, Ronald G and McVoy, Larry",
+    title  = "{{Bigfoot-NFS}: A Parallel File-Striping {NFS} Server}",
+    year   = "1994"
+}
+@misc{Avaki05,
+  language = {english},
+  author = {{Avaki Corporation}},
+  title  = {Avaki home page},
+  url    = {http://www.avaki.com},
+  year   = {2005}
+}
+% LegionFS
+@inproceedings{white01legionfs,
+  language = {english},
+  AUTHOR = {Brian S. White and Michael Walker and Marty Humphrey and Andrew Grimshaw},
+  TITLE = {{LegionFS: A Secure and Scalable File System Support Cross-Domain High Performance Applications}},
+  BOOKTITLE = {Proceedings of Supercomputing 2001},
+  YEAR = 2001,
+  URL = {http://legion.virginia.edu/papers/SC2001.pdf}
+}
+%L2A02
+  Author="Andrew S. Grimshaw and Anand Natrajan and Marty A. Humphrey and
+           Michael J. Lewis and Anh Nguyen-Tuong and John F. Karpovich and
+           Mark M. Morgan and Adam J. Ferrari", 
+@inbook{L2A02,
+  language = {english},
+  chapter = "10, {From Legion to Avaki: The Persistence of Vision}",
+  title ="{Grid Computing: Making the Global Infrastructure a Reality}",
+  publisher = "John Wiley \& Sons",
+  editor = "Fran Berman and Geoffrey C. Fox and Anthony J. G. Hey",
+  year = "March 2003",
+  pages = "265--298", 
+  ISBN = "0-470-85319-0"
+}
+@INBOOK{ogsa03,
+  language = {english},
+  COMMENT = {paper.bib},
+  AUTHOR = "Ian Foster and Carl Kesselman and Jeffrey M. Nick and Steven Tuecke",
+  TITLE = {{Grid Computing: Making the Global Infrastructure a Reality}},
+  CHAPTER = {{The Physiology of the Grid}},
+  PUBLISHER = {Wiley},
+  OPTSERIES = {Wiley Series in Communications Networking and Distributed Systems},
+  PAGES = {217--249},
+  \url = "http://www.globus.org/ogsa",
+  YEAR = {2003}
+}
+@article{Ahuja86,
+  language = {english},
+     author = {Sudhir Ahuja and Nicholas Carriero and David Gelernter},
+     title = {Linda and friends},
+     journal = {Computer},
+     volume = {19},
+     number = {8},
+     year = {1986},
+     issn = {0018-9162},
+     pages = {26--34},
+     publisher = {IEEE Computer Society Press},
+}
+
+% Ext2
+@inproceedings{Card94,
+language = "english",
+author = "R. Card and T. Ts'o and S. Tweedie", 
+title = "Design and Implementation of the Second Extended Filesystem",
+booktitle = "Proceedings of the First Dutch International Symposium on Linux",
+isbn = {90-367-0385-9},
+year = "1994",
+}
+
+% Extended Filesystem API (XFile API)
+@InBook{SUN04,
+author = {{Sun Microsystems}},
+title = {{WebNFS} Developer's Guide},
+chapter = {2 {E}xtended {F}ilesystem {API}},
+publisher = {Oracle},
+year = {2004},
+url = {http://docs.oracle.com/cd/E19455-01/806-1067/6jacl3e6g/index.html},
+}
+
+
+
+
+% Grid
+
+
+
+% SRM
+
+ @MISC{GridPP2012GridStorage,
+  author = {GridPP},
+  title = {Grid Storage},
+  howpublished = {Last visited},
+  month = apr,
+  year = {2016},
+  url = {https://www.gridpp.ac.uk/wiki/Grid_Storage},
+}
+
+ @MISC{GridPP2010WhichSRM,
+  author = {GridPP},
+  title = {Which SRM},
+  url = {https://www.gridpp.ac.uk/wiki/Which_SRM},
+  year = {2010}
+}
+
+ @MISC{GridPP2008SRM,
+  author = {GridPP},
+  title = {Storage Resource Manager},
+  url = {https://www.gridpp.ac.uk/wiki/SRM},
+  year = {2008}
+}
+
+ @MISC{dCache,
+  author = {d{C}ache.org},
+  title = {d{C}ache},
+  howpublished = {Last visited},
+  month = apr,
+  year = {2016},
+  url = {http://www.dcache.org/},
+}
+
+@INPROCEEDINGS{dCache-chep01,
+  author = {Ernst, M. and Fuhrmann, P. and Gasthuber, M. Mkrtchyan, T. and Waldman, C.},
+  title = {d{C}ache, a distributed storage data caching system},
+  booktitle = {Proceedings of Computing in High Energy Physics},
+  year = {2001},
+  address = {Beijing, China},
+  month = {Sep},
+  timestamp = {2001.09.04}
+}
+
+ @MISC{GridPP2012DPM,
+  author = {GridPP},
+  title = {Disk Pool Manager},
+  howpublished = {Last visited},
+  month = apr,
+  year = {2016},
+  url = {https://www.gridpp.ac.uk/wiki/Disk_Pool_Manager},
+}
+
+@INPROCEEDINGS{StoRM-chep04,
+  author = {Donno, F. and Ghiselli, A. and Magnoni,	L. and Zappi, R.},
+  title = {Sto{RM}: {G}rid {M}iddleware for {D}isk {R}esource {M}anagement},
+  booktitle = {Proceedings of the International {CHEP} 2004},
+  year = {2004},
+  address = {Interlaken, Switzerland},
+  month = {Sep},
+  howpublished = {http://indico.cern.ch/contributionDisplay.py?contribId=461&sessionId=10&confId=0},
+  timestamp = {2004.09.29}
+}
+
+@INPROCEEDINGS{StoRM-chep06,
+  author = {Corso, E. and Cozzini, S. and Donno, F. and Ghiselli, A. and Magnoni,
+	L. and Mazzucato, M. and Murri, R. and Ricci, P.P. and Stockinger,
+	H. and Terpin, A. and Vagnoni, V. and Zappi, R.},
+  title = {Sto{RM}, an {SRM} {I}mplementation for {LHC} {A}nalysis {F}arms,
+	{C}omputing in {H}igh {E}nergy {P}hysics},
+  booktitle = {Proceedings of the International {CHEP} 2006},
+  year = {2006},
+  address = {Mumbai, India},
+  month = {Feb},
+  howpublished = {http://indico.cern.ch/contributionDisplay.py?contribId=373\&sessionId=13\&confId=048},
+  owner = {RitZ},
+  timestamp = {2006.12.08}
+}
+
+@INPROCEEDINGS{StoRM_CGW2006,
+  author = {Corso, E. and Cozzini, S. and Forti, A. and Ghiselli, A. and Magnoni, L. and Messina, A. and Nobile, A. and Terpin, A. and Vagnoni, V. and Zappi, R.},
+  title = {{S}to{RM}: {A} {SRM} {S}olution on {D}isk {B}ased {S}torage {S}ystem},
+  booktitle = {Proceedings of the Cracow Grid Workshop 2006 (CGW2006), Cracow, Poland},
+  year = {2006},
+  url = {http://www.cyfronet.pl/cgw06/}
+}
+
+
+% SRB
+
+@MISC{SRB,
+    author = {{San} {Diego} {Supercomputer} {Center}},
+    title = {The {DICE} {S}torage {R}esource {B}roker},
+    url = {http://www.sdsc.edu/srb/index.php/Main_Page},
+    year = {2006}
+}
+
+@MISC{SRB2,
+    author = {{Science} {and} {Technology} {Facilities} {Council}},
+    title = {{S}torage {R}esource {B}roker},
+    howpublished = {Last visited},
+    month = apr,
+    year = {2016},
+    url = {http://www.stfc.ac.uk/e-Science/projects/medium-term/storage-resource-broker/22430.aspx},
+}
+
+@INPROCEEDINGS{Baru98thesdsc,
+    author = {Chaitanya Baru and Reagan Moore and Arcot Rajasekar and Michael Wan},
+    title = {The {SDSC} Storage Resource Broker},
+    booktitle = {Proceedings of CASCON},
+    year = {1998}
+}
+
+@Article{Moore_managinglarge,
+    author = {Reagan W. Moore},
+    title = {Managing Large Distributed Data Sets using the Storage Resource Broker},
+    journal = {ITEA Journal of Test and Evaluation},
+    month = jun,
+    year = {2007}
+}
+
+@inproceedings{Rajasekar:2002:MySRB,
+ author = {Rajasekar, Arcot and Wan, Michael and Moore, Reagan},
+ title = {MySRB \& SRB: Components of a Data Grid},
+ booktitle = {Proceedings of the 11th IEEE International Symposium on High Performance Distributed Computing},
+ series = {HPDC '02},
+ year = {2002},
+ isbn = {0-7695-1686-6},
+ pages = {301--},
+ url = {http://dl.acm.org/citation.cfm?id=822086.823379},
+ acmid = {823379},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+}
+
+@inproceedings{Wan:2003:ASimpleMS,
+ author = {Wan, Michael and Rajasekar, Arcot and Moore, Reagan and Andrews, Phil},
+ title = {A Simple Mass Storage System for the SRB Data Grid},
+ booktitle = {Proceedings of the 20 th IEEE/11 th NASA Goddard Conference on Mass Storage Systems and Technologies (MSS'03)},
+ series = {MSS '03},
+ year = {2003},
+ isbn = {0-7695-1914-8},
+ pages = {20--},
+ url = {http://dl.acm.org/citation.cfm?id=824467.824998},
+ acmid = {824998},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+}
+
+% Bigtable
+
+@inproceedings{Chang:2006:Bigtable,
+ author = {Chang, Fay and Dean, Jeffrey and Ghemawat, Sanjay and Hsieh, Wilson C. and Wallach, Deborah A. and Burrows, Mike and Chandra, Tushar and Fikes, Andrew and Gruber, Robert E.},
+ title = {Bigtable: a distributed storage system for structured data},
+ booktitle = {Proceedings of the 7th USENIX Symposium on Operating Systems Design and Implementation - Volume 7},
+ series = {OSDI '06},
+ year = {2006},
+ location = {Seattle, WA},
+ pages = {15--15},
+ numpages = {1},
+ url = {http://dl.acm.org/citation.cfm?id=1267308.1267323},
+ acmid = {1267323},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+}
+@article{Chang:2008:Bigtable,
+ author = {Chang, Fay and Dean, Jeffrey and Ghemawat, Sanjay and Hsieh, Wilson C. and Wallach, Deborah A. and Burrows, Mike and Chandra, Tushar and Fikes, Andrew and Gruber, Robert E.},
+ title = {Bigtable: A Distributed Storage System for Structured Data},
+ journal = {ACM Trans. Comput. Syst.},
+ issue_date = {June 2008},
+ volume = {26},
+ number = {2},
+ month = jun,
+ year = {2008},
+ issn = {0734-2071},
+ pages = {4:1--4:26},
+ articleno = {4},
+ numpages = {26},
+ url = {http://doi.acm.org/10.1145/1365815.1365816},
+ doi = {10.1145/1365815.1365816},
+ acmid = {1365816},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Large-Scale Distributed Storage},
+}
+
+
+%%%%%%%%%%%%%
+% Generic Architecture %
+%%%%%%%%%%%%%
+
+@misc{XML,
+  language = {english},
+  title = {Extensible Markup Language ({XML}) 1.0},
+  author = {{World Wide Web Consortium (W3C)}},
+  year = {2008},
+  url = {http://www.w3.org/TR/xml/},
+  key = {XML}
+}
+
+@misc{FUSE,
+  language = {english},
+  author = {Miklos Szeredi},
+  title  = {{FUSE}: Filesystem in Userspace},
+  howpublished = {Last visited},
+  month = apr,
+  year = {2016},
+  url = {http://fuse.sourceforge.net},
+
+}
+
+
+% FLASH
+
+@misc{FLASHIO,
+  language = {english},
+  author = {Michael Zingale},
+  title  = {{FLASH I/O} Benchmark Routine -- Parallel {HDF 5}},
+  year = {2001},
+  url = {http://www.ucolick.org/~zingale/flash_benchmark_io/},
+}
+@misc{FLASHArgonne,
+  language = {english},
+  author = {{Argonne National Laboratory}},
+  title  = {Parallel {I/O} Benchmarking Consortium },
+  year = {2011},
+  url = {http://www.mcs.anl.gov/research/projects/pio-benchmark/},
+}
+
+@article{FLASH,
+  author={B. Fryxell and K. Olson and P. Ricker and F. X. Timmes and M. Zingale and D. Q. Lamb and P. MacNeice and R. Rosner and J. W.
+Truran and H. Tufo},
+  title={FLASH: An Adaptive Mesh Hydrodynamics Code for Modeling Astrophysical Thermonuclear Flashes},
+  journal={The Astrophysical Journal Supplement Series},
+  volume={131},
+  number={1},
+  pages={273-334},
+  url={http://stacks.iop.org/0067-0049/131/i=1/a=273},
+  year={2000},
+  month = {nov},
+  abstract={We report on the completion of the first version of a new-generation simulation code, FLASH. The FLASH code solves the fully compressible, reactive hydrodynamic equations and allows for the use of adaptive mesh refinement. It also contains state-of-the-art modules for the equations of state and thermonuclear reaction networks. The FLASH code was developed to study the problems of nuclear flashes on the surfaces of neutron stars and white dwarfs, as well as in the interior of white dwarfs. We expect, however, that the FLASH code will be useful for solving a wide variety of other problems. This first version of the code has been subjected to a large variety of test cases and is currently being used for production simulations of X-ray bursts, Rayleigh-Taylor and Richtmyer-Meshkov instabilities, and thermonuclear flame fronts. The FLASH code is portable and already runs on a wide variety of massively parallel machines, including some of the largest machines now extant.}
+}
+
+@TechReport{BTIO,
+  author = {C. Greenough and R.F. Fowler and R.J. Allan},
+  title = {Parallel IO for High Performance Computing},
+  institution = {Rutherford Appleton Laboratory},
+  month = mar,
+  year = {2001},
+  number = {RAL-TR-2001-020},
+  url = {http://www.softeng.rl.ac.uk/st/archive/SoftEng/SESP/Publications/paraio/paraio/node8.html}
+}
+
+@misc{NPB,
+  language = {english},
+  author = {{{NASA} Advanced Supercomputing ({NAS}) Division}},
+  title  = {{NAS} Parallel Benchmarks ({NPB})},
+  year = {2003},
+  url = {http://www.nas.nasa.gov/publications/npb.html},
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Workload Modeling for Computer Systems Performance Evaluation %
+% Dror G. Feitelson                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% File sizes
+
+@book{feitelson2015workload,
+  title={Workload modeling for computer systems performance evaluation},
+  author={Feitelson, Dror G.},
+  year={2015},
+  month=may,
+  publisher={Cambridge University Press},
+  url = {http://www.cs.huji.ac.il/~feit/wlmod/}
+}
+
+@Misc{irlam:ufs93,
+  Author = {Gordon Irlam},
+  Title = {Unix File Size Survey},
+  Year = {1993},
+  Url = {http://www.gordoni.com/ufs93.html},
+}
+
+@Article{crovella97b,
+  Author = {Mark E. Crovella and Azer Bestavros},
+  Title = {Self-Similarity in World Wide Web Traffic: Evidence and Possible Causes},
+  Journal = {IEEE/ACM Trans.\ Networking},
+  Volume = {5},
+  Number = {6},
+  Pages = {835-846},
+  Month = {Dec},
+  Year = {1997},
+}
+
+@InProceedings{barford98,
+  Author = {Paul Barford and Mark Crovella},
+  Title = {Generating Representative Web Workloads for Network and Server Performance Evaluation},
+  BookTitle = {SIGMETRICS Conf.\ Measurement \& Modeling of Comput.\ Syst.},
+  Pages = {151--160},
+  Month = {Jun},
+  Year = {1998},
+}
+
+@InProceedings{downey01,
+  Author = {Allen B. Downey},
+  Title = {The Structural Cause of File Size Distributions},
+  BookTitle = {9th Modeling, Anal.\ \& Simulation of Comput.\ \& Telecomm.\ Syst. (MASCOTS)},
+  Month = {Aug},
+  Year = {2001},
+}
+
+@InProceedings{arlitt96,
+  Author = {Martin F. Arlitt and Carey L. Williamson},
+  Title = {Web Server Workload Characterization: The Search for Invariants},
+  BookTitle = {SIGMETRICS Conf.\ Measurement \& Modeling of Comput.\ Syst.},
+  Pages = {126--137},
+  Month = {May},
+  Year = {1996},
+}
+
+@InCollection{williams05,
+  Author = {Adepele Williams and Martin Arlitt and Carey Williamson and Ken Barker},
+  Title = {Web Workload Characterization: Ten Years Later},
+  BookTitle = {Web Content Delivery},
+  Editor = {Xueyan Tang and Jianliang Xu and Samuel T. Chanson},
+  Publisher = {Springer Science+Business Media, Inc.},
+  Pages = {3--21},
+  Year = {2005},
+  isbn={978-0-387-24356-6},
+  volume={2},
+  series={Web Information Systems Engineering and Internet Technologies Book Series},
+  doi={10.1007/0-387-27727-7_1},
+}
+
+@article{Crovella99,
+ author = {Crovella, Mark E. and Taqqu, Murad S.},
+ title = {Estimating the heavy tail index from scaling properties},
+ journal = {Method. Comput. Appl. Prob.},
+ issue_date = {July 1999},
+ volume = {1},
+ number = {1},
+ month = jul,
+ year = {1999},
+ issn = {1387-5841},
+ pages = {55--79},
+ numpages = {25},
+ url = {http://dx.doi.org/10.1023/A:1010012224103},
+ doi = {10.1023/A:1010012224103},
+ acmid = {329559},
+ publisher = {Kluwer Academic Publishers},
+ address = {Hingham, MA, USA},
+ keywords = {World Wide Web, estimation, file sizes, heavy tails},
+}
+
+% File Sizes
+
+@article{Mitzenmacher03ABrief,
+  author    = {Michael Mitzenmacher},
+  title     = {A Brief History of Generative Models for Power Law and Lognormal
+               Distributions},
+  journal   = {Internet Mathematics},
+  volume    = {1},
+  number    = {2},
+  year      = {2003},
+  pages     = {226-251},
+  ee        = {http://dx.doi.org/10.1080/15427951.2004.10129088},
+  doi       = {10.1080/15427951.2004.10129088},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@article{Mitzenmacher03Dynamic,
+  author    = {Michael Mitzenmacher},
+  title     = {Dynamic Models for File Sizes and Double Pareto Distributions},
+  journal   = {Internet Mathematics},
+  volume    = {1},
+  number    = {3},
+  year      = {2003},
+  pages     = {305-333},
+  ee        = {http://dx.doi.org/10.1080/15427951.2004.10129092},
+  doi       = {10.1080/15427951.2004.10129092},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@inproceedings{Mitzenmacher03New,
+  title={New models and methods for file size distributions},
+  author={Mitzenmacher, Michael and Tworetzky, Brent},
+  booktitle={Proceedings of the 41st Annual Allerton Conference on Communication Control and Computing},
+  volume={41, number 1},
+  pages={603--612},
+  year={2003},
+  organization={The University; 1998}
+}
+  number={1},
+
+@article{Reed01,
+  title = {The Pareto, Zipf and other power laws},
+  journal = {Economics Letters},
+  volume = {74},
+  number = {1},
+  pages = {15 - 19},
+  year = {2001},
+  note = {},
+  issn = {0165-1765},
+  doi = {10.1016/S0165-1765(01)00524-9},
+  url = {http://www.sciencedirect.com/science/article/pii/S0165176501005249},
+  author = {William J Reed},
+  keywords = {Power law},
+  keywords = {Tail behaviour},
+  keywords = {Gibrat’s law},
+  keywords = {Income distribution},
+  keywords = {City-size distribution}
+}
+@article{Reed02,
+  title = {From gene families and genera to incomes and internet file sizes: Why power laws are so common in nature},
+  author = {Reed, William J. and Hughes, Barry D.},
+  journal = {Physical Review E},
+  volume = {66},
+  number = {6},
+  ref = {067103},
+  numpages = {4},
+  year = {2002},
+  month = {Dec},
+  doi = {10.1103/PhysRevE.66.067103},
+  url = {http://link.aps.org/doi/10.1103/PhysRevE.66.067103},
+  publisher = {American Physical Society}
+}
+@article{Reed03,
+  title = {The Pareto law of incomes - an explanation and an extension},
+  journal = {Physica A: Statistical Mechanics and its Applications},
+  volume = {319},
+  number = {0},
+  pages = {469-486},
+  year = {2003},
+  note = {},
+  issn = {0378-4371},
+  doi = {10.1016/S0378-4371(02)01507-8},
+  url = {http://www.sciencedirect.com/science/article/pii/S0378437102015078},
+  author = {William J. Reed},
+  keywords = {Pareto law},
+  keywords = {Income distribution},
+  keywords = {\{GBM\}},
+  keywords = {Mixture model},
+  keywords = {Double Pareto-lognormal distribution}
+}
+@article{Reed04,
+  author = {Reed, William J. and Jorgensen, Murray},
+  title = {The Double Pareto-Lognormal Distribution - A New Parametric Model for Size Distributions},
+  journal = {Communications in Statistics - Theory and Methods},
+  volume = {33},
+  number = {8},
+  pages = {1733-1753},
+  year = {2004},
+  doi = {10.1081/STA-120037438},
+  URL = {http://www.tandfonline.com/doi/abs/10.1081/STA-120037438},
+  eprint = {http://www.tandfonline.com/doi/pdf/10.1081/STA-120037438}
+}
+
+% Popularity
+
+@InProceedings{breslau99,
+  Author = {Lee Breslau and Pei Cao and Li Fan and Graham Phillips and Scott Shenker},
+  Title = {Web Caching and {Zipf}-Like Distributions: Evidence and Implications},
+  BookTitle = {18th IEEE INFOCOM},
+  Volume = {1},
+  Pages = {126--134},
+  Month = {Mar},
+  Year = {1999},
+}
+
+@Article{roadknight00,
+  Author = {Chris Roadknight and Ian Marshall and Debbie Vearer},
+  Title = {File Popularity Characterisation},
+  Journal = {Performance Evaluation Rev.},
+  Volume = {27},
+  Number = {4},
+  Pages = {45--50},
+  Month = {Mar},
+  Year = {2000},
+}
+
+@Article{adamic01,
+  Author = {Lada A. Adamic and Bernardo A. Huberman},
+  Title = {The Web's Hidden Order},
+  Journal = {Comm.\ ACM},
+  Volume = {44},
+  Number = {9},
+  Pages = {55--59},
+  Month = {Sep},
+  Year = {2001},
+}
+
+@InProceedings{oke02,
+  Author = {Adeniyi Oke and Rick Bunt},
+  Title = {Hierarchical Workload Characterization for a Busy Web Server},
+  BookTitle = {TOOLS},
+  Editor = {T. Field and others},
+  Publisher = {Springer-Verlag},
+  Note = {Lect.\ Notes Comput.\ Sci.\ vol.~2324},
+  Pages = {309--328},
+  Month = {Apr},
+  Year = {2002},
+}
+
+@inproceedings{Estrada2009,
+  title   = "{EmBOINC: An emulator for performance analysis of BOINC projects}",
+  booktitle = "Parallel and Distributed Processing Symposium, International",
+  pages   = "1--8",
+  year    = "2009",
+  doi     = "10.1109/IPDPS.2009.5161135",
+  author  = "{Trilce Estrada, Michela Taufer, Kevin Reed, David P. Anderson}"
+}
+
+@article{Javadi2011,
+  title   = "{Discovering Statistical Models of Availability in Large Distributed Systems: An Empirical Study of SETI@home}",
+  journal = "Parallel and Distributed Systems, IEEE Transactions",
+  volume  = "22",
+  pages   = "1896--1903",
+  year    = "2011",
+  doi     = "10.1109/TPDS.2011.50",
+  author  = "{Bahman Javadi, Derrick Kondo, Jean-Marc Vincent, David P. Anderson}"
+}
+
+@inproceedings{Anderson2004,
+    title     = "{BOINC: A System for Public-Resource Computing and Storage}",
+    booktitle = "5th IEEE/ACM International Workshop on Grid Computing",
+    pages     = "4--10",
+    year      =	"2004",
+    doi       = "10.1109/GRID.2004.14",
+    author    = "David P. Anderson",
+}
+
+@inproceedings{Estrada2006,
+    title     = "{The Effectiveness of Threshold-Based Scheduling Policies in BOINC Projects}",
+    booktitle = "e-Science and Grid Computing, 2006. e-Science '06. Second IEEE International Conference",
+    pages     = "88",
+    year      =	"2006",
+    doi       = "10.1109/E-SCIENCE.2006.261172",
+    author    = "{Trilce Estrada, David A. Flores, Michela Taufer, Patricia J. Teller, Andre Kerstens, David P. Anderson}",
+}
+
+@MISC{BOINC2013,
+ title = {{Volunteer computing}},
+ howpublished = {\url{http://boinc.berkeley.edu/trac/wiki/VolunteerComputing}, Last visited},
+ month = dec,
+ year = {2015},
+ url = {http://boinc.berkeley.edu/trac/wiki/VolunteerComputing},
+}
+
+@MISC{BOINC2016,
+ title = {{BOINCstats}},
+ howpublished = {\url{http://boincstats.com/en/stats}, Last visited},
+ month = feb,
+ year = {2016},
+ url = {http://boincstats.com/en/stats},
+}
+
+@MISC{ScienceNode2015,
+ title = {{BOINCstats}},
+ author = {{iSGTW Opinion - Volunteer computing: grid or not grid?}},
+ howpublished = {\url{https://sciencenode.org/feature/isgtw-opinion-volunteer-computing-grid-or-not-grid.php}, Last visited},
+ month = nov,
+ year = {2015},
+ url = {https://sciencenode.org/feature/isgtw-opinion-volunteer-computing-grid-or-not-grid.php},
+}
+
+@phdthesis{Kondo2005,
+    title = "{Scheduling Task Parallel Applications for Rapid Turnaround on Enterprise Desktop Grids}",
+    author = "Derrick Kondo",
+    school = "University of California at San Diego La Jolla",
+    year = "2005",
+}
+
+@MISC{BoincEdu2016,
+ title = {{Creating BOINC Projects}},
+ howpublished = {\url{https://boinc.berkeley.edu/boinc.pdf}, Last visited},
+ month = jan,
+ year = {2016},
+ url = {https://boinc.berkeley.edu/boinc.pdf},
+}
+
+@MISC{BoincJobs2016,
+ title = {{BOINC Jobs}},
+ howpublished = {\url{https://boinc.berkeley.edu/trac/wiki/JobIn}, Last visited},
+ month = jan,
+ year = {2016},
+ url = {https://boinc.berkeley.edu/trac/wiki/JobIn},
+}
+
+@MISC{top5002015,
+ title = {{Top 500 Supercomputer list}},
+ howpublished = {\url{http://www.top500.org/}, Last visited},
+ month = apr,
+ year = {2016},
+ url = {http://www.top500.org/},
+}
+
+@MISC{SETIflops,
+ title = {{CPU performance of SETI@home volunteer computers}},
+ author = {{SETI@home}},
+ howpublished = {\url{http://setiathome.berkeley.edu/cpu_list.php}, Last visited},
+ month = mar,
+ year = {2016},
+ url = {http://setiathome.berkeley.edu/cpu_list.php},
+}
+
+@MISC{EINSTEINflops,
+ title = {{CPU performance of EINSTEIN@home volunteer computers}},
+ author = {{EINSTEIN@home}},
+ howpublished = {\url{https://www.einsteinathome.org/cpu_list.php}, Last visited},
+ month = mar,
+ year = {2016},
+ url = {https://www.einsteinathome.org/cpu_list.php},
+}
+
+@MISC{LHCflops,
+ title = {{CPU performance of LHC@home volunteer computers}},
+ author = {{LHC@home classic}},
+ howpublished = {\url{http://lhcathomeclassic.cern.ch/sixtrack/cpu_list.php}, Last visited},
+ month = mar,
+ year = {2016},
+ url = {http://lhcathomeclassic.cern.ch/sixtrack/cpu_list.php},
+}
+
+@MISC{AtlasServerStatus,
+ title = {{ATLAS@home Project Status}},
+ howpublished = {http://atlasathome.cern.ch/server\_status.php. Last visited},
+ month = may,
+ year = {2016},
+ url = {http://atlasathome.cern.ch/server\_status.php},
+}
+
+@MISC{GridsimTeam,
+ title = {{GridSim Project Team}},
+ howpublished = {\url{http://www.buyya.com/gridsim/}, Last visited},
+ month = may,
+ year = {2016},
+ url = {http://www.buyya.com/gridsim/},
+}
+
+@TECHREPORT{Legrand2015,
+    author = {{Arnaud Legrand}},
+    title = {{Scheduling for Large Scale Distributed Computing Systems: Approaches and Performance Evaluation Issues}},
+    institution = {{Universit\'e Grenoble Alpes}},
+    year = {2015}
+}
+
+@inproceedings{AlonsoMonsalve2016hpcs,
+ author = {Alonso-Monsalve, Sa\'ul and Garc\'ia-Carballeira, F\'elix and Calder\'on, Alejandro},
+ title = {{Analyzing the Performance of Volunteer Computing for Data Intensive Applications}},
+ booktitle = {14th International Conference on High Performance Computing \& Simulation},
+ series = {HPCS2016},
+ year = {2016},
+ numpages = {8},
+ address = {Innsbruck, Austria},
+}
+
+@inproceedings{AdamBourdarios2015,
+ author = {C. Adam-Boundarios and D. Cameron and A. Filipcic and E. Lancon and W. Wu},
+ title = {{ATLAS@Home: Harnessing Volunteer Computing
+for HEP}},
+ booktitle = {21st International Conference on Computing in High Energy and Nuclear Physics},
+ series = {CHEP2015},
+ year = {2015},
+ numpages = {6},
+ address = {Okinawa, Japan},
+ doi       = "10.1088/1742-6596/664/2/022009",
+}
+
+@article{Xia2004,
+title = {The MicroGrid: Using Online Simulation to Predict Application Performance in Diverse Grid Network Environments},
+journal = {In Second International Workshop on Challenges of Large Applications in Distributed Environments (CLADE)},
+institution = {Los Alamitos, CA, USA.},
+year = "2004",
+author = "H. Xia and H. Dail and H. Casanova and A. Chien",
+}
+
+@article{snir1996,
+title = {MPI the complete reference},
+journal = {The MIT Press},
+year = "1996",
+author = "M. Snir and S. Otto and S. Huss-Lederman and J. Dongarra",
+}
+
+@article{ieee1998,
+title = {{IEEE Recommended Practice for Software Requirements Specifications}},
+journal = {{IEEE}},
+year = "1998",
+pages     = "830--1998",
+author = "{Institute for Electrical and Electronics Engineers}",
+}
+
+@MISC{KondoSimboinc,
+ title = {SimBoinc},
+ howpublished = { http://www.buyya.com/gridsim/. Last visited},
+ month = may,
+ year = {2016},
+ url = { http://www.buyya.com/gridsim/},
+}
+
+@article{mdcsim,
+title = {{MDCSim: A multi-tier data center simulation platform}},
+journal = {{Cluster Computing and Workshops, CLUSTER'2009}},
+year = "2009",
+author = {S. Lim and B. Sharma and G. Nam and E. Kim and C. Das},
+}
+
+@article{pvmcsim,
+title = {{PVMsim: A parallel simulation platform to evaluate virtual machines}},
+journal = {{Future Computer and Communication, ICFCC'2010.}},
+year = "2010",
+author = {J. Wu and X. Zhao and X. Sui and X. Yang},
+}
+
+@article{virtualgems,
+title = {{Virtual-GEMS: An Infrastructure To Simulate Virtual Machines}},
+journal = {{Modelling, benchmarking and simulation}},
+year = "2009",
+author = {A. Garc\'ia-Guirado and R. Fern\'andez-Pascual and J. M. Garc\'ia},
+}
+
+@article{speci2,
+title = {{SPECI-2 - An Open-source Framework for Predictive Simulation of Cloud-scale Data-centres}},
+journal = {{Simulation and Modeling Methodologies, Technologies and Applications, SIMULTECH'2011}},
+year = "2011",
+author = {I. Sriram and D. Clif},
+}
+
+@MISC{credit,
+ title = {Computation credit},
+ howpublished = {\url{http://boinc.berkeley.edu/wiki/Computation\_credit}, Last visited},
+ month = jun,
+ year = {2016},
+ url = {http://boinc.berkeley.edu/wiki/Computation\_credit},
+}
+
+@article{boe2008,
+title = {{Real Decreto 1720/2007, de 21 de diciembre, por el que se aprueba el Reglamento de desarrollo de la Ley Org\'anica 15/1999, de 12 de diciembre, de protecci\'on de datos de car\'acter personal.}},
+journal = {{Bolet\'in Oficial del Estado, 17:4103-4136}},
+author = {{BOE, 19 de enero de 2008}},
+}
+
+@article{boe2015,
+title = {{Resolución de 30 de enero de 2015, de la Dirección General de Empleo, por la que se registran y publican las tablas salariales correspondientes a los años 2013, 2014 y 2015 del Convenio colectivo de \'ambito estatal para los centros de educaci\'on universitaria e investigaci\'on}},
+journal = {{Bolet\'in Oficial del Estado, 36:11738-11750}},
+author = {{BOE, 11 de febrero de 2015}}
+}
+
+@MISC{gnulgpl,
+ title = {{The GNU Lesser General Public License}},
+ howpublished = {\url{http://www.gnu.org/licenses/licenses.html}, Last visited},
+ month = jun, 
+ year = {2016},
+ url = {http://boinc.berkeley.edu/wiki/Computation\_credit},
+}
+
+@article{boehm1988,
+title = {{A Spiral Model of Software Development and Enhancement}},
+journal = {{IEEE Computer 21, 5}},
+pages     = "61--72",
+author = {Barry Boehm},
+year  = 1988,
+}
+
+@article{grimm1998,
+title = {{The Human Condition: A Justification for Rapid Prototyping}},
+journal = {{Time Compression Technologies, vol. 3 no. 3}},
+pages     = "1",
+author = {{Accelerated Technologies, Inc}},
+month = may,
+year  = 1998,
+}
+
+@article{hebert1983,
+title = {{Production of Large Computer Programs}},
+journal = {{IEEE Annals of the History of Computing (IEEE Educational Activities Department)}},
+pages     = "350–361",
+author = {{Benington, Herbert D.}},
+month = oct,
+year  = 1983,
+doi = "10.1109/MAHC.1983.10102",
+}
+
+@article{colaboracion,
+title = {{Resoluci\'on de 17 de junio de 2015, de la Secretar\'ia de Estado de Educaci\'on, Formaci\'on Profesional y Universidades, por la que se convocan becas de colaboraci\'on de estudiantes en departamentos universitarios para el curso acad\'emico 2015-2016}},
+journal = {{Bolet\'in Oficial del Estado, 155:53607-53616}},
+author = {{BOE, 30 de junio de 2015}}
+}
+
+@article{iva2012,
+title = {{Resoluci\'on de 2 de agosto de 2012, de la Direcci\'on General de Tributos, sobre el tipo impositivo aplicable a determinadas entregas de bienes y prestaciones de servicios en el Impuesto sobre el Valor Añadido}},
+journal = {{Bolet\'in Oficial del Estado, 187:56055-56060}},
+author = {{BOE, 6 de agosto de 2012}}}
+}
+
+@MISC{csgproject,
+ title = {{Citizen Science Grid}},
+ howpublished = {\url{http://csgrid.org/csg/}, Last visited},
+ month = feb,
+ year = {2016},
+ url = {http://csgrid.org/csg/},
+}
+
+@MISC{verification,
+ title = {{Verification vs Validation}},
+ howpublished = {\url{http://softwaretestingfundamentals.com/verification-vs-validation/}, Last visited},
+ month = mar,
+ year = {2016},
+ author = {{Software Testing Fundamentals}},
+ url = {http://softwaretestingfundamentals.com/verification-vs-validation/},
+}
+
+@article{barkai2002,
+title = {{Peer-to-Peer Computing}},
+journal = {{Intel Press}},
+author = {{D. Barkai}},
+year = 2002}
+}
+
+@MISC{hpc2016,
+ title = {{High-Performance Computing}},
+ howpublished = {\url{http://searchenterpriselinux.techtarget.com/definition/high-performance-computing}, Last visited},
+ month = may,
+ year = {2016},
+ url = {http://searchenterpriselinux.techtarget.com/definition/high-performance-computing},
+}
+
+@article{costa2007,
+title = {{Peer-To-Peer Techniques for Data Distribution in Desktop Grid Computing Platforms}},
+journal = {{Proceedings of the CoreGRID Workshop on Programming Models Grid and P2P System Architecture Grid Systems, Tools and Environments 12-13 June 2007, Heraklion, Crete, Greece}},
+author = {Fernando Costa and Luis Silva and Ian Kelley and Ian Taylor},
+pages = {377--391},
+year = 2007,
+doi = "10.1007/978-0-387-78448-9_30",
+}
+
+@MISC{amazon,
+ title = {{Amazon Web Services}},
+ howpublished = {\url{http://aws.amazon.com/}, Last visited},
+ month = jun,
+ year = {2016},
+ url = {http://aws.amazon.com/},
+}
+
+@article{nistdefinition,
+title = {{The NIST Definition of Cloud Computing}},
+journal = {{Recommendations of the National Institute of Standards and Technology, Special Publication 800-145}},
+author = {Peter Mell and Timothy Grance},
+year = 2011,
+}
+
+@MISC{pcmag2016,
+ title = {{What Is Cloud Computing?}},
+ author = {Eric Griffith},
+ howpublished = {\url{http://www.pcmag.com/article2/0,2817,2372163,00.asp}, Last visited},
+ month = jun,
+ year = {2016},
+ url = {http://www.pcmag.com/article2/0,2817,2372163,00.asp},
+}
+
+@Book{grandinetti2014,
+ author = {Lucio Grandinetti and Ornella Pisacane and Mehdi Sheikhalishahi},
+ chapter = {{9: Cloud in Science}},
+ title = {Pervasive Cloud Computing Technologies: Future Outlooks and Interdisciplinary Perspectives},
+ year = {2014},
+ doi = "10.4018/978-1-4666-4683-4.ch009"
+}
+
+@MISC{drand48,
+ title = {drand48},
+ author = {{UNIX}},
+ howpublished = {\url{http://pubs.opengroup.org/onlinepubs/7908799/xsh/drand48.html}, Last visited},
+ month = jun,
+ year = {2016},
+ url = {http://pubs.opengroup.org/onlinepubs/7908799/xsh/drand48.html},
+}
+
