@@ -18,7 +18,7 @@
 \label{ch:introduction}
 \markboth{}{INTRODUCTION}
 
-El primer capítulo introduce brevemente el objetivo del proyecto, ncluyendo the key characteristics of a the project and its motivation (Section \ref{sec:background_and_motivation}, \textit{\nameref{sec:background_and_motivation}}), the project objectives (Section \ref{sec:objectives}, \textit{\nameref{sec:objectives}}), and the entire structure of the document (Section \ref{sec:document_structure}, \textit{\nameref{sec:document_structure}}).
+El primer capítulo introduce brevemente el objetivo del proyecto, incluyendo las características clave del proyecto y su motivación (Section \ref{sec:background_and_motivation}, \textit{\nameref{sec:background_and_motivation}}), los objetivos del proyecto (Section \ref{sec:objectives}, \textit{\nameref{sec:objectives}}), y toda la estructura del documento(Section \ref{sec:document_structure}, \textit{\nameref{sec:document_structure}}).
 
 \section{Motivación}
 \label{sec:background_and_motivation}
@@ -29,21 +29,23 @@ Explicamos la motivación de realizar un simulador interactivo.
 \section{Objetivos}
 \label{sec:objectives}
 
-Explicamos los objetivos que ha tenido el proyecto:
+El objetivo principal de este proyecto, es desarrollar un simulador, que a diferencia de los existentes, pueda simular de forma completa el comportamiento de un procesador elemental permitiendo comprobar el estado de los componentes en cada ciclo de reloj, de manera que ayude a los alumnos a comprender y asimilar de forma sencilla y visual el funcionamiento de un procesador. Los objetivos secundarios son:
 
 \begin{itemize}
 
-\item Providing a complete specification of the simulation parameters in each execution.
+\item Diseñar la especificación del juego de instrucciones que permita la creación de un lenguaje ensamblador adaptado a la arquitectura del simulador.
 
-\item Optimizing the simulator to be efficient in terms of time.
+\item Diseñar e implementar el compilador del juego de instrucciones para la generación del firmware del simulador.
 
-\item Allowing simulations with hundreds of thousands of volunteer clients.
+\item Diseñar e implementar el compilador genérico de ensamblador que permita la generación del binario correspondiente al juego de instrucciones diseñado.
 
-\item Breaking down the simulator structure into discrete modules that allow to easily add new functionalities in the future.
+\item Diseñar e implementar el motor del simulador permitiendo ejecuciones reales del código ensamblador correspondiente al juego de instrucciones compilado.
 
-\item Implementing an scheduler on the client side that is close to the actual planning of the \gls{boinc} client.
+\item Diseñar una interfaz que proporcione en todo momento la información necesaria en relación al estado de la ejecución del código, de forma sencilla y visual.
 
-\item Creating a generator that allows the user to compile and generate the files (executables, platform, and deployment) required for each simulation.
+\item Permitir que los usuarios puedan importar/exportar tanto la especificación del juego de instrucciones como el código ensamblador.
+
+\item Crear un mecanismo de "modificación en caliente" que permita en mitad de una ejecución modificar el juego de instrucciones, de forma que se puedan realizar pruebas sin necesidad de reiniciar la ejecución.
 
 \end{itemize}
 
