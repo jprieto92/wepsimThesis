@@ -23,10 +23,27 @@ Este capítulo presenta el estado del arte, la última y más avanzada etapa de 
 \section{Simuladores para microprogramación}
 \label{sec:simuladores_microprogramacion}
 
+En esta sección, se explican los diferentes simuladores existentes para la microprogramación. En primer lugar, vamos a centrarnos en los simuladores que están más enfocados a una labor docente. 
 
 \section{Simuladores para programación en ensamblador}
 \label{sec:simuladores_ensamblador}
+En esta sección, se explican los diferentes simuladores existentes para la programación en ensamblador. Los simuladores más conocidos para labores docentes, son SPIM y Mars.
 
+SPIM, es un simulador de un procesador MIPS de 32 bits que permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el alumno pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque su diseño no está pensado para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción syscall. SPIM, es un simulador que permite múltiples configuraciones mediante su interfaz de usuario, de manera que se puede indicar:
+
+\begin{itemize}
+
+\item Activación del uso de pseudoinstrucciones.
+
+\item Simulación de predicción de saltos y accesos a memoria, con la latencia correspondiente.
+
+\item Activación del uso del manejador de la señal trap y la carga del manejador personalizado.
+
+\item Activación de la visualización de los mensajes en caso de ocurrir excepciones.
+
+\item Activación del uso de "memory-mapped IO".
+
+\end{itemize}
 
 \section{Propuesta de simulación unificada}
 \label{sec:propuesta_simulacion}
