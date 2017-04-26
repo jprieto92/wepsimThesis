@@ -90,6 +90,15 @@ MARS \cite{vollmar2006mars}, es un simulador con interfaz gráfica desarrollado 
 	\label{fig:qtspim_figure}
 \end{figure}
 
+em88110, es emulador descrito en \cite{perez1997em88110} que se basa en la emulación de un procesador superescalar. El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del pipeline y las dependencias existentes. Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=12cm]{figures/em88110}
+ 	\caption{Interfaz em88110.}
+	\label{fig:em88110_figure}
+\end{figure}
+
 
 WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web, de forma que no requiere de su instalación en local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de intruducción al estudio de arquitectura de computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las 5 etapas de pipeline de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura "Arquitectura de Computadores" impartida por los creadores del simulador.
 
