@@ -23,7 +23,9 @@ Este capítulo presenta el estado del arte, la última y más avanzada etapa de 
 \section{Simuladores para microprogramación}
 \label{sec:simuladores_microprogramacion}
 
-En esta sección, se explican los diferentes simuladores existentes para la microprogramación. En primer lugar, vamos a centrarnos en los simuladores que están más enfocados a una labor docente. 
+En esta sección, se explican los diferentes simuladores existentes para la microprogramación. Cabe destacar, que actualmente existen pocos simuladores que nos proporcionen esta funcionalidad, debido a que una gran parte de ellos, son utilizados de forma interna por las empresas para verificar el correcto funcionamiento de sus unidades en la fase de diseño y desarrollo. En primer lugar, vamos a centrarnos en los simuladores que están más enfocados a una labor docente.
+
+En \cite{yen1986development}, se describe el desarrollo y la implementación de un simulador para una arquitectura de microprogramación específica. Fue publicado en el año 1986, y estaba basado en la arquitectura definida  
 
 
 
@@ -130,4 +132,29 @@ Hay distintas herramientas muy útiles para labores docentes relacionadas con la
 De este modo, con WepSIM se pretende crear un simulador unificado, abarcando los aspectos más relevantes de la asignatura "Estructura de Computadores" y permitiendo que todas las prácticas de la asignatura puedan realizarse en la misma plataforma, evitando la pérdida de tiempo y dificultad que supone para el alumno el habituarse a diferentes entornos para cada una de las prácticas.
 
 WepSIM, se puede definir por tanto como un simulador de programación en ensamblador y microprogramación, flexible puesto que permite la personalización del juego de instrucciones de la máquina, multiplataforma puesto que permite su uso desde diferentes tipos de dispositivos, e interactivo al poder modificar la configuración de la máquina en tiempo de ejecución.
+
+\begin{table}[htbp]
+\ra{1.2}
+\centering
+%\resizebox{\textwidth}{%
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}llllllll@{}}
+\toprule
+Simulador & SPIM & MARS & PC88110 & WebMIPS & WepSIM  & P8080E & MicMac\\ 
+\midrule
+Ensamblador				& \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} &  &  \\
+\midrule
+Microprogramación				&  &  &  &  & \ding{51} & \ding{51} & \ding{51} \\
+\midrule
+Multiplataforma				& \ding{51} &  &  & \ding{51} & \ding{51} &  &  \\
+\midrule
+Interactivo				&  &  &  &  & \ding{51} &  &  \\
+\midrule
+Juego de instrucciones personalizable				&  &  &  &  & \ding{51} &  &  \\
+\bottomrule
+\end{tabular}
+}
+\caption{Comparación de simuladores de ensamblador y microcódigo.}
+\label{tab:comparison_frameworks}
+\end{table}
 
