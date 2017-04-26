@@ -25,6 +25,8 @@ Este capítulo presenta el estado del arte, la última y más avanzada etapa de 
 
 En esta sección, se explican los diferentes simuladores existentes para la microprogramación. En primer lugar, vamos a centrarnos en los simuladores que están más enfocados a una labor docente. 
 
+
+
 \section{Simuladores para programación en ensamblador}
 \label{sec:simuladores_ensamblador}
 En esta sección, se explican los diferentes simuladores existentes para la programación en ensamblador. Los simuladores más conocidos para labores docentes, son SPIM, MARS y WebMIPS.
@@ -47,8 +49,8 @@ SPIM \cite{larus1990spim}, es un simulador de un procesador MIPS de 32 bits desa
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=12cm]{figures/spim_figure}
- 	\caption{SPIM interface.}
+ 	\includegraphics[width=8cm]{figures/spim_figure}
+ 	\caption{Interfaz SPIM.}
 	\label{fig:spim_figure}
 \end{figure}
 
@@ -57,7 +59,7 @@ SPIM, además cuenta con una versión más actualizada del simulador, que posee 
 \begin{figure}[htbp]
  	\centering
  	\includegraphics[width=12cm]{figures/qtspim_figure}
- 	\caption{QtSPIM interface.}
+ 	\caption{Interfaz QtSPIM.}
 	\label{fig:qtspim_figure}
 \end{figure}
 
@@ -79,12 +81,53 @@ MARS \cite{vollmar2006mars}, es un simulador con interfaz gráfica desarrollado 
 
 \end{itemize}
 
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=12cm]{figures/mars_figure}
+ 	\caption{Interfaz MARS.}
+	\label{fig:qtspim_figure}
+\end{figure}
 
-WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web, de forma que no requiere de su instalación en local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de intruducción al estudio de arquitectura de computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las 5 etapas de pipeline de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa.
 
+WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web, de forma que no requiere de su instalación en local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de intruducción al estudio de arquitectura de computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las 5 etapas de pipeline de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura "Arquitectura de Computadores" impartida por los creadores del simulador.
 
+Entre las diferentes características a destacar de este simulador, se encuentran:
 
+\begin{itemize}
+	
+\item Verificación del código ensamblador, comprobando que no existen errores en la definición el código.
+
+\item Dispone de códigos simples de ejemplo ("load-and-play") que facilitan la comprensión del funcionamiento del procesador.
+
+\item Permite diferentes visualizaciones del estado de la memoria y los registros del procesador.
+
+\item Consta de dos modos de ejecución: paso a paso y ejecución completa del programa.
+	
+\end{itemize}
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=12cm]{figures/webmips_figure}
+ 	\caption{ Interfaz WebMIPS.}
+	\label{fig:qtspim_figure}
+\end{figure}
+
+\clearpage
 
 \section{Propuesta de simulación unificada}
 \label{sec:propuesta_simulacion}
+Hay distintas herramientas muy útiles para labores docentes relacionadas con la asignatura Estructura de Computadores, aunque como se comento previamente, no existe una herramienta que nos proporcione el desarrollo y simulación tanto a nivel de microcódigo como a nivel de ensamblador. WepSIM, une ambos aspectos ofreciendo:
+
+\begin{itemize}
+	\item Visión interrelacionada de la microprogramación y la programación en ensamblador.
+	\item Flexibilidad en la plataforma usada, pensando el dispositivos móviles.
+	\item Herramienta autocontenida, de forma que incorpora en sí misma tanto la ayuda como distintos ejemplos que favorecen la comprensión del simulador.
+	\item Consta de un modelo hardware que puede ser modificado o ampliado en caso de ser necesario.
+	\item Permite definir un amplio conjunto de instrucciones máquina.
+	\item Puede ser usado como herramienta de microprogramación o de programación en ensamblador.
+\end{itemize}
+
+De este modo, con WepSIM se pretende crear un simulador unificado, abarcando los aspectos más relevantes de la asignatura "Estructura de Computadores" y permitiendo que todas las prácticas de la asignatura puedan realizarse en la misma plataforma, evitando la pérdida de tiempo y dificultad que supone para el alumno el habituarse a diferentes entornos para cada una de las prácticas.
+
+WepSIM, se puede definir por tanto como un simulador de programación en ensamblador y microprogramación, flexible puesto que permite la personalización del juego de instrucciones de la máquina, multiplataforma puesto que permite su uso desde diferentes tipos de dispositivos, e interactivo al poder modificar la configuración de la máquina en tiempo de ejecución.
 
