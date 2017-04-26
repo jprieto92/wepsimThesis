@@ -25,7 +25,19 @@ Este capítulo presenta el estado del arte, la última y más avanzada etapa de 
 
 En esta sección, se explican los diferentes simuladores existentes para la microprogramación. Cabe destacar, que actualmente existen pocos simuladores que nos proporcionen esta funcionalidad, debido a que una gran parte de ellos, son utilizados de forma interna por las empresas para verificar el correcto funcionamiento de sus unidades en la fase de diseño y desarrollo. En primer lugar, vamos a centrarnos en los simuladores que están más enfocados a una labor docente.
 
-En \cite{yen1986development}, se describe el desarrollo y la implementación de un simulador para una arquitectura de microprogramación específica. Fue publicado en el año 1986, y estaba basado en la arquitectura definida  
+P8080E \cite{p8080E} es un simulador desarrollado en el DATSI en la Facultad de Informática de la Universidad Politécnica de Madrid. Este simulador, no consta de una interfaz gráfica portable e interactiva que se ajuste a las tecnologías actuales. Para realizar poder realizar el desarrollo del microcódigo, el simulador requiere el binario completo de cada ciclo, de forma que resulta un tanto complejo su uso. Pese a ser un simulador bastante completo, no está orientado para la enseñanza de ensamblador y microprogramación con la misma herramienta, puesto que no permite la definición del juego de instrucciones con un formato diferente al definido por defecto.
+
+En \cite{yen1986development}, se describe el desarrollo y la implementación de un simulador para una arquitectura de microprogramación específica. Fue publicado en el año 1986, y estaba basado en la arquitectura definida en el entonces popular libro de ingeniería de computadores \cite{tanenbaum1984}. El simulador, requería de la definición de cada uno de los ciclos de ejecución de las intrucciones para la posterior generación de la memoria de control. Esta definición, se realizaba mediante la sintaxis definida en el libro, lo que hacía de este simulador una herramienta bastante completa al para aprender junto con el libro. 
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=6cm]{figures/ejemploTanenbaum}
+ 	\caption{Ejemplo de definición de microcódigo en simulador Tanenbaum.}
+	\label{fig:tanenbaum_figure}
+\end{figure}
+
+En
+
 
 
 
@@ -87,16 +99,16 @@ MARS \cite{vollmar2006mars}, es un simulador con interfaz gráfica desarrollado 
  	\centering
  	\includegraphics[width=12cm]{figures/mars_figure}
  	\caption{Interfaz MARS.}
-	\label{fig:qtspim_figure}
+	\label{fig:mars_figure}
 \end{figure}
 
-em88110, es emulador descrito en \cite{perez1997em88110} que se basa en la emulación de un procesador superescalar. El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del pipeline y las dependencias existentes. Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
+P88110, es emulador descrito en \cite{garcia2009p88110} que se basa en la emulación de un procesador superescalar. El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del pipeline y las dependencias existentes. Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
 
 \begin{figure}[htbp]
  	\centering
  	\includegraphics[width=12cm]{figures/em88110}
  	\caption{Interfaz em88110.}
-	\label{fig:em88110_figure}
+	\label{fig:p88110_figure}
 \end{figure}
 
 
@@ -120,7 +132,7 @@ Entre las diferentes características a destacar de este simulador, se encuentra
  	\centering
  	\includegraphics[width=12cm]{figures/webmips_figure}
  	\caption{ Interfaz WebMIPS.}
-	\label{fig:qtspim_figure}
+	\label{fig:webmips_figure}
 \end{figure}
 
 \clearpage
