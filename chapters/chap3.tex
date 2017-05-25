@@ -76,31 +76,33 @@ Además, la especificación de los requisitos debe ser:
 
 \end{itemize}
 
-Starting from the user requirements, which constitute an informal reference to the product performance that the client expects, we derived the software requirements (in this case, functional requirements and non-functional requirements) that guided the design process with specific information on the functionality of the system and other characteristics. The retrieved requirements were structured according with the following schema:
+A partir de los requisitos de los usuarios, que constituyen una referencia informal al comportamiento del producto que el cliente espera, derivamos los requisitos de software (en este caso, requisitos funcionales y no funcionales) que guiaron el proceso de diseño con información específica sobre la funcionalidad del sistema y otras características. Los requisitos recuperados se estructuraron de acuerdo con el siguiente esquema:
+
+%Starting from the user requirements, which constitute an informal reference to the product p%erformance that the client expects, we derived the software requirements (in this case, functional r%equirements and non-functional requirements) that guided the design process with specific %nformation on the functionality of the system and other characteristics. The retrieved requirements %were structured according with the following schema:
 
 \begin{itemize}
-\item[1.] \textbf{User Requirements} 
+\item[1.] \textbf{Requisitos de Usuario} 
 	\begin{itemize}
-		\item[(a)] \textbf{Capacity:} the requirement describes the expected system functionality as in use cases.
-		\item[(b)] \textbf{Restriction:} the requirement specifies constraints or conditions the system must fulfil.	
+		\item[(a)] \textbf{Capacidad:} el requisito describe la funcionalidad esperada del sistema como en casos de uso.
+		\item[(b)] \textbf{Restricción:} el requisito especifica las restricciones o condiciones que el sistema debe cumplir.
 	\end{itemize}	
 \end{itemize}
 
 \begin{itemize}
-\item[2.] \textbf{Software Requirements}
+\item[2.] \textbf{Requisitos de Software}
 	\begin{itemize}
-	\item[(a)] 	\textbf{Functional}
+	\item[(a)] 	\textbf{Funcionales}
 		\begin{itemize}
-		\item[i.] 	\textbf{Functional:} the requirement describes the basic system functionality and purpose while minimizing ambiguity.
-		\item[ii.] 	\textbf{Inverse:} the requirement limits the functionality of the application to clarify its scope.
+		\item[i.] 	\textbf{Funcional:} el requisito describe la funcionalidad básica y el propósito del sistema mientras se minimiza la ambigüedad.
+		\item[ii.] 	\textbf{Inverso:} el requisito limita la funcionalidad de la aplicación para aclarar su alcance.
 		\end{itemize}
 
-	\item[(b)] 	\textbf{Non-Functional}
+	\item[(b)] 	\textbf{No-Funcionales}
 		\begin{itemize}
-		\item[i.] 	\textbf{Performance:} the requirement is related to the minimum required performance of the resulting system.
-		\item[ii.] 	\textbf{Interface:} the requirement is related to the user interface of the application.
-		\item[iii.] 	\textbf{Scalability:} the requirement is related to the ability of the system to adapt to increasing workloads.
-		\item[iv.] 	\textbf{Platform:} the requirement specifies the underlying software and hardware platforms in which the system will operate.
+		\item[i.] 	\textbf{Rendimiento:} el requisito se relaciona con el rendimiento mínimo requerido del sistema resultante.
+		\item[ii.] 	\textbf{Interfaz:} el requisito está relacionado con la interfaz de usuario de la aplicación.
+		\item[iii.] 	\textbf{Escalabilidad:} el requisito está relacionado con la capacidad del sistema para adaptarse a cargas de trabajo cada vez mayores.
+		\item[iv.] 	\textbf{Plataforma:} el requisito especifica las plataformas subyacentes de software y hardware en las que funcionará el sistema.
 		\end{itemize}			
 	\end{itemize}
 \end{itemize}
@@ -112,22 +114,22 @@ Table \ref{tab:requirements_template} provides the template used for requirement
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 				& Requirement ID. \\
+\textbf{ID} 				& Requisito ID. \\
 \midrule
-\textbf{Name} 			& Requirement name. \\
+\textbf{Nombre} 			& Nombre del requisito. \\
 \midrule
-\textbf{Type} 			& Indicates the category in which the requirement would be placed according to the previously described schema. \\
+\textbf{Tipo} 			& Indica la categoría en la que se colocaría el requisito de acuerdo con el esquema descrito anteriormente. \\
 \midrule
-\textbf{Origin} 			& Constitutes the requirement source. It might be the user, another requirement or other stakeholders involved in the project. \\
+\textbf{Origen} 			& Constituye la fuente del requisito. Puede ser el usuario, otro requisito u otros actores involucrados en el proyecto. \\
 \midrule
-\textbf{Priority}		& Indicates the requirement priority according to its importance. A requirement can be identified either as \textit{essential}, \textit{conditional} or \textit{optional}. \\
+\textbf{Prioridad}		& Indica la prioridad del requisito según su importancia. Un requisito puede ser identificado como \textit{esencial}, \textit{condicional} or \textit{opcional}. \\
 \midrule
-\textbf{Stability} 		& Indicates the requirement variability through the development process, defined as \textit{stable} or \textit{unstable}. \\
+\textbf{Estabilidad} 		& Indica la variabilidad del requisito a través del proceso de desarrollo, definido como \textit{estable} or \textit{inestable}. \\
 \midrule
-\textbf{Description} 	& Detailed explanation of the requirement. \\
+\textbf{Descripción} 	& Explicación detallada del requisito. \\
 \bottomrule
 \end{tabular}
-\caption{Template for requirements specification.}
+\caption{Plantilla para la especificación de requisitos.}
 \label{tab:requirements_template}
 \end{table*}
 \end{center}
