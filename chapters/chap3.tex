@@ -27,63 +27,52 @@ La sección \ref{sec:project_description} resume brevemente la descripción del 
 \section{Descripción del proyecto}
 \label{sec:project_description}
 
-Explicamos lo que se pretende obtener del simulador.
+El objetivo de este proyecto es construir una herramienta que permita simular con realismo el comportamiento de un procesador basado en la arquitectura indicada por el el tutor del proyecto, de forma que sirva como única herramienta para los alumnos a lo largo de la asignatura Estructura de Computadores.
+
+Los simuladores actuales para la enseñanza de Estructura de Computadores, están focalizados a una función concreta, como puede ser la simulación de cachés, la simulación de código ensamblador o la simulación de microcódigo entre otros, pero a la hora de unificar todas estas funcionalidades en una única herramienta, existe un vacío que genera una pérdida de tiempo en el aprendizaje de cada herramienta y la no posibilidad de ver una simulación completa.
+
+El reto al que se enfrente cualquier simulador educativo es el de ser capaz de simular fielmente el funcionamiento de un dispositivo permitiendo al estudiante poder observar con el mayor detalle posible el comportamiento éste.
+
+El sistema que se propone debe ser capaz de simular con realismo el comportamiento del procesador, permitiendo la definición del juego de instrucciones a utilizar para el posterior desarrollo de código ensamblador y su ejecución en el simulador con un alto nivel de detalle en cada uno de los ciclos de ejecución,.De esta forma, los estudiantes podrán comprender fácilmente los contenidos teóricos expuestos en la asignatura y serán capaces de realizar todas las prácticas en una misma herramienta, pudiendo ver de forma incremental el desarrollo de software de bajo nivel sobre un procesador elemental.
+
 
 \section{Solución elegida}
 \label{sec:solution_selection}
 
-Explicamos el porque hemos elegido esta solución, y nos comparamos.
+Para que los profesores de la asignatura Estructura de Computadores puedan hacer uso de una herramienta que sirva de ayuda para la explicación de los conceptos teóricos de la asignatura, y los alumnos puedan utilizarla para comprender estos conceptos y realizar posteriormente las prácticas de la asignatura, se propone el diseño e implementación de una herramienta web que simule con realismo en funcionamiento de un procesador elemental con unidad de control microprogramable.
 
-\begin{table}[htbp]
-\ra{1.2}
-\centering
-%\resizebox{\textwidth}{%
-\resizebox{\textwidth}{!}{
-\begin{tabular}{@{}llllll@{}}
-\toprule
-Features & SimGrid & PVMsim & Virtual-GEMS & MDCSim & SPECI-2 \\ 
-\midrule
-Languages				& C/C++/Java/Ruby                            & C                   & C/C++/Ruby           & C++/Java             & Java\\
-Open Source				& \ding{51}                            & \ding{51}                   & \ding{51}           & \ding{55}             & \ding{51}\\
-\midrule
-Models & & & & &\\
-\midrule
-Communication		& \ding{51}               & \ding{55}           & \ding{55}  & \ding{51} & \ding{51}                  \\
-Energy				& \ding{51}               & \ding{55}           & \ding{55}  & \ding{51} & \ding{55}                  \\
-Hardware				& \ding{51}               & \ding{51}           & \ding{51}  & \ding{51} & \ding{51}                  \\
-\Gls{scheduling}			& \ding{51}               & \ding{51}           & \ding{55}  & \ding{55} & \ding{51}                  \\
-Users				& \ding{51}               & \ding{55}           & \ding{55}  & \ding{51} & \ding{55}                  \\
-\bottomrule
-\end{tabular}
-}
-\caption{Comparison of simulation \gls{framework}s for distributed computing systems.}
-\label{tab:comparison_frameworks}
-\end{table}
+Este simulador, será desarrollado como una herramienta web debido a la portabilidad que proporciona, ya que podrá ser ejecutado sobre un gran número de diferentes dispositivos independientemente del sistema operativo que utilice, puesto que únicamente necesita un navegador web para su correcto funcionamiento. De esta forma, los profesores y alumnos podrán hacer uso de la herramienta sin depender de su instalación en el dispositivo a utilizar, incluso pudiendo los alumnos realizar las prácticas sobre dispositivos móviles.
+
+Además, se ha elegido que el proyecto sea desarrollado en el lenguaje de programación Javascript, debido a las facilidades que proporciona para la posterior generación automática mediante el framework de desarrollo Apache Cordova de aplicaciones móviles para las plataformas móviles Android e iOS y de aplicaciones para el sistema operativo Windows. De esta forma, con un único desarrollo, se obtiene un amplio abanico de plataformas sobre las que poder utilizar la herramienta sin tener dependencia de conexión a internet.
+
+Por tanto, la solución elegida es capaz de unificar en una misma herramienta todas las funcionalidades requeridas para la enseñanza de Estructura de computadores con un alto nivel de detalle, con alta disponibilidad al facilitarse su como una herramienta web, y con una gran portabilidad puesto que podrá ser ejecutada sobre un gran número de diversos dispositivos.
 
 
 \section{Requisitos}
 \label{sec:requirements}
 
-This section provides a detailed description of the application requirements. For the requirement specification task, the IEEE recommended practices \cite{ieee1998} were followed. According to these practices, a good specification must address the software functionality, performance issues, the external interfaces, other non-functional features and design or implementation constraints. Moreover, the requirements specification must be:
+Esta sección proporciona una descripción detallada de los requisitos de la aplicación. Para la tarea de la especificación de requisitos, se han seguido las prácticas recomendadas por IEEE \cite{ieee1998}. De acuerdo con estas prácticas, una buena especificación debe abordar la funcionalidad del software, los problemas de rendimiento, las interfaces externas, otras características no funcionales y las limitaciones de diseño o implementación.
+Además, la especificación de los requisitos debe ser:
 
 \begin{itemize}
 
-\item \textbf{Complete:} the document reflects all significant software requirements.
+\item \textbf{Completa:} el documento refleja todos los requisitos de software importantes.
 
-\item \textbf{Consistent:} requirements must not generate conflicts with each other.
+\item \textbf{Consistente:} los requisitos no deben generar conflictos entre sí.
 
-\item \textbf{Correct:} every requirement is one that the software shall meet according to the user needs.
+\item \textbf{Correcta:} cada requisito es uno que el software se reunirá de acuerdo con las necesidades del usuario.
 
-\item \textbf{Modifiable:} the structure of the specification allows changes to the requirements in a simple, complete and consistent way.
+% every requirement is one that the software shall meet according to the user needs.
 
-\item \textbf{Ranked based on importance and stability:} every requirement must indicate its importance and its stability.
+\item \textbf{Modificable:} la estructura de la especificación permite cambios en los requisitos de una manera simple, completa y consistente.
 
-\item \textbf{Traceable:} the origin of every requirement is clear and it can be easily referenced in further stages.
+\item \textbf{Clasificación basada en la importancia y la estabilidad:} cada requisito debe indicar su importancia y su estabilidad.
 
-\item \textbf{Unambiguous:} every requirement has a single interpretation.
+\item \textbf{Trazable:} el origen de cada requisito es claro y se puede hacer referencia fácilmente en otras etapas.
 
-\item \textbf{Verifiable:} every requirement must be verifiable, that is, there exists some process to verify that the software complies with every single requirement.
+\item \textbf{Inequívoco:} cada requisito tiene una sola interpretación.
 
+\item \textbf{Verificable:} Cada requisito debe ser verificable, es decir, existe algún proceso para verificar que el software cumple con cada requisito.
 
 \end{itemize}
 
