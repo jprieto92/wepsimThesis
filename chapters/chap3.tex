@@ -320,7 +320,7 @@ Esta subsección especifica los requisitos de usuario.
 \clearpage
 \subsection{Requisitos Funcionales}
 
-This subsection specifies the functional requirements.
+Esta subsección especifica los requisitos funcionales.
 
 \begin{center}
 \begin{table*}[htbp]
@@ -475,7 +475,7 @@ This subsection specifies the functional requirements.
 
 \subsection{Requisitos No-Funcionales}
 
-This subsection specifies the non-functional requirements.
+Esta subsección especifica los requisitos no-funcionales.
 
 \begin{center}
 \begin{table*}[htbp]
@@ -660,10 +660,14 @@ This section discusses the necessary constraints taking into account the regulat
 \subsection{Restricciones Legales}
 \label{sec:legal_constraints}
 
-In the real BOINC system, users must be registered, and \gls{boinc} databases handle confidential information from users, so it is necessary to ensure that third parties can not access that information. One solution is to encrypt the information transmitted following some cryptographic \gls{protocol}. In Spain, this requirement is specified in the article 104 of the RD 1720/2007 \cite{boe2008}, which deals with the Spanish Data Protection Law. 
+Para el uso de la mayoría de herramientas web, los usuarios deben de registrarse, y las bases de datos de las mismas manejan información confidencial de los usuarios, por lo que es necesario garantizar que terceros no puedan acceder a esa información. Una solución es cifrar la información transmitida mediante algún \gls{protocol} criptografico. En España, este requisito es especificado en el artículo 104 del RD 1720/2007 \cite{boe2008}, que se ocupa de la Ley Española de Protección de Datos.
 
-In contrast, the developed application does not use private data from users, and neither transmits any confidential information to third-parties, because it is just a simulator that does not even require Internet access.
 
-On the other hand, it is crucial that our simulator be available as an \gls{opensource} software. We want it to be such that anyone can redistribute the code or modify it by the terms of the GNU Lesser General Public License (LGPL) \cite{gnulgpl}. To do this, our simulator is available on the following website: \url{https://www.arcos.inf.uc3m.es/~combos/}.
+En contraste, la aplicación desarrollada no utiliza datos privados de los usuarios y tampoco transmite información confidencial a terceros, ya que es un simulador que únicamente utiliza los códigos generados por el usuario para ejecutarlos de forma local en la máquina del usuario.
+
+
+Por otro lado, es crucial que nuestro simulador esté disponible como un software de código abierto. Queremos que sea tal que cualquiera pueda redistribuir el código o modificarlo por los términos de la Licencia Pública General Menor de GNU (LGPL) \cite{gnulgpl}. Para ello, nuestro simulador está disponible en el siguiente sitio web: 
+
+\url{https://www.arcos.inf.uc3m.es/~wepsim/}.
 
 \afterpage{\blankpage} % blank page
