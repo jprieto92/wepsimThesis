@@ -1,6 +1,6 @@
-\lhead[\thepage]{CHAPTER \thechapter. ANALYSIS}
+\lhead[\thepage]{CAPÍTULO \thechapter. ANÁLISIS}
 \chead[]{}
-\rhead[A Complete Simulator for Volunteer Computing Environments\leftmark]{\thepage}
+\rhead[WepSIM: Simulador de procesador elemental con unidad de control microprogramada\leftmark]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
 
 \lfoot[]{}
@@ -28,6 +28,20 @@ La sección \ref{sec:project_description} resume brevemente la descripción del 
 \label{sec:project_description}
 
 El objetivo de este proyecto es construir una herramienta que permita simular con realismo el comportamiento de un procesador basado en la arquitectura indicada por el el tutor del proyecto, de forma que sirva como única herramienta para los alumnos a lo largo de la asignatura Estructura de Computadores.
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=12cm]{figures/cpu}
+ 	\caption{Arquitectura CPU WepSIM .}
+	\label{fig:wepsimCPU_figure}
+\end{figure}
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=12cm]{figures/controlUnit}
+ 	\caption{Arquitectura unidad de control WepSIM.}
+	\label{fig:wepsimCU_figure}
+\end{figure}
 
 Los simuladores actuales para la enseñanza de Estructura de Computadores, están focalizados a una función concreta, como puede ser la simulación de cachés, la simulación de código ensamblador o la simulación de microcódigo entre otros, pero a la hora de unificar todas estas funcionalidades en una única herramienta, existe un vacío que genera una pérdida de tiempo en el aprendizaje de cada herramienta y la no posibilidad de ver una simulación completa.
 
@@ -143,6 +157,309 @@ Esta subsección especifica los requisitos de usuario.
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
+\textbf{ID} 				& UR-C01 \\
+\midrule
+\textbf{Nombre} 			& Simulación del modelo hardware propuesto\\
+\midrule
+\textbf{Tipo} 			& Capacidad \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe realizar la simulación de códigos ensamblador sobre la arquitectura definida. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-C01.}
+\label{tab:urc01}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-C02 \\
+\midrule
+\textbf{Nombre} 			& Definición de juego de instrucciones del simulador \\
+\midrule
+\textbf{Tipo} 			& Capacidad \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe permitir la definición del juego de instrucciones a utilizar por el usuario. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-C02.}
+\label{tab:urc02}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-C03 \\
+\midrule
+\textbf{Nombre} 			& Definición de código ensamblador a simular \\
+\midrule
+\textbf{Tipo} 			& Capacidad \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe permitir la definición del código ensamblador a utilizar en la simulación por el usuario. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-C03.}
+\label{tab:urc03}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-C04 \\
+\midrule
+\textbf{Nombre} 			& Información del estado del procesador durante la simulación \\
+\midrule
+\textbf{Tipo} 			& Capacidad \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe mostrar el estado actual de procesador durante las simulaciones. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-C04.}
+\label{tab:urc04}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-C05 \\
+\midrule
+\textbf{Nombre} 			& Configuración de las simulaciones \\
+\midrule
+\textbf{Tipo} 			& Capacidad \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe permitir la configuración de las simulaciones. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-C05.}
+\label{tab:urc05}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-C06 \\
+\midrule
+\textbf{Nombre} 			& Compilación del código ensamblador según juego de instrucciones \\
+\midrule
+\textbf{Tipo} 			& Capacidad \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe realizar la compilación del código ensamblador dependiendo del juego de instrucciones definido previamente. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-C06.}
+\label{tab:urc06}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-R01 \\
+\midrule
+\textbf{Nombre} 			& Arquitectura del simulador \\
+\midrule
+\textbf{Tipo} 			& Restricción \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La arquitectura del simulador debe ser la especificada por el tutor. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-R01.}
+\label{tab:urr01}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-R02 \\
+\midrule
+\textbf{Nombre} 			& Juegos de instrucciones para el modelo hardware propuesto \\
+\midrule
+\textbf{Tipo} 			& Restricción \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& Los juegos de instrucciones deben definirse según la arquitectura del simulador. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-R02.}
+\label{tab:urr02}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-R03 \\
+\midrule
+\textbf{Nombre} 			& Formato del juego de instrucciones \\
+\midrule
+\textbf{Tipo} 			& Restricción \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& El formato del juego de instrucciones debe seguir el formato indicado por el tutor. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-R03.}
+\label{tab:urr03}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-R04 \\
+\midrule
+\textbf{Nombre} 			& Formato del código ensamblador \\
+\midrule
+\textbf{Tipo} 			& Restricción \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& El formato del código ensamblador debe seguir el formato del juego de instrucciones definido previamente. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-R04.}
+\label{tab:urr04}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-R05 \\
+\midrule
+\textbf{Nombre} 			& Simulador como herramienta web \\
+\midrule
+\textbf{Tipo} 			& Restricción \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& El simulador debe estar diseñado e implementado para su uso como herramienta web. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-R05.}
+\label{tab:urr05}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-R06 \\
+\midrule
+\textbf{Nombre} 			& Entorno de ejecución del simulador \\
+\midrule
+\textbf{Tipo} 			& Restricción \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& El simulador debe poder ser ejecutado en los principales navegadores web del mercado. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-R06.}
+\label{tab:urr06}
+\end{table*}
+\end{center}
+
+
+\iffalse
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
 \textbf{ID} 				& UR-C00 \\
 \midrule
 \textbf{Nombre} 			& a \\
@@ -163,7 +480,6 @@ Esta subsección especifica los requisitos de usuario.
 \end{table*}
 \end{center}
 
-\iffalse
 
 %\begin{center}
 %\begin{table*}[htbp]
@@ -322,6 +638,8 @@ Esta subsección especifica los requisitos de usuario.
 
 Esta subsección especifica los requisitos funcionales.
 
+\iffalse
+
 \begin{center}
 \begin{table*}[htbp]
 \centering
@@ -472,10 +790,13 @@ Esta subsección especifica los requisitos funcionales.
 \end{table*}
 \end{center}
 
+\fi
 
 \subsection{Requisitos No-Funcionales}
 
 Esta subsección especifica los requisitos no-funcionales.
+
+\iffalse
 
 \begin{center}
 \begin{table*}[htbp]
@@ -651,6 +972,8 @@ Esta subsección especifica los requisitos no-funcionales.
 \label{tab:srnfui02}
 \end{table*}
 \end{center}
+
+\fi
 
 \section{Marco Regulador}
 \label{sec:regulatory_framework}
