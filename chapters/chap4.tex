@@ -20,6 +20,20 @@
 
 This chapter provides a complete description of the developed simulator, including the internal architecture and the different software components. \gls{comsimboinc} is a complete simulator of BOINC infrastructures that simulates the behavior of all componentes involved: projects,  servers, network, \gls{scheduling}, redundant computing, and volunteer nodes. In this chapter we describe all the simulator components (Section \ref{sec:simulator_components}, \textit{\nameref{sec:simulator_components}}) and present the policies of the client scheduler (Section \ref{sec:local_scheduling_policies}, \textit{\nameref{sec:local_scheduling_policies}}).
 
+La sección \ref{sec:solution_selection} discute la solución elegida y la compara con las alternativas consideradas. 
+
+\section{Solución elegida}
+\label{sec:solution_selection}
+
+Para que los profesores de la asignatura Estructura de Computadores puedan hacer uso de una herramienta que sirva de ayuda para la explicación de los conceptos teóricos de la asignatura, y los alumnos puedan utilizarla para comprender estos conceptos y realizar posteriormente las prácticas de la asignatura, se propone el diseño e implementación de una herramienta web que simule con realismo en funcionamiento de un procesador elemental con unidad de control microprogramable.
+
+Este simulador, será desarrollado como una herramienta web debido a la portabilidad que proporciona, ya que podrá ser ejecutado sobre un gran número de diferentes dispositivos independientemente del sistema operativo que utilice, puesto que únicamente necesita un navegador web para su correcto funcionamiento. De esta forma, los profesores y alumnos podrán hacer uso de la herramienta sin depender de su instalación en el dispositivo a utilizar, incluso pudiendo los alumnos realizar las prácticas sobre dispositivos móviles.
+
+Además, se ha elegido que el proyecto sea desarrollado en el lenguaje de programación Javascript, debido a las facilidades que proporciona para la posterior generación automática mediante el framework de desarrollo Apache Cordova de aplicaciones móviles para las plataformas móviles Android e iOS y de aplicaciones para el sistema operativo Windows. De esta forma, con un único desarrollo, se obtiene un amplio abanico de plataformas sobre las que poder utilizar la herramienta sin tener dependencia de conexión a internet.
+
+Por tanto, la solución elegida es capaz de unificar en una misma herramienta todas las funcionalidades requeridas para la enseñanza de Estructura de computadores con un alto nivel de detalle, con alta disponibilidad al facilitarse su como una herramienta web, y con una gran portabilidad puesto que podrá ser ejecutada sobre un gran número de diversos dispositivos.
+
+
 
 \section{Componentes del Simulador}
 \label{sec:simulator_components}

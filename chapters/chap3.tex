@@ -22,7 +22,7 @@ El objetivo principal de este capitulo, es describir el proyecto mediante la obt
 
 Con el fin de obtener los requisitos del sistema, el tutor ha desempeñado el papel del cliente en diferentes reuniones, mientras que el alumno ha desempeñado los roles de analista, diseñador, programador y probador.
 
-La sección \ref{sec:project_description} resume brevemente la descripción del proyecto. La sección \ref{sec:solution_selection} discute la solución elegida y la compara con las alternativas consideradas. La sección \ref{sec:requirements} especifica los requisitos del sistema, empezando con los requisitos de usuario y finalizando con los requisitos funcionales y no-funcionales. Finalmente, la sección \ref{sec:regulatory_framework} indica el conjunto de leyes y regulaciones para la gestión del software.  
+La sección \ref{sec:project_description} resume brevemente la descripción del proyecto. La sección \ref{sec:requirements} especifica los requisitos del sistema, empezando con los requisitos de usuario y finalizando con los requisitos funcionales y no-funcionales. Finalmente, la sección \ref{sec:regulatory_framework} indica el conjunto de leyes y regulaciones para la gestión del software.  
 
 \section{Descripción del proyecto}
 \label{sec:project_description}
@@ -48,19 +48,6 @@ Los simuladores actuales para la enseñanza de Estructura de Computadores, está
 El reto al que se enfrente cualquier simulador educativo es el de ser capaz de simular fielmente el funcionamiento de un dispositivo permitiendo al estudiante poder observar con el mayor detalle posible el comportamiento éste.
 
 El sistema que se propone debe ser capaz de simular con realismo el comportamiento del procesador, permitiendo la definición del juego de instrucciones a utilizar para el posterior desarrollo de código ensamblador y su ejecución en el simulador con un alto nivel de detalle en cada uno de los ciclos de ejecución,.De esta forma, los estudiantes podrán comprender fácilmente los contenidos teóricos expuestos en la asignatura y serán capaces de realizar todas las prácticas en una misma herramienta, pudiendo ver de forma incremental el desarrollo de software de bajo nivel sobre un procesador elemental.
-
-
-\section{Solución elegida}
-\label{sec:solution_selection}
-
-Para que los profesores de la asignatura Estructura de Computadores puedan hacer uso de una herramienta que sirva de ayuda para la explicación de los conceptos teóricos de la asignatura, y los alumnos puedan utilizarla para comprender estos conceptos y realizar posteriormente las prácticas de la asignatura, se propone el diseño e implementación de una herramienta web que simule con realismo en funcionamiento de un procesador elemental con unidad de control microprogramable.
-
-Este simulador, será desarrollado como una herramienta web debido a la portabilidad que proporciona, ya que podrá ser ejecutado sobre un gran número de diferentes dispositivos independientemente del sistema operativo que utilice, puesto que únicamente necesita un navegador web para su correcto funcionamiento. De esta forma, los profesores y alumnos podrán hacer uso de la herramienta sin depender de su instalación en el dispositivo a utilizar, incluso pudiendo los alumnos realizar las prácticas sobre dispositivos móviles.
-
-Además, se ha elegido que el proyecto sea desarrollado en el lenguaje de programación Javascript, debido a las facilidades que proporciona para la posterior generación automática mediante el framework de desarrollo Apache Cordova de aplicaciones móviles para las plataformas móviles Android e iOS y de aplicaciones para el sistema operativo Windows. De esta forma, con un único desarrollo, se obtiene un amplio abanico de plataformas sobre las que poder utilizar la herramienta sin tener dependencia de conexión a internet.
-
-Por tanto, la solución elegida es capaz de unificar en una misma herramienta todas las funcionalidades requeridas para la enseñanza de Estructura de computadores con un alto nivel de detalle, con alta disponibilidad al facilitarse su como una herramienta web, y con una gran portabilidad puesto que podrá ser ejecutada sobre un gran número de diversos dispositivos.
-
 
 \section{Requisitos}
 \label{sec:requirements}
@@ -121,7 +108,7 @@ A partir de los requisitos de los usuarios, que constituyen una referencia infor
 	\end{itemize}
 \end{itemize}
 
-Table \ref{tab:requirements_template} proporciona la plantilla utilizada para la especificación de requisitos. Tenga en cuenta que para los requisitos del usuario, el formato de identificación será UR-XYY, donde X indica el subtipo de requisito: requisitos de capacidad (C) o restricciones (R). YY corresponde al número de requisito en su subcategoría. Para los requisitos de software, se utilizará el formato de identificación SR-X-YZZ, donde X indica si es un requisito funcional (F) o no funcional (NF), e Y representa su subcategoría: funcional (F), inversa (I) ), Rendimiento (P), interfaz (UI), escalabilidad (S) o plataforma (PL). ZZ corresponde al número de requisito en su subcategoría.
+La tabla \ref{tab:requirements_template} proporciona la plantilla utilizada para la especificación de requisitos. Tenga en cuenta que para los requisitos del usuario, el formato de identificación será UR-XYY, donde X indica el subtipo de requisito: requisitos de capacidad (C) o restricciones (R). YY corresponde al número de requisito en su subcategoría. Para los requisitos de software, se utilizará el formato de identificación SR-X-YZZ, donde X indica si es un requisito funcional (F) o no funcional (NF), e Y representa su subcategoría: funcional (F), inversa (I) ), Rendimiento (P), interfaz (UI), escalabilidad (S) o plataforma (PL). ZZ corresponde al número de requisito en su subcategoría.
 
 \begin{center}
 \begin{table*}[htbp]
@@ -169,7 +156,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe realizar la simulación de códigos ensamblador sobre la arquitectura definida. \\
+\textbf{Descripción} 	& La herramienta simulará el comportamiento de la arquitectura definida para la asignatura Estructura de Computadores. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-C01.}
@@ -194,7 +181,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe permitir la definición del juego de instrucciones a utilizar por el usuario. \\
+\textbf{Descripción} 	& La herramienta debe permitir la definición del juego de instrucciones a utilizar por el usuario siguiendo el formato especificado por el tutor. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-C02.}
@@ -209,7 +196,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-C03 \\
 \midrule
-\textbf{Nombre} 			& Definición de código ensamblador a simular \\
+\textbf{Nombre} 			& Operaciones con el juego de instrucciones \\
 \midrule
 \textbf{Tipo} 			& Capacidad \\
 \midrule
@@ -219,7 +206,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe permitir la definición del código ensamblador a utilizar en la simulación por el usuario. \\
+\textbf{Descripción} 	& La herramienta debe permitir al usuario las siguientes operaciones con el juego de instrucciones: cargar desde fichero, exportar a un fichero y generar el firmware. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-C03.}
@@ -234,7 +221,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-C04 \\
 \midrule
-\textbf{Nombre} 			& Información del estado del procesador durante la simulación \\
+\textbf{Nombre} 			& Definición de juego del código ensamblador \\
 \midrule
 \textbf{Tipo} 			& Capacidad \\
 \midrule
@@ -244,7 +231,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe mostrar el estado actual de procesador durante las simulaciones. \\
+\textbf{Descripción} 	& La herramienta debe permitir la definición del código ensamblador a simular siguiendo el formato utilizado en la asignatura Estructura de Computadores y el juego de instrucciones cargado previamente. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-C04.}
@@ -259,7 +246,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-C05 \\
 \midrule
-\textbf{Nombre} 			& Configuración de las simulaciones \\
+\textbf{Nombre} 			& Operaciones con el código ensamblador \\
 \midrule
 \textbf{Tipo} 			& Capacidad \\
 \midrule
@@ -269,7 +256,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe permitir la configuración de las simulaciones. \\
+\textbf{Descripción} 	& La herramienta debe permitir al usuario las siguientes operaciones con el código ensamblador: cargar desde fichero, exportar a un fichero y generar el binario asociado. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-C05.}
@@ -284,7 +271,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-C06 \\
 \midrule
-\textbf{Nombre} 			& Compilación del código ensamblador según juego de instrucciones \\
+\textbf{Nombre} 			& Tipos de simulación \\
 \midrule
 \textbf{Tipo} 			& Capacidad \\
 \midrule
@@ -294,7 +281,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe realizar la compilación del código ensamblador dependiendo del juego de instrucciones definido previamente. \\
+\textbf{Descripción} 	& La herramienta debe permitir tres tipos diferentes de simulación: simulación ciclo a ciclo de reloj, simulación instrucción a instrucción y simulación completa del código.\\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-C06.}
@@ -307,9 +294,85 @@ Esta subsección especifica los requisitos de usuario.
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
+\textbf{ID} 				& UR-C07 \\
+\midrule
+\textbf{Nombre} 			& Configuración de la velocidad de las simulaciones \\
+\midrule
+\textbf{Tipo} 			& Capacidad \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe permitir al usuario seleccionar la velocidad de la simulación. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-C07.}
+\label{tab:urc07}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-C08 \\
+\midrule
+\textbf{Nombre} 			& Esquemas de la arquitectura \\
+\midrule
+\textbf{Tipo} 			& Capacidad \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe mostrar la arquitectura de la CPU y la Unidad de Control que forman el simulador. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-C08.}
+\label{tab:urc08}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-C09 \\
+\midrule
+\textbf{Nombre} 			& Información a mostrar \\
+\midrule
+\textbf{Tipo} 			& Capacidad \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe mostrar al usuario la información del estado del simulador en cada paso de la simulación. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-C09.}
+\label{tab:urc09}
+\end{table*}
+\end{center}
+
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
 \textbf{ID} 				& UR-R01 \\
 \midrule
-\textbf{Nombre} 			& Arquitectura del simulador \\
+\textbf{Nombre} 			& Herramienta web\\
 \midrule
 \textbf{Tipo} 			& Restricción \\
 \midrule
@@ -319,7 +382,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La arquitectura del simulador debe ser la especificada por el tutor. \\
+\textbf{Descripción} 	& El simulador debe de ser una herramienta web. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R01.}
@@ -334,7 +397,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-R02 \\
 \midrule
-\textbf{Nombre} 			& Juegos de instrucciones para el modelo hardware propuesto \\
+\textbf{Nombre} 			& Navegadores web \\
 \midrule
 \textbf{Tipo} 			& Restricción \\
 \midrule
@@ -344,7 +407,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& Los juegos de instrucciones deben definirse según la arquitectura del simulador. \\
+\textbf{Descripción} 	& El simulador debe de funcionar en los siguiente navegadores web: Microsoft edge, Mozilla Firefox, Google Chrome y Safari. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R02.}
@@ -359,7 +422,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-R03 \\
 \midrule
-\textbf{Nombre} 			& Formato del juego de instrucciones \\
+\textbf{Nombre} 			& Interfaz de usuario \\
 \midrule
 \textbf{Tipo} 			& Restricción \\
 \midrule
@@ -369,7 +432,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El formato del juego de instrucciones debe seguir el formato indicado por el tutor. \\
+\textbf{Descripción} 	& La interfaz de usuario debe de ser compatible para uso en pc's y smartphones. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R03.}
@@ -384,7 +447,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-R04 \\
 \midrule
-\textbf{Nombre} 			& Formato del código ensamblador \\
+\textbf{Nombre} 			& Tiempo por ciclo de reloj \\
 \midrule
 \textbf{Tipo} 			& Restricción \\
 \midrule
@@ -394,7 +457,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El formato del código ensamblador debe seguir el formato del juego de instrucciones definido previamente. \\
+\textbf{Descripción} 	& El tiempo de ejecución de un ciclo de reloj del simulador no debe de sobrepasar 0,1 segundos. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R04.}
@@ -409,7 +472,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-R05 \\
 \midrule
-\textbf{Nombre} 			& Simulador como herramienta web \\
+\textbf{Nombre} 			& Ejecución en local \\
 \midrule
 \textbf{Tipo} 			& Restricción \\
 \midrule
@@ -419,7 +482,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El simulador debe estar diseñado e implementado para su uso como herramienta web. \\
+\textbf{Descripción} 	& Las simulaciones serán realizadas en la máquina del usuario, siendo únicamente necesario el servidor para el acceso a la herramienta. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R05.}
@@ -434,7 +497,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-R06 \\
 \midrule
-\textbf{Nombre} 			& Entorno de ejecución del simulador \\
+\textbf{Nombre} 			& Conexión a internet \\
 \midrule
 \textbf{Tipo} 			& Restricción \\
 \midrule
@@ -444,11 +507,36 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El simulador debe poder ser ejecutado en los principales navegadores web del mercado. \\
+\textbf{Descripción} 	& Para realizar una simulación, el dispositivo del usuario no necesita conexión a internet. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R06.}
 \label{tab:urr06}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& UR-R07 \\
+\midrule
+\textbf{Nombre} 			& Tecnologías de desarrollo \\
+\midrule
+\textbf{Tipo} 			& Restricción \\
+\midrule
+\textbf{Origen} 			& Usuario \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& El simulador debe de ser desarrollado mediante el lenguaje de programación JavaScript, posibilitando migraciones futuras. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito de usuario UR-R07.}
+\label{tab:urr07}
 \end{table*}
 \end{center}
 
@@ -480,163 +568,541 @@ Esta subsección especifica los requisitos de usuario.
 \end{table*}
 \end{center}
 
-
-%\begin{center}
-%\begin{table*}[htbp]
-%\centering
-%\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-%\toprule
-%\textbf{ID} 				& UR-C01\\
-%\midrule
-%\textbf{Name} 			& BOINC projects simulation \\
-%\midrule
-%\textbf{Type} 			& Capacity \\
-%\midrule
-%\textbf{Origin} 			& User \\
-%\midrule
-%\textbf{Priority}		& Essential \\
-%\midrule
-%\textbf{Stability} 		& Stable \\
-%\midrule
-%\textbf{Description} 	& The application shall simulate real BOINC projects. \\
-%\bottomrule
-%\end{tabular}
-%\caption{User requirement UR-C01.}
-%\label{tab:urc01}
-%\end{table*}
-%\end{center}
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& UR-C02\\
-\midrule
-\textbf{Name} 			& Client \gls{scheduling} \\
-\midrule
-\textbf{Type} 			& Capacity \\
-\midrule
-\textbf{Origin} 			& User \\
-\midrule
-\textbf{Priority}		& Essential \\
-\midrule
-\textbf{Stability} 		& Stable \\
-\midrule
-\textbf{Description} 	& The client scheduler of the simulator shall follow the actual BOINC client \gls{scheduling}. \\
-\bottomrule
-\end{tabular}
-\caption{User requirement UR-C02.}
-\label{tab:urc02}
-\end{table*}
-\end{center}
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& UR-C03\\
-\midrule
-\textbf{Name} 			& Simulation components \\
-\midrule
-\textbf{Type} 			& Capacity \\
-\midrule
-\textbf{Origin} 			& User \\
-\midrule
-\textbf{Priority}		& Essential \\
-\midrule
-\textbf{Stability} 		& Stable \\
-\midrule
-\textbf{Description} 	& The simulations shall cover all the elements present in the BOINC infrastructure. \\
-\bottomrule
-\end{tabular}
-\caption{User requirement UR-C03.}
-\label{tab:urc03}
-\end{table*}
-\end{center}
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& UR-R01\\
-\midrule
-\textbf{Name} 			& Linux as underlying OS \\
-\midrule
-\textbf{Type} 			& Restriction \\
-\midrule
-\textbf{Origin} 			& User \\
-\midrule
-\textbf{Priority}		& Essential \\
-\midrule
-\textbf{Stability} 		& Stable \\
-\midrule
-\textbf{Description} 	& The simulator shall be designed for Linux operating systems. \\
-\bottomrule
-\end{tabular}
-\caption{User requirement UR-R01.}
-\label{tab:urr01}
-\end{table*}
-\end{center}
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& UR-R02\\
-\midrule
-\textbf{Name} 			& SimGrid toolkit \\
-\midrule
-\textbf{Type} 			& Restriction \\
-\midrule
-\textbf{Origin} 			& User \\
-\midrule
-\textbf{Priority}		& Essential \\
-\midrule
-\textbf{Stability} 		& Stable \\
-\midrule
-\textbf{Description} 	& The application shall use the SimGrid toolkit in order to implement the distributed computing functionalities. \\
-\bottomrule
-\end{tabular}
-\caption{User requirement UR-R02.}
-\label{tab:urr02}
-\end{table*}
-\end{center}
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& UR-R03\\
-\midrule
-\textbf{Name} 			& Scalability \\
-\midrule
-\textbf{Type} 			& Restriction \\
-\midrule
-\textbf{Origin} 			& User \\
-\midrule
-\textbf{Priority}		& Essential \\
-\midrule
-\textbf{Stability} 		& Stable \\
-\midrule
-\textbf{Description} 	& The simulator shall be scalable (carry out executions by simulating a large number of client hosts). \\
-\bottomrule
-\end{tabular}
-\caption{User requirement UR-R03.}
-\label{tab:urr03}
-\end{table*}
-\end{center}
-
 \fi
 
 \clearpage
 \subsection{Requisitos Funcionales}
 
 Esta subsección especifica los requisitos funcionales.
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F01 \\
+\midrule
+\textbf{Nombre} 			& Arquitectura de 32 bits \\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C01 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe simular una arquitectura de 32 bits. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F01.}
+\label{tab:srff01}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F02 \\
+\midrule
+\textbf{Nombre} 			& Unidad de control microprogramable \\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C01 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La unidad de control debe de ser micoprogramable. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F02.}
+\label{tab:srff02}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F03 \\
+\midrule
+\textbf{Nombre} 			& Datos en complemento a2 \\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C01 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta operará con números enteros en complemento a2. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F03.}
+\label{tab:srff03}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F04 \\
+\midrule
+\textbf{Nombre} 			& Definición de juego de instrucciones \\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C02 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe permitir al usuario la definición del juego de instrucciones a utilizar.\\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F04.}
+\label{tab:srff04}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F05 \\
+\midrule
+\textbf{Nombre} 			& Formato del juego de instrucciones\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C02 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& El juego de instrucciones debe seguir el formato utilizado en la asignatura Estructura de Computadores, definiendo instrucciones del lenguaje ensamblador, nombrado de los registros y pseudoinstrucciones. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F05.}
+\label{tab:srff05}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F06 \\
+\midrule
+\textbf{Nombre} 			& Modificación del juego de instrucciones\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C03 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de permitir la modificación del juego de instrucciones a utilizar por el usuario. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F06.}
+\label{tab:srff06}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F07 \\
+\midrule
+\textbf{Nombre} 			& Carga de juego de instrucciones\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C03 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe permitir la carga de un fichero que contenga el juego de instrucciones. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F07.}
+\label{tab:srff07}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F08 \\
+\midrule
+\textbf{Nombre} 			& Exportar juego de instrucciones\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C03 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe permitir exportar el juego de instrucciones en un fichero. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F08.}
+\label{tab:srff08}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F09 \\
+\midrule
+\textbf{Nombre} 			& Generación firmware del simulador\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C03 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de generar el firmware simulador a partir del juego de instrucciones definido y cargado por el usuario. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F09.}
+\label{tab:srff09}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F10 \\
+\midrule
+\textbf{Nombre} 			& Definición del código ensamblador\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C04 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe permitir al usuario la definición del código ensamblador a utilizar en la simulación. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F10.}
+\label{tab:srff10}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F11 \\
+\midrule
+\textbf{Nombre} 			& Formato del código ensamblador\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C04 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& El código ensamblador a simular debe de seguir el formato utilizado en la asignatura Estructura de Computadores, utilizando el lenguaje definido en el juego de instrucciones.\\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F11.}
+\label{tab:srff11}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F12 \\
+\midrule
+\textbf{Nombre} 			& Edición del código ensamblador\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C05 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La heramienta debe permitir modificar el código ensamblador. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F12.}
+\label{tab:srff12}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F13 \\
+\midrule
+\textbf{Nombre} 			& Carga del código ensamblador\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C05 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe permitir la carga de un fichero que contenga el código ensamblador. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F13.}
+\label{tab:srff13}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F14 \\
+\midrule
+\textbf{Nombre} 			& Generación ejecutable del codigo ensamblador\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C05 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de generar el binario ejecutable asociado al código ensamblador definido para la simulación. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F14.}
+\label{tab:srff14}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F15 \\
+\midrule
+\textbf{Nombre} 			& Simulación ciclo a ciclo de reloj\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C06 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de permitir la simulación ciclo a ciclo de reloj del código ensamblador cargado por el usuario. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F15.}
+\label{tab:srff15}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F16 \\
+\midrule
+\textbf{Nombre} 			& Simulación instrucción a instrucción\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C06 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de permitir la simulación instrucción a instrucción del código ensamblador cargado por el usuario. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F16.}
+\label{tab:srff16}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F17 \\
+\midrule
+\textbf{Nombre} 			& Simulación completa\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C06 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de permitir la simulación completa del código ensamblador cargado por el usuario. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F17.}
+\label{tab:srff17}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F18 \\
+\midrule
+\textbf{Nombre} 			& Velocidad de simulación\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C07 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de permitir al usuario elegir la velocidad de simulación del código ensamblador cargado. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F18.}
+\label{tab:srff18}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F19 \\
+\midrule
+\textbf{Nombre} 			& Esquema CPU\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C08 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de mostrar el esquema de la CPU del simulador, modificando el color de las señales activas y buses de datos actualizados en cada ciclo de reloj. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F19.}
+\label{tab:srff19}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F20 \\
+\midrule
+\textbf{Nombre} 			& Esquema Unidad de Control\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C08 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de mostrar el esquema de la Unidad de Control del simulador, modificando el color de las señales activas y buses de datos actualizados en cada ciclo de reloj. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F20.}
+\label{tab:srff20}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F21\\
+\midrule
+\textbf{Nombre} 			& Información de la simulación\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C09 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de mostrar durante la ejecución el estado de los registros del simulador. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F21.}
+\label{tab:srff21}
+\end{table*}
+\end{center}
+
+
+
+
 
 \iffalse
 
@@ -645,23 +1111,23 @@ Esta subsección especifica los requisitos funcionales.
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 				& SR-F-F01\\
+\textbf{ID} 				& SR-F-F04 \\
 \midrule
-\textbf{Name} 			& Credit calculation \\
+\textbf{Nombre} 			& Diferenciación de flancos \\
 \midrule
-\textbf{Type} 			& Functional \\
+\textbf{Tipo} 			& Funcional \\
 \midrule
-\textbf{Origin} 			& UR-C01 \\
+\textbf{Origen} 			& UR-C01 \\
 \midrule
-\textbf{Priority}		& Essential \\
+\textbf{Prioridad}		& Esencial \\
 \midrule
-\textbf{Stability} 		& Stable \\
+\textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Description} 	& The simulator shall calculate the number of credits granted to each volunteer client analogously to actual BOINC projects. \\
+\textbf{Descripción} 	& El simulador debe diferenciar los flancos en los ciclos de reloj. \\
 \bottomrule
 \end{tabular}
-\caption{Functional requirement SR-F-F01.}
-\label{tab:srff01}
+\caption{Requisito Funcional SR-F-F04.}
+\label{tab:srff00}
 \end{table*}
 \end{center}
 
@@ -796,29 +1262,27 @@ Esta subsección especifica los requisitos funcionales.
 
 Esta subsección especifica los requisitos no-funcionales.
 
-\iffalse
-
 \begin{center}
 \begin{table*}[htbp]
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 				& SR-NF-PL01\\
+\textbf{ID} 				& SR-NF-PL01 \\
 \midrule
-\textbf{Name} 			& Ubuntu 14.04 \\
+\textbf{Nombre} 			& Herramienta web \\
 \midrule
-\textbf{Type} 			& Platform \\
+\textbf{Tipo} 			& Interfaz \\
 \midrule
-\textbf{Origin} 			& UR-R01 \\
+\textbf{Origen} 			& UR-R01 \\
 \midrule
-\textbf{Priority}		& Essential \\
+\textbf{Prioridad}		& Esencial \\
 \midrule
-\textbf{Stability} 		& Stable \\
+\textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Description} 	& The simulator shall work on the Ubuntu Linux distribution, version 14.04. \\
+\textbf{Descripción} 	& El simulador debe de ser diseñado como una herramienta web. \\
 \bottomrule
 \end{tabular}
-\caption{Non-functional requirement SR-NF-PL01.}
+\caption{Requisito Funcional SR-NF-PL01.}
 \label{tab:srnfpl01}
 \end{table*}
 \end{center}
@@ -828,22 +1292,22 @@ Esta subsección especifica los requisitos no-funcionales.
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 				& SR-NF-PL02\\
+\textbf{ID} 				& SR-NF-PL02 \\
 \midrule
-\textbf{Name} 			& SimGrid MSG API \\
+\textbf{Nombre} 			& Herramienta web \\
 \midrule
-\textbf{Type} 			& Platform \\
+\textbf{Tipo} 			& Interfaz \\
 \midrule
-\textbf{Origin} 			& UR-R02 \\
+\textbf{Origen} 			& UR-R02 \\
 \midrule
-\textbf{Priority}		& Essential \\
+\textbf{Prioridad}		& Esencial \\
 \midrule
-\textbf{Stability} 		& Stable \\
+\textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Description} 	& The implementation, setup and control of the simulations shall be carried out using the MSG API of the SimGrid toolkit. \\
+\textbf{Descripción} 	& El simulador debe poder ser ejecutado en los navegadores: Microsoft Edge, Mozilla Firefox, Google Chrome y Safari. \\
 \bottomrule
 \end{tabular}
-\caption{Non-functional requirement SR-NF-PL02.}
+\caption{Requisito Funcional SR-NF-PL02.}
 \label{tab:srnfpl02}
 \end{table*}
 \end{center}
@@ -853,22 +1317,22 @@ Esta subsección especifica los requisitos no-funcionales.
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 				& SR-NF-PL03\\
+\textbf{ID} 				& SR-NF-PL03 \\
 \midrule
-\textbf{Name} 			& C programming language \\
+\textbf{Nombre} 			& Plataforma de ejecución \\
 \midrule
-\textbf{Type} 			& Platform\\
+\textbf{Tipo} 			& Interfaz \\
 \midrule
-\textbf{Origin} 			& UR-R03 \\
+\textbf{Origen} 			& UR-R05 \\
 \midrule
-\textbf{Priority}		& Essential \\
+\textbf{Prioridad}		& Esencial \\
 \midrule
-\textbf{Stability} 		& Stable \\
+\textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Description} 	& The simulator shall be written in the C programming language. \\
+\textbf{Descripción} 	& Las ejecuciones de la herramienta deben ser realizadas en el dispositivo del usuario. \\
 \bottomrule
 \end{tabular}
-\caption{Non-functional requirement SR-NF-PL03.}
+\caption{Requisito Funcional SR-NF-PL03.}
 \label{tab:srnfpl03}
 \end{table*}
 \end{center}
@@ -878,23 +1342,23 @@ Esta subsección especifica los requisitos no-funcionales.
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 				& SR-NF-S01\\
+\textbf{ID} 				& SR-NF-PL04 \\
 \midrule
-\textbf{Name} 			& Large simulations \\
+\textbf{Nombre} 			& Internet \\
 \midrule
-\textbf{Type} 			& Scalability \\
+\textbf{Tipo} 			& Interfaz \\
 \midrule
-\textbf{Origin} 			& UR-R03 \\
+\textbf{Origen} 			& UR-R06 \\
 \midrule
-\textbf{Priority}		& Essential \\
+\textbf{Prioridad}		& Esencial \\
 \midrule
-\textbf{Stability} 		& Stable \\
+\textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Description} 	& The application must be able to perform simulations with more than 100,000 hosts in a machine with at least 8 GB of \gls{ram}. \\
+\textbf{Descripción} 	& La herramienta únicamente necesitará conexión a internet para el acceso a la herramienta. \\
 \bottomrule
 \end{tabular}
-\caption{Non-functional requirement SR-NF-S01.}
-\label{tab:srnfs01}
+\caption{Requisito Funcional SR-NF-PL04.}
+\label{tab:srnfpl04}
 \end{table*}
 \end{center}
 
@@ -903,23 +1367,23 @@ Esta subsección especifica los requisitos no-funcionales.
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 				& SR-NF-P01\\
+\textbf{ID} 				& SR-NF-PL05 \\
 \midrule
-\textbf{Name} 			& Linear-time execution \\
+\textbf{Nombre} 			& Lenguaje de programación JavaScript \\
 \midrule
-\textbf{Type} 			& Performance \\
+\textbf{Tipo} 			& Interfaz \\
 \midrule
-\textbf{Origin} 			& UR-R03 \\
+\textbf{Origen} 			& UR-R06 \\
 \midrule
-\textbf{Priority}		& Conditional \\
+\textbf{Prioridad}		& Esencial \\
 \midrule
-\textbf{Stability} 		& Stable \\
+\textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Description} 	& Runtime of the simulator must be linear (approximately) in the number of hosts. \\
+\textbf{Descripción} 	& La herramienta debe ser desarrollada en el lenguaje de programación JavaScript. \\
 \bottomrule
 \end{tabular}
-\caption{Non-functional requirement SR-NF-P01.}
-\label{tab:srnfp01}
+\caption{Requisito Funcional SR-NF-PL05.}
+\label{tab:srnfpl05}
 \end{table*}
 \end{center}
 
@@ -928,22 +1392,22 @@ Esta subsección especifica los requisitos no-funcionales.
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 				& SR-NF-UI01\\
+\textbf{ID} 				& SR-NF-UI01 \\
 \midrule
-\textbf{Name} 			& Simulation parameters \\
+\textbf{Nombre} 			& Interfaz de usuario \\
 \midrule
-\textbf{Type} 			& Interface \\
+\textbf{Tipo} 			& Interfaz \\
 \midrule
-\textbf{Origin} 			& Analyst \\
+\textbf{Origen} 			& UR-R03 \\
 \midrule
-\textbf{Priority}		& Essential \\
+\textbf{Prioridad}		& Esencial \\
 \midrule
-\textbf{Stability} 		& Stable \\
+\textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Description} 	& To perform simulations, users only need to specify the simulation parameters in an \gls{xml} file. \\
+\textbf{Descripción} 	& La interfaz de usuario del simulador debe de ser compatible tanto con pc's y smartphones. \\
 \bottomrule
 \end{tabular}
-\caption{Non-functional requirement SR-NF-UI01.}
+\caption{Requisito Funcional SR-NF-UI01.}
 \label{tab:srnfui01}
 \end{table*}
 \end{center}
@@ -951,29 +1415,104 @@ Esta subsección especifica los requisitos no-funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}}  
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 				& SR-NF-UI02\\
+\textbf{ID} 				& SR-NF-P01 \\
 \midrule
-\textbf{Name} 			& Progress bar \\
+\textbf{Nombre} 			& Tiempo por ciclo de reloj \\
 \midrule
-\textbf{Type} 			& Interface \\
+\textbf{Tipo} 			& Interfaz \\
 \midrule
-\textbf{Origin} 			& Analyst \\
+\textbf{Origen} 			& UR-R03 \\
 \midrule
-\textbf{Priority}		& Conditional \\
+\textbf{Prioridad}		& Esencial \\
 \midrule
-\textbf{Stability} 		& Stable \\
+\textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Description} 	& The simulations should include a progress bar. \\
+\textbf{Descripción} 	& El tiempo de ejecución de un ciclo de reloj no debe exceder 0,1 segundos. \\
 \bottomrule
 \end{tabular}
-\caption{Non-functional requirement SR-NF-UI02.}
-\label{tab:srnfui02}
+\caption{Requisito Funcional SR-NF-P01.}
+\label{tab:srnfp01}
 \end{table*}
 \end{center}
 
-\fi
+\vspace{10 mm}
+
+\section{Modelo de Casos de Uso}
+\label{sec:user_cases}
+
+Un caso de uso representa un uso típico que realizará alguno de los futuros usuarios del sistema desarrollado. El diagrama que se muestra a continuación representa los casos de uso de un usuario que utilice esta herramienta desarrollada. Se ha partido el diagrama en dos para hacerlo mucho más legible. A continuación se muestra la primera parte del diagrama. En la página siguiente se mostrará la segunda parte.
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=15cm]{figures/user_cases_1}
+ 	\caption{Diagrama Modelo Casos de Uso 1.}
+	\label{fig:user_cases1}
+\end{figure}
+
+\vspace{10 mm}
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=15cm]{figures/user_cases_2}
+ 	\caption{Diagrama Modelo Casos de Uso 2.}
+	\label{fig:user_cases2}
+\end{figure}
+
+Para realizar la especificación clara, completa y detallada de cada uno de los casos de uso recogidos en el diagrama anterior se utilizará una tabla donde se recogerán los siguientes campos de información.
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& Caso de Uso ID.  \\
+\midrule
+\textbf{Nombre} 		& Nombre del Caso de Uso.   \\
+\midrule
+\textbf{Actores} 		&	Describe el actor o los actores que intervienen en la realización del caso de uso.  \\
+\midrule
+\textbf{Objetivo} 	&	Describe textualmente el cometido concreto del caso de uso. 	 \\
+\midrule
+\textbf{Precondiciones}	&	Muestra el estado del sistema que debe darse para que se pueda realizar el caso de uso.   \\
+\midrule
+\textbf{Postcondiciones} 	&	Presenta el estado del sistema tras la realización del caso de uso.   \\
+\midrule
+\textbf{Escenario Básico} 	&  Especifica la secuencia de pasos principales que se efectúan para realizar el caso de uso. \\
+\bottomrule
+\end{tabular}
+\caption{Plantilla de caso de uso.}
+\label{tab:uc_template}
+\end{table*}
+\end{center}
+
+La tabla \ref{tab:uc_template} proporciona la plantilla utilizada para la especificación de casos de uso. Tenga en cuenta que el formato de identificación será UC-XX, donde XX corresponde al número de caso de uso. 
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-01.  \\
+\midrule
+\textbf{Nombre} 		& X   \\
+\midrule
+\textbf{Actores} 		&	X  \\
+\midrule
+\textbf{Objetivo} 	&	X 	 \\
+\midrule
+\textbf{Precondiciones}	&	X   \\
+\midrule
+\textbf{Postcondiciones} 	&	X   \\
+\midrule
+\textbf{Escenario Básico} 	&  X \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-01.}
+\label{tab:uc01}
+\end{table*}
+\end{center}
 
 \section{Marco Regulador}
 \label{sec:regulatory_framework}
