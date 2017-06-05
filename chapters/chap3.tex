@@ -1446,7 +1446,7 @@ Un caso de uso representa un uso típico que realizará alguno de los futuros us
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=15cm]{figures/user_cases_1}
+ 	\includegraphics[width=14cm]{figures/user_cases_1}
  	\caption{Diagrama Modelo Casos de Uso 1.}
 	\label{fig:user_cases1}
 \end{figure}
@@ -1494,25 +1494,373 @@ La tabla \ref{tab:uc_template} proporciona la plantilla utilizada para la especi
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID}	& UC-01.  \\
+\textbf{ID}	& UC-01  \\
 \midrule
-\textbf{Nombre} 		& X   \\
+\textbf{Nombre} 		& Cargar juego de instrucciones   \\
 \midrule
-\textbf{Actores} 		&	X  \\
+\textbf{Actores} 		&	Usuario  \\
 \midrule
-\textbf{Objetivo} 	&	X 	 \\
+\textbf{Objetivo} 	&	Cargar en la herramienta un nuevo juego de instrucciones desde un fichero que indica el usuario. 	 \\
 \midrule
-\textbf{Precondiciones}	&	X   \\
+\textbf{Precondiciones}	&	Ninguna.   \\
 \midrule
-\textbf{Postcondiciones} 	&	X   \\
+\textbf{Postcondiciones} 	&	El juego de instrucciones se carga en la herramienta, mostrándose en el editor de texto correspondiente al firmware.   \\
 \midrule
-\textbf{Escenario Básico} 	&  X \\
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña firmware.
+\item Pulsa el botón cargar firmware.
+\item Selecciona el fichero deseado y acepta.
+\end{itemize} \\
 \bottomrule
 \end{tabular}
 \caption{Caso de Uso UC-01.}
 \label{tab:uc01}
 \end{table*}
 \end{center}
+
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-02  \\
+\midrule
+\textbf{Nombre} 		& Exportar juego de instrucciones   \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Exportar a un fichero el juego de instrucciones cargado en la memoria de control. 	 \\
+\midrule
+\textbf{Precondiciones}	&	La memoria de control ha sido generada.   \\
+\midrule
+\textbf{Postcondiciones} 	& Se genera un fichero en el dispositivo del usuario con el juego de instrucciones cargado previamente en la memoria de control.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña firmware.
+\item Pulsa el botón guardar firmware.
+\item Selecciona el nombre de fichero deseado y acepta.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-02}
+\label{tab:uc02}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-03  \\
+\midrule
+\textbf{Nombre} 		& Modificar juego de instrucciones   \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Editar el juego de instrucciones desde la herramienta. 	 \\
+\midrule
+\textbf{Precondiciones}	&	Ninguna.   \\
+\midrule
+\textbf{Postcondiciones} 	& Las modificaciones realizadas por el usuario en el juego de instrucciones son mostradas en el editor de texto correspondiente al firmware.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña firmware.
+\item Realiza las modificaciones deseadas en el editor de texto.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-03.}
+\label{tab:uc03}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-04  \\
+\midrule
+\textbf{Nombre} 		& Generar firmware   \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Generar la memoria de control a partir del juego de instrucciones definido en la herramienta. 	 \\
+\midrule
+\textbf{Precondiciones}	&	El juego de instrucciones debe estar definido en la herramienta.   \\
+\midrule
+\textbf{Postcondiciones} 	& Se genera la memoria de control asociada al juego de instrucciones definido por el usuario.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña firmware.
+\item Define el juego de instrucciones deseado en la herramienta.
+\item Pulsa el botón generar firmware.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-04.}
+\label{tab:uc04}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-05  \\
+\midrule
+\textbf{Nombre} 		& Cargar ensamblador   \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Cargar en la herramienta un nuevo código ensamblador desde un fichero que indica el usuario. 	 \\
+\midrule
+\textbf{Precondiciones}	&	Ninguna.   \\
+\midrule
+\textbf{Postcondiciones} 	& El código ensamblador se carga en la herramienta, mostrándose en el editor de texto correspondiente al ensamblador.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña ensamblador.
+\item Pulsa el botón cargar ensamblador.
+\item Selecciona el fichero deseado y acepta.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-05.}
+\label{tab:uc05}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-06  \\
+\midrule
+\textbf{Nombre} 		& Exportar ensamblador   \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Exportar a un fichero el código ensamblador cargado para la simulación. 	 \\
+\midrule
+\textbf{Precondiciones}	&	El código ensamblador ha sido cargado en el simulador.   \\
+\midrule
+\textbf{Postcondiciones} 	& Se genera un fichero en el dispositivo del usuario con el código ensamblador cargado previamente en el simulador.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña ensamblador.
+\item Pulsa el botón guardar ensamblador.
+\item Selecciona el nombre de fichero deseado y acepta.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-06.}
+\label{tab:uc06}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-07  \\
+\midrule
+\textbf{Nombre} 		& Modificar ensamblador   \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Editar el código ensamblador desde la herramienta. 	 \\
+\midrule
+\textbf{Precondiciones}	&	Ninguna.   \\
+\midrule
+\textbf{Postcondiciones} 	& Las modificaciones realizadas por el usuario en el juego de instrucciones son mostradas en el editor de texto correspondiente al firmware.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña ensamblador.
+\item Realiza las modificaciones deseadas en el editor de texto.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-07.}
+\label{tab:uc07}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-08  \\
+\midrule
+\textbf{Nombre} 		& Generar memoria principal   \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Cargar el código ensamblador definido por el usuario en el simulador, generando el contenido de la memoria principal correspondiente al ensamblador. 	 \\
+\midrule
+\textbf{Precondiciones}	&	El código ensamblador debe estar definido en la herramienta.  \\
+\midrule
+\textbf{Postcondiciones} 	& Se genera la memoria principal asociada al código ensamblador definido por el usuario.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña ensamblador.
+\item Define el código ensamblador deseado en la herramienta.
+\item Pulsa el botón compilar.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-08.}
+\label{tab:uc08}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-09  \\
+\midrule
+\textbf{Nombre} 		& Siguiente ciclo de reloj   \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Avanzar un ciclo de reloj en la simulación.	 \\
+\midrule
+\textbf{Precondiciones}	&	La memoria de control y la memoria principal deben de estar generadas.  \\
+\midrule
+\textbf{Postcondiciones} 	& La ejecución de la simulación avanza un ciclo de reloj, siendo modificado el estado del simulador.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la simulador.
+\item Pulsa el botón siguiente micro-instrucción.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-09.}
+\label{tab:uc09}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-10  \\
+\midrule
+\textbf{Nombre} 		& Siguiente instrucción   \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Avanzar una instrucción en la simulación.	 \\
+\midrule
+\textbf{Precondiciones}	&	La memoria de control y la memoria principal deben de estar generadas.  \\
+\midrule
+\textbf{Postcondiciones} 	& La ejecución de la simulación avanza una instrucción, siendo modificado el estado del simulador.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la simulador.
+\item Pulsa el botón siguiente instrucción.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-10.}
+\label{tab:uc10}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-11  \\
+\midrule
+\textbf{Nombre} 		& Insertar breakpoint  \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Insertar un punto de detención en una instrucción del código ensamblador a simular.	 \\
+\midrule
+\textbf{Precondiciones}	&	La memoria de control y la memoria principal deben de estar generadas.  \\
+\midrule
+\textbf{Postcondiciones} 	& Se añade un breakpoint en la simulación.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña simulador.
+\item Selecciona la pestaña Assembly Debugger.
+\item Pulsa sobre la instrucción en la que añadir el breakpoint.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-11.}
+\label{tab:uc11}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-12  \\
+\midrule
+\textbf{Nombre} 		& Configurar velocidad  \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Configurar la velocidad de la simulación.	 \\
+\midrule
+\textbf{Precondiciones}	&	La memoria de control y la memoria principal deben de estar generadas.  \\
+\midrule
+\textbf{Postcondiciones} 	& Se modifica la velocidad de la simulación.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña simulador.
+\item Modifica la velocidad mediante la barra deslizable de velocidad.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-12.}
+\label{tab:uc12}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID}	& UC-13  \\
+\midrule
+\textbf{Nombre} 		& Reinicio del simulador  \\
+\midrule
+\textbf{Actores} 		&	Usuario  \\
+\midrule
+\textbf{Objetivo} 	&	Reiniciar la simulación.	 \\
+\midrule
+\textbf{Precondiciones}	&	La memoria de control y la memoria principal deben de estar generadas.  \\
+\midrule
+\textbf{Postcondiciones} 	& El simulador queda reiniciado y preparado para el comienzo de la simulación.   \\
+\midrule
+\textbf{Escenario Básico} 	&  \begin{itemize}
+\item El usuario selecciona la pestaña simulador.
+\item Pulsa sobre el botón reset.
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\caption{Caso de Uso UC-13.}
+\label{tab:uc13}
+\end{table*}
+\end{center}
+
 
 \section{Marco Regulador}
 \label{sec:regulatory_framework}
