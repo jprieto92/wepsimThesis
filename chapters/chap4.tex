@@ -20,7 +20,7 @@
 
 En este capítulo se realiza una descripción completa del simulador desarrollado, incluyendo la arquitectura interna y los diferentes componentes software.
 
-La sección \ref{sec:solution_selection} discute la solución elegida y la compara con las alternativas consideradas. La sección \ref{sec:simulator_components} describe cada uno de los componentes que componen el simulador.
+La sección \ref{sec:solution_selection} discute la solución elegida y la compara con las alternativas consideradas. La sección \ref{sec:simulator_architecture} describe cada uno de los componentes que componen el simulador.
 
 \section{Solución elegida}
 \label{sec:solution_selection}
@@ -43,7 +43,7 @@ La arquitectura de la solución presentada en este trabajo consta de tres elemen
 \begin{itemize}
 \item Modelo hardware: permite definir el hardware a usar.
 \item Modelo software: permite definir el juego de instrucciones a utilizar.
-\item Moto de simulación: simula el funcionamiento del hardware ejecutando el microcódigo/lenguaje máquina definido con anterioridad.
+\item Motor de simulación: simula el funcionamiento del hardware ejecutando el microcódigo/lenguaje máquina definido con anterioridad.
 \end{itemize}
 
 El modelo hardware permite definir los distintos elementos típicos de un computador (memoria principal, procesador, etc.) de una forma modular. La forma de definir estos elementos equilibra dos objetivos contrapuestos: es suficientemente completa como para imitar los principales aspectos de la realidad, pero es lo suficientemente mínima para facilitar su uso. Ante todo se persigue que sea una herramienta didáctica.
