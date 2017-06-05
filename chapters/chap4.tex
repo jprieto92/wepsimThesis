@@ -18,7 +18,7 @@
 \label{ch:design}
 \markboth{}{DESIGN}
 
-En este capítulo se realiza una descripción completa del simulador desarrollado, incluyendo la arquitectura interna y los diferentes componentes software.
+En este capítulo se realiza una descripción completa del simulador desarrollado, incluyendo la arquitectura interna y los diferentes componentes software, que componen la herramienta descritos con anterioridad en \cite{mateos2016wepsim}.
 
 La sección \ref{sec:solution_selection} discute la solución elegida y la compara con las alternativas consideradas. La sección \ref{sec:simulator_architecture} describe cada uno de los componentes que componen el simulador.
 
@@ -150,4 +150,8 @@ En la figura \ref{fig:software_assembly_example} se muestra un ejemplo de códig
 Una de las grandes ventajas del simulador WepSIM es que no está limitado a un conjunto de instrucciones concreto. Se puede definir un amplio conjunto de instrucciones de procesadores reales o inventados. Se puede usar para añadir por ejemplo, a un conjunto de instrucciones MIPS, otras instrucciones diferentes no incluidas en dicho conjunto de instrucciones.
 
 \subsection{Motor del simulador}
+
+El motor de simulación diseñado en WepSIM, es el componente que sirve de unión entre el modelo hardware y software. Su función principal reside en la simulación del computador utilizando la definición del modelo hardware  y el juego de instrucciones definido, realizando la ejecución de los códigos ensamblador, siendo el controlador de la herramienta. 
+
+Además de realizar el proceso de simulación, este componente a su vez realiza la actualización de la interfaz de usuario del simulador, en donde se muestra el valor de cada uno de los registros de la máquina y el estado de los buses y señales que conforman el modelo hardware.
 
