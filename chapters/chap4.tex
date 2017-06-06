@@ -155,3 +155,4 @@ El motor de simulación diseñado en WepSIM, es el componente que sirve de unió
 
 Además de realizar el proceso de simulación, este componente a su vez realiza la actualización de la interfaz de usuario del simulador, en donde se muestra el valor de cada uno de los registros de la máquina y el estado de los buses y señales que conforman el modelo hardware.
 
+En una simulación, este motor en primer lugar se encarga de importar en la memoria de control el resultado de la generación del juego de instrucciones definido por el usuario. Una vez cargado el lenguaje máquina, se encarga de cargar el resultado del código ensamblador compilado en la memoria principal del simulador. Una vez cargada esta información, a través de la información que le proporcionan tanto el modelo hardware como el modelo software, se encarga de propagar los datos resultantes de las operaciones de los módulos hardware en cada ciclo de reloj.
