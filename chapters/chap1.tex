@@ -45,19 +45,13 @@ El objetivo principal de este proyecto, es desarrollar un simulador, que a difer
 
 \begin{itemize}
 
-\item Diseñar la especificación del juego de instrucciones que permita la creación de un lenguaje ensamblador adaptado a la arquitectura del simulador.
+\item Simular la ejecución de el juego de instrucciones especificado en un computador denominado WepSIM desde el punto de vista de la micropogramación y la programación en ensamblador.
 
-\item Diseñar e implementar el compilador del juego de instrucciones para la generación del firmware del simulador.
+\item Permitir la especificación de diferentes juegos de instrucciones.
 
-\item Diseñar e implementar el compilador genérico de ensamblador que permita la generación del binario correspondiente al juego de instrucciones diseñado.
+\item Permitir unificar la microprogramación y la programación en ensamblador.
 
-\item Diseñar e implementar el motor del simulador permitiendo ejecuciones reales del código ensamblador correspondiente al juego de instrucciones compilado.
-
-\item Diseñar una interfaz que proporcione en todo momento la información necesaria en relación al estado de la ejecución del código, de forma sencilla y visual.
-
-\item Permitir que los usuarios puedan importar/exportar tanto la especificación del juego de instrucciones como el código ensamblador.
-
-\item Crear un mecanismo de "modificación en caliente" que permita en mitad de una ejecución modificar el juego de instrucciones, de forma que se puedan realizar pruebas sin necesidad de reiniciar la ejecución.
+\item Permitir al usuario la visualización en cada ciclo de reloj del estado y comportamiento del computador simulado.
 
 \end{itemize}
 
@@ -70,15 +64,15 @@ El documento contiene los siguientes capítulos:
 
 \item Capítulo \ref{ch:introduction}, \textit{\nameref{ch:introduction}}, presenta una breve descripción del contenido del documento. También incluye la motivación y los objetivos del proyecto.
 
-\item Capítulo \ref{ch:state_of_the_art}, \textit{\nameref{ch:state_of_the_art}}, incluye una descripción de los diferentes tipos de simuladores de lenguaje ensamblador y simuladores de microcódigo y presenta el trabajo relacionado.
+\item Capítulo \ref{ch:state_of_the_art}, \textit{\nameref{ch:state_of_the_art}}, incluye una descripción de los diferentes tipos de simuladores (de lenguaje ensamblador y de microcódigo) presentando el trabajo relacionado y una descripción de las tecnologías web actuales.
 
-\item Capítulo \ref{ch:analysis}, \textit{\nameref{ch:analysis}}, describe brevemente el proyecto, explica la solución elegida, establece los requisitos y presenta el marco regulador del proyecto.
+\item Capítulo \ref{ch:analysis}, \textit{\nameref{ch:analysis}}, describe brevemente el proyecto, establece los requisitos y presenta el marco regulador del proyecto.
 
-\item Capítulo \ref{ch:design}, \textit{\nameref{ch:design}}, detalla el diseño del sistema, incluyendo todos sus componentes.
+\item Capítulo \ref{ch:design}, \textit{\nameref{ch:design}}, , explica la solución elegida, detalla el diseño del sistema, incluyendo todos sus componentes.
 
 \item Capítulo \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}}, incluye los detalles de implementación de las partes principales del software desarrollado y las características necesarias para la implementación de la aplicación.
 
-\item Capítulo \ref{ch:verification_validation_and_evaluation}, \textit{\nameref{ch:verification_validation_and_evaluation}}, detalla una verificación y validación completa del proyecto. También muestra una evaluación de diferentes casos de prueba utilizando el simulador.
+\item Capítulo \ref{ch:verification_validation_and_evaluation}, \textit{\nameref{ch:verification_validation_and_evaluation}}, detalla una verificación y validación completa del proyecto.
 
 \item Capítulo \ref{ch:planning_and_budget}, \textit{\nameref{ch:planning_and_budget}}, presenta los conceptos relacionados con la planificación seguida, descompone todos los costes del proyecto y describe el entorno socio-económico.
 

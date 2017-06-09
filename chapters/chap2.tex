@@ -18,9 +18,15 @@
 \label{ch:state_of_the_art}
 \markboth{}{STATE OF THE ART}
 
-Este capítulo presenta el estado del arte, la última y más avanzada etapa de las tecnologías relacionadas con nuestra aplicación. Primero, se presentan los diferentes simuladores existentes para microprogramación (Section \ref{sec:simuladores_microprogramacion}). Después, se presentan los diferentes simuladores existentes para la programación en código ensamblador (Section \ref{sec:simuladores_ensamblador}). Por último, realizamos una comparación de nuestro trabajo con el contexto actual de los distintos simuladores expuestos previamente (Section \ref{sec:propuesta_simulacion}).
+Este capítulo presenta el estado del arte, la última y más avanzada etapa de las tecnologías relacionadas con nuestra aplicación. En primer lugar se presentan los diferentes simuladores existentes en el ámbito docente tanto para microprogramación (Section \ref{sec:simuladores_microprogramacion}) como para la programación en código ensamblador (Section \ref{sec:simuladores_ensamblador}), comparando una comparación de nuestro trabajo con el contexto actual de los distintos simuladores expuestos previamente (Section \ref{sec:propuesta_simulacion}). Después, se presentan las diferentes tecnologías web más utilizadas en la actualidad \ref{sec:tecnologias_web}. Por último se describe el procesador en el cual se basa WepSIM.
 
-\section{Simuladores para microprogramación}
+\section{Simuladores para la enseñanza de la Estructura y Arquitectura de Computadores}
+
+Son muchos los tipos de simuladores existentes en el ámbito docente para la explicación de las distintas partes que componen un computador. Estos simuladores, pueden ser de diferentes ámbitos como por ejemplo, cachés, pipeline, circuitos integrados, microprogramación, programación en ensamblador, etc.
+
+En este apartado, vamos a centrarnos en los tipos de simuladores que tienen relación directa con la propuesta realizada, como lo son los simuladores para la microprogramación y los simuladores para la programación en ensamblador.
+
+\subsection{Simuladores para microprogramación}
 \label{sec:simuladores_microprogramacion}
 
 En esta sección, se explican los diferentes simuladores existentes para la microprogramación. Cabe destacar, que actualmente existen pocos simuladores que nos proporcionen esta funcionalidad, debido a que una gran parte de ellos, son utilizados de forma interna por las empresas para verificar el correcto funcionamiento de sus unidades en la fase de diseño y desarrollo. En primer lugar, vamos a centrarnos en los simuladores que están más enfocados a una labor docente.
@@ -37,7 +43,7 @@ En \cite{yen1986development}, se describe el desarrollo y la implementación de 
 \end{figure}
 
 
-\section{Simuladores para programación en ensamblador}
+\subsection{Simuladores para programación en ensamblador}
 \label{sec:simuladores_ensamblador}
 En esta sección, se explican los diferentes simuladores existentes para la programación en ensamblador. Los simuladores más conocidos para labores docentes, son SPIM, MARS y WebMIPS.
 
@@ -133,7 +139,7 @@ Entre las diferentes características a destacar de este simulador, se encuentra
 
 \clearpage
 
-\section{Propuesta de simulación unificada}
+\subsection{Propuesta de simulación unificada}
 \label{sec:propuesta_simulacion}
 Hay distintas herramientas muy útiles para labores docentes relacionadas con la asignatura Estructura de Computadores, aunque como se comento previamente, no existe una herramienta que nos proporcione el desarrollo y simulación tanto a nivel de microcódigo como a nivel de ensamblador. WepSIM, une ambos aspectos ofreciendo:
 
@@ -145,10 +151,6 @@ Hay distintas herramientas muy útiles para labores docentes relacionadas con la
 	\item Permite definir un amplio conjunto de instrucciones máquina.
 	\item Puede ser usado como herramienta de microprogramación o de programación en ensamblador.
 \end{itemize}
-
-De este modo, con WepSIM se pretende crear un simulador unificado, abarcando los aspectos más relevantes de la asignatura "Estructura de Computadores" y permitiendo que todas las prácticas de la asignatura puedan realizarse en la misma plataforma, evitando la pérdida de tiempo y dificultad que supone para el alumno el habituarse a diferentes entornos para cada una de las prácticas.
-
-WepSIM, se puede definir por tanto como un simulador de programación en ensamblador y microprogramación, flexible puesto que permite la personalización del juego de instrucciones de la máquina, multiplataforma puesto que permite su uso desde diferentes tipos de dispositivos, e interactivo al poder modificar la configuración de la máquina en tiempo de ejecución.
 
 \begin{table}[htbp]
 \ra{1.2}
@@ -175,10 +177,18 @@ Juego de instrucciones personalizable				&  &  &  &  & \ding{51} &  &  \\
 \label{tab:comparison_frameworks}
 \end{table}
 
+De este modo, con WepSIM se pretende crear un simulador unificado, abarcando los aspectos más relevantes de la asignatura 'Estructura de Computadores' y permitiendo que todas las prácticas de la asignatura puedan realizarse en la misma plataforma, evitando la pérdida de tiempo y dificultad que supone para el alumno el habituarse a diferentes entornos para cada una de las prácticas.
+
+WepSIM, se puede definir por tanto como un simulador de programación en ensamblador y microprogramación, flexible puesto que permite la personalización del juego de instrucciones de la máquina, multiplataforma puesto que permite su uso desde diferentes tipos de dispositivos, e interactivo al poder modificar la configuración de la máquina en tiempo de ejecución.
+
+
 \section{Tecnologías web}
 \label{sec:tecnologias_web}
 
 Actualmente, gran parte de los recursos disponibles en el día a día son ofrecidos a través de Internet y su distribución es posible gracias a las tecnologías web. Estas tecnologías, permiten la construcción de las páginas web haciendo uso de las tecnologías para el desarrollo de páginas web y las tecnologías de interconexión de computadores permitiendo a los usuarios el intercambio en formato de hipertexto de todo tipo de datos y de aplicaciones software.
+
+\subsection{HTML5}
+\label{sec:html5}
 
 Cuando se realiza el desarrollo de una página web, son tres las tecnologías que se están empleando con mayor frecuencia: HTML, CSS y JavaScript. Todas estas tecnologías vienen definidas y estandarizadas por el organismo internacional W3C y cada una de ellas, tiene una función concreta en el funcionamiento de la página web:
 
@@ -200,6 +210,65 @@ Este lenguaje, fue diseñado con una sintaxis similar a la del lenguaje de progr
 En la actualidad, todos los navegadores realizan la interpretación del código JavaScript integrado en las páginas web. Para poder interactuar con una página web el lenguaje está provisto de una implementación del DOM que facilita el control y manejo de las interacciones del usuario.
 
 \end{itemize}
+
+\subsection{Frameworks}
+\label{sec:frameworks}
+
+Comparison of JavaScript frameworks
+
+tablita de comparación de funcionalidades
+tablita de comparación de navegadores soportados
+
+163.117.148.35/wepsim-1.0
+
+\begin{itemize}
+\item Bootstrap
+\item Jquery
+\item AngularJS
+\end{itemize}
+
+\section{Procesador elemental WepSIM}
+
+WepSIM, es un procesador elemental con unidad de control microprogramada diseñado por el personal del grupo de investigación ARCOS de la Universidad Carlos III de Madrid para la docencia en la asignatura Estructura de Computadores.
+
+En la figura \ref{fig:wepsimCPU_figure}, se muestra la estructura del Procesador Elemental WepSIM. WepSIM, consta de un módulo de memoria, un dispositivo teclado, un dispositivo pantalla y un dispositivo de E/S genérico que se puede utilizar para trabajar con interrupciones.
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=12cm]{figures/cpu}
+ 	\caption{Arquitectura CPU WepSIM .}
+	\label{fig:wepsimCPU_figure}
+\end{figure}
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=12cm]{figures/controlUnit}
+ 	\caption{Arquitectura unidad de control WepSIM.}
+	\label{fig:wepsimCU_figure}
+\end{figure}
+
+WepSIM es un procesador de 32 bits que direcciona la memoria por bytes, que cuenta con un banco de 32 registros y dos registros adicionales (RT1 y RT2) que no son visibles para el programador de ensamblador, pero que permiten el almacenamiento temporal de datos para la realización de operaciones intermedias. Desde los registros, es posible enviar los valores para operar en una ALU que dispone de las 15 operaciones aritmético-lógicas más comunes. El registro PC tiene su propio operador de sumar cuatro, de forma que no es necesario hacer uso de la ALU para esta operación. El resultado de las operaciones realizadas en la ALU puede ser almacenado en un registro temporal (RT3) que también es invisible para el programador de ensamblador, o ser enviado directamente al bus interno a través del correspondiente triestado.
+
+El registro de estado (SR) puede ser actualizado con los flags resultantes de la última operación de la alu (O, N y Z). Para ello, SELEC/SelP representa un bloque de circuitos que permite indicar qué parte del registro de estado (SR) debe ser actualizado. A la derecha de SELEC/SelP llegan los bits del registro de estado SR como entrada (Input=O N Z I U) y SelP permite seleccionar qué grupo de estos bits se actualizará en el registro de estado: los bits O, N y Z con los valores procedentes de la ALU, el bit I con el valor indicado o el bit U con el valor indicado para el mismo.
+
+El registro de instrucción (IR) tiene asociado un módulo selector (circuito de  más alto nivel que un multiplexor, etc.) que permite seleccionar un segmento del valor binario almacenado en el registro de instrucción que pasará hacia T3.
+
+En concreto, se indica la posición (Offset, donde 0 represente el bit menos significativo del registro IR) inicial y el número de bits (Size) a tomar a partir de dicha posición inicial, así como si se desea hacer extensión de signo (SE) antes de pasar el valor a la entrada de T3.
+
+Los registros MAR y MBR se usan para almacenar la dirección y el contenido asociado a esta dirección en las operaciones de lectura/escritura con la memoria. La memoria está diseñada para un funcionamiento síncrono o asíncrono. Actualmente funciona de forma síncrona, pero dispone de la señal MRdy para en un futuro trabajar de forma asíncrona. El circuito de selección permite indicar qué porción de la palabra de memoria es la que se desea (un byte, dos bytes o una palabra completa de cuatro bytes).
+
+Se dispone también de tres dispositivos de E/S: un teclado, una pantalla y un dispositivo genérico que se puede configurar para generar diversos tipos de interrupciones.
+
+Finalmente, la Unidad de Control genera las señales de control para cada ciclo de reloj. La figura \ref{fig:wepsimCU_figure} muestra la Unidad de Control con mayor detalle. Se trata de una unidad de control microprogramada con secuenciamiento implícito. Las señales de control para el ciclo de reloj actual se almacenan en el registro de micro-instrucción (aquel con los campos A0, B, C, SelA, etc.). El contenido de este registro proviene de la memoria de control, concretamente del contenido en la posición a la que apunta el registro de micro-dirección. La micro-dirección almacenada en este registro puede modificarse usando el multiplexor "MUX A". Hay cuatro opciones: la microdirección actual más uno, una micro-dirección indicada en la propia micro-instrucción (que se solapa con SelA, SelB y parcialmente con SelE), la primera micro-dirección asociada al campo de código de operación de la instrucción del registro IR, y finalmente el valor cero, que es la dirección de la memoria de control donde se almacena la microrrutina correspondiente al fetch. La microdirección se puede seleccionar de forma condicional, para ello se usa el multiplexor "MUX C" que permite seleccionar los bits del registro de estado (SR) o valores de las señales de control de E/S.
+
+Para generar los valores correspondientes a las señales selectoras del banco de registros RA, RB y RE se usan los circuitos selectores SelRA, SelRB y SelRE. Estos selectores toman como entrada los 32 bits del registro de instrucción (IR) por un lado y el campo SelA, SelB y SelE por otro, de forma que toman SelX como el desplazamiento dentro del registro de instrucción (de 0 a 32) desde donde tomar los siguientes 5 bits correspondientes a las señales RA, RB o RE. Permiten por tanto seleccionar 5 bits consecutivos de los 32 bits del registro de instrucción.
+
+El multiplexor MR permite indicar si las señales RA, RB y RE serán literalmente los valores almacenados en SelA, SelB y SelE (MR=1) o bien si SelA, SelB y SelE indican el desplazamiento dentro de la instrucción donde están los valores a utilizar para RA, RB y RE. Esto último permite que en la instrucción se pueda indicar los registros a usar como operandos en el banco de registros, en lugar de indicarlos desde la micro-instrucción.
+
+Para la señal Cop (código de operación en la ALU) la señal MC permite tomar el valor SelCop de la micro-instrucción (MC=1) o bien los 4 bits menos significativos del registro de instrucción (MC=0), es decir IR3-IR0.
+
+En \cite{perez2015problemas} se puede encontrar una descripción más detallada del procesador descrito anteriormente.
+
 
 
 

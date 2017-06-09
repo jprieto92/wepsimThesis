@@ -69,6 +69,7 @@
 \renewcommand{\ALG@name}{Pseudocode}
 \makeatother
 \renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}% Algorithm # is <chapter>.<algorithm>
+\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}%
 \makeatletter\@addtoreset{algorithm}{chapter}\makeatother
 \makeatletter
 \renewcommand{\ALG@beginalgorithmic}{\normalsize}
@@ -173,7 +174,7 @@
         \Large
         Universidad Carlos III de Madrid\\
         Escuela Politécnica Superior\\
-        Bachelor's Degree in Computer Science and Engineering
+        Grado en Ingeniería Informática
         
         \vspace{0.8cm}
         
@@ -183,7 +184,7 @@
         \vspace{1.5cm}
         
         \LARGE
-        Bachelor Thesis
+        Trabajo Fin de Grado
         
         \Huge
         %\textbf{A Volunteer Computing Environments Simulator}
@@ -195,14 +196,14 @@
         
         \Large
         \begin{changemargin}{3.8cm}{3.8cm}
-        Author:\hfill Javier Prieto Cepeda\\
-        Supervisor:\hfill Félix García Carballeira\\
+        Autor:\hfill Javier Prieto Cepeda\\
+        Tutor:\hfill Félix García Carballeira\\
         \end{changemargin}
 		\begin{changemargin}{3.8cm}{3.8cm}
 		\begin{flushright}		        
         \vspace{0.5cm}
-        Leganés, Madrid, Spain\\
-        November 2016
+        Leganés, Madrid, España\\
+        Junio 2017
  		\end{flushright}
         \end{changemargin}
         

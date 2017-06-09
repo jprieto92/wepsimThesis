@@ -20,9 +20,14 @@
 
 En este capítulo se realiza una descripción completa del simulador desarrollado, incluyendo la arquitectura interna y los diferentes componentes software, que componen la herramienta descritos con anterioridad en \cite{mateos2016wepsim}.
 
-La sección \ref{sec:solution_selection} discute la solución elegida y la compara con las alternativas consideradas. La sección \ref{sec:simulator_architecture} describe cada uno de los componentes que componen el simulador.
+La sección \ref{sec:study_of_solution} discute el estudio de la solución final, considerando las diferentes alternativas existentes para el diseño y desarrollo del simulador. En la sección \ref{sec:solution_selection} se indica la solución elegida y la compara con las alternativas consideradas. La sección \ref{sec:simulator_architecture} describe cada uno de los componentes que componen el simulador.
 
-\section{Solución elegida}
+\section{Estudio de la solución final}
+\label{sec:study_of_solution}
+
+Para el diseño del simulador, existen en la actualidad diferentes modelos y frameworks de desarrollo web que ...
+
+\subsection{Solución elegida}
 \label{sec:solution_selection}
 
 Para que los profesores de la asignatura Estructura de Computadores puedan hacer uso de una herramienta que sirva de ayuda para la explicación de los conceptos teóricos de la asignatura, y los alumnos puedan utilizarla para comprender estos conceptos y realizar posteriormente las prácticas de la asignatura, se propone el diseño e implementación de una herramienta web que simule con realismo en funcionamiento de un procesador elemental con unidad de control microprogramable.
@@ -31,9 +36,7 @@ Este simulador, será desarrollado como una herramienta web debido a la portabil
 
 Para lograr dicha portabilidad, el simulador ha sido desarrollado en HTML5 (HTML + JavaScript + CSS) haciendo posible su ejecución en cualquier plataforma (smartphones, tablet, PC, etc.) que pueden ejecutar Microsoft Edge, Mozilla Firefox, Google Chrome o Safari. Además, la herramienta depende de los siguientes frameworks/bibliotecas: JQuery, JQueryUI, JQuery Mobile, Knockout y BootStrap.
 
-Por tanto, la solución elegida es capaz de unificar en una misma herramienta todas las funcionalidades requeridas para la enseñanza de Estructura de computadores con un alto nivel de detalle, con alta disponibilidad al facilitarse su como una herramienta web, y con una gran portabilidad puesto que podrá ser ejecutada sobre un gran número de diversos dispositivos.
-
-
+Por tanto, la solución elegida es capaz de unificar en una misma herramienta todas las funcionalidades requeridas para la enseñanza de Estructura de computadores con un alto nivel de detalle, con alta disponibilidad al facilitarse su como una herramienta web, y con una gran portabilidad puesto que podrá ser ejecutada sobre un gran número de diversos dispositivos, buscando en todo momento una solución sin la necesidad de servidor.
 
 \section{Arquitectura de WepSIM}
 \label{sec:simulator_architecture}
@@ -43,14 +46,14 @@ La arquitectura de la solución presentada en este trabajo consta de tres elemen
 \begin{itemize}
 \item Modelo hardware: permite definir el hardware a usar.
 \item Modelo software: permite definir el juego de instrucciones a utilizar.
-\item Motor de simulación: simula el funcionamiento del hardware ejecutando el microcódigo/lenguaje máquina definido con anterioridad.
+\item Kernel de simulación: simula el funcionamiento del hardware ejecutando el microcódigo/lenguaje máquina definido con anterioridad.
 \end{itemize}
 
 El modelo hardware permite definir los distintos elementos típicos de un computador (memoria principal, procesador, etc.) de una forma modular. La forma de definir estos elementos equilibra dos objetivos contrapuestos: es suficientemente completa como para imitar los principales aspectos de la realidad, pero es lo suficientemente mínima para facilitar su uso. Ante todo se persigue que sea una herramienta didáctica.
 
 El modelo software permite definir el microcódigo y el ensamblador basado en este microcódigo de la forma tan intuitiva posible. El ensamblador a usar viene dado por un conjunto de instrucciones que puede ser definido por el usuario e intenta ser lo suficientemente flexible como para poder definir diferentes tipos y juegos de instrucciones, como por ejemplo MIPS o ARM.
 
-El tercer elemento de la arquitectura propuesta es un motor que toma como entrada el modelo hardware descrito y el modelo software de trabajo, y se encarga de mostrar el funcionamiento del hardware con el software dado.
+El tercer elemento de la arquitectura propuesta es un kernel que toma como entrada el modelo hardware descrito y el modelo software de trabajo, y se encarga de mostrar el funcionamiento del hardware con el software dado.
 
 \begin{figure}[htbp]
  	\centering
@@ -59,7 +62,7 @@ El tercer elemento de la arquitectura propuesta es un motor que toma como entrad
 	\label{fig:architecture_diagram}
 \end{figure}
 
-La figura \ref{fig:architecture_diagram} resume la arquitectura de WepSIM. El punto de inicio es el modelo hardware que describe el procesador a ser simulado. Ello incluye el procesador, la memoria y algunos dispositivos de E/S: teclado, pantalla y un dispositivo de E/S simple que genera interrupciones. El modelo hardware describe el estado global del procesador. A partir del estado global del procesador, el motor de simulación actualiza el estado en cada ciclo de reloj.
+La figura \ref{fig:architecture_diagram} resume la arquitectura de WepSIM. El punto de inicio es el modelo hardware que describe el procesador a ser simulado. Ello incluye el procesador, la memoria y algunos dispositivos de E/S: teclado, pantalla y un dispositivo de E/S simple que genera interrupciones. El modelo hardware describe el estado global del procesador. A partir del estado global del procesador, el kernel de simulación actualiza el estado en cada ciclo de reloj.
 
 La unidad de control simulada almacena las señales de control de cada ciclo en una memoria de control. La memoria de control tiene todos los microprogramas para las instrucciones con las que trabaja el procesador, y el fetch para leer la instrucción de memoria y decodificarla.
 
@@ -67,7 +70,7 @@ La unidad de control simulada almacena las señales de control de cada ciclo en 
 El microcódigo (el contenido de la memoria de control) junto con el formato de cada instrucción (campos de la instrucción y su longitud) se describe en un fichero de texto. El modelo software lee este fichero, lo traduce a binario y lo carga en el procesador. La definición del lenguaje ensamblador a utilizar se describe junto con el microcódigo, y el modelo software permite traducir a binario programas escritos en dicho ensamblador.
 
 
-El motor de simulación pregunta al subsistema del modelo software por el microcódigo definido, la descripción del formato de instrucción y el contenido de la memoria principal. Los binarios se cargan en los elementos del modelo hardware, y a continuación el motor de simulación actualiza el estado global en cada ciclo de reloj.
+El kernel de simulación pregunta al subsistema del modelo software por el microcódigo definido, la descripción del formato de instrucción y el contenido de la memoria principal. Los binarios se cargan en los elementos del modelo hardware, y a continuación el kernel de simulación actualiza el estado global en cada ciclo de reloj.
 
 
 WepSIM dispone de un controlador de simulación que se encarga de actualizar el ciclo de reloj y mostrar el estado global. El subsistema de interfaz de simulación actualiza la interfaz de usuario. Cuando el usuario usa la interfaz de usuario para solicitar una operación, el subsistema de interfaz de simulación traslada la petición al controlador de simulación. Como se puede ver, se usa un Modelo- Vista-Controlador (MVC) básico para la arquitectura de WepSIM.
@@ -149,10 +152,10 @@ En la figura \ref{fig:software_assembly_example} se muestra un ejemplo de códig
 
 Una de las grandes ventajas del simulador WepSIM es que no está limitado a un conjunto de instrucciones concreto. Se puede definir un amplio conjunto de instrucciones de procesadores reales o inventados. Se puede usar para añadir por ejemplo, a un conjunto de instrucciones MIPS, otras instrucciones diferentes no incluidas en dicho conjunto de instrucciones.
 
-\subsection{Motor del simulador}
+\subsection{Kernel del simulador}
 
-El motor de simulación diseñado en WepSIM, es el componente que sirve de unión entre el modelo hardware y software. Su función principal reside en la simulación del computador utilizando la definición del modelo hardware  y el juego de instrucciones definido, realizando la ejecución de los códigos ensamblador, siendo el controlador de la herramienta. 
+El kernel de simulación diseñado en WepSIM, es el componente que sirve de unión entre el modelo hardware y software. Su función principal reside en la simulación del computador utilizando la definición del modelo hardware  y el juego de instrucciones definido, realizando la ejecución de los códigos ensamblador, siendo el controlador de la herramienta. 
 
 Además de realizar el proceso de simulación, este componente a su vez realiza la actualización de la interfaz de usuario del simulador, en donde se muestra el valor de cada uno de los registros de la máquina y el estado de los buses y señales que conforman el modelo hardware.
 
-En una simulación, este motor en primer lugar se encarga de importar en la memoria de control el resultado de la generación del juego de instrucciones definido por el usuario. Una vez cargado el lenguaje máquina, se encarga de cargar el resultado del código ensamblador compilado en la memoria principal del simulador. Una vez cargada esta información, a través de la información que le proporcionan tanto el modelo hardware como el modelo software, se encarga de propagar los datos resultantes de las operaciones de los módulos hardware en cada ciclo de reloj.
+En una simulación, este kernel en primer lugar se encarga de importar en la memoria de control el resultado de la generación del juego de instrucciones definido por el usuario. Una vez cargado el lenguaje máquina, se encarga de cargar el resultado del código ensamblador compilado en la memoria principal del simulador. Una vez cargada esta información, a través de la información que le proporcionan tanto el modelo hardware como el modelo software, se encarga de propagar los datos resultantes de las operaciones de los módulos hardware en cada ciclo de reloj.

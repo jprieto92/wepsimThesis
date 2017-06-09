@@ -1,6 +1,6 @@
-\lhead[\thepage]{CHAPTER \thechapter. PLANNING AND BUDGET}
+\lhead[\thepage]{CAPÍTULO \thechapter. PLANIFICACIÓN Y PRESUPUESTO}
 \chead[]{}
-\rhead[A Complete Simulator for Volunteer Computing Environments\leftmark]{\thepage}
+\rhead[WepSIM: Simulador de procesador elemental con unidad de control microprogramada\leftmark]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
 
 \lfoot[]{}
@@ -18,63 +18,59 @@
 \label{ch:planning_and_budget}
 \markboth{}{PLANNING AND BUDGET}
 
-This chapter presents a detailed planning of the project (Section \ref{sec:planning}, \textit{\nameref{sec:planning}}). Then, we explain the project costs (Section \ref{sec:budget}, \textit{\nameref{sec:budget}}). At the end of the chapter, we comment on the socio-economic environment of the project ({Section \ref{sec:socioeconomic_environment}, \textit{\nameref{sec:socioeconomic_environment}}}).
+Este capítulo presenta una planificación detallada del proyecto (Sección \ref{sec:planning}, \textit{\nameref{sec:planning}}). Luego, explicamos los costes del proyecto (Sección \ref{sec:budget}, \textit{\nameref{sec:budget}}). Al final del capítulo, explicamos el entorno socio-económico del proyecto ({Section \ref{sec:socioeconomic_environment}, \textit{\nameref{sec:socioeconomic_environment}}}).
 
 \section{Planificación}
 \label{sec:planning}
 
-This section includes the complete project planning. First, we describe the software development methodology used. After that, we detail the time duration of each phase of the project, collecting all times in a Gantt chart.
+Esta sección incluye la planificación completa del proyecto. En primer lugar, describimos la metodología de desarrollo de software utilizada. Después, detallamos la duración de cada fase del proyecto, indicando todos los tiempos en un gráfico de Gantt.
 
 \subsection{Justificación de la Metodología}
 
-Due to its characteristics, we have divided our project into three iterations:
+Debido a sus características, hemos dividido nuestro proyecto en tres iteraciones:
 
 \begin{itemize}
+\item \textbf{Modelo hardware:} la primera iteración ha consistido en lograr el modelado del hardware que compone el procesador WepSIM. El objetivo de esta fase, ha sido lograr el modelado y funcionamiento básico de cada componente hardware por separado.
 
-\item \textbf{Basic functionality:} the first iteration has been to achieve the simulation of a simple distributed computing system. The aim of this phase has been to simulate client machines that exchange messages with a server through the a network.
+\item \textbf{Modelo software:} esta fase ha consistido en lograr el modelo software utilizado en la asignatura Estructura de computadores para la definición del juego de instrucciones y el lenguaje ensamblador. El objetivo de esta fase, ha sido lograr interpretar el juego de instrucciones definido y código ensamblador definidos por el usuario, generando la memoria de control y memoria principal en el orden correspondiente.
 
-\item \textbf{Client side:} this phase has been to incorporate all the necessary functionality on the client side (described in Chapter \ref{ch:design}, \textit{\nameref{ch:design}}).
-
-\item \textbf{Server side:} this phase has been to incorporate all the necessary functionality on the server side (described in Chapter \ref{ch:design}, \textit{\nameref{ch:design}}).
-
+\item \textbf{Kernel del simulador:} esta fase ha consistido en lograr unir el modelo hardware y modelo software, realizando el kernel del simulador. El objetivo de esta fase, ha sido diseñar e implementar el kernel de simulador encargado de unir el modelo hardware y el modelo software, generando la simulación y la vista del simulador.
 \end{itemize}
 
-It was necessary to have an iterative methodology used to develop each of the phases independently to join all together in the last stage and obtain the final product. For this purpose, we have analyzed three different software development methodologies: Software prototyping \cite{grimm1998}, the Waterfall model \cite{hebert1983} and the Spiral model \cite{boehm1988}. Software prototyping did not fit well because it requires building a prototype of the software in a short time. The Waterfall model is a sequential design process, used in software development processes, in which progress is seen as flowing steadily downwards (like a waterfall) through different phases. The problem with this methodology is that it does not allow iterations within the software development. Finally, the Spiral model allowed fragmenting the project into different iterations. The model combines the strengths of the other two models (simplicity and flexibility), and uses an iterative process. Although this model is slower than the other two, it allowed us to apply different iterations so we decided to apply it to the whole process.
+Era necesario contar con una metodología iterativa para desarrollar cada una de las fases de manera independiente para unirlas todas en la última etapa y obtener el producto final. Para ello, hemos analizado tres metodologías de desarrollo de software diferentes: Prototipado de software \cite{grimm1998}, el Modelo en Cascada \cite{hebert1983} y el Modelo en Espiral \cite{boehm1988}. El  Prototipado de Software no encaja muy bien en nuestro proyecto, puesto que requiere la construcción de un prototipo de sofware en poco tiempo. El Modelo en Cascada es un proceso de diseño secuencial, utilizado en procesos de desarrollo de software en el cual el progreso es visto como un flujo constante hacia abajo (como una cascada) a través de diferentes fases. El problema con esta metodología es que no permite iteraciones dentro del desarrollo del software. Finalmente, el Modelo en Espiral permitió dividir el proyecto en diferentes iteraciones. Este modelo, combina las fortalezas de los otros dos modelos (simplicidad y flexibilidad), utilizando además un proceso iterativo. Aunque este modelo es más lento que los dos anteriores, nos permitió aplicar diferentes iteraciones por lo que decidimos aplicarlo a todo el proceso.
 
 \subsection{Ciclo de Vida}
 
-The life cycle development process of the project has followed the Spiral lifecycle model \cite{boehm1988}. Figure \ref{fig:spiral_model} shows the Spiral model using a scheme.
+El proceso de desarrollo del ciclo de vida del proyecto ha seguido el Modelo de ciclo de vida en Espiral \cite{boehm1988}. La Figura \ref{fig:spiral_model} muestra el Modelo en Espiral usando un esquema.
 
 \begin{figure}[htbp]
  	\centering
  	\includegraphics[width=12cm]{figures/spiral_model}
- 	\caption{Spiral model (Boehm, 2000).}
+ 	\caption{Modelo en Espiral (Boehm, 2000).}
 	\label{fig:spiral_model}
 \end{figure}
 
-The Spiral model has four phases, which are repeated during the different iterations of the model. These phases are:
+El modelo en Espiral tiene cuatro fases, que se repiten durante las diferentes iteraciones del modelo. Estas fases son:
 
 \begin{itemize}
+\item \textbf{Planificación} ('Determine objectives' en Figura \ref{fig:spiral_model}): Se reúnen los requisitos de los usuarios, se realiza un estudio de factibilidad del sistema y se determinan los objetivos de iteración.
 
-\item \textbf{Planning} (Determine objectives in Figure \ref{fig:spiral_model}): the user requirements are gathered, a feasibility study of the system is performed, and the iteration objectives are determined. 
+\item \textbf{Análisis} ('Identify and resolve risks' en Figura \ref{fig:spiral_model}): Se realiza un análisis completo de los requisitos y se identifican los posibles riesgos. Esta fase termina con un diseño básico.
 
-\item \textbf{Analysis} (Identify and resolve risks in Figure \ref{fig:spiral_model}): a full analysis of requirements is done and the potential risks are identified. This phase ends with a basic design.
+\item \textbf{Desarrollo y Pruebas}: Se lleva a cabo la implementación del código. Se realizan los casos de prueba y los resultados de la prueba.
 
-\item \textbf{Development and Test}: Code implementation is done. Test cases and test results are performed.
-
-\item \textbf{Evaluation} (Plan the next iteration in Figure \ref{fig:spiral_model}): Customers evaluate the software and provide their feedback. In this case, the student tries to get the supervisor's approval. This is  the \textit{critical task} of the life cycle, since we can only move on to the next iteration of the Spiral lifecycle model if this task is approved.
+\item \textbf{Evaluación} ('Plan the next iteration' in Figure \ref{fig:spiral_model}): 
+Los clientes evalúan el software y proporcionan sus comentarios. En este caso, el estudiante intenta obtener la aprobación del supervisor. Esta es la \textit{tarea crítica} del ciclo de vida, ya que solo podemos pasar a la siguiente iteración del Modelo de ciclo de vida Espiral si esta tarea es aprobada.
 
 \end{itemize}
 
-Each phase starts with a design goal and ends with the customer (the supervisor) reviewing the progress so far. As previously explained, we have divided the software development into three iterations: basic functionality, client side, and server side. In the last iteration, the complete software must undergo extensive testing in order to validate the simulator.
-
+Cada fase comienza con un objetivo de diseño y termina con el cliente (el supervisor) revisando el progreso hasta ahora. Como se explicó anteriormente, hemos dividido el desarrollo de software en tres iteraciones: modelo hardware, modelo software, y kernel del simulador. En la última iteración, el software completo debe someterse a pruebas exhaustivas para validar el simulador.
 
 \subsection{Tiempo Estimado}
 
-The Gantt chart (Figure \ref{fig:gantt}) shows all the tasks carried out during the project development. This project has been developed within a Collaboration in University Departments Scholarship \cite{colaboracion}, funded by the Spanish Ministry of Education, Culture, and Sport. The project began on November 2st, 2015, and ended on June 22, 2016, making a total of almost eight months of work. During this time, I have worked from Monday to Friday, four hours a day.
+El gráfico de Gantt (Figura \ref{fig:gantt}) muestra todas las tareas realizadas durante el desarrollo del proyecto. El proyecto comenzó el 1 de noviembre de 2015 y finalizó el 30 de diciembre de 2016, lo que supone un total de casi 13 meses de trabajo. Durante este tiempo, he trabajado de lunes a viernes, durante cuatro horas al día.
 
-The Gantt chart shows all the tasks performed in each iteration of the spiral lifecycle model. Recall that the three iterations were: Basic functionality, Client side and Server side. In addition to the tasks (phases) mentioned above (Planning, Analysis, Development and Test, and Evaluation), we have included the Documentation task at the end of each iteration. The Documentation task has consisted mainly in drafting this bachelor thesis.
-
+El diagrama de Gantt muestra todas las tareas realizadas en cada iteración del modelo de ciclo de vida espiral. Recuerde que las tres iteraciones fueron: Modelo hardware, Modelo software y kernel del simulador. Además de las tareas (fases) mencionadas anteriormente (Planificación, Análisis, Desarrollo y Prueba, y Evaluación), hemos incluido la tarea de Documentación al final de cada iteración. La tarea de documentación ha consistido principalmente en la redacción de este trabajo fin de grado.
 
 \begin{figure}[htbp]
  	\centering
@@ -86,11 +82,11 @@ The Gantt chart shows all the tasks performed in each iteration of the spiral li
 \section{Presupuesto}
 \label{sec:budget}
 
-This section details the overall project budget. On the one hand, we present the project costs and, on the other hand, we disclose the offer presented to the customer.
+Esta sección detalla el presupuesto general del proyecto. Por un lado, presentamos los costes del proyecto y, por otro lado, damos a conocer la oferta presentada al cliente.
 
 \subsection{Coste del Proyecto}
 
-Table \ref{tab:project_information} summarizes the main features of the project including the total budget. 
+La tabla \ref{tab:project_information} resume las principales características del proyecto, incluído el presupuesto total.
 
 \begin{center}
 \ra{1.2}
@@ -98,41 +94,41 @@ Table \ref{tab:project_information} summarizes the main features of the project 
 \centering
 \begin{tabular}{@{}p{3.5cm} p{9cm}@{}} 
 \toprule
-\multicolumn{2}{c}{\textbf{\textit{Project Information}}}\\
+\multicolumn{2}{c}{\textbf{\textit{Información del Proyecto}}}\\
 \midrule
-\textbf{Title} 					& A Complete Simulator for Volunteer Computing Environments \\
+\textbf{Title} 					& WepSIM: Simulador de procesador elemental con unidad de control microprogramada \\
 \midrule
-\textbf{Author} 					& Saúl Alonso Monsalve \\
+\textbf{Author} 					& Javier Prieto Cepeda \\
 \midrule
-\textbf{Department} 				& Computer Science and Engineering Department \\
+\textbf{Department} 				& Departamento de Informática \\
 \midrule
-\textbf{Start date}				& 2nd of November of 2015 \\
+\textbf{Start date}				& 1 de Noviembre de 2015 \\
 \midrule
-\textbf{End date}				& 22nd of June of 2016 \\
+\textbf{End date}				& 30 de Diciembre de 2016 \\
 \midrule
-\textbf{Duration} 				& 8 months \\
+\textbf{Duration} 				& 13 meses \\
 \midrule
 \textbf{Indirect costs ratio} 	& 20 \% \\
 \midrule
 \textbf{Total budget} 			& 30,526.49 \\
 \bottomrule
 \end{tabular}
-\caption{Project Information.}
+\caption{Información del Proyecto.}
 \label{tab:project_information}
 \end{table*}
 \end{center}
 
-Then the total budget of the project is broken down below.
+A continuación se desglosa el presupuesto total del proyecto.
 
 \subsubsection{Costes Directos}
 
-In this part, the direct costs of the project are presented. Table \ref{tab:dhrc} shows the direct costs caused by personnel costs, based on the planning presented in the previous section. The supervisor and the student have played the following roles:
+En esta parte se presentan los costos directos del proyecto. La Tabla \ref{tab:dhrc} muestra los costes directos causados por los costes de personal, sobre la base de la planificación presentada en la sección anterior. El tutor y el estudiante han desempeñado los siguientes roles:
 
 \begin{itemize}
 
-\item \textbf{Supervisor:} Project manager.
+\item \textbf{Tutor:} Jefe de Proyecto.
 
-\item \textbf{Student:} Analyst, Developer, Tester.
+\item \textbf{Estudiante:} Analista, Desarrollador, Tester.
 
 \end{itemize} 
 
@@ -144,39 +140,39 @@ In this part, the direct costs of the project are presented. Table \ref{tab:dhrc
 \toprule
 \textbf{Category} & \textbf{Cost per hour (\euro)} & \textbf{Hours} & \textbf{Total (\euro)} \\
 \midrule
-Project manager					& 60 						& 56			& 3,360 \\
-Analyst			 				& 35							& 188		& 6,580 \\
-Developer		 				& 35							& 316		& 11,060 \\
+Jefe de Proyecto					& 60 						& 56			& 3,360 \\
+Analista			 				& 35							& 188		& 6,580 \\
+Desarrollador		 				& 35							& 316		& 11,060 \\
 Tester		 					& 25							& 112		& 2,800 \\
 \midrule
 \textbf{\textit{Total}}			&							&			& \textbf{23,800.00}\\
 \bottomrule
 \end{tabular}
-\caption{Human resources costs.}
+\caption{Costes de recursos humanos.}
 \label{tab:dhrc}
 \end{table*}
 \end{center}
 
-Table \ref{tab:dec} shows the direct costs caused by equipment acquisition and usage. The chargeable cost, C, is calculated using the following formula:
+La tabla \ref{tab:dec} muestra los costes directos causados por la adquisición y uso del equipo. El coste amortizado, C, es calculado utilizando la siguiente formula:
 
 \begin{equation}
   C = \frac{d \cdot c \cdot u}{D}
 \label{eq:costs}
 \end{equation}
 
-Where:
+Donde:
 
 \begin{itemize}
 
-\item \textbf{C:} Chargeable cost. It is equivalent to the depreciated value.
+\item \textbf{C:} Coste amortizado. Es equivalente al valor amortizado.
 
-\item \textbf{d:} Time the equipment has been used.
+\item \textbf{d:} Tiempo que el equipamiento ha sido utilizado.
 
-\item \textbf{c:} Equipment cost. 
+\item \textbf{c:} Coste del equipamiento. 
 
-\item \textbf{u:} Project dedication. Percentage of time the equipment has been used.
+\item \textbf{u:} Dedicación al proyecto. Porcentaje del tiempo que el equipamiento ha sido utilizado.
 
-\item \textbf{D:} Equipment depreciation period.
+\item \textbf{D:} Periodo de amortización del equipamiento.
 
 \end{itemize}
 
@@ -186,7 +182,7 @@ Where:
 \centering
 \begin{tabular}{@{}p{2.5cm} C{1.8cm} C{2.1cm} C{2.1cm} C{2.7cm} C{2.3cm}@{}} 
 \toprule
-\textbf{Concept} & \textbf{Cost, c (\euro)} & \textbf{Dedication, u (\%)} & \textbf{Dedication, d (months)} & \textbf{Depreciation, D (months)} & \textbf{Chargeable cost, C (\euro)}\\
+\textbf{Concepto} & \textbf{Coste, c (\euro)} & \textbf{Dedicación, u (\%)} & \textbf{Dedicación, d (meses)} & \textbf{Amortización, D (meses)} & \textbf{Coste amortizado, C (\euro)}\\
 \midrule
 Desktop \acrshort{pc}		 			& \multicolumn{1}{r}{799.99}		& \multicolumn{1}{r}{100}		& \multicolumn{1}{r}{8} 		& 	\multicolumn{1}{r}{36}	& 	\multicolumn{1}{r}{177.78} \\
 Laptop 						& \multicolumn{1}{r}{529.99} 	& \multicolumn{1}{r}{25}			& \multicolumn{1}{r}{8} 		& 	\multicolumn{1}{r}{36}	& 	\multicolumn{1}{r}{29.44} \\
@@ -197,12 +193,12 @@ Printer						& \multicolumn{1}{r}{399.24}		& \multicolumn{1}{r}{5}			& \multicol
 \textbf{\textit{Total}}		&			&			& 			& &  \multicolumn{1}{r}{\textbf{1,276.14}}\\
 \bottomrule
 \end{tabular}
-\caption{Equipment costs.}
+\caption{Costes de equipamiento.}
 \label{tab:dec}
 \end{table*}
 \end{center}
 
-Furthermore, the equipment presented in Table \ref{tab:dec} is detailed below:
+Además, el equipo presentado en la Tabla \ref{tab:dec} es detallado a continuación:
 
 \begin{itemize}
 
@@ -210,15 +206,15 @@ Furthermore, the equipment presented in Table \ref{tab:dec} is detailed below:
 
 \item \textbf{Laptop:} Toshiba L50D-C-19D, A10-8700P, 8GB \gls{ram} and 1TB.
 
-\item \textbf{\acrshort{arcos} Tucan:} Cluster used by the research group \acrshort{arcos}.
-
 \item \textbf{\acrshort{arcos} Mirlo:} Server used by the research group \acrshort{arcos}. 32GB \gls{ram} and eight i7 processors of 2.67GHz each.
 
 \item \textbf{Printer:} HP LaserJet Enterprise P3015.
 
 \end{itemize}
 
-Other direct costs are shown in Table \ref{tab:odc}. These costs consist of office material, a toner for the printer, and the monthly travel pass. Office material includes: pencils, pens, notebooks, paper, tipex, and markers.
+Otros costes directos se muestran en la Tabla \ref{tab:odc}. Estos costes consisten en material de oficina, un tóner para la impresora y el abono transporte mensual. El material de oficina incluye: lápices, bolígrafos, cuadernos, papel, tipex y marcadores.
+
+
 
 \begin{center}
 \ra{1.2}
@@ -226,23 +222,23 @@ Other direct costs are shown in Table \ref{tab:odc}. These costs consist of offi
 \centering
 \begin{tabular}{@{}p{5cm} R{3.5cm}@{}} 
 \toprule
-\textbf{Concept} & \textbf{Cost (\euro)} \\
+\textbf{Concept} & \textbf{Coste (\euro)} \\
 \midrule
-Office material					& 112.98				\\
+Material de oficina				& 112.98				\\
 Toner (x1) 			 			& 89.62				\\
-Monthly travel pass (x8) 		& 160				\\
+Abono transporte (x13) 		& 260				\\
 \midrule
-\textbf{\textit{Total}}			& \textbf{362.60} 	\\
+\textbf{\textit{Total}}		&	\textbf{362.60}  	\\
 \bottomrule
 \end{tabular}
-\caption{Other direct costs.}
+\caption{Otros costes directos.}
 \label{tab:odc}
 \end{table*}
 \end{center}
 
 \subsubsection{Resumen de Costes}
 
-Table \ref{tab:cs} shows the complete summary of the project costs. Indirect costs (20\% of direct costs) consist of the electricity and water bills, telephone, Internet access, etc.
+La Tabla \ref{tab:cs} muestra el resumen completo de los costes del proyecto. Los costes indirectos (20\% de los costes directos) consisten en las facturas de electricidad y agua, teléfono, acceso a internet, etc.
 
 \begin{center}
 \ra{1.2}
@@ -250,26 +246,27 @@ Table \ref{tab:cs} shows the complete summary of the project costs. Indirect cos
 \centering
 \begin{tabular}{@{}p{5cm} R{5cm}@{}} 
 \toprule
-\multicolumn{2}{c}{\textbf{\textit{Costs summary}}}\\
+\multicolumn{2}{c}{\textbf{\textit{Resumen de costes}}}\\
 \midrule
-\textbf{Human resources} 				& 23,800.00 \\
-\textbf{Equipment} 						& 1,276.14 \\
-\textbf{Other direct costs} 				& 362.60 \\
-\textbf{Indirect costs}					& 5,087.75 \\
+\textbf{Recursos humanos} 				& 23,800.00 \\
+\textbf{Equipamiento} 						& 1,276.14 \\
+\textbf{Otros costes directos} 				& 362.60 \\
+\textbf{Costes indirectos}					& 5,087.75 \\
 \midrule
-\textbf{\textit{Total budget}}			& \textbf{30,526.49} \\
+\textbf{\textit{Presupuesto total}}			& \textbf{30,526.49} \\
 \bottomrule
 \end{tabular}
-\caption{Costs summary.}
+\caption{Resumen de costes.}
 \label{tab:cs}
 \end{table*}
 \end{center}
 
-The total budget for this project amounts to \textbf{30,526.49 \euro \ (thirty thousand five hundred twenty-six euro and forty-nine cent)}.
+El presupuesto total de este proyecto asciende a \textbf{30,526.49 \euro \ (treinta mil quinientos veintiséis euros y cuarenta y nueve céntimos)}.
 
 \subsection{Oferta de Proyecto Propuesta}
 
-Table \ref{tab:offer} shows a detailed offer proposal. This offer includes the estimated risks (20\%), the expected benefits (15\%), and the Value Added Tax (Spanish \gls{iva}), which corresponds to 21\% \cite{iva2012}. After applying all theses concepts, the final amount for this project in case of sale to a third-party client is \textbf{50,973.14 \euro \ (fifty thousand nine hundred seventy-three euro and fourteen cent).}
+La Tabla \ref{tab:offer} una propuesta de oferta detallada. Esta oferta incluye los riesgos estimados (20\%), los beneficios esperados (15\%), y el Impuesto de Valor Agregado (\gls{iva}), que corresponde al 21\% \cite{iva2012}. Después de aplicar todos estos conceptos, la cantidad final para este proyecto en caso de venta a un cliente de terceros es \textbf{50,973.14 \euro \ 
+(Cincuenta mil novecientos setenta y tres euros y catorce céntimos)}.
 
 \begin{center}
 \ra{1.2}
@@ -277,19 +274,19 @@ Table \ref{tab:offer} shows a detailed offer proposal. This offer includes the e
 \centering
 \begin{tabular}{@{}p{2.5cm} R{2.6cm} R{3.1cm} R{3.5cm}@{}} 
 \toprule
-\multicolumn{4}{c}{\textbf{\textit{Offer proposal}}}\\
+\multicolumn{4}{c}{\textbf{\textit{Oferta propuesta}}}\\
 \midrule
-\textbf{Concept} & \textbf{Increment (\%)} & \textbf{Partial value (\euro)} & \textbf{Aggregated cost (\euro)} \\
+\textbf{Concepto} & \textbf{Incremento (\%)} & \textbf{Valor Parcial (\euro)} & \textbf{Coste agregado (\euro)} \\
 \midrule
-Project costs				& - 			& 30,526.49		& 30,526.49 \\
-Risk			 				& 20			& 6,105.30		& 36,631.79 \\
-Benefits		 				& 15			& 5,494.77		& 42,126.56 \\
+Costes del proyecto				& - 			& 30,526.49		& 30,526.49 \\
+Riesgos			 				& 20			& 6,105.30		& 36,631.79 \\
+Beneficios		 				& 15			& 5,494.77		& 42,126.56 \\
 IVA		 					& 21			& 8,846.58		& 50,973.14 \\
 \midrule
 \textbf{\textit{Total}}		&			&			& \textbf{50,973.14}\\
 \bottomrule
 \end{tabular}
-\caption{Offer proposal.}
+\caption{Oferta propuesta.}
 \label{tab:offer}
 \end{table*}
 \end{center}
@@ -300,5 +297,3 @@ IVA		 					& 21			& 8,846.58		& 50,973.14 \\
 As commented in previous chapters, \gls{comsimboinc} can guide the design of \gls{boinc} projects. This means that \gls{boinc} project designers can perform accurate simulations using \gls{comsimboinc} before deploying the system. Thanks to this, designers can save money and resources, because they will know the performance of the system before deploying it. In addition, it can also save energy because designers will not need to perform tests using the original infrastructure, as they will only need to use \gls{comsimboinc} in order to analyze the functioning of different alternatives.
 
 Moreover, \gls{boinc} operates as a platform for distributed applications in areas as diverse as mathematics, medicine, molecular biology, climatology, environmental science, and astrophysics. On the one hand, there are projects that help the scientific community, such as the SETI@home project \cite{Anderson2002SETI@home}, of which the purpose is to analyze radio signals, searching for signs of extraterrestrial intelligence; or the Citizen Science Grid project \cite{csgproject}, which is dedicated to supporting a wide range of research and educational projects. On the other hand, there are projects dedicated to the environmental care, such as the Climateprediction.net project \cite{climateprediction}, which studies climate. Therefore, our simulator indirectly contributes to both science and the environment.
-
-

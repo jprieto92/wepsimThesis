@@ -29,51 +29,12 @@ La sección \ref{sec:project_description} resume brevemente la descripción del 
 
 El objetivo de este proyecto es construir una herramienta que permita simular con realismo el comportamiento de un procesador basado en la arquitectura indicada por el el tutor del proyecto, de forma que sirva como única herramienta para los alumnos a lo largo de la asignatura Estructura de Computadores.
 
-\begin{figure}[htbp]
- 	\centering
- 	\includegraphics[width=12cm]{figures/cpu}
- 	\caption{Arquitectura CPU WepSIM .}
-	\label{fig:wepsimCPU_figure}
-\end{figure}
-
-\begin{figure}[htbp]
- 	\centering
- 	\includegraphics[width=12cm]{figures/controlUnit}
- 	\caption{Arquitectura unidad de control WepSIM.}
-	\label{fig:wepsimCU_figure}
-\end{figure}
-
 Los simuladores actuales para la enseñanza de Estructura de Computadores, están focalizados a una función concreta, como puede ser la simulación de cachés, la simulación de código ensamblador o la simulación de microcódigo entre otros, pero a la hora de unificar todas estas funcionalidades en una única herramienta, existe un vacío que genera una pérdida de tiempo en el aprendizaje de cada herramienta y la no posibilidad de ver una simulación completa.
 
 El reto al que se enfrente cualquier simulador educativo es el de ser capaz de simular fielmente el funcionamiento de un dispositivo permitiendo al estudiante poder observar con el mayor detalle posible el comportamiento éste.
 
-El sistema que se propone debe ser capaz de simular con realismo el comportamiento del procesador, permitiendo la definición del juego de instrucciones a utilizar para el posterior desarrollo de código ensamblador y su ejecución en el simulador con un alto nivel de detalle en cada uno de los ciclos de ejecución,.De esta forma, los estudiantes podrán comprender fácilmente los contenidos teóricos expuestos en la asignatura y serán capaces de realizar todas las prácticas en una misma herramienta, pudiendo ver de forma incremental el desarrollo de software de bajo nivel sobre un procesador elemental.
+El sistema que se propone debe ser capaz de simular con realismo el comportamiento del procesador, permitiendo la definición del juego de instrucciones a utilizar para el posterior desarrollo de código ensamblador y su ejecución en el simulador con un alto nivel de detalle en cada uno de los ciclos de ejecución. De esta forma, los estudiantes podrán comprender fácilmente los contenidos teóricos expuestos en la asignatura y serán capaces de realizar todas las prácticas en una misma herramienta, pudiendo ver de forma incremental el desarrollo de software de bajo nivel sobre un procesador elemental.
 
-\subsection{Procesador elemental WepSIM}
-
-En la figura \ref{fig:wepsimCPU_figure}, se muestra la estructura del Procesador Elemental WepSIM. WepSIM, consta de un módulo de memoria, un dispositivo teclado, un dispositivo pantalla y un dispositivo de E/S genérico que se puede utilizar para trabajar con interrupciones.
-
-WepSIM es un procesador de 32 bits que direcciona la memoria por bytes, que cuenta con un banco de 32 registros y dos registros adicionales (RT1 y RT2) que no son visibles para el programador de ensamblador, pero que permiten el almacenamiento temporal de datos para la realización de operaciones intermedias. Desde los registros, es posible enviar los valores para operar en una ALU que dispone de las 15 operaciones aritmético-lógicas más comunes. El registro PC tiene su propio operador de sumar cuatro, de forma que no es necesario hacer uso de la ALU para esta operación. El resultado de las operaciones realizadas en la ALU puede ser almacenado en un registro temporal (RT3) que también es invisible para el programador de ensamblador, o ser enviado directamente al bus interno a través del correspondiente triestado.
-
-El registro de estado (SR) puede ser actualizado con los flags resultantes de la última operación de la alu (O, N y Z). Para ello, SELEC/SelP representa un bloque de circuitos que permite indicar qué parte del registro de estado (SR) debe ser actualizado. A la derecha de SELEC/SelP llegan los bits del registro de estado SR como entrada (Input=O N Z I U) y SelP permite seleccionar qué grupo de estos bits se actualizará en el registro de estado: los bits O, N y Z con los valores procedentes de la ALU, el bit I con el valor indicado o el bit U con el valor indicado para el mismo.
-
-El registro de instrucción (IR) tiene asociado un módulo selector (circuito de  más alto nivel que un multiplexor, etc.) que permite seleccionar un segmento del valor binario almacenado en el registro de instrucción que pasará hacia T3.
-
-En concreto, se indica la posición (Offset, donde 0 represente el bit menos significativo del registro IR) inicial y el número de bits (Size) a tomar a partir de dicha posición inicial, así como si se desea hacer extensión de signo (SE) antes de pasar el valor a la entrada de T3.
-
-Los registros MAR y MBR se usan para almacenar la dirección y el contenido asociado a esta dirección en las operaciones de lectura/escritura con la memoria. La memoria está diseñada para un funcionamiento síncrono o asíncrono. Actualmente funciona de forma síncrona, pero dispone de la señal MRdy para en un futuro trabajar de forma asíncrona. El circuito de selección permite indicar qué porción de la palabra de memoria es la que se desea (un byte, dos bytes o una palabra completa de cuatro bytes).
-
-Se dispone también de tres dispositivos de E/S: un teclado, una pantalla y un dispositivo genérico que se puede configurar para generar diversos tipos de interrupciones.
-
-Finalmente, la Unidad de Control genera las señales de control para cada ciclo de reloj. La figura \ref{fig:wepsimCU_figure} muestra la Unidad de Control con mayor detalle. Se trata de una unidad de control microprogramada con secuenciamiento implícito. Las señales de control para el ciclo de reloj actual se almacenan en el registro de micro-instrucción (aquel con los campos A0, B, C, SelA, etc.). El contenido de este registro proviene de la memoria de control, concretamente del contenido en la posición a la que apunta el registro de micro-dirección. La micro-dirección almacenada en este registro puede modificarse usando el multiplexor "MUX A". Hay cuatro opciones: la microdirección actual más uno, una micro-dirección indicada en la propia micro-instrucción (que se solapa con SelA, SelB y parcialmente con SelE), la primera micro-dirección asociada al campo de código de operación de la instrucción del registro IR, y finalmente el valor cero, que es la dirección de la memoria de control donde se almacena la microrrutina correspondiente al fetch. La microdirección se puede seleccionar de forma condicional, para ello se usa el multiplexor "MUX C" que permite seleccionar los bits del registro de estado (SR) o valores de las señales de control de E/S.
-
-Para generar los valores correspondientes a las señales selectoras del banco de registros RA, RB y RE se usan los circuitos selectores SelRA, SelRB y SelRE. Estos selectores toman como entrada los 32 bits del registro de instrucción (IR) por un lado y el campo SelA, SelB y SelE por otro, de forma que toman SelX como el desplazamiento dentro del registro de instrucción (de 0 a 32) desde donde tomar los siguientes 5 bits correspondientes a las señales RA, RB o RE. Permiten por tanto seleccionar 5 bits consecutivos de los 32 bits del registro de instrucción.
-
-El multiplexor MR permite indicar si las señales RA, RB y RE serán literalmente los valores almacenados en SelA, SelB y SelE (MR=1) o bien si SelA, SelB y SelE indican el desplazamiento dentro de la instrucción donde están los valores a utilizar para RA, RB y RE. Esto último permite que en la instrucción se pueda indicar los registros a usar como operandos en el banco de registros, en lugar de indicarlos desde la micro-instrucción.
-
-Para la señal Cop (código de operación en la ALU) la señal MC permite tomar el valor SelCop de la micro-instrucción (MC=1) o bien los 4 bits menos significativos del registro de instrucción (MC=0), es decir IR3-IR0.
-
-En \cite{perez2015problemas} se puede encontrar una descripción más detallada del procesador descrito anteriormente.
 
 \section{Requisitos}
 \label{sec:requirements}
@@ -399,7 +360,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-R01 \\
 \midrule
-\textbf{Nombre} 			& Herramienta web\\
+\textbf{Nombre} 			& Aplicación web\\
 \midrule
 \textbf{Tipo} 			& Restricción \\
 \midrule
@@ -409,7 +370,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El simulador debe de ser una herramienta web. \\
+\textbf{Descripción} 	& El simulador debe de ser una aplicación web. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R01.}
@@ -484,7 +445,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El tiempo de ejecución de un ciclo de reloj del simulador no debe de sobrepasar 0,1 segundos. \\
+\textbf{Descripción} 	& El tiempo de ejecución en media de un ciclo de reloj del simulador no debe de sobrepasar 0,1 segundos. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R04.}
@@ -534,7 +495,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& Para realizar una simulación, el dispositivo del usuario no necesita conexión a internet. \\
+\textbf{Descripción} 	& La herramienta podrá ser ejecutada sin conexión a internet. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R06.}
@@ -559,7 +520,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El simulador debe de ser desarrollado mediante el lenguaje de programación JavaScript, posibilitando migraciones futuras. \\
+\textbf{Descripción} 	& El simulador debe de ser desarrollado mediante el lenguaje de programación HTML5, posibilitando migraciones futuras. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R07.}
@@ -1042,7 +1003,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe simular una arquitectura de 32 bits. \\
+\textbf{Descripción} 	& La herramienta debe simular una arquitectura de 32 bits, implicando un banco de 32 registros, memoria principal con tamaño de  $2^{32}$ bits y registros y buses de 32 bits . \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-F-F01.}
@@ -1067,7 +1028,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La unidad de control debe de ser micoprogramable. \\
+\textbf{Descripción} 	& La unidad de control debe de ser microprogramable, con secuenciamiento implícito, saltos a nivel de microdirección y microsaltos condicionales. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-F-F02.}
@@ -1092,7 +1053,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta operará con números enteros en complemento a2. \\
+\textbf{Descripción} 	& La herramienta operará con una ALU de números enteros en complemento a2. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-F-F03.}
@@ -1142,7 +1103,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El juego de instrucciones debe seguir el formato utilizado en la asignatura Estructura de Computadores, definiendo instrucciones del lenguaje ensamblador, nombrado de los registros y pseudoinstrucciones. \\
+\textbf{Descripción} 	& El juego de instrucciones debe seguir el formato utilizado en la asignatura Estructura de Computadores, definiendo instrucciones del lenguaje ensamblador, su microcódigo asociado, nombrado de los registros y pseudoinstrucciones. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-F-F05.}
@@ -1357,7 +1318,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F14 \\
 \midrule
-\textbf{Nombre} 			& Generación ejecutable del codigo ensamblador\\
+\textbf{Nombre} 			& Carga del código ensamblador\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1367,7 +1328,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de generar el binario ejecutable asociado al código ensamblador definido para la simulación. \\
+\textbf{Descripción} 	& La herramienta debe permitir la carga de un fichero que contenga el código ensamblador. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-F-F14.}
@@ -1382,17 +1343,17 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F15 \\
 \midrule
-\textbf{Nombre} 			& Simulación ciclo a ciclo de reloj\\
+\textbf{Nombre} 			& Generación ejecutable del codigo ensamblador\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
-\textbf{Origen} 			& UR-C06 \\
+\textbf{Origen} 			& UR-C05 \\
 \midrule
 \textbf{Prioridad}		& Esencial \\
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de permitir la simulación ciclo a ciclo de reloj del código ensamblador cargado por el usuario. \\
+\textbf{Descripción} 	& La herramienta debe de generar el binario ejecutable asociado al código ensamblador definido para la simulación. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-F-F15.}
@@ -1407,7 +1368,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F16 \\
 \midrule
-\textbf{Nombre} 			& Simulación instrucción a instrucción\\
+\textbf{Nombre} 			& Simulación ciclo a ciclo de reloj\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1417,7 +1378,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de permitir la simulación instrucción a instrucción del código ensamblador cargado por el usuario. \\
+\textbf{Descripción} 	& La herramienta debe de permitir la simulación ciclo a ciclo de reloj del código ensamblador cargado por el usuario. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-F-F16.}
@@ -1432,7 +1393,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F17 \\
 \midrule
-\textbf{Nombre} 			& Simulación completa\\
+\textbf{Nombre} 			& Simulación instrucción a instrucción\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1442,7 +1403,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de permitir la simulación completa del código ensamblador cargado por el usuario. \\
+\textbf{Descripción} 	& La herramienta debe de permitir la simulación instrucción a instrucción del código ensamblador cargado por el usuario. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-F-F17.}
@@ -1457,17 +1418,17 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F18 \\
 \midrule
-\textbf{Nombre} 			& Velocidad de simulación\\
+\textbf{Nombre} 			& Simulación completa\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
-\textbf{Origen} 			& UR-C07 \\
+\textbf{Origen} 			& UR-C06 \\
 \midrule
 \textbf{Prioridad}		& Esencial \\
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de permitir al usuario elegir la velocidad de simulación del código ensamblador cargado. \\
+\textbf{Descripción} 	& La herramienta debe de permitir la simulación completa del código ensamblador cargado por el usuario. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-F-F18.}
@@ -1482,17 +1443,17 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F19 \\
 \midrule
-\textbf{Nombre} 			& Esquema CPU\\
+\textbf{Nombre} 			& Velocidad de simulación\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
-\textbf{Origen} 			& UR-C08 \\
+\textbf{Origen} 			& UR-C07 \\
 \midrule
 \textbf{Prioridad}		& Esencial \\
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de mostrar el esquema de la CPU del simulador, modificando el color de las señales activas y buses de datos actualizados en cada ciclo de reloj. \\
+\textbf{Descripción} 	& La herramienta debe de permitir al usuario elegir la velocidad de simulación del código ensamblador cargado. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-F-F19.}
@@ -1507,6 +1468,31 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F20 \\
 \midrule
+\textbf{Nombre} 			& Esquema CPU\\
+\midrule
+\textbf{Tipo} 			& Funcional \\
+\midrule
+\textbf{Origen} 			& UR-C08 \\
+\midrule
+\textbf{Prioridad}		& Esencial \\
+\midrule
+\textbf{Estabilidad} 		& Estable \\
+\midrule
+\textbf{Descripción} 	& La herramienta debe de mostrar el esquema de la CPU del simulador, modificando el color de las señales activas y buses de datos actualizados en cada ciclo de reloj. \\
+\bottomrule
+\end{tabular}
+\caption{Requisito Funcional SR-F-F20.}
+\label{tab:srff20}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htbp]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 				& SR-F-F21 \\
+\midrule
 \textbf{Nombre} 			& Esquema Unidad de Control\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
@@ -1520,8 +1506,8 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de mostrar el esquema de la Unidad de Control del simulador, modificando el color de las señales activas y buses de datos actualizados en cada ciclo de reloj. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F20.}
-\label{tab:srff20}
+\caption{Requisito Funcional SR-F-F21.}
+\label{tab:srff21}
 \end{table*}
 \end{center}
 
@@ -1530,7 +1516,7 @@ Esta subsección especifica los requisitos funcionales.
 \centering
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 				& SR-F-F21\\
+\textbf{ID} 				& SR-F-F22\\
 \midrule
 \textbf{Nombre} 			& Información de la simulación\\
 \midrule
@@ -1545,8 +1531,8 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de mostrar durante la ejecución el estado de los registros del simulador. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F21.}
-\label{tab:srff21}
+\caption{Requisito Funcional SR-F-F22.}
+\label{tab:srff22}
 \end{table*}
 \end{center}
 
@@ -1719,7 +1705,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \toprule
 \textbf{ID} 				& SR-NF-PL01 \\
 \midrule
-\textbf{Nombre} 			& Herramienta web \\
+\textbf{Nombre} 			& Aplicación web \\
 \midrule
 \textbf{Tipo} 			& Interfaz \\
 \midrule
@@ -1729,7 +1715,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El simulador debe de ser diseñado como una herramienta web. \\
+\textbf{Descripción} 	& El simulador debe de ser diseñado como una aplicación web. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-NF-PL01.}
@@ -1744,7 +1730,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \toprule
 \textbf{ID} 				& SR-NF-PL02 \\
 \midrule
-\textbf{Nombre} 			& Herramienta web \\
+\textbf{Nombre} 			& Navegadores web \\
 \midrule
 \textbf{Tipo} 			& Interfaz \\
 \midrule
@@ -1804,7 +1790,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta únicamente necesitará conexión a internet para el acceso a la herramienta. \\
+\textbf{Descripción} 	& La herramienta podrá ser ejecutada sin conexión a internet. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-NF-PL04.}
@@ -1819,7 +1805,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \toprule
 \textbf{ID} 				& SR-NF-PL05 \\
 \midrule
-\textbf{Nombre} 			& Lenguaje de programación JavaScript \\
+\textbf{Nombre} 			& Lenguaje de programación HTML5 \\
 \midrule
 \textbf{Tipo} 			& Interfaz \\
 \midrule
@@ -1829,7 +1815,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe ser desarrollada en el lenguaje de programación JavaScript. \\
+\textbf{Descripción} 	& La herramienta debe ser desarrollada en el lenguaje de programación HTML5 (HTML + CSS + JavaScript). \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-NF-PL05.}
@@ -1854,7 +1840,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La interfaz de usuario del simulador debe de ser compatible tanto con pc's y smartphones. \\
+\textbf{Descripción} 	& La interfaz de usuario del simulador debe de ser compatible tanto con pc's como con plataformas móviles (tablets, smartphones, etc). \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-NF-UI01.}
@@ -1869,7 +1855,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \toprule
 \textbf{ID} 				& SR-NF-P01 \\
 \midrule
-\textbf{Nombre} 			& Tiempo por ciclo de reloj \\
+\textbf{Nombre} 			& Tiempo medio por ciclo de reloj \\
 \midrule
 \textbf{Tipo} 			& Interfaz \\
 \midrule
@@ -1879,7 +1865,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El tiempo de ejecución de un ciclo de reloj no debe exceder 0,1 segundos. \\
+\textbf{Descripción} 	& El tiempo medio de ejecución de un ciclo de reloj no debe exceder 0,1 segundos. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito Funcional SR-NF-P01.}
@@ -1887,18 +1873,15 @@ Esta subsección especifica los requisitos no-funcionales.
 \end{table*}
 \end{center}
 
-\vspace{10 mm}
-
-
 \section{Marco Regulador}
 \label{sec:regulatory_framework}
 
 Esta sección discute las restricciones necesarias teniendo en cuenta el marco regulador. En concreto, se especifican las restricciones legales aplicables al simulador.
 
-\subsection{Restricciones Legales}
+\subsection{Aspectos Legales}
 \label{sec:legal_constraints}
 
-Para el uso de la mayoría de herramientas web, los usuarios deben de registrarse, y las bases de datos de las mismas manejan información confidencial de los usuarios, por lo que es necesario garantizar que terceros no puedan acceder a esa información. Una solución es cifrar la información transmitida mediante algún \gls{protocol} criptografico. En España, este requisito es especificado en el artículo 104 del RD 1720/2007 \cite{boe2008}, que se ocupa de la Ley Española de Protección de Datos.
+Para el uso de la mayoría de aplicaciones web, los usuarios deben de registrarse, y las bases de datos de las mismas manejan información confidencial de los usuarios, por lo que es necesario garantizar que terceros no puedan acceder a esa información. Una solución es cifrar la información transmitida mediante algún \gls{protocol} criptografico. En España, este requisito es especificado en el artículo 104 del RD 1720/2007 \cite{boe2008}, que se ocupa de la Ley Española de Protección de Datos.
 
 
 En contraste, la aplicación desarrollada no utiliza datos privados de los usuarios y tampoco transmite información confidencial a terceros, ya que es un simulador que únicamente utiliza los códigos generados por el usuario para ejecutarlos de forma local en la máquina del usuario.
