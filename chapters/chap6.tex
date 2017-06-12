@@ -76,9 +76,7 @@ Con el fin de realizar las pruebas de verificación, hemos seguido un proceso di
 \end{table*}
 \end{center}
 
-Luego, especificamos las pruebas de verificación.
-
-\vspace{0.7cm}
+A continuación, especificamos las pruebas de verificación.
 
 \begin{center}
 \begin{table*}[htb]
@@ -89,22 +87,19 @@ Luego, especificamos las pruebas de verificación.
 \midrule
 \textbf{Nombre} 				& Plataforma. \\
 \midrule
-\textbf{Requisitos} 		& . \\
+\textbf{Requisitos} 		& SR-NF-PL01, SR-NF-PL02\\
 \midrule
-\textbf{Descripción} 		& Verificar que el software puede ser utilizado y ha sido desarrollado con las herramientas especificadas en los requisitos. \\
+\textbf{Descripción} 		& Verificar que el software puede ser utilizado en los navegadores especificados en los requisitos. \\
 \midrule
-\textbf{Precondiciones}		& 1.Utilizar una máquina con sistema operativo Ubuntu 16.04 / Windows 10 / MacOS 10.2.5 .\\
-							& 2. . \\
-							& 3. . \\
+\textbf{Precondiciones}		& 1. Utilizar una máquina con sistema operativo Ubuntu 16.04 / Windows 10 / MacOS 10.2.5 .\\
+							& 2. .Tener instalados los navegadores Microsft Edge 30+, Mozilla Firefox 45+, Google Chrome 50+ o Safari 10+. \\
 \midrule
-\textbf{Procedimiento}			& 1. . \\
-							& 2. .\\
-							& 3. .\\
+\textbf{Procedimiento}			& 1. Abrir el software en cualquiera de los navegadores web especificados. \\
+							& 2. Generar firmware.\\
+							& 3. Generar memoria principal.\\
+							& 4. Ejecutar simulación.\\
 \midrule
-\textbf{Postcondiciones} 		& 1. .\\
-							& 2. .\\
-							& 3. . \\			
-							& 4. . \\
+\textbf{Postcondiciones} 		&  La simulación ha sido completada satisfactoriamente sin ningún error de ejecución debido a la plataforma .\\
 \midrule
 \textbf{Evaluación} 			& OK \\
 \bottomrule
@@ -114,266 +109,344 @@ Luego, especificamos las pruebas de verificación.
 \end{table*}
 \end{center}
 
-
 \begin{center}
 \begin{table*}[htb]
 \centering
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
-\textbf{ID} 					& VET-01 \\
+\textbf{ID} 					& VET-02. \\
 \midrule
-\textbf{Name} 				& Plataforma. \\
+\textbf{Nombre} 				& Ejecución local. \\
 \midrule
-\textbf{Requirements} 		& . \\
+\textbf{Requisitos} 		& SR-NF-PL03, SR-NF-PL04\\
 \midrule
-\textbf{Description} 		& Verificar que el sofware puede ser utilizado y ha sido desarrollado con las herramientas especificadas en los requisitos. \\
+\textbf{Descripción} 		& Verificar que el software es ejecutado en local sin la necesidad de conexión a internet. \\
 \midrule
-\textbf{Preconditions}		& 1. Use a machine with Ubuntu 14.04 operating system.\\
-							& 2. GCC (GNU Compiler) 5.1 or higher must be installed on the machine. \\
-							& 3. The user must be located in the main directory of the \gls{comsimboinc} application. \\
+\textbf{Precondiciones}		& 1. No tener acceso a Internet.\\
+											& 2. Tener el código fuente de la herramienta descargado en local.\\
 \midrule
-\textbf{Procedure}			& 1. Check the code of the simulator source files (all these files are inside the /Files folder). \\
-							& 2. Run the generator script with the default parameters to create the simulation files.\\
-							& 3. Run the simulation.\\
+\textbf{Procedimiento}			& 1. Abrir el software en cualquiera de los navegadores web especificados. \\
+							& 2. Generar firmware.\\
+							& 3. Generar memoria principal.\\
+							& 4. Ejecutar simulación.\\
 \midrule
-\textbf{Postconditions} 		& 1. All source files must be written in C programming language.\\
-							& 2. The implementation, setup and control of the simulations must be carried out using the MSG API of the SimGrid toolkit.\\
-							& 3. Simulations run while a progress bar indicates the percentage of execution. \\			
-							& 4. The simulator must successfully finish its execution in the specified operating system. \\
+\textbf{Postcondiciones} 		&  La simulación ha sido completada satisfactoriamente sin ningún error de ejecución debido a la conexión de red.\\
 \midrule
-\textbf{Evaluation} 			& Passed \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Verification test VET-01.}
-\label{tab:vet01}
-\end{table*}
-\end{center}
-
-
-\begin{center}
-\begin{table*}[htb]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
-\toprule
-\textbf{ID} 					& VET-02 \\
-\midrule
-\textbf{Name} 				& Realistic BOINC elements in simulations. \\
-\midrule
-\textbf{Requirements} 		& SR-F-F06, SR-NF-UI01, SR-NF-UI02. \\
-\midrule
-\textbf{Description} 		& Verify that the simulator allows to simulate all the BOINC actual elements. \\
-\midrule
-\textbf{Preconditions}		& 1. The user must be located in the main directory of the \gls{comsimboinc} application.\\
-\midrule
-\textbf{Procedure}			& 1. Specify the following elements in the simulation parameters: tasks, volunteer hosts, servers, data servers, networks, and hosts availability.\\
-							& 2. Run the generator script to create the simulation files.\\
-							& 3. Run the simulation. \\
-\midrule
-\textbf{Postconditions} 		& 1. Simulations run while a progress bar indicates the percentage of execution. \\		
-							& 2. The simulator must successfully finish its execution. \\
-\midrule
-\textbf{Evaluation} 			& Passed \\
-\bottomrule
-\end{tabular}
-\caption{Verification test VET-02.}
+\caption{Test de verificación VET-02.}
 \label{tab:vet02}
 \end{table*}
 \end{center}
 
-
 \begin{center}
 \begin{table*}[htb]
 \centering
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
-\textbf{ID} 					& VET-03 \\
+\textbf{ID} 					& VET-03. \\
 \midrule
-\textbf{Name} 				& Statistics of BOINC projects. \\
+\textbf{Nombre} 				& Lenguaje de programación HTML5. \\
 \midrule
-\textbf{Requirements} 		& SR-F-F02, SR-NF-UI01, SR-NF-UI02. \\
+\textbf{Requisitos} 		& SR-NF-PL05\\
 \midrule
-\textbf{Description} 		& Verify that the outputs of the simulator are the same as those published by BOINCstats \cite{BOINC2016}. The outputs are: credits, hosts, active hosts, and \acrshort{flops}.\\
+\textbf{Descripción} 		& Verificar que el software ha sido desarrollando utilizando HTML5. \\
 \midrule
-\textbf{Preconditions}		& 1. The user must be located in the main directory of the \gls{comsimboinc} application. \\
+\textbf{Precondiciones}		& 1. Tener el código fuente de la herramienta descargado en local. \\
 \midrule
-\textbf{Procedure}			& 1. Specify the simulation parameters.\\
-							& 2. Run the generator script to create the simulation files.\\
-							& 3. Run the simulation.\\
+\textbf{Procedimiento}		& 1. Comprobar el código de los archivos fuente del simulador.\\
 \midrule
-\textbf{Postconditions} 		& 1. Simulations run while a progress bar indicates the percentage of execution. \\
-							& 2. The simulator must successfully finish its execution. \\
-							& 3. The outputs of the simulator contain at least: credits, hosts, active hosts, and \acrshort{flops} (The same as those published by BOINCstats \cite{BOINC2016}). \\
+\textbf{Postcondiciones} 		&  El simulador ha sido desarrollado mediante el lenguaje de programación HTML5.\\
 \midrule
-\textbf{Evaluation} 			& Passed \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Verification test VET-03.}
+\caption{Test de verificación VET-03.}
 \label{tab:vet03}
 \end{table*}
 \end{center}
 
-
 \begin{center}
 \begin{table*}[htb]
 \centering
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
-\textbf{ID} 					& VET-04 \\
+\textbf{ID} 					& VET-04. \\
 \midrule
-\textbf{Name} 				& Multiple BOINC proyects simultaneously. \\
+\textbf{Nombre} 				& Interfaz de usuario. \\
 \midrule
-\textbf{Requirements} 		& SR-F-F04, SR-NF-UI01, SR-NF-UI02. \\
+\textbf{Requisitos} 		& SR-NF-UI01\\
 \midrule
-\textbf{Description} 		& Verify that the simulator allows multiple project simulations simultaneously. \\
+\textbf{Descripción} 		& Verificar que la interfaz del simulador es compatible tanto con pc como con plataformas móviles. \\
 \midrule
-\textbf{Preconditions}		& 1. The user must be located in the main directory of the \gls{comsimboinc} application. \\
+\textbf{Precondiciones}		& 1. Disponer de un pc y de un dispositivo móvil. \\
+											& 2. Los dispositivos deben tener instalados los navegadores web específicados previamente. \\
 \midrule
-\textbf{Procedure}			& 1. Specify the simulation parameters of three different projects (for example, the SETI@home, Einstein@home, and LHC@home projects).\\
-							& 2. Run the generator script to create the simulation files.\\
-							& 3. Run the simulation.\\
+\textbf{Procedimiento}			& 1. Abrir el software en cualquiera de los navegadores web especificados. \\
+							& 2. Generar firmware.\\
+							& 3. Generar memoria principal.\\
+							& 4. Ejecutar simulación.\\
 \midrule
-\textbf{Postconditions} 		& 1. Simulations run while a progress bar indicates the percentage of execution. \\
-							& 2. The simulator must successfully finish its execution. \\
+\textbf{Postcondiciones} 		&  La interfaz del simulador es compatible tanto como pc como con dispositivos móviles, visualizándose correctamente en cualquier pantalla de la herramienta.\\
 \midrule
-\textbf{Evaluation} 			& Passed \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Verification test VET-04.}
+\caption{Test de verificación VET-04.}
 \label{tab:vet04}
 \end{table*}
 \end{center}
 
-
 \begin{center}
 \begin{table*}[htb]
 \centering
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
-\textbf{ID} 					& VET-05 \\
+\textbf{ID} 					& VET-05. \\
 \midrule
-\textbf{Name} 				& BOINC client scheduler. \\
+\textbf{Nombre} 				& Tiempo medio por ciclo de reloj. \\
 \midrule
-\textbf{Requirements} 		& SR-F-F05, SR-NF-UI01, SR-NF-UI02. \\
+\textbf{Requisitos} 		& SR-NF-P01\\
 \midrule
-\textbf{Description} 		& Verify that the client scheduler implemented produces the same results as the actual BOINC scheduler. \\
+\textbf{Descripción} 		& Verificar que el tiempo medio por ciclo de reloj del simulador no supera 0,1 segundos. \\
 \midrule
-\textbf{Preconditions}		& 1. The user must be located in the main directory of the \gls{comsimboinc} application. \\
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
 \midrule
-\textbf{Procedure}			& 1. Specify the client side simulation parameters of three different projects: SETI@home, Einstein@home, and LHC@home. \\
-							& 2. Run the generator script to create the simulation files.\\
-							& 3. Run the simulation.\\
+\textbf{Procedimiento}			& 1. Abrir el software en cualquiera de los navegadores web especificados. \\
+							& 2. Generar firmware.\\
+							& 3. Generar memoria principal utilizando un código ensamblador que utiliza cada una de las partes de la arquitectura del simulador.\\
+							& 4. Ejecutar simulación midiendo el tiempo de ejecución.\\
 \midrule
-\textbf{Postconditions} 		& 1. Simulations run while a progress bar indicates the percentage of execution. \\
-							& 2. The simulator must successfully finish its execution. \\
-							& 3. The outputs of the simulation are the same as the real BOINC client scheduler (it is detailed in \ref{subsec:validation_of_the_client_scheduler}, \textit{\nameref{subsec:validation_of_the_client_scheduler}}).  \\
+\textbf{Postcondiciones} 		&  El tiempo de ejecución medio por ciclo de reloj excede 0,1 segundos.\\
 \midrule
-\textbf{Evaluation} 			& Passed \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Verification test VET-05.}
+\caption{Test de verificación VET-05.}
 \label{tab:vet05}
 \end{table*}
 \end{center}
 
-
 \begin{center}
 \begin{table*}[htb]
 \centering
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
-\textbf{ID} 					& VET-06 \\
+\textbf{ID} 					& VET-06. \\
 \midrule
-\textbf{Name} 				& Accurate simulations of BOINC projects. \\
+\textbf{Nombre} 				& Arquitectura del simulador. \\
 \midrule
-\textbf{Requirements} 		& SR-F-F01, SR-F-F03, SR-NF-UI01, SR-NF-UI02. \\
+\textbf{Requisitos} 		& SR-F-F01, SR-F-02, SR-F-03\\
 \midrule
-\textbf{Description} 		& Verify that the outputs of the simulator for existing projects (SETI@home, Einstein@home, and LHC@home) should be almost identical to those published in BOINCstats \cite{BOINC2016}. \\
+\textbf{Descripción} 		& Verificar que el software simula una arquitectura de 32 bits con unidad de control microprogramable (con secuenciamiento implícito, saltos a nivel de microdirección y microsaltos condicionales). \\
 \midrule
-\textbf{Preconditions}		& 1. The user must be located in the main directory of the \gls{comsimboinc} application. \\
+\textbf{Precondiciones}		& 1. Tener el código fuente de la herramienta descargado en local. \\
+											& 2. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
 \midrule
-\textbf{Procedure}			& 1. Specify the simulation parameters of three different projects: SETI@home, Einstein@home, and LHC@home. \\
-							& 2. Run the generator script to create the simulation files.\\
-							& 3. Run the simulation.\\
+\textbf{Procedimiento}		& 1. Comprobar el código de los archivos fuente del simulador que contienen el modelo hardware a simular (sim\_hw\_*.js).\\
+											& 2. Generar firmware que define instrucciones de acceso a memoria, operaciones con el banco de registros, uso de los buses de la arquitectura del simulador, saltos a nivel de microdirección y microsaltos condicionales.\\
+											& 3. Generar memoria principal utilizando un código ensamblador que utiliza cada una de las partes de la arquitectura del simulador y las instrucciones de prueba definidas.\\
+							& 4. Verificar que los resultados obtenidos de la ejecución son los resultados teóricos esperados.\\
 \midrule
-\textbf{Postconditions} 		& 1. Simulations run while a progress bar indicates the percentage of execution. \\
-							& 2. The simulator must successfully finish its execution. \\
-							& 3. The outputs of the simulation are the same as the actual BOINC projects, in terms of \acrshort{flops} and credit (it is detailed in \ref{subsec:validation_of_the_whole_simulator}, \textit{\nameref{subsec:validation_of_the_whole_simulator}}). \\
+\textbf{Postcondiciones} 		&  El modelo hardware ha sido definido correctamente, obteniendo los resultados esperados tras la simulación.\\
 \midrule
-\textbf{Evaluation} 			& Passed \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Verification test VET-06.}
+\caption{Test de verificación VET-06.}
 \label{tab:vet06}
 \end{table*}
 \end{center}
 
-
 \begin{center}
 \begin{table*}[htb]
 \centering
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
-\textbf{ID} 					& VET-07 \\
+\textbf{ID} 					& VET-07. \\
 \midrule
-\textbf{Name} 				& Large simulations. \\
+\textbf{Nombre} 				& Definición de juego de instrucciones. \\
 \midrule
-\textbf{Requirements} 		& SR-NF-S01, SR-NF-UI01, SR-NF-UI02. \\
+\textbf{Requisitos} 		& SR-F-F04, SR-F-F05, SR-F-F09, SR-F-F10, SR-F-F11, SR-F-F15\\
 \midrule
-\textbf{Description} 		& Verify the application is able to perform simulations
-with more than 100,000 hosts in a machine with at least 8 GB of \gls{ram}. \\
+\textbf{Descripción} 		& Verificar que el software permite la definición del juego de instrucciones en el formato utilizado en la asignatura Estructura de Computadores. \\
 \midrule
-\textbf{Preconditions}		& 1. Use a machine with at least 8GB or \gls{ram}. \\
-							& 2. The user must be located in the main directory of the \gls{comsimboinc} application. \\
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Disponer de un juego de instrucciones base en el formato utilizado en la asignatura Estructura de Computadores. \\
+											& 3. Disponer de un código ensamblador que utiliza el juego de instrucciones utilizado en la asignatura Estructura de Computadores. \\
 \midrule
-\textbf{Procedure}			& 1. Specify the simulation parameters with more than 100,000 hosts. \\
-							& 2. Run the generator script to create the simulation files.\\
-							& 3. Run the simulation.\\
+\textbf{Procedimiento}		& 1. Generar firmware mediante el juego de instrucciones proporcionado.\\
+											& 2. Generar memoria principal utilizando el código ensamblador proporcionado.\\
+											& 3. Ejecutar simulación.\\
+											& 4. Verificar que los resultados obtenidos de la ejecución son los resultados teóricos esperados.\\
 \midrule
-\textbf{Postconditions} 		& 1. Simulations run while a progress bar indicates the percentage of execution. \\
-							& 2. The simulator must successfully finish its execution. \\
+\textbf{Postcondiciones} 		&  La memoria de control y la memoria principal han sido generadas correctamente, realizándose la simulación de forma satisfactoria.\\
 \midrule
-\textbf{Evaluation} 			& Passed \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Verification test VET-07.}
+\caption{Test de verificación VET-07.}
 \label{tab:vet07}
 \end{table*}
 \end{center}
 
+\begin{center}
+\begin{table*}[htb]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
+\toprule
+\textbf{ID} 					& VET-08. \\
+\midrule
+\textbf{Nombre} 				& Importación y exportación. \\
+\midrule
+\textbf{Requisitos} 		& SR-F-F07, SR-F-F08, SR-F-F13, SR-F-F14\\
+\midrule
+\textbf{Descripción} 		& Verificar que el software permite tanto la importación como la exportación de/a fichero del juego de instrucciones y del código ensamblador. \\
+\midrule
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Disponer de un juego de instrucciones base en el formato utilizado en la asignatura Estructura de Computadores en un fichero. \\
+											& 3. Disponer de un código ensamblador que utiliza el juego de instrucciones utilizado en la asignatura Estructura de Computadores en un fichero. \\
+\midrule
+\textbf{Procedimiento}		& 1. Importar juego de instrucciones mediante el fichero proporcionado.\\
+											& 2. Generar firmware.\\
+											& 3. Exportar juego de instrucciones.\\
+											& 4. Importar código ensamblador mediante el fichero proporcionado.\\
+											& 5. Generar memoria principal.\\
+											& 6. Exportar código ensamblador.\\
+											& 7. Verificar que la memoria de control y la memoria principal han sido generadas correctamente.\\
+											& 8. Verificar que los ficheros exportados han sido generados correctamente.\\
+\midrule
+\textbf{Postcondiciones} 		&  La memoria de control, la memoria principal y los dos ficheros exportados han sido generados correctamente.\\
+\midrule
+\textbf{Evaluación} 			& OK \\
+\bottomrule
+\end{tabular}
+\caption{Test de verificación VET-08.}
+\label{tab:vet08}
+\end{table*}
+\end{center}
 
 \begin{center}
 \begin{table*}[htb]
 \centering
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
-\textbf{ID} 					& VET-08 \\
+\textbf{ID} 					& VET-09. \\
 \midrule
-\textbf{Name} 				& Execution time. \\
+\textbf{Nombre} 				& Edición de texto. \\
 \midrule
-\textbf{Requirements} 		& SR-NF-P01, SR-NF-UI01, SR-NF-UI02. \\
+\textbf{Requisitos} 		& SR-F-F06, SR-F-F12\\
 \midrule
-\textbf{Description} 		& Check that simulations follow a linear execution time. \\
+\textbf{Descripción} 		& Verificar que el software permite la edición del juego de instrucciones y del código ensamblador. \\
 \midrule
-\textbf{Preconditions}		& 1. The user must be located in the main directory of the \gls{comsimboinc} application. \\
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
 \midrule
-\textbf{Procedure}			& 1. Specify the simulation parameters with different workloads. \\
-							& 2. Run the generator script to create the simulation files.\\
-							& 3. Run the simulation.\\
-							
-							& 4. Go to 2 specifying different simulation parameters.\\
+\textbf{Procedimiento}		& 1. Definir un juego de instrucciones mediante la herramienta.\\
+											& 2. Generar firmware.\\
+											& 3. Definir código ensamblador mediante la herramienta.\\
+											& 4. Generar memoria principal.\\
 \midrule
-\textbf{Postconditions} 		& 1. Simulations run while a progress bar indicates the percentage of execution. \\
-							& 2. The simulator must successfully finish its execution. \\
-							& 3. Check that executions follow a linear execution time when increasing the workload (it is detailed in \ref{sec:performance_study}, \textit{\nameref{sec:performance_study}}). \\
+\textbf{Postcondiciones} 		&  La memoria de control, la memoria principal  han sido generadas correctamente, pudiéndose editar desde la herramienta.\\
 \midrule
-\textbf{Evaluation} 			& Passed \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Verification test VET-08.}
-\label{tab:vet08}
+\caption{Test de verificación VET-09.}
+\label{tab:vet09}
 \end{table*}
 \end{center}
 
+\begin{center}
+\begin{table*}[htb]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
+\toprule
+\textbf{ID} 					& VET-10. \\
+\midrule
+\textbf{Nombre} 				& Tipos de simulaciones. \\
+\midrule
+\textbf{Requisitos} 		& SR-F-F16, SR-F-F17, SR-F-F18, SR-F-F22\\
+\midrule
+\textbf{Descripción} 		& Verificar que el software permite los tres tipos de simulación: ciclo a ciclo de reloj, instrucción a instrucción y simulación completa. \\
+\midrule
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Tener la memoria de control y la memoria principal de la herramienta generadas. \\
+\midrule
+\textbf{Procedimiento}		& 1. Realizar la simulación del código cargado microinstrucción a microinstrucción.\\
+											& 2. Reiniciar la simulación.\\
+											& 3. Realizar la simulación del código cargado instrucción a instrucción.\\
+											& 4. Reiniciar la simulación.\\
+											& 5. Realizar la simulación completa del código cargado. \\
+\midrule
+\textbf{Postcondiciones} 		&  Las simulaciones han sido realizadas correctamente, obteniéndose los resultados teóricos esperados en ellas.\\
+\midrule
+\textbf{Evaluación} 			& OK \\
+\bottomrule
+\end{tabular}
+\caption{Test de verificación VET-10.}
+\label{tab:vet10}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htb]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
+\toprule
+\textbf{ID} 					& VET-11. \\
+\midrule
+\textbf{Nombre} 				& Velocidad de simulación. \\
+\midrule
+\textbf{Requisitos} 		& SR-F-F19\\
+\midrule
+\textbf{Descripción} 		& Verificar que el software permite la configuración de la velocidad de simulación. \\
+\midrule
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Tener la memoria de control y la memoria principal de la herramienta generadas. \\
+\midrule
+\textbf{Procedimiento}		& 1. Realizar la simulación completa del código cargado.\\
+											& 2. Reiniciar la simulación.\\
+											& 3. Modificar velocidad de simulación. \\
+											& 4. Realizar la simulación completa del código cargado.\\
+\midrule
+\textbf{Postcondiciones} 		&  Las simulaciones han sido realizadas correctamente, obteniéndose diferentes tiempos en función de la velocidad de simulación establecida.\\
+\midrule
+\textbf{Evaluación} 			& OK \\
+\bottomrule
+\end{tabular}
+\caption{Test de verificación VET-11.}
+\label{tab:vet11}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htb]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
+\toprule
+\textbf{ID} 					& VET-12. \\
+\midrule
+\textbf{Nombre} 				& Información de las simulaciones. \\
+\midrule
+\textbf{Requisitos} 		& SR-F-F20, SR-F-21, SR-F-22\\
+\midrule
+\textbf{Descripción} 		& Verificar que el software muestra los esquemas de la CPU y la Unidad de control, modificando el color de las señales activas y buses actualizados y muestra la información del estado de los registros. \\
+\midrule
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Tener la memoria de control y la memoria principal de la herramienta generadas. \\
+\midrule
+\textbf{Procedimiento}		& 1. Realizar la simulación del código cargado ciclo a ciclo de reloj.\\
+\midrule
+\textbf{Postcondiciones} 		&  Las simulaciones han sido realizadas correctamente, cambiándose el color de las señales activas y buses de datos actualizados en cada ciclo de reloj y mostrándose la información de los registros.\\
+\midrule
+\textbf{Evaluación} 			& OK \\
+\bottomrule
+\end{tabular}
+\caption{Test de verificación VET-12.}
+\label{tab:vet12}
+\end{table*}
+\end{center}
 
 \clearpage
 
@@ -387,35 +460,51 @@ La matriz de trazabilidad de las pruebas de verificación (Tabla \ref{tab:verifi
 \begin{table}[htb]
 \ra{1.3}
   \centering
-  \begin{tabular}{@{}L{3cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}@{}}
+  \begin{tabular}{@{}L{3cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}@{}}
     \toprule
-     \thead{Requirements} & \rothead{VET-01} & \rothead{VET-02} & \rothead{VET-03} & \rothead{VET-04} & \rothead{VET-05} & \rothead{VET-06} & \rothead{VET-07} & \rothead{VET-08}\\
+     \thead{Requirements} & \rothead{VET-01} & \rothead{VET-02} & \rothead{VET-03} & \rothead{VET-04} & \rothead{VET-05} & \rothead{VET-06} & \rothead{VET-07} & \rothead{VET-08} & \rothead{VET-09} & \rothead{VET-10} & \rothead{VET-11} & \rothead{VET-12}\\
     \midrule
-    SR-F-F01 & & & & & & \ding{51} & &\\
-    SR-F-F02 & & & \ding{51} & & & & &\\
-    SR-F-F03 & & & & & & \ding{51} & &\\
-    SR-F-F04 & & & & \ding{51} & & & &\\
-    SR-F-F05 & & & & & \ding{51} & & &\\
-    SR-F-F06 & & \ding{51} & & & & & &\\
-    SR-NF-PL01 & \ding{51} & & & & & & & \\
-    SR-NF-PL02 & \ding{51} & & & & & & &\\
-    SR-NF-PL03 & \ding{51} & & & & & & &\\
-    SR-NF-S01 & & & & & & & \ding{51} &\\
-    SR-NF-P01 & & & & & & & & \ding{51}\\
-    SR-NF-UI01 & & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51}\\
-    SR-NF-UI02 & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51}\\
+    SR-F-F01 & & & & & & \ding{51} & & & & & & \\
+    SR-F-F02 & & & & & & \ding{51} & & & & & & \\
+    SR-F-F03 & & & & & & \ding{51} & & & & & & \\
+    SR-F-F04 & & & & & & & \ding{51} & & & & & \\
+    SR-F-F05 & & & & & & & \ding{51} & & & & & \\
+    SR-F-F06 & & & & & & & &  & \ding{51} & & & \\
+    SR-F-F07 & & & & & & & & \ding{51} & & & & \\
+    SR-F-F08 & & & & & & & & \ding{51} & & & & \\
+    SR-F-F09 & & & & & & & \ding{51} & & & & & \\
+    SR-F-F10 & & & & & & & \ding{51} & & & & & \\
+    SR-F-F11 & & & & & & & \ding{51} & & & & & \\
+    SR-F-F12 & & & & & & & & & \ding{51} & & & \\
+    SR-F-F13 & & & & & & & & \ding{51} & & & & \\
+    SR-F-F14 & & & & & & & & \ding{51} & & & & \\
+    SR-F-F15 & & & & & & & \ding{51} & & & & & \\
+     SR-F-F16 & & & & & & & & & & \ding{51} & & \\
+    SR-F-F17 & & & & & & & & & & \ding{51} & & \\
+    SR-F-F18 & & & & & & & & & & \ding{51} & & \\
+    SR-F-F19 & & & & & & & & & & & \ding{51} & \\
+    SR-F-F20 & & & & & & & & & & & & \ding{51} \\
+    SR-F-F21 & & & & & & & & & & & & \ding{51} \\
+    SR-F-F22 & & & & & & & & & & \ding{51} & & \ding{51} \\
+    SR-NF-PL01 & \ding{51} & & & & & & & & & & & \\
+    SR-NF-PL02 & \ding{51} & & & & & & & & & & & \\
+    SR-NF-PL03 & & \ding{51} & & & & & & & & & & \\
+    SR-NF-PL04 & & \ding{51} & & & & & & & & & & \\
+    SR-NF-PL05 & & & \ding{51} & & & & & & & & & \\
+    SR-NF-UI01 & & & & \ding{51} & & & & & & & & \\
+    SR-NF-P01 & & & & & \ding{51} & & & & & & & \\
     \bottomrule
 \end{tabular}
-\caption{Verification test traceability matrix.}
+\caption{Matriz de trazabilidad de pruebas de verificación.}
 \label{tab:verification_matrix}
 \end{table}    
 
 \clearpage
 
-\subsection{Validation Tests}
+\subsection{Pruebas de validación}
 
 
-Para realizar las pruebas de validación, hemos comprobado el software final, comparándolo con las necesidades del usuario especificadas en el Capítulo \ref{ch:analysis} \textit{\nameref{ch:analysis}}). Con estas pruebas queremos responder a la pregunta: `` ¿Hemos construido el producto adecuado? ''. La tabla \ref{tab:validation_tests} proporciona la plantilla utilizada para los test de validación. Tenga en cuenta que el formato del atributo ID es VAT-XX, donde XX indica el número de test de validación.
+Para realizar las pruebas de validación, hemos comprobado el software final, comparándolo con las necesidades del usuario especificadas en el Capítulo \ref{ch:analysis} \textit{\nameref{ch:analysis}}). Con estas pruebas queremos responder a la pregunta: " ¿Hemos construido el producto adecuado? ''. La tabla \ref{tab:validation_tests} proporciona la plantilla utilizada para los test de validación. Tenga en cuenta que el formato del atributo ID es VAT-XX, donde XX indica el número de test de validación.
 
 
 \begin{center}
@@ -448,37 +537,35 @@ Para realizar las pruebas de validación, hemos comprobado el software final, co
 \end{center}
 
 
-Luego, especificamos las pruebas de validación.
-
+A continuación, especificamos las pruebas de validación.
 
 \begin{center}
 \begin{table*}[htb]
 \centering
-\begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 					& VAT-01 \\
+\textbf{ID} 					& VAT-01. \\
 \midrule
-\textbf{Name} 				& BOINC projects simulation. \\
+\textbf{Nombre} 				& Juego de instrucciones. \\
 \midrule
-\textbf{Requirements} 		& UR-C01. \\
+\textbf{Requisitos} 		& UR-C02, UR-C03 \\
 \midrule
-\textbf{Verification tests} 	& VET-03, VET-06. \\
+\textbf{Descripción} 		& Validar que el software permite la definición del juego de instrucciones en el formato utilizado en la asignatura Estructura de Computadores mediante la carga de un fichero y la edición desde la herramienta, generando la memoria de control asociada y permitiendo la exportación del juego de instrucciones a un fichero. \\
 \midrule
-\textbf{Description} 		& Validate that the simulator is able to simulate the behavior of BOINC projects. \\
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Disponer de un juego de instrucciones base en el formato utilizado en la asignatura Estructura de Computadores. \\
 \midrule
-\textbf{Preconditions}		&  1. The user must be located in the main directory of the \gls{comsimboinc} application. \\
+\textbf{Procedimiento}		& 1. Importar juego de instrucciones desde fichero.\\
+											& 2. Editar el juego de instrucciones desde la herramienta.\\
+											& 3. Generar memoria de control utilizando el juego de instrucciones cargado.\\
+											& 4. Exportar el juego de instrucciones cargado a fichero. \\
 \midrule
-\textbf{Procedure}			& 1. Specify the simulation parameters of three different BOINC projects: SETI@home, Einstein@home, and LHC@home. \\
-							& 2. Run the generator script to create the simulation files. \\
-							& 3. Run the simulation. \\ 
+\textbf{Postcondiciones} 		&  La memoria de control ha sido generada correctamente, permitiéndose la carga desde fichero, la edición desde la herramienta y la exportación del juego de instrucciones a fichero.\\
 \midrule
-\textbf{Postconditions} 		& 1. The simulator must successfully finish its execution. \\
-							& 2. The outputs of the simulation are the same as the actual BOINC projects, in terms of \acrshort{flops} and credit (it is detailed in \ref{subsec:validation_of_the_whole_simulator}, \textit{\nameref{subsec:validation_of_the_whole_simulator}}). \\
-\midrule
-\textbf{Evaluation} 			& Passed. \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Validation test VAT-01.}
+\caption{Test de validación VAT-01.}
 \label{tab:vat-01}
 \end{table*}
 \end{center}
@@ -487,158 +574,337 @@ Luego, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
-\begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 					& VAT-02 \\
+\textbf{ID} 					& VAT-02. \\
 \midrule
-\textbf{Name} 				& Client \gls{scheduling}. \\
+\textbf{Nombre} 				& Juego de instrucciones. \\
 \midrule
-\textbf{Requirements} 		& UR-C02. \\
+\textbf{Requisitos} 		& UR-C04, UR-C05 \\
 \midrule
-\textbf{Verification tests} 	& VET-05. \\
+\textbf{Descripción} 		& Validar que el software permite la definición del código ensamblador en el formato utilizado en la asignatura Estructura de Computadores mediante la carga de un fichero y la edición desde la herramienta, generando la memoria principal asociada y permitiendo la exportación del código ensamblador a un fichero. \\
 \midrule
-\textbf{Description} 		& Validate that the client scheduler implemented produces the same results as the actual BOINC scheduler. \\
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Disponer de un juego de instrucciones base en el formato utilizado en la asignatura Estructura de Computadores cargado en el simulador. \\
+											& 3. Disponer de un código ensamblador base en el formato utilizado en la asignatura Estructura de Computadores. \\
 \midrule
-\textbf{Preconditions}		&  1. The user must be located in the main directory of the \gls{comsimboinc} application. \\
+\textbf{Procedimiento}		& 1. Importar código ensamblador desde fichero.\\
+											& 2. Editar el código ensamblador desde la herramienta.\\
+											& 3. Generar memoria principal utilizando el código ensamblador cargado.\\
+											& 4. Exportar el código ensamblador cargado a fichero. \\
 \midrule
-\textbf{Procedure}			& 1. Specify the client side simulation parameters of three different projects: SETI@home, Einstein@home, and LHC@home. \\
-							& 2. Run the generator script to create the simulation files. \\
-							& 3. Run the simulation. \\ 
+\textbf{Postcondiciones} 		&  La memoria principal ha sido generada correctamente, permitiéndose la carga desde fichero, la edición desde la herramienta y la exportación del código ensamblador a fichero.\\
 \midrule
-\textbf{Postconditions} 		& 1. The simulator must successfully finish its execution. \\
-							& 2. The outputs of the simulation are the same as the real BOINC client scheduler (it is detailed in \ref{subsec:validation_of_the_client_scheduler}, \textit{\nameref{subsec:validation_of_the_client_scheduler}}). \\
-\midrule
-\textbf{Evaluation} 			& Passed. \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Validation test VAT-02.}
+\caption{Test de validación VAT-02.}
 \label{tab:vat-02}
 \end{table*}
 \end{center}
 
-
 \begin{center}
 \begin{table*}[htb]
 \centering
-\begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 					& VAT-03 \\
+\textbf{ID} 					& VAT-03. \\
 \midrule
-\textbf{Name} 				& Simulation components. \\
+\textbf{Nombre} 				& Simulación del modelo hardware propuesto. \\
 \midrule
-\textbf{Requirements} 		& UR-C03. \\
+\textbf{Requisitos} 		& UR-C01 \\
 \midrule
-\textbf{Verification tests} 	& VET-02. \\
+\textbf{Descripción} 		& Validar que el software permite la simulación del modelo hardware propuesto. \\
 \midrule
-\textbf{Description} 		& Validate that the simulations cover all the elements of the BOINC infrastructure. \\
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Disponer de un juego de instrucciones base en el formato utilizado en la asignatura Estructura de Computadores cargado en el simulador. \\
+											& 3. Disponer de un código ensamblador base en el formato utilizado en la asignatura Estructura de Computadores cargado en el simulador. \\
 \midrule
-\textbf{Preconditions}		&  1. The user must be located in the main directory of the ComBoS application. \\
+\textbf{Procedimiento}		& 1. Comprobar el código de los archivos fuente del simulador que contienen el modelo hardware a simular (sim\_hw\_*.js).\\
+											& 2. Ejecutar la simulación del código ensamblador.\\
 \midrule
-\textbf{Procedure}			& 1. Specify the following elements in the simulation parameters: tasks, volunteer hosts, servers, data servers, networks, and hosts availability. \\
-							& 2. Run the generator script to create the simulation files. \\
-							& 3. Run the simulation. \\ 
+\textbf{Postcondiciones} 		&  El modelo hardware definido se corresponde con el modelo propuesto, siendo el resultado de la simulación el resultado teórico esperado.\\
 \midrule
-\textbf{Postconditions} 		& 1. The simulator must successfully finish its execution. \\
-\midrule
-\textbf{Evaluation} 			& Passed. \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Validation test VAT-03.}
+\caption{Test de validación VAT-03.}
 \label{tab:vat-03}
 \end{table*}
 \end{center}
 
-
 \begin{center}
 \begin{table*}[htb]
 \centering
-\begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 					& VAT-04 \\
+\textbf{ID} 					& VAT-04. \\
 \midrule
-\textbf{Name} 				& Platform. \\
+\textbf{Nombre} 				& Tipos de simulaciones. \\
 \midrule
-\textbf{Requirements} 		& UR-R01, UR-R02. \\
+\textbf{Requisitos} 		& UR-C06\\
 \midrule
-\textbf{Verification tests} 	& VET-01. \\
+\textbf{Descripción} 		& Verificar que el software permite los tres tipos de simulación: ciclo a ciclo de reloj, instrucción a instrucción y simulación completa. \\
 \midrule
-\textbf{Description} 		& Validate that the software can be used on the platform and is developed with the tools specified in the requirements. \\
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Tener la memoria de control y la memoria principal de la herramienta generadas. \\
 \midrule
-\textbf{Preconditions}		& 1. Use a machine with a Linux operating system. \\
-							& 2. The user must be located in the main directory of the \gls{comsimboinc} application. \\
+\textbf{Procedimiento}		& 1. Realizar la simulación del código cargado microinstrucción a microinstrucción.\\
+											& 2. Reiniciar la simulación.\\
+											& 3. Realizar la simulación del código cargado instrucción a instrucción.\\
+											& 4. Reiniciar la simulación.\\
+											& 5. Realizar la simulación completa del código cargado. \\
 \midrule
-\textbf{Procedure}			& 1. Check the code of the simulator source files (all these files are inside the /Files folder). \\
-							& 2. Run the generator script with the default parameters to create the simulation files. \\
-							& 3. Run the simulation. \\ 
+\textbf{Postcondiciones} 		&  Las simulaciones han sido realizadas correctamente, obteniéndose los resultados teóricos esperados en ellas.\\
 \midrule
-\textbf{Postconditions} 		& 1. The simulator must successfully finish its execution. \\
-							& 2. The implementation, setup and control of the simulations must be carried out using the MSG API of the SimGrid toolkit. \\
-\midrule
-\textbf{Evaluation} 			& Passed. \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Validation test VAT-04.}
+\caption{Test de validación VAT-04.}
 \label{tab:vat-04}
 \end{table*}
 \end{center}
 
-\clearpage
-
 \begin{center}
 \begin{table*}[htb]
 \centering
-\begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
-\textbf{ID} 					& VAT-05 \\
+\textbf{ID} 					& VAT-05. \\
 \midrule
-\textbf{Name} 				& Scalability. \\
+\textbf{Nombre} 				& Velocidad de simulación. \\
 \midrule
-\textbf{Requirements} 		& UR-R03. \\
+\textbf{Requisitos} 		& UR-C07\\
 \midrule
-\textbf{Verification tests} 	& VET-07. \\
+\textbf{Descripción} 		& Verificar que el software permite la configuración de la velocidad de simulación. \\
 \midrule
-\textbf{Description} 		& Validate that the application is able to perform large simulations. \\
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Tener la memoria de control y la memoria principal de la herramienta generadas. \\
 \midrule
-\textbf{Preconditions}		&  1. The user must be located in the main directory of the ComBoS application. \\
+\textbf{Procedimiento}		& 1. Realizar la simulación completa del código cargado.\\
+											& 2. Reiniciar la simulación.\\
+											& 3. Modificar velocidad de simulación. \\
+											& 4. Realizar la simulación completa del código cargado.\\
 \midrule
-\textbf{Procedure}			& 1. Specify the simulation parameters with more than 100,000 hosts. \\
-							& 2. Run the generator script to create the simulation files. \\
-							& 3. Run the simulation. \\ 
+\textbf{Postcondiciones} 		&  Las simulaciones han sido realizadas correctamente, obteniéndose diferentes tiempos en función de la velocidad de simulación establecida.\\
 \midrule
-\textbf{Postconditions} 		& 1. The simulator must successfully finish its execution. \\
-\midrule
-\textbf{Evaluation} 			& Passed. \\
+\textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Validation test VAT-05.}
+\caption{Test de validación VAT-05.}
 \label{tab:vat-05}
 \end{table*}
 \end{center}
 
+\begin{center}
+\begin{table*}[htb]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 					& VAT-06. \\
+\midrule
+\textbf{Nombre} 				& Información de las simulaciones. \\
+\midrule
+\textbf{Requisitos} 		& UR-C08, UR-C09\\
+\midrule
+\textbf{Descripción} 		& Verificar que el software muestra los esquemas de la CPU y la Unidad de control, modificando el color de las señales activas y buses actualizados y muestra la información del estado de los registros. \\
+\midrule
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+											& 2. Tener la memoria de control y la memoria principal de la herramienta generadas. \\
+\midrule
+\textbf{Procedimiento}		& 1. Realizar la simulación del código cargado ciclo a ciclo de reloj.\\
+\midrule
+\textbf{Postcondiciones} 		&  Las simulaciones han sido realizadas correctamente, cambiándose el color de las señales activas y buses de datos actualizados en cada ciclo de reloj y mostrándose la información de los registros.\\
+\midrule
+\textbf{Evaluación} 			& OK \\
+\bottomrule
+\end{tabular}
+\caption{Test de validación VAT-06.}
+\label{tab:vat-06}
+\end{table*}
+\end{center}
 
-The validation test traceability matrix (Table \ref{tab:validation_matrix}) determines that all the user needs have been validated in the final product.
+\begin{center}
+\begin{table*}[htb]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 					& VAT-07. \\
+\midrule
+\textbf{Nombre} 				& Plataforma. \\
+\midrule
+\textbf{Requisitos} 		& UR-R01, UR-R02\\
+\midrule
+\textbf{Descripción} 		& Verificar que el software puede ser utilizado en los navegadores especificados en los requisitos. \\
+\midrule
+\textbf{Precondiciones}		& 1. Utilizar una máquina con sistema operativo Ubuntu 16.04 / Windows 10 / MacOS 10.2.5 .\\
+							& 2. .Tener instalados los navegadores Microsft Edge 30+, Mozilla Firefox 45+, Google Chrome 50+ o Safari 10+. \\
+\midrule
+\textbf{Procedimiento}			& 1. Abrir el software en cualquiera de los navegadores web especificados. \\
+							& 2. Generar firmware.\\
+							& 3. Generar memoria principal.\\
+							& 4. Ejecutar simulación.\\
+\midrule
+\textbf{Postcondiciones} 		&  La simulación ha sido completada satisfactoriamente sin ningún error de ejecución debido a la plataforma .\\
+\midrule
+\textbf{Evaluación} 			& OK \\
+\bottomrule
+\end{tabular}
+\caption{Test de validación VAT-07.}
+\label{tab:vat-07}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htb]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 					& VAT-08. \\
+\midrule
+\textbf{Nombre} 				& Interfaz de usuario. \\
+\midrule
+\textbf{Requisitos} 		& UR-R03\\
+\midrule
+\textbf{Descripción} 		& Verificar que la interfaz del simulador es compatible tanto con pc como con plataformas móviles. \\
+\midrule
+\textbf{Precondiciones}		& 1. Disponer de un pc y de un dispositivo móvil. \\
+											& 2. Los dispositivos deben tener instalados los navegadores web específicados previamente. \\
+\midrule
+\textbf{Procedimiento}			& 1. Abrir el software en cualquiera de los navegadores web especificados. \\
+							& 2. Generar firmware.\\
+							& 3. Generar memoria principal.\\
+							& 4. Ejecutar simulación.\\
+\midrule
+\textbf{Postcondiciones} 		&  La interfaz del simulador es compatible tanto como pc como con dispositivos móviles, visualizándose correctamente en cualquier pantalla de la herramienta.\\
+\midrule
+\textbf{Evaluación} 			& OK \\
+\bottomrule
+\end{tabular}
+\caption{Test de validación VAT-08.}
+\label{tab:vat-08}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htb]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 					& VAT-09. \\
+\midrule
+\textbf{Nombre} 				& Tiempo medio por ciclo de reloj. \\
+\midrule
+\textbf{Requisitos} 		& UR-R04\\
+\midrule
+\textbf{Descripción} 		& Verificar que el tiempo medio por ciclo de reloj del simulador no supera 0,1 segundos. \\
+\midrule
+\textbf{Precondiciones}		& 1. Disponer de un dispositivo con una versión de navegador web igual o superior a los indicados anteriormente. \\
+\midrule
+\textbf{Procedimiento}			& 1. Abrir el software en cualquiera de los navegadores web especificados. \\
+							& 2. Generar firmware.\\
+							& 3. Generar memoria principal utilizando un código ensamblador que utiliza cada una de las partes de la arquitectura del simulador.\\
+							& 4. Ejecutar simulación midiendo el tiempo de ejecución.\\
+\midrule
+\textbf{Postcondiciones} 		&  El tiempo de ejecución medio por ciclo de reloj excede 0,1 segundos.\\
+\midrule
+\textbf{Evaluación} 			& OK \\
+\bottomrule
+\end{tabular}
+\caption{Test de validación VAT-09.}
+\label{tab:vat-09}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htb]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 					& VAT-10. \\
+\midrule
+\textbf{Nombre} 				& Ejecución local. \\
+\midrule
+\textbf{Requisitos} 		& UR-R05, UR-R06\\
+\midrule
+\textbf{Descripción} 		& Verificar que el software es ejecutado en local sin la necesidad de conexión a internet. \\
+\midrule
+\textbf{Precondiciones}		& 1. No tener acceso a Internet.\\
+											& 2. Tener el código fuente de la herramienta descargado en local.\\
+\midrule
+\textbf{Procedimiento}			& 1. Abrir el software en cualquiera de los navegadores web especificados. \\
+							& 2. Generar firmware.\\
+							& 3. Generar memoria principal.\\
+							& 4. Ejecutar simulación.\\
+\midrule
+\textbf{Postcondiciones} 		&  La simulación ha sido completada satisfactoriamente sin ningún error de ejecución debido a la conexión de red.\\
+\midrule
+\textbf{Evaluación} 			& OK \\
+\bottomrule
+\end{tabular}
+\caption{Test de validación VAT-10.}
+\label{tab:vat-10}
+\end{table*}
+\end{center}
+
+\begin{center}
+\begin{table*}[htb]
+\centering
+\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
+\toprule
+\textbf{ID} 					& VAT-11. \\
+\midrule
+\textbf{Nombre} 				& Tecnologías de desarrollo. \\
+\midrule
+\textbf{Requisitos} 		& UR-R07\\
+\midrule
+\textbf{Descripción} 		& Verificar que el software ha sido desarrollando utilizando HTML5. \\
+\midrule
+\textbf{Precondiciones}		& 1. Tener el código fuente de la herramienta descargado en local. \\
+\midrule
+\textbf{Procedimiento}		& 1. Comprobar el código de los archivos fuente del simulador.\\
+\midrule
+\textbf{Postcondiciones} 		&  El simulador ha sido desarrollado mediante el lenguaje de programación HTML5.\\
+\midrule
+\textbf{Evaluación} 			& OK \\
+\bottomrule
+\end{tabular}
+\caption{Test de validación VAT-11.}
+\label{tab:vat-11}
+\end{table*}
+\end{center}
+
+\clearpage
+
+La matriz de trazabilidad de las pruebas de validación (Tabla \ref{tab:validation_matrix}) Determina que todos los requisitos de usuario han sido validados con el producto final.
 
 \vspace{2cm}
-
 
 \begin{table}[htb]
 \ra{1.3}
   \centering
-  \begin{tabular}{@{}L{3cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}@{}}
+  \begin{tabular}{@{}L{3cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}@{}}
     \toprule
-     \thead{Requirements} & \rothead{VAT-01} & \rothead{VAT-02} & \rothead{VAT-03} & \rothead{VAT-04} & \rothead{VAT-05}\\
+     \thead{Requirements} & \rothead{VAT-01} & \rothead{VAT-02} & \rothead{VAT-03} & \rothead{VAT-04} & \rothead{VAT-05} & \rothead{VAT-06} & \rothead{VAT-07} & \rothead{VAT-08} & \rothead{VAT-09} & \rothead{VAT-10} & \rothead{VAT-11}\\
     \midrule
-    UR-C01 & \ding{51} & & & & \\
-    UR-C02 & & \ding{51} & & & \\
-    UR-C03 & & & \ding{51} & & \\
-    UR-R01 & & & & \ding{51} & \\
-    UR-R02 & & & & \ding{51} & \\
-    UR-R03 & & & & & \ding{51} \\
+    UR-C01 & & & \ding{51} & & & & & & & & \\
+    UR-C02 & \ding{51} & & & & & & & & & & \\
+    UR-C03 & \ding{51} & & & & & & & & & & \\
+    UR-C04 & & \ding{51} & & & & & & & & & \\
+    UR-C05 & & \ding{51} & & & & & & & & & \\
+    UR-C06 & & & & \ding{51} & & & & & & & \\
+    UR-C07 & & & & & \ding{51} & & & & & & \\
+    UR-C08 & & & & & & \ding{51} & & & & & \\
+    UR-C09 & & & & & & \ding{51} & & & & & \\
+    UR-R01 & & & & & & & \ding{51} & & & & \\
+    UR-R02 & & & & & & & \ding{51} & & & & \\
+    UR-R03 & & & & & & & & \ding{51} & & & \\
+    UR-R04 & & & & & & & & & \ding{51} & & \\
+    UR-R05 & & & & & & & & & & \ding{51} & \\
+    UR-R06 & & & & & & & & & & \ding{51} & \\
+    UR-R07 & & & & & & & & & & & \ding{51} \\
     \bottomrule
 \end{tabular}
-\caption{Validation test traceability matrix.}
+\caption{Matriz de trazabilidad de pruebas de validación.}
 \label{tab:validation_matrix}
 \end{table}    
-
-
-\clearpage

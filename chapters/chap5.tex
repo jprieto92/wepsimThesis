@@ -30,9 +30,146 @@ Como hemos explicado en el capítulo \ref{ch:analysis}, \textit{\nameref{ch:anal
 
 Además, hemos trabajado en conseguir una herramienta que sea capaz de generar la memoria de control mediante la definición del juego de instrucciones por parte del usuario, y de generar el código binario asociado al código ensamblador definido por el usuario; el cual depende del juego de instrucciones definido previamente. Para ello, se han diseñado e implementado dos compiladores diferentes, capaces de generar los binarios correspondientes además de las estructuras de datos necesarias para ayudar al motor de simulación a lo largo de la ejecución.
 
-De esta forma, en \ref{alg:core_simulator_pseudocode} podemos ver el pseudocódigo de como se realiza una simulación, realizando la comprobación de segmentos de memoria, tipo de simulación, y ejecución del ciclo o instrucción correspondiente. En \ref{alg:firmware_compiler_pseudocode}, podemos observar el pseudocódigo del proceso de generación de la memoria de control, mientras que en \ref{alg:assembly_compiler_pseudocode} podemos ver el proceso de compilación del código ensamblador definido por el usuario en función de la memoria de control previamente generada.
+De esta forma, en \ref{alg:firmware_compiler_pseudocode}, podemos observar el pseudocódigo del proceso de generación de la memoria de control, mientras que en \ref{alg:assembly_compiler_pseudocode} podemos ver el proceso de compilación del código ensamblador definido por el usuario en función de la memoria de control previamente generada, detallando el proceso de compilación del segmento de datos en \ref{alg:data_segment_pseudocode} y el proceso de compilación del segmento de texto en \ref{alg:text_segment_pseudocode}. En \ref{alg:core_simulator_pseudocode} podemos ver el pseudocódigo de como se realiza una simulación, realizando la comprobación de segmentos de memoria, tipo de simulación, y ejecución del ciclo o instrucción correspondiente.
 
-\vspace{1cm}
+\begin{algorithm}[h]
+	\caption{Proceso de compilación del juego de instrucciones}
+	\label{alg:firmware_compiler_pseudocode}
+  	\scriptsize
+  	\setstretch{1.35}
+	\begin{algorithmic}[1]
+		\Function{compile\_firmware}{$context$ }
+		\State $token$ = getToken();
+		\State $firmware$ = $null$;
+		\State $instructions $= $null$;
+		\State $registers$ = $null$;
+		\State $pseudoinstructions$ = $null$;
+		\While {(!is\_registers($token$) and $token$ != $null$)}
+			\State $instruction = null$;
+			\State $instructions$[$signature$]=readSignature(getNextToken());
+			\State $instructions$[$co$]=readCo(getNextToken());
+			\If{(getNextToken() == $COP$)}
+				\State $instruction$[$cop$]=readCop(getNextToken());
+			\EndIf
+			\While {(is\_Field(getNextToken())}
+				\State $instructions$[$field$].add=readField(getToken());
+			\EndWhile
+			\While {(is\_microcode(getNextToken())}
+				\State $instructions$[$microcode$].add=readCycle(getToken());
+			\EndWhile
+			\State $firmware$.add($instructions$);
+		\EndWhile
+		\If{(is\_registers(getToken())}
+			\State $registers$ = readRegisters(getToken());
+		\EndIf
+		\If{(is\_pseudoInstructions(getToken())}
+			\State $pseudoinstructions$ = readPseudoinstructions(getToken());
+		\EndIf
+		\State $firmware$.add($instructions$);
+		\State $firmware$.add($registers$);
+		\State $firmware$.add($pseudoinstructions$);
+		\State Return $firmware$;
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[h]
+	\caption{Proceso de compilación de código ensamblador}
+	\label{alg:assembly_compiler_pseudocode}
+  	\scriptsize
+  	\setstretch{1.35}
+	\begin{algorithmic}[1]
+		\Function{compile\_assembly}{ $context$,$datosCU$}
+		\State $dataSegment$ = $null$;
+		\State $textSegment$ = $null$;
+		\State $mainMemory$ = $null$;
+		\If{(!is\_data\_segment(getToken()))}
+			\State Return;
+		\EndIf
+		\State $dataSegment$ = read\_data\_segment($context$[$dSegment$]);
+		\If{(!is\_text\_segment(getToken()))}
+			\State Return;
+		\EndIf
+		\State $textSegment$ = read\_text\_segment($context$[$tSegment$]);
+		\State $mainMemory$.add($dataSegment$);
+		\State $mainMemory$.add($textSegment$,$dataSegment$.$labels$);
+		\State Return $mainMemory$;
+		\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[h]
+	\caption{Proceso de compilación de código ensamblador: segmento de datos}
+	\label{alg:data_segment_pseudocode}
+  	\scriptsize
+  	\setstretch{1.35}
+	\begin{algorithmic}[1]
+		\Function{read\_data\_segment}{$context$}
+			\State $labels$ = $null$;		
+			\State $token$ = getToken();
+			\While {(!is\_End(getNextToken())}   \Comment{Check Labels}
+				\If{(isLabel(getToken()))}
+					\State $labels$.add(getLabel(getToken()));
+				\EndIf
+			\EndWhile
+			\State $dataSegment$[$labels$].add(labels);
+			\State $token$ = getFirstToken();
+			\For{($i$ in $context$[$directives$])}	\Comment{Read Directives}  
+				\State $possible\_datatype$ = $i$;
+				\If{($possible\_datatype$ == "$.byte$")}
+					$dataSegment$[$directives$].add(readByte($i$));
+				\EndIf
+				\If{($possible\_datatype$ == "$.half$")}
+					$dataSegment$[$directives$].add(readHalf($i$));
+				\EndIf
+				\If{($possible\_datatype$ == "$.word$")}
+					$dataSegment$[$directives$].add(readWord($i$));
+				\EndIf
+				\If{($possible\_datatype$ == "$.space$")}
+					$dataSegment$[$directives$].add(readSpace($i$));
+				\EndIf
+				\If{($possible\_datatype$ == "$.ascii$")}
+					$dataSegment$[$directives$].add(readAscii($i$));
+				\EndIf
+				\If{($possible\_datatype$ == "$.asciiz$")}
+					$dataSegment$[$directives$].add($i$));
+				\EndIf
+				\If{($possible\_datatype$ == "$.align$")}
+					$dataSegment$[$directives$].add(readAlign($i$));
+				\EndIf
+			\EndFor
+			 \State Return $dataSegment$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[h]
+	\caption{Proceso de compilación de código ensamblador: segmento de texto}
+	\label{alg:text_segment_pseudocode}
+  	\scriptsize
+  	\setstretch{1.35}
+	\begin{algorithmic}[1]
+		\Function{read\_text\_segment}{$context$,$labels$}
+			\For {($i$ in $labels$}    \Comment{Read Labels}
+				\State replaceLabel($context$, $i$);	   \Comment{Replace Label in Text Segment}
+			\EndFor
+			\For{($i$ in $context$[$instructions$])}     \Comment{Read Instructions}
+				\State $auxInstruction$ = fillFields($i$);
+				\State $auxBinary$ = $null$;
+				\If{(!isInstruction($auxInstruction$[$0$]))}     \Comment{Check if instruction exist}
+					\State Return;
+				\EndIf
+				$auxBinary$ = generateBinary($auxInstruction$);
+				\If{($auxBinary$ == $null$)}
+					\State Return;
+				\EndIf
+				$textSegment$.add($auxBinary$);
+			\EndFor
+			 \State Return $textSegment$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
 
 \begin{algorithm}[h]
 	\caption{Proceso de simulación}
@@ -61,77 +198,25 @@ De esta forma, en \ref{alg:core_simulator_pseudocode} podemos ver el pseudocódi
 		         \State{execute\_instruction();}
 		   \EndIf	
 		\EndFunction
-		\Function{execute\_microInstruction()}{ }
+		\Function{execute\_microInstruction}{ }
 		\If {(!possible\_execute())}
 		    \State Return;
 		\EndIf
-		\State compute\_general\_behaviour(CLOCK); \Comment{execute cycle}
+		\State compute\_general\_behaviour(CLOCK); \Comment{Execute Cycle}
 		\State update\_UI();		
 		\EndFunction
-		\Function{execute\_instruction()}{ }
+		\Function{execute\_instruction}{ }
 		\If {(!possible\_execute())}
 		    \State Return;
 		\EndIf
 		\Do
-		\State compute\_general\_behaviour(CLOCK); \Comment{execute cycle}
-		\doWhile{($reg\_microaddr$!=$0$ and $mem\_control$[$microAddr$]!=$undefined$)} \Comment{check next cycle}
-		\State update\_UI(); \Comment{update user interface}
+		\State compute\_general\_behaviour(CLOCK); \Comment{Execute Cycle}
+		\doWhile{($reg\_microaddr$!=$0$ and $mem\_control$[$microAddr$]!=$undefined$)} \Comment{Check Next Cycle}
+		\State update\_UI(); \Comment{Update User Interface}
 		\EndFunction
 	\end{algorithmic}
 \end{algorithm}
-
 \clearpage
-
-\begin{algorithm}[h]
-	\caption{Proceso de compilación del juego de instrucciones}
-	\label{alg:firmware_compiler_pseudocode}
-  	\scriptsize
-  	\setstretch{1.35}
-	\begin{algorithmic}[1]
-		\Function{work\_fetch}{ }
-		\State $project = null$
-		\While {time < max\_time}
-		\For {each project $p$ in $projects$}
-		\If {$p$ meets the requirements}
-		\State $project = p$
-		\EndIf
-		\EndFor
-		\If {$project$ and not $deadlines\_missed$}
-		\State \Call{ask\_for\_work}{$project$}
-		\EndIf		
-		\State \Call{wait}{} $work\_fetch\_period$
-		\EndWhile	
-		\State \Call{signal}{} Client main process
-		\State Return
-		\EndFunction
-	\end{algorithmic}
-\end{algorithm}
-
-\begin{algorithm}[h]
-	\caption{Proceso de compilación de código ensamblador}
-	\label{alg:assembly_compiler_pseudocode}
-  	\scriptsize
-  	\setstretch{1.35}
-	\begin{algorithmic}[1]
-		\Function{work\_fetch}{ }
-		\State $project = null$
-		\While {time < max\_time}
-		\For {each project $p$ in $projects$}
-		\If {$p$ meets the requirements}
-		\State $project = p$
-		\EndIf
-		\EndFor
-		\If {$project$ and not $deadlines\_missed$}
-		\State \Call{ask\_for\_work}{$project$}
-		\EndIf		
-		\State \Call{wait}{} $work\_fetch\_period$
-		\EndWhile	
-		\State \Call{signal}{} Client main process
-		\State Return
-		\EndFunction
-	\end{algorithmic}
-\end{algorithm}
-
 
 \section{Despliegue}
 \label{sec:deployment}
@@ -154,13 +239,13 @@ En esta sección se presenta el despliegue de la herramienta. Para ello, indicam
 
 	\begin{itemize}
 
-	\item[1.] Mozilla Firefox.
+	\item[1.] Mozilla Firefox 45+.
 	
-	\item[2.] Google Chrome.
+	\item[2.] Google Chrome 50+.
 	
-	\item[3.] Microsoft Edge.
+	\item[3.] Microsoft Edge 30+.
 	
-	\item[4.] Safari.
+	\item[4.] Safari 10+.
 
 	\end{itemize}
 
