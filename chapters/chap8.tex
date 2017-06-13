@@ -18,18 +18,82 @@
 \label{ch:conclusions_and_future_work}
 \markboth{}{CONCLUSIONS AND FUTURE WORK}
 
-In this chapter we discuss the main contributions of our work. In addition, we present the conclusions of the work, revise the objectives set at the beginning of this document, and include some personal conclusions. Finally, we discuss future work.
-
-\section{Contribuciones}
-
-
+En este capítulo presentamos las conclusiones del trabajo, revisamos los objetivos establecidos al principio de este documento, e incluímos algunas conclusiones personales. Además, discutiremos las principales contribuciones de nuestro trabajo, indicando también las publicaciones resultantes de este trabajo. Finalmente, discutimos el trabajo futuro.
 
 \section{Conclusiones}
 
+En este trabajo se ha descrito el diseño de WepSIM, un simulador de un procesador elemental con unidad de control microprogramada. Este trabajo presenta un nuevo simulador que resulta intuitivo, portable y extensible, sirviendo como complemento docente para la docencia en Estructura de Computadores. Este simulador, permite definir diferentes juegos de instrucciones y ejecutar y depurar código fuente que use el conjunto de instrucciones definido. También permite definir el comportamiento del procesador mediante microprogramación.
 
+WepSIM, permite a los estudiante entender el funcionamiento de un procesador elemental de una forma sencilla, pudiendo ser usado desde un dispositivo móvil o un ordenador con un navegador Web moderno, sin la necesidad de ser instalado. De esta forma, los estudiantes pueden interactuar con el simulador aprendiendo y comprendiendo el funcionamiento del procesador elemental WepSIM, incluyendo los mecanismos de interacción con el software de sistema e integrando en una misma herramienta tanto la microprogramación como la programación en ensamblador.
 
+El objetivo principal de este proyecto era desarrollar un simulador, que a diferencia de los existentes, pudiera simular de forma completa el comportamiento de un procesador elemental permitiendo comprobar el estado de los componentes en cada ciclo de reloj, de manera que ayudáse a los alumnos a comprender y asimilar de forma sencilla y visual el funcionamiento de un procesador.  También hemos cumplido con todos los demás objetivos presentados en la introducción del documento:
+
+\begin{itemize}
+
+\item Simular la ejecución de el juego de instrucciones especificado en un computador denominado WepSIM desde el punto de vista de la micropogramación y la programación en ensamblador.
+
+\item Permitir la especificación de diferentes juegos de instrucciones.
+
+\item Permitir unificar la microprogramación y la programación en ensamblador.
+
+\item Permitir al usuario la visualización en cada ciclo de reloj del estado y comportamiento del computador simulado.
+
+\end{itemize}
+
+A nivel personal, este trabajo me ha ayudado a empezar en el mundo de la investigación científica. He logrado aplicar una gran cantidad de los conocimientos adquiridos a lo largo del grado. Además, he aprendido importantes técnicas de modelado de hardware, compilación y simulación, las cuáles tienen una gran utilidad y complejidad y me han servido parar profundizar aún más en los conocimientos adquiridos en el grado. Por todo ello, es muy satisfactorio ver el resultado final obtenido, puesto que he logrado superar todos los problemas que han surgido a lo largo del proyecto.
+
+\subsection{Contribuciones}
+
+El proyecto llevado a cabo durante este Trabajo Fin de Grado encaja con muchas de las asignaturas estudiadas en el Grado en Ingeniería Informática de la Universidad Carlos III de Madrid, destacando los siguientes temas en particular:
+
+\begin{itemize}
+
+\item \textbf{Tecnología de Computadores} (asignatura obligatoria, Primer curso) en donde se introducen los componentes hardware y la lógica binaria.
+
+\item \textbf{Estructura de Computadores} (asignatura obligatoria, Segundo curso) en donde se introducen las bases de la estructura y funcionamiento de un computador.
+
+\item \textbf{Teoría de Autómatas y Lenguajes Formales} (asignatura obligatoria, Segundo curso) en donde se introducen las bases acerca de los lenguajes y gramáticas formales.
+
+\item \textbf{Sistemas Operativos} (asignatura obligatoria, Segundo curso) en donde se introducen las bases del funcionamiento del sistema operativo.
+
+\item \textbf{Arquitectura de Computadores} (asignatura obligatoria, Tercer curso) en donde se introducen las bases de la arquitectura de un computador.
+
+\item \textbf{Diseño de Sistemas Operativos} (asignatura obligatoria, Tercer curso) en donde se introducen las bases del diseño de los distintos módulos de un sistema operativo.
+
+\item \textbf{Dirección de proyectos de desarrollo de software} (asignatura obligatoria, Tercer curso) en donde se introducen las bases para la dirección y gestión de un proyecto de desarrollo de software.
+
+\end{itemize}
+
+El proyecto llevado a cabo durante esta tesis de licenciatura encaja con muchas de las materias estudiadas en el Grado de Informática e Ingeniería de la Universidad Carlos III de Madrid, destacando los siguientes temas en particular:
+
+\subsection{Publicaciones}
+
+Este Trabajo Fin de Grado ha hecho una importante contribución al campo de la docencia en Estructura y Arquitectura de Computadores. Las principales contribuciones de este trabajo se han publicado en dos artículos:
+
+\begin{itemize}
+
+\item \textbf{A. Calderón, F. García-Carballeira, and J. Prieto}, “WepSIM: Simulador modular e interactivo de un procesador elemental para facilitar una visión integrada de la microprogramación y la programación en ensamblador”, \textit{Enseñanza y aprendizaje de ingeniería de computadores}, vol. 6, 35-53,2016. \cite{mateos2016wepsim}
+
+\item \textbf{J. Prieto, A. Calderón, F. García-Carballeira, and S. Alonso-Monsalve}, “WepSIM: simulador integrado de microprogramación y programación en ensamblador”, \textit{Jornadas sarteco 2016}. \cite{arcos2032}
+
+\end{itemize}
+
+Además, en el momento de la entrega de este documento también otro artículo enviado a la espera de su aceptación.
 
 \section{Trabajos Futuros}
 
+Actualmente, hay varias líneas de trabajos futuros en las cuáles estamos trabajando:
+
+\begin{itemize}
+
+\item Añadir un módulo de corrección automática de prácticas a la herramienta.
+
+\item Añadir revisión semántica del código, pudiendo identificar y notificar los errores de programación al usuario.
+
+\item Estudiar el ensamblador de MIPS/ARM generado con gcc/clang de forma que pueda ser usado directamente en WepSIM.
+
+\item Introducir más elementos hardware, como por ejemplo una caché.
+
+\end{itemize}
 
 
