@@ -190,20 +190,20 @@ Actualmente, gran parte de los recursos disponibles en el día a día son ofreci
 \subsection{HTML5}
 \label{sec:html5}
 
-Cuando se realiza el desarrollo de una página web, son tres las tecnologías que se están empleando con mayor frecuencia: HTML, CSS y JavaScript. Todas estas tecnologías vienen definidas y estandarizadas por el organismo internacional W3C y cada una de ellas, tiene una función concreta en el funcionamiento de la página web:
+Cuando se realiza el desarrollo de una página web, son tres las tecnologías que se emplean con mayor frecuencia: HTML, CSS y JavaScript. Todas estas tecnologías vienen definidas y estandarizadas por el organismo internacional W3C y cada una de ellas, tiene una función concreta en el funcionamiento de la página web:
 
 \begin{itemize}
-\item HTML: Es un lenguaje de marcado con el que se realiza la estructuración de la página web. Es un estándar que sirve de referencia del software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, vídeos, juegos, entre otros. 
+\item \textbf{HTML}: Es un lenguaje de marcado con el que se realiza la estructuración de la página web. Es un estándar que sirve de referencia del software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, vídeos, juegos, entre otros. 
 
 El lenguaje HTML basa su filosofía de desarrollo en la diferenciación. Para añadir un elemento externo a la página (imagen, vídeo, script, entre otros.), este no se incrusta directamente en el código de la página, sino que se hace una referencia a la ubicación de dicho elemento mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web (interpretador del código) la tarea de unir todos los elementos y visualizar la página final. Al ser un estándar, HTML busca ser un lenguaje que permita que cualquier página web escrita en una determinada versión, pueda ser interpretada de la misma forma (estándar) por cualquier navegador web actualizado.
 
 En cambio, a lo largo de las diferentes versiones, se han añadido y eliminado diferentes características, con la finalidad de hacer el lenguaje más eficiente y facilitar el desarrollo de páginas web con diferentes plataformas y navegadores. Un navegador web  desactualizado, no será capaz de interpretar correctamente una página web escrita en una versión superior de HTML a la que pueda interpretar.  
 
-\item CSS: Es un lenguaje de diseño gráfico utilizado para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado, como puede ser, HTML. Su principal finalidad, es establecer el diseño visual de las páginas web e interfaces de usuario escritas en los lenguajes HTML o XHTML. Este lenguaje además, permite aplicar estilos no visuales como pueden ser las hojas de estilo auditivas.
+\item \textbf{CSS}: Es un lenguaje de diseño gráfico utilizado para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado, como puede ser, HTML. Su principal finalidad, es establecer el diseño visual de las páginas web e interfaces de usuario escritas en los lenguajes HTML o XHTML. Este lenguaje además, permite aplicar estilos no visuales como pueden ser las hojas de estilo auditivas.
 
 Esta tecnología web, es usada por la mayoría de sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web, y GUIs para muchas de las aplicaciones móviles existentes en el mercado. Con ella, se pretende separar el contenido de la página web de la presentación, buscando mejorar la accesibilidad del documento y dando una mayor flexibilidad y control en la especificación de las características de la presentación, permitiendo que varios docuementos HTML compartan un mismo estilo usando una única hoja de estilos reduciendo la complejidad y la repetición de código en la estructura del documento.
 
-\item JavaScript: Es un lenguaje de programación interpretado orientado a las páginas web que surgió de la necesidad de ampliar las posibilidades del HTML. Su principal función en las páginas web, es realizar tareas y operaciones en el marco de la aplicación cliente como la mejora de la interfaz de usuario y la generación de páginas web dinámicas, aunque también es utilizado en el lado del servidor .
+\item \textbf{JavaScript}: Es un lenguaje de programación interpretado orientado a las páginas web que surgió de la necesidad de ampliar las posibilidades del HTML. Su principal función en las páginas web, es realizar tareas y operaciones en el marco de la aplicación cliente como la mejora de la interfaz de usuario y la generación de páginas web dinámicas, aunque también es utilizado en el lado del servidor .
 
 Este lenguaje, fue diseñado con una sintaxis similar a la del lenguaje de programación C, aunque adopta nombres y convenciones del lenguaje de programación Java. En cambio, Java y Javascript tienen propósitos y semánticas distintos.
 
@@ -214,17 +214,18 @@ En la actualidad, todos los navegadores realizan la interpretación del código 
 \subsection{Frameworks}
 \label{sec:frameworks}
 
-Comparison of JavaScript frameworks
-
-tablita de comparación de funcionalidades
-tablita de comparación de navegadores soportados
-
-163.117.148.35/wepsim-1.0
+Como se indica en \cite{garrido2004arquitectura} las aplicaciones web se han convertido en los últimos años en complejos sistemas software con interfaces de usuario cada vez más parecidas a las aplicaciones de escritorio, dando servicio a procesos de negocio de considerable envergadura y estableciéndose sobre ellas requisitos estrictos de accesibilidad y respuesta. Para ayudar al desarrollo de estas aplicaciones web, se hace uso de diferentes frameworks y bibliotecas que añaden funcionalidad al entorno de trabajo. Los frameworks son una estructura conceptual para el desarrollo e implementación de aplicaciones web, teniendo como objetivos principales la aceleración del proceso de desarrollo, reutilización de código ya existente y promover buenas prácticas de desarrollo, como el uso de patrones. Entre los frameworks más utilizados en la actualidad, se encuentran:
 
 \begin{itemize}
-\item Bootstrap
-\item Jquery
-\item AngularJS
+
+\item \textbf{Angular.js}: Es un framework MVC (Modelo-Vista-Controlador) de JavaScript de código abierto mantenido por Google para el desarrollo Web Front End, que permite crear aplicaciones \textit{Single-Page}. Este framework ha supuesto un avance puesto que al implementar el patrón MVC ayuda al desarrollador a separar conceptos. De este modo, adapta y amplía el HTML tradicional para servir mejor contenido dinámico a través de un \textit{data binding} bidireccional que permite la sincronización automática de modelos y vistas. Además facilita la creación de test unitarios, lo cual resulta de gran ayuda para los desarrolladores.
+
+\item \textbf{jQuery.js}: Es una biblioteca de JavaScript rápida, pequeña y característica. Ofrece una infraestructura que proporciona una mayor facilidad para la creación de aplicaciones complejas del lado del cliente. De esta forma, al utilizar esta biblioteca, el desarrollador se asegura que funcionará correctamente en los navegadores de los usuarios.
+
+\item \textbf{BootStrap}: Es un framework de código abierto para el diseño de aplicaciones web, en el cual se incluyen diferentes plantillas de diseño con tipografía, formularios, botones, menús de navegación y otros elementos de diseño basados en HTML y CSS que proporcionan el desarrollador ayuda a la hora de implementar la interfaz de usuario de su aplicación. Además, es compatible con la mayoría de los navegadores web.
+
+\item \textbf{Dojo}: Es un framework que contiene APIs que facilitan el desarrollo de aplicaciones web que utilizan la tecnología AJAX, conteniendo un sistema de empaquetado inteligente, efecto de interfaz de usuario, abstracción de eventos, almacenamiento de APIs en el cliente e interacción de APIs con AJAX.
+
 \end{itemize}
 
 \section{Procesador elemental WepSIM}

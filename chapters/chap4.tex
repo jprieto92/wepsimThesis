@@ -25,7 +25,38 @@ La sección \ref{sec:study_of_solution} discute el estudio de la solución final
 \section{Estudio de la solución final}
 \label{sec:study_of_solution}
 
-Para el diseño del simulador, existen en la actualidad diferentes modelos y frameworks de desarrollo web que ...
+Existen diferentes modelos arquitectónicos a la hora de realizar el diseño de una aplicación web. La primera opción, es el modelo cliente-servidor en el cual las tareas se reparten entre dos roles: un proveedor que proporciona recursos o servicios que es llamado servidor, y un consumidor que contacta con el servidor con el objetivo de hacer uso de los recursos que este provee. Es un modelo distribuido en el que la lógica de negocio y el cómputo recae en el servidor, y el cliente provee la interfaz de usuario, realizando validaciones y procesos menores de la lógica de negocio. La segunda opción, es un modelo en el que toda la aplicación es ejecutada en el cliente, siendo únicamente necesario el servidor para el acceso al código de la aplicación. Este modelo, posibilita incluso que el servidor no sea necesario en el caso de existir el código de la aplicación web en el cliente, pudiendo ser ejecutada sin la necesidad de internet. Ambos modelos, poseen una alta compatiblidad al hacer que las aplicaciones no sean dependientes del sistema operativo del usuario, sino del navegador web que este utiliza.
+
+Debido a los requisitos de usuario establecidos en este proyecto (Sección \ref{sec:user_requirements}), la segunda opción es la que cumple con la necesidad de no necesitar acceso a internet, de forma que la funcionalidad total del simulador quede en el dispositivo del usuario.
+
+Una vez decidido el modelo de diseño, es necesario tener en cuenta las diferentes tecnologías a utilizar. Como se indicó en (Sección \ref{sec:user_requirements}), es necesario que la aplicación sea diseñada siguiendo el lenguaje de programación HTML5, que está formado por HTML, CSS y JavaScript. De este modo, es necesario contemplar los diferentes frameworks y bibliotecas existentes que ayudan a la hora de realizar el diseño de la aplicación, posibilitando el funcionamiento de esta tanto el ordenadores como en dispositivos móviles. Estas tecnologías descritas anteriormente en el Apartado \ref{sec:tecnologias_web}, proporcionan distintas funcionalidades y enfoques a la hora de diseñar la aplicación, permitiendo la compatibilidad de la aplicación con la amplia mayoría de los navegadores web. En la Tabla \ref{tab:comparison_webframeworks}, se analizan las funcionalidades y compatibilidades que proporcionan estas tecnologías, valorando si cumplen con los requisitos establecidos en este proyecto.
+
+\begin{table}[htbp]
+\ra{1.2}
+\centering
+%\resizebox{\textwidth}{%
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}llllllll@{}}
+\toprule
+Simulador & SPIM & MARS & PC88110 & WebMIPS & WepSIM  & P8080E & MicMac\\ 
+\midrule
+Ensamblador				& \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} &  &  \\
+\midrule
+Microprogramación				&  &  &  &  & \ding{51} & \ding{51} & \ding{51} \\
+\midrule
+Multiplataforma				& \ding{51} &  &  & \ding{51} & \ding{51} &  &  \\
+\midrule
+Interactivo				&  &  &  &  & \ding{51} &  &  \\
+\midrule
+Juego de instrucciones personalizable				&  &  &  &  & \ding{51} &  &  \\
+\bottomrule
+\end{tabular}
+}
+\caption{Comparación de frameworks y bibliotecas.}
+\label{tab:comparison_webframeworks}
+\end{table}
+
+De este modo, se puede observar como pese a que \textit{Angular.js} nos proporciona la mayoría de funcionalidades requeridas, tiene una curva de aprendizaje bastante mayor que \textit{jQuery}, lo cual hace que \textit{jQuery} se imponga a la hora de su elección debido a que la ganancia de uso que proporcionaría \textit{Angular.js} es inferior a este inconveniente. Por otro lado, sería interesante el uso de \textit{Dojo} a la hora de utilizar una tecnología que nos proporcione funcionalidad y efectos en la interfaz de usuario y nos ayude a la capturación de eventos, pero queda descartado al estar enfocado a aplicaciones que utilizan \textit{AJAX}. De esta forma, \textit{BootStrap} será la tecnología elegida para dotar a la aplicación de la funcionalidad requerida a nivel de interfaz de usuario y complementando tanto a JavaScript como a jQuery.
 
 \subsection{Solución elegida}
 \label{sec:solution_selection}
