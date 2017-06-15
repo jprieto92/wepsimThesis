@@ -40,17 +40,15 @@ Una vez decidido el modelo de diseño, es necesario tener en cuenta las diferent
 \resizebox{\textwidth}{!}{
 \begin{tabular}{@{}llllllll@{}}
 \toprule
-Simulador & SPIM & MARS & PC88110 & WebMIPS & WepSIM  & P8080E & MicMac\\ 
+Framework & Angular.js & jQuery.js & BootStrap & Dojo \\ 
 \midrule
-Ensamblador				& \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} &  &  \\
+Funcionalidad requerida			& \ding{51}  &  \ding{51} & \ding{51} & \ding{51} \\
 \midrule
-Microprogramación				&  &  &  &  & \ding{51} & \ding{51} & \ding{51} \\
+Ejecución en cliente				& \ding{51} & \ding{51} & \ding{51} &  \\
 \midrule
-Multiplataforma				& \ding{51} &  &  & \ding{51} & \ding{51} &  &  \\
+Compatibilidad navegadores requeridos				& \ding{51} & \ding{51} & \ding{51} & \ding{51} \\
 \midrule
-Interactivo				&  &  &  &  & \ding{51} &  &  \\
-\midrule
-Juego de instrucciones personalizable				&  &  &  &  & \ding{51} &  &  \\
+Soporte plataformas móviles				& \ding{51}  & \ding{51}  & \ding{51}  & \\
 \bottomrule
 \end{tabular}
 }
@@ -187,10 +185,19 @@ Una de las grandes ventajas del simulador WepSIM es que no está limitado a un c
 
 \subsection{Kernel del simulador}
 
-El kernel de simulación diseñado en WepSIM, es el componente que sirve de unión entre el modelo hardware y software. Su función principal reside en la simulación del computador utilizando la definición del modelo hardware  y el juego de instrucciones definido, realizando la ejecución de los códigos ensamblador, siendo el controlador de la herramienta. 
+El kernel del simulador, es el componente que integra la interfaz de usuario del simulador, el controlador del simulador, y el motor de simulación, siendo el encargado de hacer las funciones de controlador de la herramienta gestionando las comunicaciones de la interfaz de usuario con los modelos hardware y software. 
 
-Además de realizar el proceso de simulación, este componente a su vez realiza la actualización de la interfaz de usuario del simulador, en donde se muestra el valor de cada uno de los registros de la máquina y el estado de los buses y señales que conforman el modelo hardware.
+De esta forma cuando el usuario interacciona con la interfaz gráfica, el módulo encargado de la interfaz genera eventos que identifican las acciones que el usuario realiza. Estos eventos son generados a modo de peticiones al controlador de la simulación, que se encarga de identificar el evento generado, comprobar el contexto en el cual se encuentra, y enviar la acción correspondiente a realizar al motor del simulador. El motor del simulador, se encarga de comunicarse con los modelos hardware y software, de forma que estos puedan ejecutar correctamente la acción solicitada (Figura \ref{fig:kernel_diagram}).
 
-En una simulación, este kernel en primer lugar se encarga de importar en la memoria de control el resultado de la generación del juego de instrucciones definido por el usuario. Una vez cargado el lenguaje máquina, se encarga de cargar el resultado del código ensamblador compilado en la memoria principal del simulador. Una vez cargada esta información, a través de la información que le proporcionan tanto el modelo hardware como el modelo software, se encarga de gestionar los eventos que son generados debido a la interacción del usuario con el simulador a través de la interfaz de usuario. Estos eventos son generados por el módulo de la interfaz de usuario y son tratados por el kernel del simulador, identificando cada uno de los eventos y ejecutando la función asociada a estos eventos. Este diseño orientado a eventos mantiene el principio de diseño modular de la herramienta, de forma que en un futuro éste kernel pueda ser utilizado sin necesidad de una interfaz gráfica.
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=10cm]{figures/kernel_diagram}
+ 	\caption{Arquitectura del kernel del simulador.}
+	\label{fig:kernel_diagram}
+\end{figure}
+
+Por ejemplo, si el usuario selecciona la ejecución de un ciclo de reloj, la interfaz de usuario genera el evento correspondiente. El controlador del simulador, se encarga de identificar el evento, verificar que se cumplen todas las condiciones para poder ejecutarse un ciclo de reloj comprobando diferentes valores del estado del simulador. En caso de poder ser realizada la ejecución del ciclo de reloj, envía la orden al motor del simulador que se encarga de comunicarse con el  modelo hardware, realizando la ejecución de un ciclo de reloj actualizando los componentes del modelo hardware. Por último, la interfaz de usuario consulta el estado del modelo hardware actualizando la información necesaria para ser mostrada al usuario.
+
+
 
 
