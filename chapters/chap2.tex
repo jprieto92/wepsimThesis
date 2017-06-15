@@ -33,8 +33,6 @@ En esta sección, se explican los diferentes simuladores existentes para la micr
 
 P8080E \cite{p8080E} es un simulador desarrollado en el DATSI en la Facultad de Informática de la Universidad Politécnica de Madrid. Este simulador, no consta de una interfaz gráfica portable e interactiva que se ajuste a las tecnologías actuales. Para realizar poder realizar el desarrollo del microcódigo, el simulador requiere el binario completo de cada ciclo, de forma que resulta un tanto complejo su uso. Pese a ser un simulador bastante completo, no está orientado para la enseñanza de ensamblador y microprogramación con la misma herramienta, puesto que no permite la definición del juego de instrucciones con un formato diferente al definido por defecto.
 
-En \cite{yen1986development}, se describe el desarrollo y la implementación de un simulador para una arquitectura de microprogramación específica. Fue publicado en el año 1986, y estaba basado en la arquitectura definida en el entonces popular libro de ingeniería de computadores \cite{tanenbaum1984}. El simulador, requería de la definición de cada uno de los ciclos de ejecución de las intrucciones para la posterior generación de la memoria de control. Esta definición, se realizaba mediante la sintaxis definida en el libro, lo que hacía de este simulador una herramienta bastante completa al para aprender junto con el libro. 
-
 \begin{figure}[htbp]
  	\centering
  	\includegraphics[width=6cm]{figures/ejemploTanenbaum}
@@ -42,10 +40,19 @@ En \cite{yen1986development}, se describe el desarrollo y la implementación de 
 	\label{fig:tanenbaum_figure}
 \end{figure}
 
+En \cite{yen1986development}, se describe el desarrollo y la implementación de un simulador para una arquitectura de microprogramación específica. Fue publicado en el año 1986, y estaba basado en la arquitectura definida en el entonces popular libro de ingeniería de computadores \cite{tanenbaum1984}. El simulador, requería de la definición de cada uno de los ciclos de ejecución de las intrucciones para la posterior generación de la memoria de control. Esta definición, se realizaba mediante la sintaxis definida en el libro, lo que hacía de este simulador una herramienta bastante completa al para aprender junto con el libro. 
+
 
 \subsection{Simuladores para programación en ensamblador}
 \label{sec:simuladores_ensamblador}
 En esta sección, se explican los diferentes simuladores existentes para la programación en ensamblador. Los simuladores más conocidos para labores docentes, son SPIM, MARS y WebMIPS.
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=8cm]{figures/spim_figure}
+ 	\caption{Interfaz SPIM.}
+	\label{fig:spim_figure}
+\end{figure}
 
 SPIM \cite{larus1990spim}, es un simulador de un procesador MIPS de 32 bits desarrollado a principios de 1990. En un primer momento implementaba el juego de instrucciones MIPS-1, utilizado por los computadores MIPS R2000/R3000. Actualmente, implementa la arquitectura MIPS32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el alumno pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque su diseño no está pensado para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción syscall. SPIM, es un simulador que permite múltiples configuraciones mediante su interfaz de usuario, de manera que se puede indicar:
 
@@ -62,13 +69,6 @@ SPIM \cite{larus1990spim}, es un simulador de un procesador MIPS de 32 bits desa
 \item Activación del uso de "memory-mapped IO".
 
 \end{itemize}
-
-\begin{figure}[htbp]
- 	\centering
- 	\includegraphics[width=8cm]{figures/spim_figure}
- 	\caption{Interfaz SPIM.}
-	\label{fig:spim_figure}
-\end{figure}
 
 SPIM, además cuenta con una versión más actualizada del simulador, que posee una interfaz gráfica más potente. Éste simulador se llama QtSPIM \cite{aguilar2013simuladores}, y cuenta con todas las características anteriormente mencionadas de SPIM.
 
@@ -99,7 +99,7 @@ MARS \cite{vollmar2006mars}, es un simulador con interfaz gráfica desarrollado 
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=12cm]{figures/mars_figure}
+ 	\includegraphics[width=14cm]{figures/mars_figure}
  	\caption{Interfaz MARS.}
 	\label{fig:mars_figure}
 \end{figure}
@@ -108,7 +108,7 @@ P88110, es emulador descrito en \cite{garcia2009p88110} que se basa en la emulac
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=12cm]{figures/em88110}
+ 	\includegraphics[width=8cm]{figures/em88110}
  	\caption{Interfaz em88110.}
 	\label{fig:p88110_figure}
 \end{figure}
@@ -132,7 +132,7 @@ Entre las diferentes características a destacar de este simulador, se encuentra
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=12cm]{figures/webmips_figure}
+ 	\includegraphics[width=15cm]{figures/webmips_figure}
  	\caption{ Interfaz WebMIPS.}
 	\label{fig:webmips_figure}
 \end{figure}
@@ -236,14 +236,14 @@ En la figura \ref{fig:wepsimCPU_figure}, se muestra la estructura del Procesador
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=12cm]{figures/cpu}
+ 	\includegraphics[width=11cm]{figures/cpu}
  	\caption{Arquitectura CPU WepSIM .}
 	\label{fig:wepsimCPU_figure}
 \end{figure}
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=12cm]{figures/controlUnit}
+ 	\includegraphics[width=11cm]{figures/controlUnit}
  	\caption{Arquitectura unidad de control WepSIM.}
 	\label{fig:wepsimCU_figure}
 \end{figure}
