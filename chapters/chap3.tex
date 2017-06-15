@@ -361,7 +361,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-R01 \\
 \midrule
-\textbf{Nombre} 			& Aplicación web\\
+\textbf{Nombre} 			& Multiplataforma\\
 \midrule
 \textbf{Tipo} 			& Restricción \\
 \midrule
@@ -371,7 +371,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El simulador debe de ser una aplicación web. \\
+\textbf{Descripción} 	& El simulador no debe ser instalado en el dispositivo del usuario. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R01.}
@@ -558,7 +558,6 @@ Esta subsección especifica los requisitos de usuario.
 
 \fi
 
-\clearpage
 \subsection{Modelo de Casos de Uso}
 \label{sec:user_cases}
 
@@ -1708,9 +1707,9 @@ Esta subsección especifica los requisitos no-funcionales.
 \toprule
 \textbf{ID} 				& SR-NF-PL01 \\
 \midrule
-\textbf{Nombre} 			& Aplicación web \\
+\textbf{Nombre} 			&  Multiplataforma \\
 \midrule
-\textbf{Tipo} 			& Interfaz \\
+\textbf{Tipo} 			& Plataforma \\
 \midrule
 \textbf{Origen} 			& UR-R01 \\
 \midrule
@@ -1735,7 +1734,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Nombre} 			& Navegadores web \\
 \midrule
-\textbf{Tipo} 			& Interfaz \\
+\textbf{Tipo} 			& Plataforma \\
 \midrule
 \textbf{Origen} 			& UR-R02 \\
 \midrule
@@ -1760,7 +1759,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Nombre} 			& Plataforma de ejecución \\
 \midrule
-\textbf{Tipo} 			& Interfaz \\
+\textbf{Tipo} 			& Plataforma \\
 \midrule
 \textbf{Origen} 			& UR-R05 \\
 \midrule
@@ -1785,7 +1784,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Nombre} 			& Internet \\
 \midrule
-\textbf{Tipo} 			& Interfaz \\
+\textbf{Tipo} 			& Plataforma \\
 \midrule
 \textbf{Origen} 			& UR-R06 \\
 \midrule
@@ -1810,9 +1809,9 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Nombre} 			& Lenguaje de programación HTML5 \\
 \midrule
-\textbf{Tipo} 			& Interfaz \\
+\textbf{Tipo} 			& Plataforma \\
 \midrule
-\textbf{Origen} 			& UR-R06 \\
+\textbf{Origen} 			& UR-R07 \\
 \midrule
 \textbf{Prioridad}		& Esencial \\
 \midrule
@@ -1860,9 +1859,9 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Nombre} 			& Tiempo medio por ciclo de reloj \\
 \midrule
-\textbf{Tipo} 			& Interfaz \\
+\textbf{Tipo} 			& Rendimiento \\
 \midrule
-\textbf{Origen} 			& UR-R03 \\
+\textbf{Origen} 			& UR-R04 \\
 \midrule
 \textbf{Prioridad}		& Esencial \\
 \midrule
@@ -1875,6 +1874,50 @@ Esta subsección especifica los requisitos no-funcionales.
 \label{tab:srnfp01}
 \end{table*}
 \end{center}
+
+La matriz de trazabilidad de entre requisitos de usuario y requisitos de software (Tabla \ref{tab:requirements_matrix}) determina que todos los requisitos de usuario quedan reflejados en los requisitos de software.
+
+\begin{table}[htb]
+\ra{1.3}
+  \centering
+  \begin{tabular}{@{}L{3cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}@{}}
+    \toprule
+     \thead{Requisitos} & \rothead{UR-C01} & \rothead{UR-C02} & \rothead{UR-C03} & \rothead{UR-C04}& \rothead{UR-C05} & \rothead{UR-C06} & \rothead{UR-C07} & \rothead{UR-C08} & \rothead{UR-C09} & \rothead{UR-R01} & \rothead{UR-R02} & \rothead{UR-R03} & \rothead{UR-R04} & \rothead{UR-R05} & \rothead{UR-R06} & \rothead{UR-R07} \\
+    \midrule
+    SR-F-F01 & \ding{51} & - & - & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F02 & \ding{51} & - & - & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F03 & \ding{51} & - & - & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F04 & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F05 & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F06 & - & - & \ding{51} & - & - & - & - &  & - & - & - & - & - & - & - & - \\
+    SR-F-F07 & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F08 & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F09 & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F10 & - & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F11 & - & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F12 & - & - & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F13 & - & - & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F14 & - & - & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F15 & - & - & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F16 & - & - & - & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F17 & - & - & - & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F18 & - & - & - & - & - & \ding{51} & - & - & - & - & - & - & - & - & - & - \\
+    SR-F-F19 & - & - & - & - & - & - & \ding{51} & - & - & - & - & - & - & - & - & - \\
+    SR-F-F20 & - & - & - & - & - & - & - & \ding{51} & - & - & - & - & - & - & - & - \\
+    SR-F-F21 & - & - & - & - & - & - & - & - & \ding{51} & - & - & - & - & - & - & - \\
+    SR-F-F22 & - & - & - & - & - & - & - & - & - & \ding{51} & - & - & - & - & - & - \\
+    SR-NF-PL01 & - & - & - & - & - & - & - & - & - & \ding{51} & - & - & - & - & - & - \\
+    SR-NF-PL02 & - & - & - & - & - & - & - & - & - & - & \ding{51} & - & - & - & - & - \\
+    SR-NF-PL03 & - & - & - & - & - & - & - & - & - & - & - & - & - & \ding{51} & - & - \\
+    SR-NF-PL04 & - & - & - & - & - & - & - & - & - & - & - & - & - & - & \ding{51} & - \\
+    SR-NF-PL05 & - & - & - & - & - & - & - & - & - & - & - & - & - & - & - & \ding{51} \\
+    SR-NF-UI01 & - & - & - & - & - & - & - & - & - & - & - & \ding{51} & - & - & - & - \\
+    SR-NF-P01 & - & - & - & - & - & - & - & - & - & - & - & - & \ding{51} & - & - & - \\
+    \bottomrule
+\end{tabular}
+\caption{Matriz de trazabilidad de requisitos.}
+\label{tab:requirements_matrix}
+\end{table}    
 
 \section{Marco Regulador}
 \label{sec:regulatory_framework}
