@@ -54,19 +54,19 @@ En esta sección, se explican los diferentes simuladores existentes para la prog
 	\label{fig:spim_figure}
 \end{figure}
 
-SPIM \cite{larus1990spim}, es un simulador de un procesador MIPS de 32 bits desarrollado a principios de 1990. En un primer momento implementaba el juego de instrucciones MIPS-1, utilizado por los computadores MIPS R2000/R3000. Actualmente, implementa la arquitectura MIPS32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el estudiante pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque su diseño no está pensado para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción syscall. SPIM, es un simulador que permite múltiples configuraciones mediante su interfaz de usuario, de manera que se puede indicar:
+SPIM \cite{larus1990spim}, es un simulador de un procesador MIPS de 32 bits desarrollado a principios de 1990. En un primer momento implementaba el juego de instrucciones MIPS-1, utilizado por los computadores MIPS R2000/R3000. Actualmente, implementa la arquitectura MIPS32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el estudiante pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque su diseño no está pensado para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción \emph{syscall}. SPIM es un simulador que permite múltiples configuraciones mediante su interfaz de usuario, de manera que se puede indicar:
 
 \begin{itemize}
 
-\item Activación del uso de pseudoinstrucciones.
+\item Activación del uso de pseudoinstrucciones,
 
-\item Simulación de predicción de saltos y accesos a memoria, con la latencia correspondiente.
+\item Simulación de predicción de saltos y accesos a memoria, con la latencia correspondiente,
 
-\item Activación del uso del manejador de la señal trap y la carga del manejador personalizado.
+\item Activación del uso del manejador de la señal trap y la carga del manejador personalizado,
 
-\item Activación de la visualización de los mensajes en caso de ocurrir excepciones.
+\item Activación de la visualización de los mensajes en caso de ocurrir excepciones,
 
-\item Activación del uso de "memory-mapped IO".
+\item Activación del uso de ``memory-mapped IO''.
 
 \end{itemize}
 
@@ -79,17 +79,17 @@ SPIM, además cuenta con una versión más actualizada del simulador, que posee 
 	\label{fig:qtspim_figure}
 \end{figure}
 
-MARS \cite{vollmar2006mars}, es un simulador con interfaz gráfica desarrollado en JAVA para el lenguaje ensamblador MIPS. Fue creado en el año 2005 como una alternativa del simulador SPIM y diseñado específicamente para las necesidades limitadas de cusos de pregrado. Está basado en la arquitectura MIPS RISC, que tiene un número pequeño de elementos del lenguaje e instrucciones. Consta de operaciones de entrada/salida, saltos, condiciones y operaciones aritmético-lógicas tanto enteras como en coma flotante. Alguna de las mejoras que incorpora MARS con respecto a SPIM son \cite{vegdahl2008mipspilot}: 
+MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado en JAVA para el lenguaje ensamblador MIPS. Fue creado en el año 2005 como una alternativa del simulador SPIM y diseñado específicamente para las necesidades limitadas de cursos de pre-grado. Está basado en la arquitectura MIPS RISC, que tiene un número pequeño de elementos del lenguaje e instrucciones. Consta de operaciones de entrada/salida, saltos, condiciones y operaciones aritmético-lógicas tanto enteras como en coma flotante. Alguna de las mejoras que incorpora MARS con respecto a SPIM son \cite{vegdahl2008mipspilot}: 
 
 \begin{itemize}
 
-\item Depuración más sencilla y cómoda, debido constar de GUI. Ésto se debe, a que para añadir un punto de ruptura, únicamente hay que clickar sobre un checkbox que tiene la instrucción.
+\item Depuración más sencilla y cómoda, debido constar de una interfáz gráfica de usuario (GUI). Esto se debe, a que para añadir un punto de ruptura, únicamente hay que pulsar sobre el elemento que tiene la instrucción.
 
-\item Los programas puedes ejecutarse de forma inversa, lo que permite volver a un estado anterior de la máquina en la ejecución de un programa.
+\item Los programas puedes ejecutarse de forma inversa, lo que permite volver a un estado anterior del computador en la ejecución de un programa.
 
 \item La velocidad de ejecución puede modificarse, de forma que si se ralentiza el usuario puede observar como cada instrucción se resalta cuando está siendo ejecutada y ver los cambios que se producen en los valores del banco de registros y de las ubicaciones de memoria.
 
-\item  La memoria y los registros se pueden modificar de una manera WYSIWYG.
+\item  La memoria y los registros se pueden modificar de una manera \emph{WYSIWYG}.
 
 \item Incorpora un editor de texto, eliminando dependencias externas para el uso del simulador.
 
@@ -104,7 +104,7 @@ MARS \cite{vollmar2006mars}, es un simulador con interfaz gráfica desarrollado 
 	\label{fig:mars_figure}
 \end{figure}
 
-P88110, es emulador descrito en \cite{garcia2009p88110} que se basa en la emulación de un procesador superescalar. El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del pipeline y las dependencias existentes. Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
+P88110 es emulador descrito en \cite{garcia2009p88110} que se basa en la emulación de un procesador superescalar. El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del pipeline y las dependencias existentes. Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
 
 \begin{figure}[htbp]
  	\centering
@@ -114,7 +114,7 @@ P88110, es emulador descrito en \cite{garcia2009p88110} que se basa en la emulac
 \end{figure}
 
 
-WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web, de forma que no requiere de su instalación en local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de intruducción al estudio de arquitectura de computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las 5 etapas de pipeline de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura "Arquitectura de Computadores" impartida por los creadores del simulador.
+WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web, de forma que no requiere de su instalación en local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de arquitectura de computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las 5 etapas de pipeline de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura "Arquitectura de Computadores" impartida por los creadores del simulador.
 
 Entre las diferentes características a destacar de este simulador, se encuentran:
 
@@ -179,7 +179,7 @@ Juego de instrucciones personalizable				&  &  &  &  & \ding{51} &  &  \\
 
 De este modo, con WepSIM se pretende crear un simulador unificado, abarcando los aspectos más relevantes de la asignatura 'Estructura de Computadores' y permitiendo que todas las prácticas de la asignatura puedan realizarse en la misma plataforma, evitando la pérdida de tiempo y dificultad que supone para el estudiante el habituarse a diferentes entornos para cada una de las prácticas.
 
-WepSIM, se puede definir por tanto como un simulador de programación en ensamblador y microprogramación, flexible puesto que permite la personalización del juego de instrucciones de la máquina, multiplataforma puesto que permite su uso desde diferentes tipos de dispositivos, e interactivo al poder modificar la configuración de la máquina en tiempo de ejecución.
+WepSIM se puede definir por tanto como un simulador de programación en ensamblador y microprogramación, flexible puesto que permite la personalización del juego de instrucciones del computador, multiplataforma puesto que permite su uso desde diferentes tipos de dispositivos, e interactivo al poder modificar la configuración del computador en tiempo de ejecución.
 
 
 \section{Tecnologías web}
@@ -201,7 +201,7 @@ En cambio, a lo largo de las diferentes versiones, se han añadido y eliminado d
 
 \item \textbf{CSS}: Es un lenguaje de diseño gráfico utilizado para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado, como puede ser, HTML. Su principal finalidad, es establecer el diseño visual de las páginas web e interfaces de usuario escritas en los lenguajes HTML o XHTML. Este lenguaje además, permite aplicar estilos no visuales como pueden ser las hojas de estilo auditivas.
 
-Esta tecnología web, es usada por la mayoría de sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web, y GUIs para muchas de las aplicaciones móviles existentes en el mercado. Con ella, se pretende separar el contenido de la página web de la presentación, buscando mejorar la accesibilidad del documento y dando una mayor flexibilidad y control en la especificación de las características de la presentación, permitiendo que varios docuementos HTML compartan un mismo estilo usando una única hoja de estilos reduciendo la complejidad y la repetición de código en la estructura del documento.
+Esta tecnología web, es usada por la mayoría de sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web, y GUIs para muchas de las aplicaciones móviles existentes en el mercado. Con ella, se pretende separar el contenido de la página web de la presentación, buscando mejorar la accesibilidad del documento y dando una mayor flexibilidad y control en la especificación de las características de la presentación, permitiendo que varios documentos HTML compartan un mismo estilo usando una única hoja de estilos reduciendo la complejidad y la repetición de código en la estructura del documento.
 
 \item \textbf{JavaScript}: Es un lenguaje de programación interpretado orientado a las páginas web que surgió de la necesidad de ampliar las posibilidades del HTML. Su principal función en las páginas web, es realizar tareas y operaciones en el marco de la aplicación cliente como la mejora de la interfaz de usuario y la generación de páginas web dinámicas, aunque también es utilizado en el lado del servidor .
 
@@ -236,21 +236,21 @@ En la figura \ref{fig:wepsimCPU_figure}, se muestra la estructura del Procesador
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=11cm]{figures/cpu}
+ 	\includegraphics[width=11cm]{figures/processor6}
  	\caption{Arquitectura CPU WepSIM .}
 	\label{fig:wepsimCPU_figure}
 \end{figure}
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=11cm]{figures/controlUnit}
+ 	\includegraphics[width=11cm]{figures/controlunit6}
  	\caption{Arquitectura unidad de control WepSIM.}
 	\label{fig:wepsimCU_figure}
 \end{figure}
 
 WepSIM es un procesador de 32 bits que direcciona la memoria por bytes, que cuenta con un banco de 32 registros y dos registros adicionales (RT1 y RT2) que no son visibles para el programador de ensamblador, pero que permiten el almacenamiento temporal de datos para la realización de operaciones intermedias. Desde los registros, es posible enviar los valores para operar en una ALU que dispone de las 15 operaciones aritmético-lógicas más comunes. El registro PC tiene su propio operador de sumar cuatro, de forma que no es necesario hacer uso de la ALU para esta operación. El resultado de las operaciones realizadas en la ALU puede ser almacenado en un registro temporal (RT3) que también es invisible para el programador de ensamblador, o ser enviado directamente al bus interno a través del correspondiente triestado.
 
-El registro de estado (SR) puede ser actualizado con los flags resultantes de la última operación de la alu (O, N y Z). Para ello, SELEC/SelP representa un bloque de circuitos que permite indicar qué parte del registro de estado (SR) debe ser actualizado. A la derecha de SELEC/SelP llegan los bits del registro de estado SR como entrada (Input=O N Z I U) y SelP permite seleccionar qué grupo de estos bits se actualizará en el registro de estado: los bits O, N y Z con los valores procedentes de la ALU, el bit I con el valor indicado o el bit U con el valor indicado para el mismo.
+El registro de estado (SR) puede ser actualizado con los \emph{flags} resultantes de la última operación de la alu (O, N y Z). Para ello, SELEC/SelP representa un bloque de circuitos que permite indicar qué parte del registro de estado (SR) debe ser actualizado. A la derecha de SELEC/SelP llegan los bits del registro de estado SR como entrada (Input=O N Z I U) y SelP permite seleccionar qué grupo de estos bits se actualizará en el registro de estado: los bits O, N y Z con los valores procedentes de la ALU, el bit I con el valor indicado o el bit U con el valor indicado para el mismo.
 
 El registro de instrucción (IR) tiene asociado un módulo selector (circuito de  más alto nivel que un multiplexor, etc.) que permite seleccionar un segmento del valor binario almacenado en el registro de instrucción que pasará hacia T3.
 

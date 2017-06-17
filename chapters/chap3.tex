@@ -18,7 +18,7 @@
 \label{ch:analysis}
 \markboth{}{ANALYSIS}
 
-El objetivo principal de este capitulo, es describir el proyecto mediante la obtención y especificación de los requisitos del simulador, que puede proporcionar información suficiente para un análisis detallado que, por lo tanto, puede servir para continuar diseñando e implementando (Capítulos \ref{ch:design}, \textit{\nameref{ch:design}}; and \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}}) un software que cumpla con esos requisitos. 
+El objetivo principal de este capitulo, es describir el proyecto mediante la obtención y especificación de los requisitos del simulador, que puede proporcionar información suficiente para un análisis detallado que, por lo tanto, puede servir para continuar diseñando e implementando (Capítulos \ref{ch:design}, \textit{\nameref{ch:design}}; y \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}}) un software que cumpla con esos requisitos. 
 
 Con el fin de obtener los requisitos del sistema, el tutor ha desempeñado el papel del cliente en diferentes reuniones, mientras que el estudiante ha desempeñado los roles de analista, diseñador, programador y probador.
 
@@ -471,7 +471,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& Las simulaciones serán realizadas en la máquina del usuario, siendo únicamente necesario el servidor para el acceso a la herramienta. \\
+\textbf{Descripción} 	& Las simulaciones serán realizadas en el dispositivo del usuario, siendo únicamente necesario el servidor para el acceso a la herramienta. \\
 \bottomrule
 \end{tabular}
 \caption{Requisito de usuario UR-R05.}
@@ -1538,164 +1538,6 @@ Esta subsección especifica los requisitos funcionales.
 \end{table*}
 \end{center}
 
-
-
-
-
-\iffalse
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& SR-F-F04 \\
-\midrule
-\textbf{Nombre} 			& Diferenciación de flancos \\
-\midrule
-\textbf{Tipo} 			& Funcional \\
-\midrule
-\textbf{Origen} 			& UR-C01 \\
-\midrule
-\textbf{Prioridad}		& Esencial \\
-\midrule
-\textbf{Estabilidad} 		& Estable \\
-\midrule
-\textbf{Descripción} 	& El simulador debe diferenciar los flancos en los ciclos de reloj. \\
-\bottomrule
-\end{tabular}
-\caption{Requisito Funcional SR-F-F04.}
-\label{tab:srff00}
-\end{table*}
-\end{center}
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& SR-F-F02\\
-\midrule
-\textbf{Name} 			& Collection of statistics \\
-\midrule
-\textbf{Type} 			& Functional \\
-\midrule
-\textbf{Origin} 			& UR-C01 \\
-\midrule
-\textbf{Priority}		& Essential \\
-\midrule
-\textbf{Stability} 		& Stable \\
-\midrule
-\textbf{Description} 	& The simulator shall collect, for each project, the same statistics that actual BOINC projects (published in BOINCstats \cite{BOINC2016}). \\
-\bottomrule
-\end{tabular}
-\caption{Functional requirement SR-F-F02.}
-\label{tab:srff02}
-\end{table*}
-\end{center}
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& SR-F-F03\\
-\midrule
-\textbf{Name} 			& Almost identical outputs \\
-\midrule
-\textbf{Type} 			& Functional \\
-\midrule
-\textbf{Origin} 			& UR-C01 \\
-\midrule
-\textbf{Priority}		& Essential \\
-\midrule
-\textbf{Stability} 		& Stable \\
-\midrule
-\textbf{Description} 	& The outputs of the simulator for existing projects should be almost identical to those published in BOINCstats \cite{BOINC2016}. \\
-\bottomrule
-\end{tabular}
-\caption{Functional requirement SR-F-F03.}
-\label{tab:srff03}
-\end{table*}
-\end{center}
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& SR-F-F04\\
-\midrule
-\textbf{Name} 			& Multiple BOINC projects \\
-\midrule
-\textbf{Type} 			& Functional \\
-\midrule
-\textbf{Origin} 			& UR-C01 \\
-\midrule
-\textbf{Priority}		& Essential \\
-\midrule
-\textbf{Stability} 		& Stable \\
-\midrule
-\textbf{Description} 	& The simulator shall allow the simulation of different projects simultaneously. \\
-\bottomrule
-\end{tabular}
-\caption{Functional requirement SR-F-F04.}
-\label{tab:srff04}
-\end{table*}
-\end{center}
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& SR-F-F05\\
-\midrule
-\textbf{Name} 			& Client scheduler \\
-\midrule
-\textbf{Type} 			& Functional \\
-\midrule
-\textbf{Origin} 			& UR-C02 \\
-\midrule
-\textbf{Priority}		& Essential \\
-\midrule
-\textbf{Stability} 		& Stable \\
-\midrule
-\textbf{Description} 	& The client scheduler shall follow the actual BOINC client \gls{scheduling} (described in \cite{anderson2007}). \\
-\bottomrule
-\end{tabular}
-\caption{Functional requirement SR-F-F05.}
-\label{tab:srff05}
-\end{table*}
-\end{center}
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& SR-F-F06\\
-\midrule
-\textbf{Name} 			& Realistic simulation elements \\
-\midrule
-\textbf{Type} 			& Functional \\
-\midrule
-\textbf{Origin} 			& UR-C03 \\
-\midrule
-\textbf{Priority}		& Essential \\
-\midrule
-\textbf{Stability} 		& Stable \\
-\midrule
-\textbf{Description} 	& All simulations shall include the following elements: tasks, volunteer hosts, servers, data servers, networks, and hosts availability. \\
-\bottomrule
-\end{tabular}
-\caption{Functional requirement SR-F-F06.}
-\label{tab:srff06}
-\end{table*}
-\end{center}
-
-\fi
-
 \subsection{Requisitos No-Funcionales}
 
 Esta subsección especifica los requisitos no-funcionales.
@@ -1927,10 +1769,10 @@ Esta sección discute las restricciones necesarias teniendo en cuenta el marco r
 \subsection{Aspectos Legales}
 \label{sec:legal_constraints}
 
-Para el uso de la mayoría de aplicaciones web, los usuarios deben de registrarse, y las bases de datos de las mismas manejan información confidencial de los usuarios, por lo que es necesario garantizar que terceros no puedan acceder a esa información. Una solución es cifrar la información transmitida mediante algún \gls{protocol} criptografico. En España, este requisito es especificado en el artículo 104 del RD 1720/2007 \cite{boe2008}, que se ocupa de la Ley Española de Protección de Datos.
+Para el uso de la mayoría de aplicaciones web, los usuarios deben de registrarse, y las bases de datos de las mismas manejan información confidencial de los usuarios, por lo que es necesario garantizar que terceros no puedan acceder a esa información. Una solución es cifrar la información transmitida mediante algún \gls{protocol} criptográfico. En España, este requisito es especificado en el artículo 104 del RD 1720/2007 \cite{boe2008}, que se ocupa de la Ley Española de Protección de Datos.
 
 
-En contraste, la aplicación desarrollada no utiliza datos privados de los usuarios y tampoco transmite información confidencial a terceros, ya que es un simulador que únicamente utiliza los códigos generados por el usuario para ejecutarlos de forma local en la máquina del usuario.
+En contraste, la aplicación desarrollada no utiliza datos privados de los usuarios y tampoco transmite información confidencial a terceros, ya que es un simulador que únicamente utiliza los códigos generados por el usuario para ejecutarlos de forma local en el dispositivo del usuario.
 
 
 Por otro lado, es crucial que nuestro simulador esté disponible como un software de código abierto. Queremos que sea tal que cualquiera pueda redistribuir el código o modificarlo por los términos de la Licencia Pública General Menor de GNU (LGPL) \cite{gnulgpl}. Para ello, nuestro simulador está disponible en los siguientes sitios web: 

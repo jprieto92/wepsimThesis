@@ -64,9 +64,14 @@
 \setlength\epigraphwidth{8cm}
 \setlength\epigraphrule{0pt}
 
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\contentsname}{Lista de Contenidos}
+\renewcommand{\figurename}{\textbf{\textit{Figura}}}
+
 % pseudocode
 \makeatletter
-\renewcommand{\ALG@name}{Pseudocode}
+\renewcommand{\ALG@name}{Pseudocódigo}
 \makeatother
 \renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}% Algorithm # is <chapter>.<algorithm>
 \algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}%
@@ -179,7 +184,7 @@
         \vspace{0.8cm}
         
         \centering        
-        \includegraphics[width=0.3\textwidth]{figures/uc3m}
+        \includegraphics[width=0.3\textwidth]{figures/logo-nuevo}
         
         \vspace{1.5cm}
         
@@ -238,10 +243,10 @@
 %Some text between the list of acronyms and the glossary.
 
 \printglossary
-\addcontentsline{toc}{chapter}{Glossary}
+\addcontentsline{toc}{chapter}{Glosario}
 
 \printglossary[type=\acronymtype]
-\addcontentsline{toc}{chapter}{Acronyms}
+\addcontentsline{toc}{chapter}{Acrónimos}
 
 \cleardoublepage
 \phantomsection

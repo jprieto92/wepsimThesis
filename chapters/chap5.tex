@@ -86,7 +86,7 @@ Los ficheros que componen WepSIM son detallados a continuación:
 
 Para comprender funcionamiento tanto de los dos compiladores utilizados (compilador de firmware y compilador de ensamblador) como del kernel del simulador, se puede observar en \ref{alg:firmware_compiler_pseudocode}, mientras que en \ref{alg:assembly_compiler_pseudocode} podemos ver el proceso de compilación del código ensamblador definido por el usuario en función de la memoria de control previamente generada, detallando el proceso de compilación del segmento de datos en \ref{alg:data_segment_pseudocode} y el proceso de compilación del segmento de texto en \ref{alg:text_segment_pseudocode}. En \ref{alg:core_simulator_pseudocode} podemos ver el pseudocódigo de como se realiza una simulación, realizando la comprobación de segmentos de memoria, tipo de simulación, y ejecución del ciclo o instrucción correspondiente.
 
-El proceso de compilación del juego de instrucciones (Figura \ref{alg:firmware_compiler_pseudocode} está basado en la técnica de compilación \textit{LEX and YACC}, que queda perfectamente descrita en \cite{bennett1996introduction}. De este modo, el proceso de compilación queda dividido en tres bloques importantes: instrucciones, nombrado de registros y pseudoinstrucciones. En primer lugar, se realiza la lectura del bloque de instrucciones, en donde se comprueba cada uno de los campos y parámetros que la conforman para posteriormente generar el binario asociado a cada ciclo de reloj. Después, se realiza la lectura del banco de registros, donde se forma el par \textit{id,nombre}, pudiendo realizar el nombrado deseado de los distintos registros que lo componen. Por último, se realiza la lectura de pseudoinstrucciones. Estas instrucciones no pertenecen al lenguaje, sino que están compuestas por instrucciones del lenguaje, pudiendo el usuario utilizar técnicas de alto nivel en donde con una única línea de código, genere más de una instrucción.
+El proceso de compilación del juego de instrucciones (Figura \ref{alg:firmware_compiler_pseudocode} se realiza mediante un análsis sintáctico basado en la técnica \textit{LEX and YACC}, que queda perfectamente descrita en \cite{bennett1996introduction}. De este modo, el proceso de compilación queda dividido en tres bloques importantes: instrucciones, nombrado de registros y pseudoinstrucciones. En primer lugar, se realiza la lectura del bloque de instrucciones, en donde se comprueba cada uno de los campos y parámetros que la conforman para posteriormente generar el binario asociado a cada ciclo de reloj. Después, se realiza la lectura del banco de registros, donde se forma el par \textit{id,nombre}, pudiendo realizar el nombrado deseado de los distintos registros que lo componen. Por último, se realiza la lectura de pseudoinstrucciones. Estas instrucciones no pertenecen al lenguaje, sino que están compuestas por instrucciones del lenguaje, pudiendo el usuario utilizar técnicas de alto nivel en donde con una única línea de código, genere más de una instrucción.
 
 \clearpage
 
@@ -323,7 +323,7 @@ Las especificaciones técnicas recomendadas para que el usuario final obtenga la
 
 \end{itemize}
 
-Para el proceso de despliegue de la herramienta, se requiere que el usuario disponga de un servidor web \textit{Apache}  o \textit{Nginx} instalado en la máquina para que el software sea accesible. Una vez instalado el servidor web, se deben de seguir los siguientes pasos:
+Para el proceso de despliegue de la herramienta, se requiere que el usuario disponga de un servidor web \textit{Apache}  o \textit{Nginx} instalado en su computador para que el software sea accesible. Una vez instalado el servidor web, se deben de seguir los siguientes pasos:
 
 \begin{itemize}
 
@@ -337,7 +337,7 @@ Para el proceso de despliegue de la herramienta, se requiere que el usuario disp
 
 \end{itemize}
 
-Por último, el usuario podrá acceder a la herramienta mediante un navegador web de los citados anteriormente. Para ello, el usuario deberá de indicar en el navegador la dirección en la cual ha sido publicada la herramienta, no siendo necesaria la conexión a internet en caso de estar publicada en la misma máquina (\textit{localhost}).
+Por último, el usuario podrá acceder a la herramienta mediante un navegador web de los citados anteriormente. Para ello, el usuario deberá de indicar en el navegador la dirección en la cual ha sido publicada la herramienta, no siendo necesaria la conexión a internet en caso de estar publicada en el mismo computador (\textit{localhost}).
 
 En caso de no desear el usuario realizar este proceso, puede acceder a la herramienta de forma inmediata accediendo a la dirección: 
 

@@ -23,15 +23,15 @@ El primer capítulo introduce brevemente el objetivo del proyecto, incluyendo la
 \section{Motivación}
 \label{sec:background_and_motivation}
 
-La enseñanza de la arquitectura de un computador es una parte básica y fundamental en la formación de los estudiantes de Ingeniería Informática mediante la cual los estudiantes logran obtener una visión y comprensión del comportamiento a bajo nivel de la máquina. Para lograr que los estudiantes comprendan y asienten correctamente los fundamentos teóricos, es necesario el uso de clases prácticas, en donde el estudiante pueda ser capaz de interactuar con un computador de arquitectura igual o similar a la explicada en teoría y logre extrapolar los fundamentos teóricos al comportamiento real de la máquina.
+La enseñanza de la arquitectura de un computador es una parte básica y fundamental en la formación de los estudiantes de Ingeniería Informática, mediante la cual los estudiantes logran obtener una visión y comprensión del comportamiento a bajo nivel de un computador. Para lograr que los estudiantes comprendan y asienten correctamente los fundamentos teóricos, es necesario el uso de clases prácticas, en donde el estudiante pueda ser capaz de interactuar con un computador de arquitectura igual o similar a la explicada en teoría y además logre extrapolar los fundamentos teóricos al comportamiento real.
 
-Uno de los principales problemas a la hora de diseñar estas clases prácticas es lograr obtener los medios necesarios para que los estudiantes puedan hacer uso de un computador similar al visto en las clases teóricas, debido al coste que supone tener un número suficiente de computadores para el número de estudiantes que deben hacer uso de ellos y su mantenimiento, la limitación de movilidad a la hora de realizar las practicas debido a la necesidad física del computador, etc. Para evitar estos problemas, actualmente se hace uso de simuladores y emuladores que proporcionan las funciones necesarias para las clases prácticas, evitando los problemas anteriormente comentados.
+Uno de los principales problemas a la hora de diseñar estas clases prácticas es lograr obtener los medios necesarios para que los estudiantes puedan hacer uso de un computador similar al visto en las clases teóricas, debido al coste que supone tener un número suficiente de computadores para el número de estudiantes que deben hacer uso de ellos y su mantenimiento, la limitación de movilidad a la hora de realizar las prácticas debido a la necesidad física del computador, etc. Para evitar estos problemas, actualmente se hace uso de simuladores y emuladores que proporcionan las funciones necesarias para las clases prácticas, evitando los problemas anteriormente comentados.
 
 Un emulador es un software que se encarga de imitar el comportamiento de una computadora de forma que programas pensados para una arquitectura concreta, puedan ser ejecutados en otra diferente. Por otro lado, un simulador es un software que trata reproducir el comportamiento de un computador, pero con un menor nivel de realismo, puesto que el emulador se encarga de modelar de forma precisa el dispositivo de manera que los programas ejecutados sobre él funcionen como si estuvieran siendo ejecutados en el dispositivo original.
 
-Hay distintos simuladores que se pueden utilizar para trabajar con los principales aspectos que se tratan en las asignaturas de Estructura y Arquitectura de Computadores: ensamblador, caché, etc. Aunque la idea de usar distintos simuladores cae dentro de la estrategia de "divide y vencerás", hay dos principales problemas con estos simuladores: cuanto más realistas son más compleja se hace la enseñanza (tanto del simulador como de la tarea simulada), y cuantos más simuladores se usan más se pierde la visión de conjunto.
+Hay distintos simuladores que se pueden utilizar para trabajar con los principales aspectos que se tratan en las asignaturas de Estructura y Arquitectura de Computadores: ensamblador, caché, etc. La mayoría de estos simuladores se centran en un tipo de simulación concreta, lo que implica una pérdida de la visión del conjunto al necesitar el uso de diferentes simuladores. Por lo tanto es mucho mejor tener siempre una visión centralizada de cualquier servicio, siendo más favorable el uso de una herramienta que reúna las máximas funcionalidades posibles.
 
-Hay otro problema no menos importante: la mayoría de los simuladores están pensados para PC. Uno de los objetivos que nos planteamos con WepSIM es que pudiera ser utilizado en dispositivos móviles (smartphones o tablets), para ofrecer al estudiante una mayor flexibilidad en su uso.
+Hay otro problema no menos importante: la mayoría de los simuladores están pensados para PC. Uno de los objetivos que nos planteamos con WepSIM es que pudiera ser utilizado en dispositivos móviles (\emph{smartphones} o \emph{tablets}), para ofrecer al estudiante una mayor flexibilidad en su uso.
 
 Además de tener un simulador portable a distintas plataformas, el simulador ha de ser lo más autocontenido posible de manera que integre la ayuda principal para su uso (no como un documento separado que sirva de manual de uso para ser impreso) permitiendo al usuario hacer un uso completo de la aplicación sin la necesidad de salir de ella.
 
@@ -45,11 +45,11 @@ El objetivo principal de este proyecto, es desarrollar un simulador, que a difer
 
 \begin{itemize}
 
-\item Simular la ejecución de el juego de instrucciones especificado en un computador denominado WepSIM desde el punto de vista de la micropogramación y la programación en ensamblador.
+\item Simular la ejecución de el juego de instrucciones especificado en un computador denominado WepSIM desde el punto de vista de la microprogramación y la programación en ensamblador.
 
 \item Permitir la especificación de diferentes juegos de instrucciones.
 
-\item Permitir unificar la microprogramación y la programación en ensamblador.
+\item Permitir unificar la microprogramación en un computador y la programación en lenguaje ensamblador.
 
 \item Permitir al usuario la visualización en cada ciclo de reloj del estado y comportamiento del computador simulado.
 
@@ -64,7 +64,7 @@ El documento contiene los siguientes capítulos:
 
 \item Capítulo \ref{ch:introduction}, \textit{\nameref{ch:introduction}}, presenta una breve descripción del contenido del documento. También incluye la motivación y los objetivos del proyecto.
 
-\item Capítulo \ref{ch:state_of_the_art}, \textit{\nameref{ch:state_of_the_art}}, incluye una descripción de los diferentes tipos de simuladores (de lenguaje ensamblador y de microcódigo) presentando el trabajo relacionado y una descripción de las tecnologías web actuales.
+\item Capítulo \ref{ch:state_of_the_art}, \textit{\nameref{ch:state_of_the_art}}, incluye una descripción de los diferentes tipos de simuladores (de lenguaje ensamblador y de microcódigo), presentando el trabajo relacionado y una descripción de las tecnologías web actuales.
 
 \item Capítulo \ref{ch:analysis}, \textit{\nameref{ch:analysis}}, describe brevemente el proyecto, establece los requisitos y presenta el marco regulador del proyecto.
 
