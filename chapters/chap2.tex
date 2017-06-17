@@ -1,6 +1,6 @@
 \lhead[\thepage]{CAPÍTULO \thechapter. ESTADO DEL ARTE}
 \chead[]{}
-\rhead[WepSIM: Simulador de procesador elemental con unidad de control microprogramada\leftmark]{\thepage}
+\rhead[WepSIM: Simulador de un procesador elemental con unidad de control microprogramada\leftmark]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
 
 \lfoot[]{}
@@ -18,7 +18,7 @@
 \label{ch:state_of_the_art}
 \markboth{}{STATE OF THE ART}
 
-Este capítulo presenta el estado del arte, la última y más avanzada etapa de las tecnologías relacionadas con nuestra aplicación. En primer lugar se presentan los diferentes simuladores existentes en el ámbito docente tanto para microprogramación (Section \ref{sec:simuladores_microprogramacion}) como para la programación en código ensamblador (Section \ref{sec:simuladores_ensamblador}), comparando una comparación de nuestro trabajo con el contexto actual de los distintos simuladores expuestos previamente (Section \ref{sec:propuesta_simulacion}). Después, se presentan las diferentes tecnologías web más utilizadas en la actualidad \ref{sec:tecnologias_web}. Por último se describe el procesador en el cual se basa WepSIM.
+Este capítulo presenta el estado del arte, la última y más avanzada etapa de las tecnologías relacionadas con nuestra aplicación. En primer lugar se presentan los diferentes simuladores existentes en el ámbito docente tanto para microprogramación (Sección \ref{sec:simuladores_microprogramacion}) como para la programación en código ensamblador (Sección \ref{sec:simuladores_ensamblador}), comparando una comparación de nuestro trabajo con el contexto actual de los distintos simuladores expuestos previamente (Sección \ref{sec:propuesta_simulacion}). Después, se presentan las diferentes tecnologías web más utilizadas en la actualidad \ref{sec:tecnologias_web}. Por último se describe el procesador en el cual se basa WepSIM.
 
 \section{Simuladores para la enseñanza de la Estructura y Arquitectura de Computadores}
 
@@ -54,7 +54,7 @@ En esta sección, se explican los diferentes simuladores existentes para la prog
 	\label{fig:spim_figure}
 \end{figure}
 
-SPIM \cite{larus1990spim}, es un simulador de un procesador MIPS de 32 bits desarrollado a principios de 1990. En un primer momento implementaba el juego de instrucciones MIPS-1, utilizado por los computadores MIPS R2000/R3000. Actualmente, implementa la arquitectura MIPS32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el alumno pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque su diseño no está pensado para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción syscall. SPIM, es un simulador que permite múltiples configuraciones mediante su interfaz de usuario, de manera que se puede indicar:
+SPIM \cite{larus1990spim}, es un simulador de un procesador MIPS de 32 bits desarrollado a principios de 1990. En un primer momento implementaba el juego de instrucciones MIPS-1, utilizado por los computadores MIPS R2000/R3000. Actualmente, implementa la arquitectura MIPS32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el estudiante pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque su diseño no está pensado para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción syscall. SPIM, es un simulador que permite múltiples configuraciones mediante su interfaz de usuario, de manera que se puede indicar:
 
 \begin{itemize}
 
@@ -177,7 +177,7 @@ Juego de instrucciones personalizable				&  &  &  &  & \ding{51} &  &  \\
 \label{tab:comparison_frameworks}
 \end{table}
 
-De este modo, con WepSIM se pretende crear un simulador unificado, abarcando los aspectos más relevantes de la asignatura 'Estructura de Computadores' y permitiendo que todas las prácticas de la asignatura puedan realizarse en la misma plataforma, evitando la pérdida de tiempo y dificultad que supone para el alumno el habituarse a diferentes entornos para cada una de las prácticas.
+De este modo, con WepSIM se pretende crear un simulador unificado, abarcando los aspectos más relevantes de la asignatura 'Estructura de Computadores' y permitiendo que todas las prácticas de la asignatura puedan realizarse en la misma plataforma, evitando la pérdida de tiempo y dificultad que supone para el estudiante el habituarse a diferentes entornos para cada una de las prácticas.
 
 WepSIM, se puede definir por tanto como un simulador de programación en ensamblador y microprogramación, flexible puesto que permite la personalización del juego de instrucciones de la máquina, multiplataforma puesto que permite su uso desde diferentes tipos de dispositivos, e interactivo al poder modificar la configuración de la máquina en tiempo de ejecución.
 
