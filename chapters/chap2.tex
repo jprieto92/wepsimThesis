@@ -18,20 +18,20 @@
 \label{ch:state_of_the_art}
 \markboth{}{STATE OF THE ART}
 
-Este capítulo presenta el estado del arte, la última y más avanzada etapa de las tecnologías relacionadas con nuestra aplicación. En primer lugar se presentan los diferentes simuladores existentes en el ámbito docente tanto para microprogramación (Sección \ref{sec:simuladores_microprogramacion}) como para la programación en código ensamblador (Sección \ref{sec:simuladores_ensamblador}), comparando una comparación de nuestro trabajo con el contexto actual de los distintos simuladores expuestos previamente (Sección \ref{sec:propuesta_simulacion}). Después, se presentan las diferentes tecnologías web más utilizadas en la actualidad \ref{sec:tecnologias_web}. Por último se describe el procesador en el cual se basa WepSIM.
+Este capítulo presenta el estado del arte, la última y más avanzada etapa de las tecnologías relacionadas con nuestra aplicación. En primer lugar, se presentan los diferentes simuladores existentes en el ámbito docente tanto para microprogramación (Sección \ref{sec:simuladores_microprogramacion}) como para la programación en código ensamblador (Sección \ref{sec:simuladores_ensamblador}), realizando una comparación de nuestro trabajo con el contexto actual de los distintos simuladores expuestos previamente (Sección \ref{sec:propuesta_simulacion}). Después, se presentan las diferentes tecnologías web más utilizadas en la actualidad (Sección \ref{sec:tecnologias_web}). Por último se describe el procesador en el cual se basa WepSIM (Sección \ref{sec:wepsim}.
 
 \section{Simuladores para la enseñanza de la Estructura y Arquitectura de Computadores}
 
-Son muchos los tipos de simuladores existentes en el ámbito docente para la explicación de las distintas partes que componen un computador. Estos simuladores, pueden ser de diferentes ámbitos como por ejemplo, cachés, pipeline, circuitos integrados, microprogramación, programación en ensamblador, etc.
+Son muchos los tipos de simuladores existentes en el ámbito docente para la explicación de las distintas partes que componen un computador. Estos simuladores, pueden ser de diferentes ámbitos como, por ejemplo, cachés, pipeline, circuitos integrados, microprogramación, programación en ensamblador, etc.
 
 En este apartado, vamos a centrarnos en los tipos de simuladores que tienen relación directa con la propuesta realizada, como lo son los simuladores para la microprogramación y los simuladores para la programación en ensamblador.
 
 \subsection{Simuladores para microprogramación}
 \label{sec:simuladores_microprogramacion}
 
-En esta sección, se explican los diferentes simuladores existentes para la microprogramación. Cabe destacar, que actualmente existen pocos simuladores que nos proporcionen esta funcionalidad, debido a que una gran parte de ellos, son utilizados de forma interna por las empresas para verificar el correcto funcionamiento de sus unidades en la fase de diseño y desarrollo. En primer lugar, vamos a centrarnos en los simuladores que están más enfocados a una labor docente.
+En esta sección, se explican los diferentes simuladores existentes para la microprogramación. Cabe destacar que, actualmente, existen pocos simuladores que nos proporcionen esta funcionalidad, debido a que una gran parte de ellos son utilizados de forma interna por las empresas para verificar el correcto funcionamiento de sus unidades en la fase de diseño y desarrollo. 
 
-P8080E \cite{p8080E} es un simulador desarrollado en el DATSI en la Facultad de Informática de la Universidad Politécnica de Madrid. Este simulador, no consta de una interfaz gráfica portable e interactiva que se ajuste a las tecnologías actuales. Para realizar poder realizar el desarrollo del microcódigo, el simulador requiere el binario completo de cada ciclo, de forma que resulta un tanto complejo su uso. Pese a ser un simulador bastante completo, no está orientado para la enseñanza de ensamblador y microprogramación con la misma herramienta, puesto que no permite la definición del juego de instrucciones con un formato diferente al definido por defecto.
+P8080E \cite{p8080E} es un simulador desarrollado en el DATSI en la Facultad de Informática de la Universidad Politécnica de Madrid. Este simulador, no consta de una interfaz gráfica portable e interactiva que se ajuste a las tecnologías actuales. Para poder realizar el desarrollo del microcódigo, el simulador requiere el binario completo de cada ciclo, de forma que resulta un tanto complejo su uso. Pese a ser un simulador bastante completo, no está orientado para la enseñanza de ensamblador y microprogramación con la misma herramienta, puesto que no permite la definición del juego de instrucciones con un formato diferente al definido por defecto.
 
 \begin{figure}[htbp]
  	\centering
@@ -40,12 +40,12 @@ P8080E \cite{p8080E} es un simulador desarrollado en el DATSI en la Facultad de 
 	\label{fig:tanenbaum_figure}
 \end{figure}
 
-En \cite{yen1986development}, se describe el desarrollo y la implementación de un simulador para una arquitectura de microprogramación específica. Fue publicado en el año 1986, y estaba basado en la arquitectura definida en el entonces popular libro de ingeniería de computadores \cite{tanenbaum1984}. El simulador, requería de la definición de cada uno de los ciclos de ejecución de las intrucciones para la posterior generación de la memoria de control. Esta definición, se realizaba mediante la sintaxis definida en el libro, lo que hacía de este simulador una herramienta bastante completa al para aprender junto con el libro. 
+En \cite{yen1986development}, se describe el desarrollo y la implementación de un simulador para una arquitectura de microprogramación específica (Figura \ref{fig:tanenbaum_figure}). Fue publicado en el año 1986, y estaba basado en la arquitectura definida en el entonces popular libro de ingeniería de computadores de \textit{Tanembaum}, el autor \cite{tanenbaum1984}. El simulador, requería de la definición de cada uno de los ciclos de ejecución de las instrucciones para la posterior generación de la memoria de control. Esta definición, se realizaba mediante la sintaxis definida en el libro, lo que hacía de este simulador una herramienta bastante completa para aprender junto con el libro. 
 
 
 \subsection{Simuladores para programación en ensamblador}
 \label{sec:simuladores_ensamblador}
-En esta sección, se explican los diferentes simuladores existentes para la programación en ensamblador. Los simuladores más conocidos para labores docentes, son SPIM, MARS y WebMIPS.
+En esta sección, se explican los diferentes simuladores existentes para la programación en ensamblador. Los simuladores más conocidos para labores docentes son SPIM, MARS y WebMIPS.
 
 \begin{figure}[htbp]
  	\centering
@@ -54,7 +54,7 @@ En esta sección, se explican los diferentes simuladores existentes para la prog
 	\label{fig:spim_figure}
 \end{figure}
 
-SPIM \cite{larus1990spim}, es un simulador de un procesador MIPS de 32 bits desarrollado a principios de 1990. En un primer momento implementaba el juego de instrucciones MIPS-1, utilizado por los computadores MIPS R2000/R3000. Actualmente, implementa la arquitectura MIPS32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el estudiante pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque su diseño no está pensado para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción \emph{syscall}. SPIM es un simulador que permite múltiples configuraciones mediante su interfaz de usuario, de manera que se puede indicar:
+SPIM \cite{larus1990spim}, es un simulador de un procesador MIPS de 32 bits desarrollado a principios de 1990 (Figura \ref{fig:spim_figure}). En un primer momento implementaba el juego de instrucciones MIPS-1, utilizado por los computadores MIPS R2000/R3000. Actualmente, implementa la arquitectura MIPS32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el estudiante pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque su diseño no está pensado para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción \emph{syscall}. SPIM es un simulador que permite múltiples configuraciones mediante su interfaz de usuario, de manera que se puede indicar:
 
 \begin{itemize}
 
@@ -70,7 +70,7 @@ SPIM \cite{larus1990spim}, es un simulador de un procesador MIPS de 32 bits desa
 
 \end{itemize}
 
-SPIM, además cuenta con una versión más actualizada del simulador, que posee una interfaz gráfica más potente. Éste simulador se llama QtSPIM \cite{aguilar2013simuladores}, y cuenta con todas las características anteriormente mencionadas de SPIM.
+SPIM, además cuenta con una versión más actualizada del simulador, que posee una interfaz gráfica más potente (Figura \ref{fig:qtspim_figure}). Este simulador se llama QtSPIM \cite{aguilar2013simuladores}, y cuenta con todas las características anteriormente mencionadas de SPIM.
 
 \begin{figure}[htbp]
  	\centering
@@ -79,21 +79,21 @@ SPIM, además cuenta con una versión más actualizada del simulador, que posee 
 	\label{fig:qtspim_figure}
 \end{figure}
 
-MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado en JAVA para el lenguaje ensamblador MIPS. Fue creado en el año 2005 como una alternativa del simulador SPIM y diseñado específicamente para las necesidades limitadas de cursos de pre-grado. Está basado en la arquitectura MIPS RISC, que tiene un número pequeño de elementos del lenguaje e instrucciones. Consta de operaciones de entrada/salida, saltos, condiciones y operaciones aritmético-lógicas tanto enteras como en coma flotante. Alguna de las mejoras que incorpora MARS con respecto a SPIM son \cite{vegdahl2008mipspilot}: 
+MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado en JAVA para el lenguaje ensamblador MIPS (Figura \ref{fig:mars_figure}). Fue creado en el año 2005 como una alternativa del simulador SPIM y diseñado específicamente para las necesidades limitadas de grado. Está basado en la arquitectura MIPS RISC, que tiene un número pequeño de elementos del lenguaje e instrucciones. Consta de operaciones de entrada/salida, saltos, condiciones y operaciones aritmético-lógicas tanto enteras como en coma flotante. Alguna de las mejoras que incorpora MARS con respecto a SPIM son \cite{vegdahl2008mipspilot}: 
 
 \begin{itemize}
 
-\item Depuración más sencilla y cómoda, debido constar de una interfáz gráfica de usuario (GUI). Esto se debe, a que para añadir un punto de ruptura, únicamente hay que pulsar sobre el elemento que tiene la instrucción.
+\item Depuración más sencilla y cómoda, debido constar de una interfaz gráfica de usuario (GUI). Esto se debe, a que para añadir un punto de ruptura, únicamente hay que pulsar sobre el elemento que tiene la instrucción.
 
-\item Los programas puedes ejecutarse de forma inversa, lo que permite volver a un estado anterior del computador en la ejecución de un programa.
+\item Los programas pueden ejecutarse de forma inversa, lo que permite volver a un estado anterior del computador en la ejecución de un programa.
 
-\item La velocidad de ejecución puede modificarse, de forma que si se ralentiza el usuario puede observar como cada instrucción se resalta cuando está siendo ejecutada y ver los cambios que se producen en los valores del banco de registros y de las ubicaciones de memoria.
+\item La velocidad de ejecución puede modificarse de forma que, si se ralentiza, el usuario puede observar cómo cada instrucción se resalta cuando está siendo ejecutada y ver los cambios que se producen en los valores del banco de registros y de las ubicaciones de memoria.
 
 \item  La memoria y los registros se pueden modificar de una manera \emph{WYSIWYG}.
 
 \item Incorpora un editor de texto, eliminando dependencias externas para el uso del simulador.
 
-\item Permite que los desarrolladores puedan suministrar nuevos complementos, que por ejemplo, sirvan para extender la arquitectura o mostrar los datos de forma intuitiva.
+\item Permite que los desarrolladores puedan suministrar nuevos complementos que, por ejemplo, sirvan para extender la arquitectura o mostrar los datos de forma intuitiva.
 
 \end{itemize}
 
@@ -104,7 +104,7 @@ MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado e
 	\label{fig:mars_figure}
 \end{figure}
 
-P88110 es emulador descrito en \cite{garcia2009p88110} que se basa en la emulación de un procesador superescalar. El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del pipeline y las dependencias existentes. Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
+P88110 es emulador descrito en \cite{garcia2009p88110} que se basa en la emulación de un procesador superescalar (Figura \ref{fig:p88110_figure}). El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del \emph{pipeline} y las dependencias existentes. Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
 
 \begin{figure}[htbp]
  	\centering
@@ -114,7 +114,7 @@ P88110 es emulador descrito en \cite{garcia2009p88110} que se basa en la emulaci
 \end{figure}
 
 
-WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web, de forma que no requiere de su instalación en local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de arquitectura de computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las 5 etapas de pipeline de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura "Arquitectura de Computadores" impartida por los creadores del simulador.
+WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia (Figura \ref{fig:webmips_figure}). Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web, de forma que no requiere de su instalación en local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de arquitectura de computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las cinco etapas de \emph{pipeline} de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura ``Arquitectura de Computadores'' impartida por los creadores del simulador.
 
 Entre las diferentes características a destacar de este simulador, se encuentran:
 
@@ -122,7 +122,7 @@ Entre las diferentes características a destacar de este simulador, se encuentra
 	
 \item Verificación del código ensamblador, comprobando que no existen errores en la definición el código.
 
-\item Dispone de códigos simples de ejemplo ("load-and-play") que facilitan la comprensión del funcionamiento del procesador.
+\item Dispone de códigos simples de ejemplo (\textit{``load-and-play''}) que facilitan la comprensión del funcionamiento del procesador.
 
 \item Permite diferentes visualizaciones del estado de la memoria y los registros del procesador.
 
@@ -185,29 +185,29 @@ WepSIM se puede definir por tanto como un simulador de programación en ensambla
 \section{Tecnologías web}
 \label{sec:tecnologias_web}
 
-Actualmente, gran parte de los recursos disponibles en el día a día son ofrecidos a través de Internet y su distribución es posible gracias a las tecnologías web. Estas tecnologías, permiten la construcción de las páginas web haciendo uso de las tecnologías para el desarrollo de páginas web y las tecnologías de interconexión de computadores permitiendo a los usuarios el intercambio en formato de hipertexto de todo tipo de datos y de aplicaciones software.
+Actualmente, gran parte de los recursos disponibles en el día a día son ofrecidos a través de Internet y su distribución es posible gracias a las tecnologías web. Estas tecnologías permiten la construcción de las páginas web haciendo uso de las tecnologías para el desarrollo de páginas web y las tecnologías de interconexión de computadores permitiendo a los usuarios el intercambio en formato de hipertexto de todo tipo de datos y de aplicaciones software.
 
 \subsection{HTML5}
 \label{sec:html5}
 
-Cuando se realiza el desarrollo de una página web, son tres las tecnologías que se emplean con mayor frecuencia: HTML, CSS y JavaScript. Todas estas tecnologías vienen definidas y estandarizadas por el organismo internacional W3C y cada una de ellas, tiene una función concreta en el funcionamiento de la página web:
+Cuando se realiza el desarrollo de una página web, son tres las tecnologías que se emplean con mayor frecuencia: HTML, CSS y JavaScript. Todas estas tecnologías vienen definidas y estandarizadas por el organismo internacional W3C, y cada una de ellas tiene una función concreta en el funcionamiento de la página web:
 
 \begin{itemize}
-\item \textbf{HTML}: Es un lenguaje de marcado con el que se realiza la estructuración de la página web. Es un estándar que sirve de referencia del software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, vídeos, juegos, entre otros. 
+\item \textbf{HTML}: Es un lenguaje de marcas con el que se realiza la estructuración de la página web. Es un estándar que sirve de referencia para el software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, vídeos, juegos, entre otros. 
 
 El lenguaje HTML basa su filosofía de desarrollo en la diferenciación. Para añadir un elemento externo a la página (imagen, vídeo, script, entre otros.), este no se incrusta directamente en el código de la página, sino que se hace una referencia a la ubicación de dicho elemento mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web (interpretador del código) la tarea de unir todos los elementos y visualizar la página final. Al ser un estándar, HTML busca ser un lenguaje que permita que cualquier página web escrita en una determinada versión, pueda ser interpretada de la misma forma (estándar) por cualquier navegador web actualizado.
 
-En cambio, a lo largo de las diferentes versiones, se han añadido y eliminado diferentes características, con la finalidad de hacer el lenguaje más eficiente y facilitar el desarrollo de páginas web con diferentes plataformas y navegadores. Un navegador web  desactualizado, no será capaz de interpretar correctamente una página web escrita en una versión superior de HTML a la que pueda interpretar.  
+En cambio, a lo largo de las diferentes versiones, se han añadido y eliminado diferentes características con la finalidad de hacer el lenguaje más eficiente y facilitar el desarrollo de páginas web con diferentes plataformas y navegadores. Un navegador web  desactualizado no será capaz de interpretar correctamente una página web escrita en una versión superior de HTML a la que pueda interpretar.  
 
-\item \textbf{CSS}: Es un lenguaje de diseño gráfico utilizado para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado, como puede ser, HTML. Su principal finalidad, es establecer el diseño visual de las páginas web e interfaces de usuario escritas en los lenguajes HTML o XHTML. Este lenguaje además, permite aplicar estilos no visuales como pueden ser las hojas de estilo auditivas.
+\item \textbf{CSS}: Es un lenguaje de diseño gráfico utilizado para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado, como puede ser HTML. Su principal finalidad es establecer el diseño visual de las páginas web e interfaces de usuario escritas en los lenguajes HTML o XHTML. Este lenguaje, además, permite aplicar estilos no visuales como pueden ser las hojas de estilo audibles.
 
-Esta tecnología web, es usada por la mayoría de sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web, y GUIs para muchas de las aplicaciones móviles existentes en el mercado. Con ella, se pretende separar el contenido de la página web de la presentación, buscando mejorar la accesibilidad del documento y dando una mayor flexibilidad y control en la especificación de las características de la presentación, permitiendo que varios documentos HTML compartan un mismo estilo usando una única hoja de estilos reduciendo la complejidad y la repetición de código en la estructura del documento.
+Esta tecnología web es usada por la mayoría de sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web, y GUIs para muchas de las aplicaciones móviles existentes en el mercado. Con ella se pretende separar el contenido de la página web de la presentación, buscando mejorar la accesibilidad del documento y dando una mayor flexibilidad y control en la especificación de las características de la presentación, permitiendo que varios documentos HTML compartan un mismo estilo, usando una única hoja de estilos reduciendo la complejidad y la repetición de código en la estructura del documento.
 
-\item \textbf{JavaScript}: Es un lenguaje de programación interpretado orientado a las páginas web que surgió de la necesidad de ampliar las posibilidades del HTML. Su principal función en las páginas web, es realizar tareas y operaciones en el marco de la aplicación cliente como la mejora de la interfaz de usuario y la generación de páginas web dinámicas, aunque también es utilizado en el lado del servidor .
+\item \textbf{JavaScript}: Es un lenguaje de programación interpretado orientado a las páginas web, que surgió de la necesidad de ampliar las posibilidades del HTML. Su principal función en las páginas web es realizar tareas y operaciones en el marco de la aplicación cliente como la mejora de la interfaz de usuario y la generación de páginas web dinámicas, aunque también es utilizado en el lado del servidor .
 
-Este lenguaje, fue diseñado con una sintaxis similar a la del lenguaje de programación C, aunque adopta nombres y convenciones del lenguaje de programación Java. En cambio, Java y Javascript tienen propósitos y semánticas distintos.
+Este lenguaje fue diseñado con una sintaxis similar a la del lenguaje de programación C, aunque adopta nombres y convenciones del lenguaje de programación Java. En cambio, Java y Javascript tienen propósitos y semánticas distintos.
 
-En la actualidad, todos los navegadores realizan la interpretación del código JavaScript integrado en las páginas web. Para poder interactuar con una página web el lenguaje está provisto de una implementación del DOM que facilita el control y manejo de las interacciones del usuario.
+En la actualidad, todos los navegadores realizan la interpretación del código JavaScript integrado en las páginas web. Para poder interactuar con una página web, el lenguaje está provisto de una implementación del DOM que facilita el control y manejo de las interacciones del usuario.
 
 \end{itemize}
 
@@ -229,6 +229,7 @@ Como se indica en \cite{garrido2004arquitectura} las aplicaciones web se han con
 \end{itemize}
 
 \section{Procesador elemental WepSIM}
+\label{sec:wepsim}
 
 WepSIM, es un procesador elemental con unidad de control microprogramada diseñado por el personal del grupo de investigación ARCOS de la Universidad Carlos III de Madrid para la docencia en la asignatura Estructura de Computadores.
 
@@ -260,7 +261,7 @@ Los registros MAR y MBR se usan para almacenar la dirección y el contenido asoc
 
 Se dispone también de tres dispositivos de E/S: un teclado, una pantalla y un dispositivo genérico que se puede configurar para generar diversos tipos de interrupciones.
 
-Finalmente, la Unidad de Control genera las señales de control para cada ciclo de reloj. La figura \ref{fig:wepsimCU_figure} muestra la Unidad de Control con mayor detalle. Se trata de una unidad de control microprogramada con secuenciamiento implícito. Las señales de control para el ciclo de reloj actual se almacenan en el registro de micro-instrucción (aquel con los campos A0, B, C, SelA, etc.). El contenido de este registro proviene de la memoria de control, concretamente del contenido en la posición a la que apunta el registro de micro-dirección. La micro-dirección almacenada en este registro puede modificarse usando el multiplexor "MUX A". Hay cuatro opciones: la microdirección actual más uno, una micro-dirección indicada en la propia micro-instrucción (que se solapa con SelA, SelB y parcialmente con SelE), la primera micro-dirección asociada al campo de código de operación de la instrucción del registro IR, y finalmente el valor cero, que es la dirección de la memoria de control donde se almacena la microrrutina correspondiente al fetch. La microdirección se puede seleccionar de forma condicional, para ello se usa el multiplexor "MUX C" que permite seleccionar los bits del registro de estado (SR) o valores de las señales de control de E/S.
+Finalmente, la Unidad de Control genera las señales de control para cada ciclo de reloj. La figura \ref{fig:wepsimCU_figure} muestra la Unidad de Control con mayor detalle. Se trata de una unidad de control microprogramada con secuenciamiento implícito. Las señales de control para el ciclo de reloj actual se almacenan en el registro de micro-instrucción (aquel con los campos A0, B, C, SelA, etc.). El contenido de este registro proviene de la memoria de control, concretamente del contenido en la posición a la que apunta el registro de micro-dirección. La micro-dirección almacenada en este registro puede modificarse usando el multiplexor ``MUX ''. Hay cuatro opciones: la microdirección actual más uno, una micro-dirección indicada en la propia micro-instrucción (que se solapa con SelA, SelB y parcialmente con SelE), la primera micro-dirección asociada al campo de código de operación de la instrucción del registro IR, y finalmente el valor cero, que es la dirección de la memoria de control donde se almacena la microrrutina correspondiente al fetch. La microdirección se puede seleccionar de forma condicional, para ello se usa el multiplexor ``MUX C'' que permite seleccionar los bits del registro de estado (SR) o valores de las señales de control de E/S.
 
 Para generar los valores correspondientes a las señales selectoras del banco de registros RA, RB y RE se usan los circuitos selectores SelRA, SelRB y SelRE. Estos selectores toman como entrada los 32 bits del registro de instrucción (IR) por un lado y el campo SelA, SelB y SelE por otro, de forma que toman SelX como el desplazamiento dentro del registro de instrucción (de 0 a 32) desde donde tomar los siguientes 5 bits correspondientes a las señales RA, RB o RE. Permiten por tanto seleccionar 5 bits consecutivos de los 32 bits del registro de instrucción.
 

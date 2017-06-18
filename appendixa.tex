@@ -1,6 +1,6 @@
-\lhead[\thepage]{APPENDIX A. USER MANUAL}
+\lhead[\thepage]{CAPÍTULO \thechapter. SUMMARY}
 \chead[]{}
-\rhead[A Complete Simulator for Volunteer Computing Environments]{\thepage}
+\rhead[WepSIM: Simulador de un procesador elemental con unidad de control microprogramada\leftmark]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
 
 \lfoot[]{}
@@ -8,164 +8,125 @@
 \rfoot[]{}
 \renewcommand{\footrulewidth}{0pt}
 
-\begin{appendices}
-\chapter{User Manual}
-\label{ch:user_manual}
+\chapter{Summary}
+\markboth{}{APPENDIX A}
 
-This appendix presents a detailed user manual of \gls{comsimboinc}. First we indicate the basic requirements to deploy the application and a detailed tutorial for the installation of SimGrid. Finally, we present an example of the simulator usage.
+\section{Introducion}
 
-\section{Basic Requirements}
+Teaching the architecture of a computer is a basic and fundamental part of the training of computer science students, through which students achieve a low-level vision and understanding of behavior in a computer. In order to get students to understand and correctly understand the theoretical foundations, it is necessary to use practical classes, where the student can be able to interact with a computer of architecture similar or similar to that explained in theory and also manage to extrapolate the theoretical foundations To actual behavior.
 
-The technical specifications recommended for the final user to obtain the best experience from the application are:
+One of the main problems when designing these practical classes is to obtain the necessary means so that the students can use a computer similar to that seen in the theoretical classes, due to the cost of having a sufficient number of computers for the Number of students who must make use of them and their maintenance, the limitation of mobility when doing the practices due to the physical need of the computer, etc. To avoid these problems, simulators and emulators are currently used to provide the necessary functions for the practical classes, avoiding the problems discussed above.
+
+An emulator is a software that imitates the behavior of a computer so that programs designed for a particular architecture can be executed in a different one. On the other hand, a simulator is a software that tries to reproduce the behavior of a computer, but with a lower level of realism, since the emulator is in charge of accurately modeling the device so that the programs executed on it work as if Were being executed in the original device.
+
+There are different simulators that can be used to work with the main aspects that are treated in the subjects of Structure and Architecture of Computers: assembler, cache, etc. Most of these simulators focus on a specific type of simulation, which implies a loss of the vision of the set when needing the use of different simulators. Therefore it is much better to always have a centralized vision of any service, being more favorable the use of a tool that combines the maximum possible functionalities.
+
+There is another problem not least: most of the simulators are designed for PC. One of the goals we put forward with WepSIM is that it could be used in smartphones or tablets, to offer the student greater flexibility in its use.
+
+In addition to having a portable simulator to different platforms, the simulator must be as self-contained as possible, so that it integrates the main help for its use (not as a separate document that serves as a user manual to be printed) allowing the user to do A full use of the application without the need to get out of it.
+
+Therefore, we have considered how to offer a simulator that is simple and modular, and that allows to integrate the teaching of the microprogramming with the programming in assembler. In particular, it can be used to microprogram an instruction set and see the basic operation of a processor, and to create assembler programs based on the assembler defined by the above microcode. This is of great help, for example, for the programming of systems since it is possible to see how the software interacts in assembler with the hardware in the treatment of interruptions. The idea is to offer a simulator that offers a global vision of what happens in hardware and software, also avoiding the extra time involved in learning different tools.
+
+
+\section{Objectives}
+
+The main objective of this project is to develop a simulator, which unlike the existing ones, can fully simulate the behavior of an elementary processor allowing to check the state of the components in each clock cycle, so that it helps the students To understand and assimilate in a simple and visual way the operation of a processor. The secondary objectives, derived from the main objective, are:
 
 \begin{itemize}
 
-\item \textbf{Operating System}: Ubuntu 14.04.4 LTS (Linux distribution) or higher.
+\item Simulate the execution of the set of instructions specified in a computer called WepSIM from the point of view of microprogramming and programming in assembler.
 
-\item \textbf{Processor}: Intel(R) Core(TM) i7 CPU 920 @2.67GHz or higher.
+\item Allow specification of different sets of instructions.
 
-\item \textbf{\gls{ram}}: 8 GB or higher.
+\item Allow unified microprogramming in a computer and programming in assembly language.
 
-\item \textbf{Storage}: 1 GB of free space in the Hard Disk Drive.
 
-\item \textbf{Network}: Internet connection is not required.
-
-\item \textbf{Software}: The following software must be installed in order to run the application:
-
-	\begin{itemize}
-
-	\item[1.] GCC (GNU Compiler) 5.1 or higher.
-	
-	\item[2.] SimGrid toolkit 3.10 or higher.
-	
-	\end{itemize}
+\item Allow the user to display in each clock cycle the status and behavior of the simulated computer.
 
 \end{itemize}
 
+\section{WepSIM Elemental Processor}
 
-\section{SimGrid Installation}
+WepSIM is an elementary processor with microprogrammed control unit designed by the staff of the research group ARCOS of the University Carlos III of Madrid for teaching in the subject Computer Structure.
 
-We will present a tutorial for the installation of the SimGrid toolkit (version 3.10). First, you have to download the official binary package from the \textit{download page} (\url{http://simgrid.gforge.inria.fr/download.php}). In this case you will download the file \textit{SimGrid-3.10.tar.gz}.
-
-Then, you have to recompile de archive. This should be done in a few lines:
-
-\vspace{0.6cm}
-
-\begin{lstlisting}[language=bash]
-  $ tar xf SimGrid-3.10.tar.gz
-  $ cd SimGrid-3.10
-  $ cmake -DCMAKE_INSTALL_PREFIX=/opt/simgrid $HOME
-  $ make
-  $ make install
-\end{lstlisting}
-
-\vspace{0.6cm}
-
-After following these steps, you will have the SimGrid toolkit installed in your computer.
-
-
-\section{Usage Example}
-
-In order to use \gls{comsimboinc}, you must download the corresponding files from the following website: \url{https://www.arcos.inf.uc3m.es/~combos/}. After unzipping the downloaded file, the unzipped files will follow the folder structure presented in Figure \ref{fig:folder_structure} (Section \ref{sec:deployment}, \textit{\nameref{sec:deployment}} (Chapter \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}})). To perform simulations using \gls{comsimboinc}, it is necessary to model the platform to be simulated. Once you know the environment to simulate, you must specify all simulation parameters in the parameters \gls{xml} file.
-
-Figure \ref{fig:interaction} shows an example of a potential simulation that can be carried out by \gls{comsimboinc}. The figure shows a simplified platform with two \gls{boinc} projects and 350,000 clients. The first project is represented by two \gls{scheduling} servers (SS0 and SS1) and two data servers (DS0 and DS1). The second project consists of a single \gls{scheduling} server (SS2) and three data servers (DS2, DS3 and DS4). Clients are grouped into three sets. The first group (G0) consists of 100,000 hosts and has a route to the first project. The second group (G1), has 200,000 hosts and a route to both projects. The third group (G2) consists of 50,000 computers and has route to the second project. The rest of the figure shows the links among the elements of the environment (from L0 to L7). In each of the links, latency and bandwidth are indicated.
+In the figure \ref{fig:wepsimCPU_figure_summary}, the structure of the WepSIM Elemental Processor is shown. WepSIM consists of a memory module, a keyboard device, a display device and a generic I/O device that can be used to work with interrupts.
 
 \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=13.5cm]{figures/interaction}
-    \caption{Simulator platform example.}
-    \label{fig:interaction}
+ 	\centering
+ 	\includegraphics[width=11cm]{figures/processor6}
+ 	\caption{CPU Architecture WepSIM .}
+	\label{fig:wepsimCPU_figure_summary}
 \end{figure}
 
-To create a simulation, \gls{comsimboinc} requires to specify all the parameters described in Tables \ref{tab:project_parameters} and \ref{tab:vngroup_parameters} in the parameters.xml file (see Listing \ref{lis:parameters}). Users can define the power and availability of the volunteer hosts via either a traces file or distribution functions. For example, in the case of the SETI@home project, we have analyzed the 3,900,000 hosts that participate in this project. The CPU performance of the hosts can be modeled according to an exponential function, as shown Figure \ref{fig:exponential}, which has a mean of 5.871 Giga\acrshort{flops} per host.
-
-\begin{figure}[htbp] 
-	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[width=\linewidth]{figures/density}
-		\captionsetup{width=.9\textwidth}
-		\caption{Probability density function of SETI@home hosts power.} 
-		\label{fig:pdf}
-	\end{subfigure}
-	\hspace*{\fill} % separation between the subfigures
-	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[width=\linewidth]{figures/distribution}
-		\captionsetup{width=.9\textwidth}
-		\caption{Cumulative distribution function of SETI@home hosts power.} 
-		\label{fig:cdf}
-	\end{subfigure}
-	\caption{CPU performance modeling for SETI@home hosts.}
-	\label{fig:exponential}
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=11cm]{figures/controlunit6}
+ 	\caption{Arquitectura unidad de control WepSIM.}
+	\label{fig:wepsimCU_figure_summary}
 \end{figure}
 
 
-Our software first processes the \gls{xml} file, creating the necessary deployment and platform files for subsequent simulations. In  \gls{comsimboinc}, all this is transparent to the user. The user only has to specify all the parameters of the simulation in the \gls{xml} file (Listing \ref{lis:parameters}), and run the generator script using the following command:
+WepSIM is a 32bit processor that addresses memory by bytes, which has a bank of 32 registers and two additional registers (RT1 and RT2) that are not visible to the assembler programmer but allow temporary storage of data for the carrying out of intermediate operations. From the registers, it is possible to send the values to operate in an ALU that hasta the 15 most most common arithmetic-logic operations.  The PC registry has its own operator adding four, so it is not necessary to make use of the ALU for this operation. The result of the operations performed in the ALU can be stored in a temporary register (RT3) that is also invisible to the assembler programmer, or sent directly to the internal bus through the corresponding tristate.
 
-\vspace{0.6cm}
 
-\begin{lstlisting}[language=bash]
-  $ ./generator
-\end{lstlisting}
+The status register (SR) can be updated with the resulting flags of the last operation of the alu (O, N and Z). To do this, SELEC/SelP represents a circuit block that allows indicating which part of the state register (SR) must be updated. To the right of SELEC/SelP the bits of the SR status register enter (Input = ONZIU) and SelP allows to select which group of these bits will be updated in the status register: bits O, N and Z with the values coming of the ALU, the bit I with the indicated value or the bit U with the indicated value for the same.
 
-\vspace{0.6cm}
+The instruction register (IR) is associated with a selector module (higher level circuit than a multiplexer, etc.) which allows to select a segment of the binary value stored in the instruction register that will pass to T3.
 
-The above command generates the platform and deployment files. The platform file contemplates all the necessary elements in the simulation: hosts, clusters, links, etc. The deployment file indicates the processes that should be created during the simulation. In addition, the generator script also compiles all source files needed for the simulation and generates the executable file. Finally, to run the simulation you just need to run the execution script:
+In particular, the position (Offset, where 0 represents the least significant bit of the IR register) and the number of bits (Size) to be taken from that initial position is indicated, and if it is desired to make sign extension (SE ) Before passing the value to the T3 input.
 
-\vspace{0.6cm}
+The MAR and MBR registers are used to store the address and content associated with this address in read/write operations with memory. The memory is designed for synchronous or asynchronous operation. It currently works synchronously, but has the MRdy signal for future work asynchronously. The selection circuit allows you to indicate which portion of the memory word is the desired one (one byte, two bytes, or a complete four-byte word).
 
-\begin{lstlisting}[language=bash]
-  $ ./execute
-\end{lstlisting}
+There are also three I / O devices: a keyboard, a display and a generic device that can be configured to generate various types of interrupts.
 
-\vspace{0.6cm}
+Finally, the Control Unit generates the control signals for each clock cycle. The Figure \ref{fig:wepsimCU_figure_summary} Shows the Control Unit in more detail. It is a microprogrammed control unit with implicit sequencing. The control signals for the current clock cycle are stored in the micro-instruction register (the one with the fields A0, B, C, SelA, etc.). The contents of this record come from the control memory, specifically from the content in the position to which the micro-address register points. The micro-address stored in this register can be modified using the ``MUX '' multiplexer. There are four options: the current micro-address plus one, a micro-address indicated in the micro-instruction itself (which overlaps with SelA, SelB and partially with SelE), the first micro-address associated with the operation code field of the instruction of the IR register, and finally the value zero, which is the address of the control memory where the microprogram corresponding to the fetch is stored. The micro address can be selected conditionally by using the ``MUX C '' multiplexer that allows to select the status register bits (SR) or values of the I/O control signals. 
 
-The execution results are composed by multiple statistical results (see Listings \ref{lis:output}): the execution time, the memory usage of the simulator, the load of the \gls{scheduling} and data servers, the total number of work requests received in the \gls{scheduling} servers, the job statistics (number of jobs created, sent, received, analyzed, success, fail, too late, etc), the credit granted to the clients, the number of \acrshort{flops}, the average power of the volunteer nodes, and the percentage of time the volunteer nodes were available during the simulation.
+The SelRA, SelRB and SelRE selector circuits are used to generate the values corresponding to the selector signals of the register bank RA, RB and RE. These selectors take as input the 32 bits of the instruction register (IR) on one side and the field SelA, SelB and SelE on the other, so that they take SelX as the displacement within the instruction register (from 0 to 32) from where Take the next 5 bits corresponding to the RA, RB or RE signals. They thus allow to select 5 consecutive bits of the 32 bits of the instruction register.
 
-\clearpage
+The MR multiplexer is used to indicate whether the RA, RB and RE signals are literally the values stored in SelA, SelB and SelE (MR = 1) or if SelA, SelB and SelE indicate the offset within the instruction where the values to be used for RA, RB and RE. The latter allows the instruction to indicate the registers to be used as operands in the register bank, instead of indicating them from the micro-instruction.
 
-    \lstset{
-    language=xml,
-    morekeywords={Server, Client, side},
-    tabsize=3,
-    frame=lines,
-    label=code:sample,
-    frame=shadowbox,
-    rulesepcolor=\color{gray},
-    xleftmargin=20pt,
-    framexleftmargin=15pt,
-    numbers=left,
-    numberstyle=\tiny,
-    numbersep=5pt,
-    breaklines=true,
-    showstringspaces=false,
-    basicstyle=\footnotesize,
-    captionpos=b,
-    caption=parameters.xml file filled with the parameters of the example.,
-    label=lis:parameters}
-    
-    \lstinputlisting{figures/parameters.xml}
-    
-\clearpage
+For the Cop signal (operation code in the ALU), the MC signal can be used to take the SelCop value of the micro-instruction (MC = 1) or the 4 least significant bits of the instruction register (MC = 0), ie IR3 -IR 0.
 
-    \lstset{
-    %language=xml,
-    morekeywords={PROJECT1, PROJECT2},
-    tabsize=3,
-    frame=lines,
-    label=code:sample,
-    frame=shadowbox,
-    rulesepcolor=\color{gray},
-    xleftmargin=20pt,
-    framexleftmargin=15pt,
-    numbers=left,
-    numberstyle=\tiny,
-    numbersep=5pt,
-    breaklines=true,
-    showstringspaces=false,
-    basicstyle=\footnotesize,
-    captionpos=b,
-    caption=Simulation execution results.,
-    label=lis:output}
-    
-    \lstinputlisting{figures/output}
-    
-\end{appendices}
+\section{Design}
+
+In order for the teachers of the Computer Structure subject to use a tool that helps to explain the theoretical concepts of the subject, and students can use it to understand these concepts and to carry out the subject's practices later, Proposes the design and implementation of a web tool that realistically simulates an elementary processor with a microprogrammable control unit.
+
+This simulator will be developed as a web tool due to the portability it provides, since it can be executed on a large number of different devices regardless of the operating system you use, since you only need a web browser for its correct operation. In this way, teachers and students will be able to use the tool without depending on their installation in the device to be used, even if students can practice on mobile devices.
+
+To achieve this portability, the simulator has been developed in HTML5 (HTML + JavaScript + CSS) making it possible to run on any platform (smartphones, tablet, PC, etc.) that can run Microsoft Edge, Mozilla Firefox, Google Chrome or Safari. In addition, the tool depends on the following frameworks / libraries: JQuery, JQueryUI, JQuery Mobile, Knockout and BootStrap.
+
+Therefore, the chosen solution is able to unify in a single tool all the functionalities required for the teaching of Structure of computers with a high level of detail, with high availability by facilitating its as a web tool, and with a great portability since Can be executed on a large number of different devices, always looking for a solution without the need for a server.
+
+\subsection{Simulator Architecture}
+
+The architecture of the solution presented in this work consists of three main elements:
+
+\begin{itemize}
+\item Hardware model: allows you to define the hardware to use.
+\item Software model: allows to define the set of instructions to use.
+\item Simulation kernel: simulates hardware operation by running microcode / machine language previously defined.
+\end{itemize}
+
+The hardware model allows to define the typical elements of a computer (main memory, processor, etc.) in a modular way. The way in which these elements are defined balances two opposing objectives: it is sufficiently complete to imitate the main aspects of reality, but it is sufficiently minimal to facilitate its use. Above all, it is intended to be a didactic tool.
+
+The software model allows defining the microcode and assembler based on this microcode as intuitively as possible. The assembler to use is given by a set of instructions that can be defined by the user and tries to be flexible enough to be able to define different types and sets of instructions, such as MIPS or ARM.
+
+The third element of the proposed architecture is a kernel that takes as input the described hardware model and the working software model, and is responsible for showing the operation of the hardware with the given software.
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=14cm]{figures/architecture_diagram}
+ 	\caption{WepSIM Architecture.}
+	\label{fig:architecture_diagram_summary}
+\end{figure}
+
+The Figure \ref{fig:architecture_diagram_summary} summarizes the architecture of WepSIM. The starting point is the hardware model that describes the processor to be simulated. This includes the processor, memory, and some I / O devices: keyboard, display, and a single I / O device that generates interrupts. The hardware model describes the overall state of the processor. From the processor's overall state, the simulation kernel updates the state in each clock cycle.
+
+The simulated control unit stores the control signals of each cycle in a control memory. The control memory has all the microprograms for the instructions with which the processor works, and the fetch to read the memory instruction and to decode it.
+
+The microcode (the contents of the control memory) together with the format of each instruction (fields of the instruction and its length) is described in a text file. The software model reads this file, translates it to binary and loads it into the processor. The definition of the assembler language to be used is described together with the microcode, and the software model allows to translate programs written in said assembler to binary.
+
+
+The simulation kernel asks the subsystem of the software model for the defined microcode, the description of the instruction format and the contents of the main memory. The binaries are loaded into the elements of the hardware model, and then the simulation kernel updates the global state in each clock cycle.
+
+WepSIM has a simulation controller that is responsible for updating the clock cycle and displaying the global status. The simulation interface subsystem updates the user interface. When the user uses the user interface to request an operation, the simulation interface subsystem moves the request to the simulation controller. As you can see, a basic Model-View-Controller (MVC) is used for the WepSIM architecture.
