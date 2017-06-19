@@ -20,7 +20,7 @@
 
 El objetivo principal de este capítulo, es describir el proyecto mediante la obtención y especificación de los requisitos del simulador, que puede proporcionar información suficiente para un análisis detallado que, por lo tanto, puede servir para continuar diseñando e implementando (Capítulos \ref{ch:design}, \textit{\nameref{ch:design}}; y \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}}) un software que cumpla con esos requisitos. 
 
-Con el fin de obtener los requisitos del sistema, el tutor ha desempeñado el papel del cliente en diferentes reuniones, mientras que el estudiante ha desempeñado los roles de analista, diseñador, programador y probador.
+Con el fin de obtener los requisitos del sistema, el tutor ha desempeñado el papel del cliente en diferentes reuniones, mientras que el estudiante ha desempeñado los roles de analista, diseñador, programador y \emph{tester}.
 
 La Sección \ref{sec:project_description} resume brevemente la descripción del proyecto. La Sección \ref{sec:requirements} especifica los requisitos del sistema, empezando con los requisitos de usuario y finalizando con los requisitos funcionales y no-funcionales. La Sección \ref{sec:user_cases} especifica los caso de uso del sistema. Finalmente, la Sección \ref{sec:regulatory_framework} indica el conjunto de leyes y regulaciones para la gestión del software.  
 
@@ -69,7 +69,7 @@ A partir de los requisitos de los usuarios, que constituyen una referencia infor
 %Starting from the user requirements, which constitute an informal reference to the product p%erformance that the client expects, we derived the software requirements (in this case, functional r%equirements and non-functional requirements) that guided the design process with specific %nformation on the functionality of the system and other characteristics. The retrieved requirements %were structured according with the following schema:
 
 \begin{itemize}
-\item[1.] \textbf{Requisitos de Usuario} 
+\item[1.] \textbf{Requisitos de usuario} 
 	\begin{itemize}
 		\item[(a)] \textbf{Capacidad:} el requisito describe la funcionalidad esperada del sistema como en casos de uso.
 		\item[(b)] \textbf{Restricción:} el requisito especifica las restricciones o condiciones que el sistema debe cumplir.
@@ -77,7 +77,7 @@ A partir de los requisitos de los usuarios, que constituyen una referencia infor
 \end{itemize}
 
 \begin{itemize}
-\item[2.] \textbf{Requisitos de Software}
+\item[2.] \textbf{Requisitos de software}
 	\begin{itemize}
 	\item[(a)] 	\textbf{Funcionales}
 		\begin{itemize}
@@ -95,11 +95,12 @@ A partir de los requisitos de los usuarios, que constituyen una referencia infor
 	\end{itemize}
 \end{itemize}
 
-La tabla \ref{tab:requirements_template} proporciona la plantilla utilizada para la especificación de requisitos. Tenga en cuenta que para los requisitos del usuario, el formato de identificación será UR-XYY, donde X indica el subtipo de requisito: requisitos de capacidad (C) o restricciones (R). YY corresponde al número de requisito en su subcategoría. Para los requisitos de software, se utilizará el formato de identificación SR-X-YZZ, donde X indica si es un requisito funcional (F) o no funcional (NF), e Y representa su subcategoría: funcional (F), inversa (I) ), Rendimiento (P), interfaz (UI), escalabilidad (S) o plataforma (PL). ZZ corresponde al número de requisito en su subcategoría.
+La Tabla \ref{tab:requirements_template} proporciona la plantilla utilizada para la especificación de requisitos. Es necesario tener en cuenta que para los requisitos del usuario, el formato de identificación será UR-XYY, donde X indica el subtipo de requisito: requisitos de capacidad (C) o restricciones (R). YY corresponde al número de requisito en su subcategoría. Para los requisitos de software, se utilizará el formato de identificación SR-X-YZZ, donde X indica si es un requisito funcional (F) o no funcional (NF), e Y representa su subcategoría: funcional (F), inversa (I) ), Rendimiento (P), interfaz (UI), escalabilidad (S) o plataforma (PL). ZZ corresponde al número de requisito en su subcategoría.
 
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Plantilla para la especificación de requisitos.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& Requisito ID. \\
@@ -117,7 +118,6 @@ La tabla \ref{tab:requirements_template} proporciona la plantilla utilizada para
 \textbf{Descripción} 	& Explicación detallada del requisito. \\
 \bottomrule
 \end{tabular}
-\caption{Plantilla para la especificación de requisitos.}
 \label{tab:requirements_template}
 \end{table*}
 \end{center}
@@ -131,6 +131,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-C01.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-C01 \\
@@ -148,7 +149,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La herramienta simulará el comportamiento de la arquitectura definida para la asignatura Estructura de Computadores. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-C01.}
 \label{tab:urc01}
 \end{table*}
 \end{center}
@@ -156,6 +156,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-C02.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-C02 \\
@@ -173,7 +174,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La herramienta debe permitir la definición del juego de instrucciones a utilizar por el usuario siguiendo el formato especificado por el tutor. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-C02.}
 \label{tab:urc02}
 \end{table*}
 \end{center}
@@ -181,6 +181,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-C03.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-C03 \\
@@ -198,7 +199,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La herramienta debe permitir al usuario las siguientes operaciones con el juego de instrucciones: cargar desde fichero, exportar a un fichero y generar el firmware. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-C03.}
 \label{tab:urc03}
 \end{table*}
 \end{center}
@@ -206,6 +206,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-C04.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-C04 \\
@@ -223,7 +224,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La herramienta debe permitir la definición del código ensamblador a simular siguiendo el formato utilizado en la asignatura Estructura de Computadores y el juego de instrucciones cargado previamente. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-C04.}
 \label{tab:urc04}
 \end{table*}
 \end{center}
@@ -231,6 +231,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-C05.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-C05 \\
@@ -248,7 +249,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La herramienta debe permitir al usuario las siguientes operaciones con el código ensamblador: cargar desde fichero, exportar a un fichero y generar el binario asociado. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-C05.}
 \label{tab:urc05}
 \end{table*}
 \end{center}
@@ -256,6 +256,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-C06.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-C06 \\
@@ -273,7 +274,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La herramienta debe permitir tres tipos diferentes de simulación: simulación ciclo a ciclo de reloj, simulación instrucción a instrucción y simulación completa del código.\\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-C06.}
 \label{tab:urc06}
 \end{table*}
 \end{center}
@@ -281,6 +281,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-C07.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-C07 \\
@@ -298,7 +299,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La herramienta debe permitir al usuario seleccionar la velocidad de la simulación. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-C07.}
 \label{tab:urc07}
 \end{table*}
 \end{center}
@@ -306,6 +306,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-C08.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-C08 \\
@@ -323,7 +324,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La herramienta debe mostrar la arquitectura de la CPU y la Unidad de Control que forman el simulador. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-C08.}
 \label{tab:urc08}
 \end{table*}
 \end{center}
@@ -331,6 +331,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-C09.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-C09 \\
@@ -348,7 +349,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La herramienta debe mostrar al usuario la información del estado del simulador en cada paso de la simulación. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-C09.}
 \label{tab:urc09}
 \end{table*}
 \end{center}
@@ -357,6 +357,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-R01.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-R01 \\
@@ -374,7 +375,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& El simulador no debe ser instalado en el dispositivo del usuario. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-R01.}
 \label{tab:urr01}
 \end{table*}
 \end{center}
@@ -382,6 +382,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-R02.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-R02 \\
@@ -399,7 +400,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& El simulador debe de funcionar en los siguiente navegadores web: Microsoft Edge 30+, Mozilla Firefox 45+, Google Chrome 50+ y Safari 10+. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-R02.}
 \label{tab:urr02}
 \end{table*}
 \end{center}
@@ -407,6 +407,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-R03.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-R03 \\
@@ -424,7 +425,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La interfaz de usuario debe de ser compatible para uso en PCs y smartphones. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-R03.}
 \label{tab:urr03}
 \end{table*}
 \end{center}
@@ -432,6 +432,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-R04.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-R04 \\
@@ -449,7 +450,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& El tiempo de ejecución en media de un ciclo de reloj del simulador no debe de sobrepasar 0,1 segundos. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-R04.}
 \label{tab:urr04}
 \end{table*}
 \end{center}
@@ -457,6 +457,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-R05.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-R05 \\
@@ -474,7 +475,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& Las simulaciones serán realizadas en el dispositivo del usuario, siendo únicamente necesario el servidor para el acceso a la herramienta. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-R05.}
 \label{tab:urr05}
 \end{table*}
 \end{center}
@@ -482,6 +482,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-R06.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-R06 \\
@@ -499,7 +500,6 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& La herramienta podrá ser ejecutada sin conexión a internet. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-R06.}
 \label{tab:urr06}
 \end{table*}
 \end{center}
@@ -507,6 +507,7 @@ Esta subsección especifica los requisitos de usuario.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito de usuario UR-R07.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& UR-R07 \\
@@ -524,49 +525,19 @@ Esta subsección especifica los requisitos de usuario.
 \textbf{Descripción} 	& El simulador debe de ser desarrollado mediante el lenguaje de programación HTML5. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito de usuario UR-R07.}
 \label{tab:urr07}
 \end{table*}
 \end{center}
 
-\iffalse
-
-\begin{center}
-\begin{table*}[htbp]
-\centering
-\begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
-\toprule
-\textbf{ID} 				& UR-C00 \\
-\midrule
-\textbf{Nombre} 			& a \\
-\midrule
-\textbf{Tipo} 			& a \\
-\midrule
-\textbf{Origen} 			& a \\
-\midrule
-\textbf{Prioridad}		& a \\
-\midrule
-\textbf{Estabilidad} 		& a \\
-\midrule
-\textbf{Descripción} 	& a \\
-\bottomrule
-\end{tabular}
-\caption{Requisito de usuario UR-C00.}
-\label{tab:urc00}
-\end{table*}
-\end{center}
-
-\fi
-
 \subsection{Modelo de Casos de Uso}
 \label{sec:user_cases}
 
-Un caso de uso representa un uso típico que realizará alguno de los futuros usuarios del sistema desarrollado. El diagrama que se muestra a continuación representa los casos de uso de un usuario que utilice esta herramienta desarrollada. Se ha partido el diagrama en dos para hacerlo mucho más legible. A continuación se muestra la primera parte del diagrama. En la página siguiente se mostrará la segunda parte.
+Un caso de uso representa un uso típico que realizará alguno de los futuros usuarios del sistema desarrollado. El diagrama que se muestra a continuación representa los casos de uso de un usuario que utilice esta herramienta desarrollada. Se ha partido el diagrama en dos para hacerlo mucho más legible. A continuación, se muestra la primera parte del diagrama (Figura \ref{fig:user_cases1}). En la página siguiente se muestra la segunda parte (Figura \ref{fig:user_cases2}).
 
 \begin{figure}[htbp]
  	\centering
  	\includegraphics[width=14cm]{figures/user_cases_1}
- 	\caption{Diagrama Modelo Casos de Uso 1.}
+ 	\caption{Diagrama modelo casos de uso 1.}
 	\label{fig:user_cases1}
 \end{figure}
 
@@ -575,7 +546,7 @@ Un caso de uso representa un uso típico que realizará alguno de los futuros us
 \begin{figure}[htbp]
  	\centering
  	\includegraphics[width=15cm]{figures/user_cases_2}
- 	\caption{Diagrama Modelo Casos de Uso 2.}
+ 	\caption{Diagrama modelo casos de uso 2.}
 	\label{fig:user_cases2}
 \end{figure}
 
@@ -606,7 +577,7 @@ Para realizar la especificación clara, completa y detallada de cada uno de los 
 \end{table*}
 \end{center}
 
-La Tabla \ref{tab:uc_template} proporciona la plantilla utilizada para la especificación de casos de uso. Tenga en cuenta que el formato de identificación será UC-XX, donde XX corresponde al número de caso de uso. 
+La Tabla \ref{tab:uc_template} proporciona la plantilla utilizada para la especificación de casos de uso. Es necesario tener en cuenta que el formato de identificación será UC-XX, donde XX corresponde al número del caso de uso. 
 
 A continuación, se exponen los casos de uso.
 

@@ -25,7 +25,7 @@ El primer capítulo introduce brevemente el objetivo del proyecto, incluyendo la
 
 La enseñanza de la arquitectura de un computador es una parte básica y fundamental en la formación de los estudiantes de Ingeniería Informática, mediante la cual los estudiantes logran obtener una visión y comprensión del comportamiento a bajo nivel de un computador. Para lograr que los estudiantes comprendan y asienten correctamente los fundamentos teóricos, es necesario el uso de clases prácticas, en donde el estudiante pueda ser capaz de interactuar con un computador de arquitectura igual o similar a la explicada en teoría y además logre extrapolar los fundamentos teóricos al comportamiento real.
 
-Uno de los principales problemas a la hora de diseñar estas clases prácticas es lograr obtener los medios necesarios para que los estudiantes puedan hacer uso de un computador similar al visto en las clases teóricas, debido al coste que supone tener un número suficiente de computadores para el número de estudiantes que deben hacer uso de ellos y su mantenimiento, la limitación de movilidad a la hora de realizar las prácticas debido a la necesidad física del computador, etc. Para evitar estos problemas, actualmente se hace uso de simuladores y emuladores que proporcionan las funciones necesarias para las clases prácticas, evitando los problemas anteriormente comentados.
+Uno de los principales problemas a la hora de diseñar estas clases prácticas es lograr obtener los medios necesarios para que los estudiantes puedan hacer uso de un computador similar al visto en las clases teóricas. Actualmente, existen diferentes simuladores y emuladores que simulan diferentes componentes de un computador, pero no existe una herramienta que unifique la simulación de estos componentes, siendo un problema a la hora de obtener una visión global del funcionamiento de un computador.
 
 Un emulador es un software que se encarga de imitar el comportamiento de una computadora de forma que programas pensados para una arquitectura concreta, puedan ser ejecutados en otra diferente. Por otro lado, un simulador es un software que trata reproducir el comportamiento de un computador, pero con un menor nivel de realismo, puesto que el emulador se encarga de modelar de forma precisa el dispositivo de manera que los programas ejecutados sobre él funcionen como si estuvieran siendo ejecutados en el dispositivo original.
 
@@ -35,7 +35,7 @@ Hay otro problema no menos importante: la mayoría de los simuladores están pen
 
 Además de tener un simulador portable a distintas plataformas, el simulador ha de ser lo más autocontenido posible, de manera que integre la ayuda principal para su uso (no como un documento separado que sirva de manual de uso para ser impreso) permitiendo al usuario hacer un uso completo de la aplicación sin la necesidad de salir de ella.
 
-Por todo ello, nos hemos planteado cómo ofrecer un simulador que sea simple y modular, y que permita integrar la enseñanza de la microprogramación con la programación en ensamblador. En concreto, puede utilizarse para microprogramar un juego de instrucciones y ver el funcionamiento básico de un procesador, y para crear programas en ensamblador basados en el ensamblador definido por el anterior microcódigo. Esto es de gran ayuda, por ejemplo, para la programación de sistemas dado que es posible ver cómo interactúa el software en ensamblador con el hardware en el tratamiento de interrupciones. La idea es ofrecer un simulador que ofrezca una visión global de lo que pasa en hardware y software, evitando además el tiempo extra que supone el aprendizaje de distintas herramientas.
+Por todo ello, proponemos ofrecer un simulador que sea simple y modular, y que permita integrar la enseñanza de la microprogramación con la programación en ensamblador. En concreto, puede utilizarse para microprogramar un juego de instrucciones y ver el funcionamiento básico de un procesador, y para crear programas en ensamblador basados en el ensamblador definido por el anterior microcódigo. Este planteamiento permite una mejor comprensión de la programación de sistemas dado que es posible ver cómo interactúa el software en ensamblador con el hardware en el tratamiento de interrupciones. Finalmente, desde el punto de vista de la docencia, nuestro simulador ofrece una visión global de lo que pasa en hardware y software, evitando además el tiempo extra que supone el aprendizaje de distintas herramientas.
 
 
 \section{Objetivos}
@@ -45,13 +45,13 @@ El objetivo principal de este proyecto, es desarrollar un simulador, que a difer
 
 \begin{itemize}
 
-\item Simular la ejecución de el juego de instrucciones especificado en un computador denominado WepSIM desde el punto de vista de la microprogramación y la programación en ensamblador.
+\item \textbf{O1:} Simular la ejecución de el juego de instrucciones especificado en un computador denominado WepSIM desde el punto de vista de la microprogramación y la programación en ensamblador.
 
-\item Permitir la especificación de diferentes juegos de instrucciones.
+\item \textbf{O2:} Permitir la especificación de diferentes juegos de instrucciones.
 
-\item Permitir unificar la microprogramación en un computador y la programación en lenguaje ensamblador.
+\item \textbf{O3:}Permitir unificar la microprogramación en un computador y la programación en lenguaje ensamblador.
 
-\item Permitir al usuario la visualización en cada ciclo de reloj del estado y comportamiento del computador simulado.
+\item \textbf{O4:} Permitir al usuario la visualización en cada ciclo de reloj del estado y comportamiento del computador simulado.
 
 \end{itemize}
 
@@ -68,7 +68,7 @@ El documento contiene los siguientes capítulos:
 
 \item Capítulo \ref{ch:analysis}, \textit{\nameref{ch:analysis}}, describe brevemente el proyecto, establece los requisitos y presenta el marco regulador del proyecto.
 
-\item Capítulo \ref{ch:design}, \textit{\nameref{ch:design}}, explica la solución elegida, detalla el diseño del sistema, incluyendo todos sus componentes.
+\item Capítulo \ref{ch:design}, \textit{\nameref{ch:design}}, explica la solución elegida y detalla el diseño del sistema, incluyendo todos sus componentes.
 
 \item Capítulo \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}}, incluye los detalles de implementación de las partes principales del software desarrollado y las características necesarias para la implementación de la aplicación.
 

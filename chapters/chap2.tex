@@ -35,7 +35,7 @@ P8080E \cite{p8080E} es un simulador desarrollado por el grupo de investigación
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=6cm]{figures/ejemploTanenbaum}
+ 	\includegraphics[width=5cm]{figures/ejemploTanenbaum}
  	\caption{Ejemplo de definición de microcódigo en simulador Tanenbaum.}
 	\label{fig:tanenbaum_figure}
 \end{figure}
@@ -89,7 +89,7 @@ MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado e
 
 \item La velocidad de ejecución puede modificarse de forma que, si se ralentiza, el usuario puede observar cómo cada instrucción se resalta cuando está siendo ejecutada y ver los cambios que se producen en los valores del banco de registros y de las ubicaciones de memoria.
 
-\item  La memoria y los registros se pueden modificar de una manera \emph{WYSIWYG}.
+\item  La memoria y los registros se pueden modificar de una manera \emph{``What You See Is What You Get''}( \emph{WYSIWYG}).
 
 \item Incorpora un editor de texto, eliminando dependencias externas para el uso del simulador.
 
@@ -114,7 +114,7 @@ P88110 es emulador descrito en \cite{garcia2009p88110} que se basa en la emulaci
 \end{figure}
 
 
-WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia (Figura \ref{fig:webmips_figure}). Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web, de forma que no requiere de su instalación en computador local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de arquitectura de computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las cinco etapas de \emph{pipeline} de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura ``Arquitectura de Computadores'' impartida por los creadores del simulador.
+WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia (Figura \ref{fig:webmips_figure}). Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web, de forma que no requiere de su instalación en computador local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de la arquitectura del computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las cinco etapas de \emph{pipeline} de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura ``Arquitectura de Computadores'' impartida por los creadores del simulador.
 
 Entre las diferentes características a destacar de este simulador, se encuentran:
 
@@ -141,7 +141,7 @@ Entre las diferentes características a destacar de este simulador, se encuentra
 
 \subsection{Propuesta de simulación unificada}
 \label{sec:propuesta_simulacion}
-Hay distintas herramientas muy útiles para labores docentes relacionadas con la asignatura Estructura de Computadores, aunque como se comento previamente, no existe una herramienta que nos proporcione el desarrollo y simulación tanto a nivel de microcódigo como a nivel de ensamblador. WepSIM, une ambos aspectos ofreciendo:
+Hay distintas herramientas muy útiles para labores docentes relacionadas con la asignatura ``Estructura de Computadores'', aunque como se comento previamente, no existe una herramienta que nos proporcione el desarrollo y simulación tanto a nivel de microcódigo como a nivel de ensamblador (Figura \ref{tab:comparison_frameworks}). WepSIM, une ambos aspectos ofreciendo:
 
 \begin{itemize}
 	\item Visión interrelacionada de la microprogramación y la programación en ensamblador.
@@ -156,24 +156,24 @@ Hay distintas herramientas muy útiles para labores docentes relacionadas con la
 \ra{1.2}
 \centering
 %\resizebox{\textwidth}{%
+\caption{Comparación de simuladores de ensamblador y microcódigo.}
 \resizebox{\textwidth}{!}{
-\begin{tabular}{@{}llllllll@{}}
+\begin{tabular}{@{}lllllllll@{}}
 \toprule
-Simulador & SPIM & MARS & PC88110 & WebMIPS & WepSIM  & P8080E & MicMac\\ 
+Simulador & SPIM & QtSPIM & MARS & PC88110 & WebMIPS & WepSIM  & P8080E & MicMac\\ 
 \midrule
-Ensamblador				& \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} &  &  \\
+Ensamblador				& \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} &  &  \\
 \midrule
-Microprogramación				&  &  &  &  & \ding{51} & \ding{51} & \ding{51} \\
+Microprogramación				& & &  &  &  & \ding{51} & \ding{51} & \ding{51} \\
 \midrule
-Multiplataforma				& \ding{51} &  &  & \ding{51} & \ding{51} &  &  \\
+Multiplataforma				& \ding{51} & \ding{51} &  &  & \ding{51} & \ding{51} &  &  \\
 \midrule
-Interactivo				&  &  &  &  & \ding{51} &  &  \\
+Interactivo				& &  &  &  &  & \ding{51} &  &  \\
 \midrule
-Juego de instrucciones personalizable				&  &  &  &  & \ding{51} &  &  \\
+Juego de instrucciones personalizable				& &  &  &  &  & \ding{51} &  &  \\
 \bottomrule
 \end{tabular}
 }
-\caption{Comparación de simuladores de ensamblador y microcódigo.}
 \label{tab:comparison_frameworks}
 \end{table}
 
@@ -190,7 +190,7 @@ Actualmente, gran parte de los recursos disponibles son ofrecidos a través de I
 \subsection{HTML5}
 \label{sec:html5}
 
-Cuando se realiza el desarrollo de una página web, son tres las tecnologías que se emplean con mayor frecuencia: HTML, CSS y JavaScript. Todas estas tecnologías vienen definidas y estandarizadas por el organismo internacional W3C, y cada una de ellas tiene una función concreta en el funcionamiento de la página web:
+Cuando se realiza el desarrollo de una página web, son tres las tecnologías que se emplean con mayor frecuencia: HTML, CSS y JavaScript. Todas estas tecnologías vienen definidas y estandarizadas por el organismo internacional W3C, y conforman el lenguaje de marcado HTML5. Cada una de ellas tiene una función concreta en el funcionamiento de la página web:
 
 \begin{itemize}
 \item \textbf{HTML}: Es un lenguaje de marcas con el que se realiza la estructuración de la página web. Es un estándar que sirve de referencia para el software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, vídeos, juegos, entre otros. 
@@ -231,7 +231,7 @@ Como se indica en \cite{garrido2004arquitectura} las aplicaciones web se han con
 \section{Procesador elemental WepSIM}
 \label{sec:wepsim}
 
-WepSIM es un procesador elemental con unidad de control microprogramada diseñado por el personal del grupo de investigación ARCOS de la Universidad Carlos III de Madrid para la docencia en la asignatura Estructura de Computadores.
+WepSIM es un procesador elemental con unidad de control microprogramada diseñado por el personal del grupo de investigación ARCOS de la Universidad Carlos III de Madrid para la docencia en la asignatura ``Estructura de Computadores''.
 
 En la Figura \ref{fig:wepsimCPU_figure} se muestra la estructura del Procesador Elemental WepSIM. WepSIM, consta de un módulo de memoria, un dispositivo teclado, un dispositivo pantalla y un dispositivo de E/S genérico que se puede utilizar para trabajar con interrupciones.
 
