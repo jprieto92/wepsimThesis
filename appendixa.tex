@@ -11,7 +11,7 @@
 \chapter{Summary}
 \markboth{}{APPENDIX A}
 
-\section{Introducion}
+\section{Introduction}
 
 Teaching the architecture of a computer is a basic and fundamental part of the training of computer science students, through which students achieve a low-level vision and understanding of behavior in a computer. In order to get students to understand and correctly understand the theoretical foundations, it is necessary to use practical classes, where the student can be able to interact with a computer of architecture similar or similar to that explained in theory and also manage to extrapolate the theoretical foundations To actual behavior.
 
@@ -34,14 +34,14 @@ The main objective of this project is to develop a simulator, which unlike the e
 
 \begin{itemize}
 
-\item Simulate the execution of the set of instructions specified in a computer called WepSIM from the point of view of microprogramming and programming in assembler.
+\item \textbf{O1:} Simulate the execution of the set of instructions specified in a computer called WepSIM from the point of view of microprogramming and programming in assembler.
 
-\item Allow specification of different sets of instructions.
+\item \textbf{O2:} Allow specification of different sets of instructions.
 
-\item Allow unified microprogramming in a computer and programming in assembly language.
+\item \textbf{O3:} Allow unified microprogramming in a computer and programming in assembly language.
 
 
-\item Allow the user to display in each clock cycle the status and behavior of the simulated computer.
+\item \textbf{O4:} Allow the user to display in each clock cycle the status and behavior of the simulated computer.
 
 \end{itemize}
 
@@ -87,7 +87,7 @@ The MR multiplexer is used to indicate whether the RA, RB and RE signals are lit
 
 For the Cop signal (operation code in the ALU), the MC signal can be used to take the SelCop value of the micro-instruction (MC = 1) or the 4 least significant bits of the instruction register (MC = 0), ie IR3 -IR 0.
 
-\section{Design}
+\section{Simulator design}
 
 In order for the teachers of the Computer Structure subject to use a tool that helps to explain the theoretical concepts of the subject, and students can use it to understand these concepts and to carry out the subject's practices later, Proposes the design and implementation of a web tool that realistically simulates an elementary processor with a microprogrammable control unit.
 
@@ -102,9 +102,9 @@ Therefore, the chosen solution is able to unify in a single tool all the functio
 The architecture of the solution presented in this work consists of three main elements:
 
 \begin{itemize}
-\item Hardware model: allows you to define the hardware to use.
-\item Software model: allows to define the set of instructions to use.
-\item Simulation kernel: simulates hardware operation by running microcode / machine language previously defined.
+\item \textbf{Hardware model:} allows you to define the hardware to use.
+\item \textbf{Software model:} allows to define the set of instructions to use.
+\item \textbf{Simulation kernel:} simulates hardware operation by running microcode / machine language previously defined.
 \end{itemize}
 
 The hardware model allows to define the typical elements of a computer (main memory, processor, etc.) in a modular way. The way in which these elements are defined balances two opposing objectives: it is sufficiently complete to imitate the main aspects of reality, but it is sufficiently minimal to facilitate its use. Above all, it is intended to be a didactic tool.
@@ -129,4 +129,111 @@ The microcode (the contents of the control memory) together with the format of e
 
 The simulation kernel asks the subsystem of the software model for the defined microcode, the description of the instruction format and the contents of the main memory. The binaries are loaded into the elements of the hardware model, and then the simulation kernel updates the global state in each clock cycle.
 
-WepSIM has a simulation controller that is responsible for updating the clock cycle and displaying the global status. The simulation interface subsystem updates the user interface. When the user uses the user interface to request an operation, the simulation interface subsystem moves the request to the simulation controller. As you can see, a basic Model-View-Controller (MVC) is used for the WepSIM architecture.
+WepSIM has a simulation controller that is responsible for updating the clock cycle and displaying the global status. The simulation interface subsystem updates the user interface. When the user uses the user interface to request an operation, the simulation interface subsystem moves the request to the simulation controller. In this way, a basic Model-View-Controller (MVC) is used for the WepSIM architecture.
+
+\section{Conclusions and future work}
+
+This section presents the conclusions of the paper, reviews the objectives set out at the beginning of this document, and includes some personal conclusions. In addition, we discuss the main contributions of our work, also indicating the publications resulting from this work. Finally, future work is discussed.
+
+\section{Conclusions}
+
+In this work we have described the design of WepSIM, a simulator of an elementary processor with microprogrammed control unit. This work presents a new simulator that is intuitive, portable and extensible, serving as a teaching complement for teaching in Computer Structure. This simulator allows you to define different sets of instructions and to execute and debug source code using the defined set of instructions. It also allows to define the behavior of the processor by microprogramming.
+
+WepSIM allows students to understand the operation of an elementary processor in a simple way, can be used from a mobile device or a computer with a modern Web browser without the need to be installed. In this way, students can interact with the simulator by learning and understanding the operation of the WepSIM elementary processor, including the mechanisms of interaction with the system software and integrating in the same tool both the microprogramming and the programming in assembler.
+
+The main objective of this project was to develop a simulator, which, in contrast to existing ones, could completely simulate the behavior of an elementary processor, allowing to check the state of the components in each clock cycle, so that students Understand and assimilate in a simple and visual way the operation of a processor. We have also met all the other objectives presented in the introduction of the document:
+
+\begin{itemize}
+
+\item \textbf{O1}, A tool has been designed that simulates the execution of the instruction set specified in a computer called WepSIM, from the point of view of microprogramming and assembly programming.
+
+\item \textbf{O2}, The tool allows the specification of different instructions.
+
+\item \textbf{O3}, The tool unifies the microprogramming of a computer and programming in assembler language.
+
+\item \textbf{O4}, The tool allows the user to display in each clock cycle the state and behavior of the simulated computer.
+
+\end{itemize}
+
+On a personal level, this work has helped me to enter the world of scientific research. I have been able to apply a great deal of the knowledge acquired throughout the degree. In addition, I have learned important techniques of hardware modeling, compilation and simulation, which have a great utility and complexity and have served me to deepen even more in the knowledge acquired in the degree. For all this, it is very satisfying to see the final result obtained, since I have managed to overcome all the problems that have arisen throughout the project.
+
+\subsection{Contributions}
+
+The project carried out during this Work End of Degree fits with many of the subjects studied in the Degree in Computer Engineering of the Carlos III University of Madrid, highlighting the following topics in particular:
+
+\begin{itemize}
+
+\item \textbf{Computer technology} (Compulsory subject, First course) Where the hardware components and binary logic are introduced.
+
+\item \textbf{Computer structure} (Compulsory subject, Second course) Where the bases of the structure and operation of a computer are introduced.
+
+\item \textbf{Formal languages and Automata theory} (Compulsory subject, Second course) Where the bases are introduced about the formal languages and grammars.
+
+\item \textbf{Operating systems} (Compulsory subject, Second course) Where the bases of the operation of the operating system are introduced.
+
+\item \textbf{Computer architecture} (Compulsory subject, Third course) Where the bases of the architecture of a computer are introduced.
+
+\item \textbf{Operating systems design} (Compulsory subject, Third course) Where the bases of the design of the different modules of an operating system are introduced.
+
+\item \textbf{Software development projects management} (Compulsory subject, Third course) Where the bases for the management and management of a software development project are introduced.
+
+\end{itemize}
+
+\subsection{Publications}
+
+This bachelor thesis has allowed to make an important contribution to the field of teaching in Structure and Computer Architecture. In addition, the following scientific articles have been published:
+
+\begin{itemize}
+
+\item \textbf{A. Calderón, F. García-Carballeira, and J. Prieto}, “WepSIM: Simulador modular e interactivo de un procesador elemental para facilitar una visión integrada de la microprogramación y la programación en ensamblador”, \textit{Enseñanza y aprendizaje de ingeniería de computadores}, vol. 6, 35-53,2016. \cite{mateos2016wepsim}
+
+\item \textbf{J. Prieto, A. Calderón, F. García-Carballeira, and S. Alonso-Monsalve}, “WepSIM: simulador integrado de microprogramación y programación en ensamblador”, \textit{Jornadas sarteco 2016}. \cite{arcos2032}
+
+\end{itemize}
+d
+In addition, at the time of delivery of this document, also another item sent waiting for its acceptance.
+
+\vspace{1cm}
+
+\section{Future works}
+
+Currently, there are several lines of future work in which we are working.
+
+\begin{itemize}
+
+\item Regarding improvements in the hardware model:
+
+\begin{itemize}
+
+\item[1.] Introduce more hardware elements, such as a cache, in order to expand the contents of the subject included in the tool.
+
+\item[2.] Introduce a hardware model based on pipeline, allowing the use of the tool in those subjects that use this architecture model.
+
+\end{itemize}
+
+\item Regarding improvements in the software model:
+
+\begin{itemize}
+
+\item[3.] Add semantic revision of the code, allowing to identify and notify the programming errors to the user.
+
+\item[4.] Add new sets of instructions to the tool such as the ARM assembler, allowing the use of different languages in the tool.
+
+\item[5.] Study the MIPS / ARM assembler generated with GCC / Clang so that it can be used directly in WepSIM.
+
+\end{itemize}
+
+\item Regarding improvements in the tool:
+
+\begin{itemize}
+
+\item[6.] Add an automatic correction module of practices to the tool, so that students can practice with it and check the validity of their exercises.
+
+\item[7.] Migrate the tool as a mobile application using the Apache Cordova plugin, so that the tool is not linked to use by web browser.
+
+\end{itemize}
+
+\end{itemize}
+
+
+

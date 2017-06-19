@@ -18,7 +18,7 @@
 \label{ch:state_of_the_art}
 \markboth{}{STATE OF THE ART}
 
-Este capítulo presenta el estado del arte, la última y más avanzada etapa de las tecnologías relacionadas con nuestra aplicación. En primer lugar, se presentan los diferentes simuladores existentes en el ámbito docente tanto para microprogramación (Sección \ref{sec:simuladores_microprogramacion}) como para la programación en código ensamblador (Sección \ref{sec:simuladores_ensamblador}), realizando una comparación de nuestro trabajo con el contexto actual de los distintos simuladores expuestos previamente (Sección \ref{sec:propuesta_simulacion}). Después, se presentan las diferentes tecnologías web más utilizadas en la actualidad (Sección \ref{sec:tecnologias_web}). Por último se describe el procesador en el cual se basa WepSIM (Sección \ref{sec:wepsim}.
+Este capítulo presenta el estado del arte, la última y más avanzada etapa de las tecnologías relacionadas con nuestra aplicación. En primer lugar, se presentan los diferentes simuladores existentes en el ámbito docente tanto para microprogramación (Sección \ref{sec:simuladores_microprogramacion}) como para la programación en código ensamblador (Sección \ref{sec:simuladores_ensamblador}), realizando una comparación de nuestro trabajo con el contexto actual de los distintos simuladores expuestos previamente (Sección \ref{sec:propuesta_simulacion}). Después, se presentan las diferentes tecnologías web más utilizadas en la actualidad (Sección \ref{sec:tecnologias_web}). Por último se describe el procesador en el cual se basa WepSIM (Sección \ref{sec:wepsim}).
 
 \section{Simuladores para la enseñanza de la Estructura y Arquitectura de Computadores}
 
@@ -29,7 +29,7 @@ En esta sección, nos centramos en los tipos de simuladores que tienen relación
 \subsection{Simuladores para microprogramación}
 \label{sec:simuladores_microprogramacion}
 
-En esta sección, se explican los diferentes simuladores existentes para la microprogramación. Cabe destacar que, actualmente, existen pocos simuladores que nos proporcionen esta funcionalidad, principalmente debido a que una gran parte de ellos son utilizados de forma interna por las empresas para verificar el correcto funcionamiento de sus unidades en la fase de diseño y desarrollo. 
+En esta sección, se explican las diferentes herramientas existentes para el aprendizaje de microprogramación a través de simulaciones. Cabe destacar que, actualmente, existen pocos simuladores que nos proporcionen esta funcionalidad, principalmente debido a que una gran parte de ellos son utilizados de forma interna por las empresas para verificar el correcto funcionamiento de sus unidades en la fase de diseño y desarrollo. 
 
 P8080E \cite{p8080E} es un simulador desarrollado por el grupo de investigación DATSI en la Facultad de Informática de la Universidad Politécnica de Madrid. Este simulador, no consta de una interfaz gráfica portable e interactiva que se ajuste a las tecnologías actuales. Para poder realizar el desarrollo del microcódigo, el simulador requiere el binario completo de cada ciclo, de forma que resulta un tanto complejo su uso. Pese a ser un simulador bastante completo, no está orientado para la enseñanza de ensamblador y microprogramación con la misma herramienta, puesto que no permite la definición del juego de instrucciones con un formato diferente al definido por defecto.
 
@@ -40,7 +40,7 @@ P8080E \cite{p8080E} es un simulador desarrollado por el grupo de investigación
 	\label{fig:tanenbaum_figure}
 \end{figure}
 
-En \cite{yen1986development}, se describe el desarrollo y la implementación de un simulador para una arquitectura de microprogramación específica (Figura \ref{fig:tanenbaum_figure}). Fue publicado en el año 1986 y está basado en la arquitectura definida en el entonces popular libro de ingeniería de computadores de \textit{Tanembaum}, el autor \cite{tanenbaum1984}. El simulador, requería de la definición de cada uno de los ciclos de ejecución de las instrucciones para la posterior generación de la memoria de control. Esta definición, se realizaba mediante la sintaxis definida en el libro, lo que hacía de este simulador una herramienta bastante completa para aprender junto con el libro. 
+En \cite{yen1986development}, se describe el desarrollo y la implementación de un simulador para una arquitectura de microprogramación específica (Figura \ref{fig:tanenbaum_figure}). Fue publicado en el año 1986 y está basado en la arquitectura definida en el entonces popular libro de ingeniería de computadores de \textit{Tanembaum et al.} \cite{tanenbaum1984}. El simulador, requería de la definición de cada uno de los ciclos de ejecución de las instrucciones para la posterior generación de la memoria de control. Esta definición, se realizaba mediante la sintaxis definida en el libro, lo que hacía de este simulador una herramienta bastante completa para aprender junto con el libro. 
 
 
 \subsection{Simuladores para programación en ensamblador}
@@ -54,19 +54,21 @@ En esta sección, se explican los diferentes simuladores existentes para la prog
 	\label{fig:spim_figure}
 \end{figure}
 
-SPIM \cite{larus1990spim} es un simulador de un procesador MIPS de 32 bits desarrollado a principios de 1990 (Figura \ref{fig:spim_figure}). En un primer momento implementaba el juego de instrucciones MIPS-1, utilizado por los computadores MIPS R2000/R3000. Actualmente, implementa la arquitectura MIPS32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el estudiante pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque su diseño no está pensado para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción \emph{syscall}. SPIM es un simulador que permite múltiples configuraciones mediante su interfaz de usuario, de manera que se puede indicar:
+SPIM \cite{larus1990spim} es un simulador de un procesador MIPS de 32 bits desarrollado a principios de 1990. En un primer momento implementaba el juego de instrucciones MIPS-1, utilizado por los computadores MIPS R2000/R3000. Actualmente, implementa la arquitectura MIPS32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el estudiante pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque el diseño de su interfaz gráfica no está pensada para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción \emph{syscall}. 
+
+SPIM es un simulador que permite múltiples configuraciones mediante su interfaz de usuario (Figura \ref{fig:spim_figure}), de manera que se puede indicar:
 
 \begin{itemize}
 
-\item Activación del uso de pseudoinstrucciones,
+\item Activación del uso de pseudoinstrucciones.
 
-\item Simulación de predicción de saltos y accesos a memoria, con la latencia correspondiente,
+\item Simulación de predicción de saltos y accesos a memoria, con la latencia correspondiente.
 
-\item Activación del uso del manejador de la señal trap y la carga del manejador personalizado,
+\item Activación del uso del manejador de la señal trap y la carga del manejador personalizado.
 
-\item Activación de la visualización de los mensajes en caso de ocurrir excepciones,
+\item Activación de la visualización de los mensajes en caso de ocurrir excepciones.
 
-\item Activación del uso de ``memory-mapped IO''.
+\item Activación del uso de \emph{``memory-mapped IO''}.
 
 \end{itemize}
 
@@ -79,11 +81,11 @@ SPIM, además cuenta con una versión más actualizada del simulador, que posee 
 	\label{fig:qtspim_figure}
 \end{figure}
 
-MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado en JAVA para el lenguaje ensamblador MIPS (Figura \ref{fig:mars_figure}). Fue creado en el año 2005 como una alternativa del simulador SPIM y diseñado específicamente para las necesidades limitadas de grado. Está basado en la arquitectura MIPS RISC, que tiene un número pequeño de elementos del lenguaje e instrucciones. Consta de operaciones de entrada/salida, saltos, condiciones y operaciones aritmético-lógicas tanto enteras como en coma flotante. Alguna de las mejoras que incorpora MARS con respecto a SPIM son \cite{vegdahl2008mipspilot}: 
+MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado en JAVA para el lenguaje ensamblador MIPS. Fue creado en el año 2005 como una alternativa del simulador SPIM y diseñado específicamente para las necesidades limitadas de grado. Está basado en la arquitectura MIPS RISC, que tiene un número pequeño de elementos del lenguaje e instrucciones. Consta de operaciones de entrada/salida, saltos, condiciones y operaciones aritmético-lógicas tanto enteras como en coma flotante. Alguna de las mejoras que incorpora MARS con respecto a SPIM son \cite{vegdahl2008mipspilot}: 
 
 \begin{itemize}
 
-\item Depuración más sencilla y cómoda, debido constar de una interfaz gráfica de usuario (GUI). Esto se debe, a que para añadir un punto de ruptura, únicamente hay que pulsar sobre el elemento que tiene la instrucción.
+\item Depuración más sencilla y cómoda, debido a constar de una interfaz gráfica de usuario (GUI) (Figura \ref{fig:mars_figure}). Esto se debe, a que para añadir un punto de ruptura, únicamente hay que pulsar sobre el elemento que tiene la instrucción.
 
 \item Los programas pueden ejecutarse de forma inversa, lo que permite volver a un estado anterior del computador en la ejecución de un programa.
 
@@ -104,7 +106,7 @@ MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado e
 	\label{fig:mars_figure}
 \end{figure}
 
-P88110 es emulador descrito en \cite{garcia2009p88110} que se basa en la emulación de un procesador superescalar (Figura \ref{fig:p88110_figure}). El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del \emph{pipeline} y las dependencias existentes. Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
+P88110 es un emulador descrito en \cite{garcia2009p88110} que se basa en la emulación de un procesador superescalar. El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del \emph{pipeline} y las dependencias existentes (Figura \ref{fig:p88110_figure}). Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
 
 \begin{figure}[htbp]
  	\centering
@@ -114,7 +116,7 @@ P88110 es emulador descrito en \cite{garcia2009p88110} que se basa en la emulaci
 \end{figure}
 
 
-WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia (Figura \ref{fig:webmips_figure}). Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web, de forma que no requiere de su instalación en computador local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de la arquitectura del computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las cinco etapas de \emph{pipeline} de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura ``Arquitectura de Computadores'' impartida por los creadores del simulador.
+WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web (Figura \ref{fig:webmips_figure}), de forma que no requiere de su instalación en computador local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de la arquitectura del computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las cinco etapas de \emph{pipeline} de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura ``Arquitectura de Computadores'' impartida por los creadores del simulador.
 
 Entre las diferentes características a destacar de este simulador, se encuentran:
 
@@ -141,11 +143,11 @@ Entre las diferentes características a destacar de este simulador, se encuentra
 
 \subsection{Propuesta de simulación unificada}
 \label{sec:propuesta_simulacion}
-Hay distintas herramientas muy útiles para labores docentes relacionadas con la asignatura ``Estructura de Computadores'', aunque como se comento previamente, no existe una herramienta que nos proporcione el desarrollo y simulación tanto a nivel de microcódigo como a nivel de ensamblador (Figura \ref{tab:comparison_frameworks}). WepSIM, une ambos aspectos ofreciendo:
+Hay distintas herramientas muy útiles para labores docentes relacionadas con la asignatura ``Estructura de Computadores'', aunque como se comentó previamente, no existe una herramienta que nos proporcione el desarrollo y simulación tanto a nivel de microcódigo como a nivel de ensamblador (Figura \ref{tab:comparison_frameworks}). WepSIM, une ambos aspectos ofreciendo:
 
 \begin{itemize}
 	\item Visión interrelacionada de la microprogramación y la programación en ensamblador.
-	\item Flexibilidad en la plataforma usada, pensando el dispositivos móviles.
+	\item Flexibilidad en la plataforma usada, pensando en dispositivos móviles.
 	\item Herramienta autocontenida, de forma que incorpora en sí misma tanto la ayuda como distintos ejemplos que favorecen la comprensión del simulador.
 	\item Consta de un modelo hardware que puede ser modificado o ampliado en caso de ser necesario.
 	\item Permite definir un amplio conjunto de instrucciones máquina.
@@ -168,7 +170,7 @@ Microprogramación				& & &  &  &  & \ding{51} & \ding{51} & \ding{51} \\
 \midrule
 Multiplataforma				& \ding{51} & \ding{51} &  &  & \ding{51} & \ding{51} &  &  \\
 \midrule
-Interactivo				& &  &  &  &  & \ding{51} &  &  \\
+Interactivo				& & \ding{51} &  &  &  & \ding{51} &  &  \\
 \midrule
 Juego de instrucciones personalizable				& &  &  &  &  & \ding{51} &  &  \\
 \bottomrule
@@ -185,7 +187,7 @@ WepSIM se puede definir por tanto como un simulador de programación en ensambla
 \section{Tecnologías web}
 \label{sec:tecnologias_web}
 
-Actualmente, gran parte de los recursos disponibles son ofrecidos a través de Internet y su distribución es posible gracias a las tecnologías web. Estas tecnologías permiten la construcción de las páginas web haciendo uso de las tecnologías para el desarrollo de páginas web y las tecnologías de interconexión de computadores permitiendo a los usuarios el intercambio en formato de hipertexto de todo tipo de datos y de aplicaciones software.
+Actualmente, gran parte de los recursos digitales disponibles son ofrecidos a través de Internet y su distribución es posible gracias a las tecnologías web. Estas tecnologías permiten la construcción de las páginas web haciendo uso de las tecnologías para el desarrollo de páginas web y las tecnologías de interconexión de computadores permitiendo a los usuarios el intercambio en formato de hipertexto de todo tipo de datos y de aplicaciones software.
 
 \subsection{HTML5}
 \label{sec:html5}
@@ -193,9 +195,9 @@ Actualmente, gran parte de los recursos disponibles son ofrecidos a través de I
 Cuando se realiza el desarrollo de una página web, son tres las tecnologías que se emplean con mayor frecuencia: HTML, CSS y JavaScript. Todas estas tecnologías vienen definidas y estandarizadas por el organismo internacional W3C, y conforman el lenguaje de marcado HTML5. Cada una de ellas tiene una función concreta en el funcionamiento de la página web:
 
 \begin{itemize}
-\item \textbf{HTML}: Es un lenguaje de marcas con el que se realiza la estructuración de la página web. Es un estándar que sirve de referencia para el software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, vídeos, juegos, entre otros. 
+\item \textbf{HTML}: Es un lenguaje de marcas con el que se realiza la estructuración de la página web. Es un estándar que sirve de referencia para el software que conecta con la elaboración de páginas web en sus diferentes versiones. HTML define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, vídeos, juegos, entre otros. 
 
-El lenguaje HTML basa su filosofía de desarrollo en la diferenciación. Para añadir un elemento externo a la página (imagen, vídeo, script, entre otros.), este no se incrusta directamente en el código de la página, sino que se hace una referencia a la ubicación de dicho elemento mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web (interpretador del código) la tarea de unir todos los elementos y visualizar la página final. Al ser un estándar, HTML busca ser un lenguaje que permita que cualquier página web escrita en una determinada versión, pueda ser interpretada de la misma forma (estándar) por cualquier navegador web actualizado.
+El lenguaje HTML basa su filosofía de desarrollo en la diferenciación. Para añadir un elemento externo a la página (imagen, vídeo, script, entre otros.), éste no se incrusta directamente en el código de la página, sino que se hace una referencia a la ubicación de dicho elemento mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web (interpretador del código) la tarea de unir todos los elementos y renderizar la página final. Al ser un estándar, HTML busca ser un lenguaje que permita que cualquier página web escrita en una determinada versión, pueda ser interpretada de la misma forma (estándar) por cualquier navegador web actualizado.
 
 En cambio, a lo largo de las diferentes versiones, se han añadido y eliminado diferentes características con la finalidad de hacer el lenguaje más eficiente y facilitar el desarrollo de páginas web con diferentes plataformas y navegadores. Un navegador web  desactualizado no será capaz de interpretar correctamente una página web escrita en una versión superior de HTML a la que pueda interpretar.  
 
@@ -249,25 +251,25 @@ En la Figura \ref{fig:wepsimCPU_figure} se muestra la estructura del Procesador 
 	\label{fig:wepsimCU_figure}
 \end{figure}
 
-WepSIM es un procesador de 32 bits que direcciona la memoria por bytes, que cuenta con un banco de 32 registros y dos registros adicionales (RT1 y RT2) que no son visibles para el programador de ensamblador, pero que permiten el almacenamiento temporal de datos para la realización de operaciones intermedias. Desde los registros, es posible enviar los valores para operar en una ALU que dispone de las 15 operaciones aritmético-lógicas más comunes. El registro PC tiene su propio operador de sumar cuatro, de forma que no es necesario hacer uso de la ALU para esta operación. El resultado de las operaciones realizadas en la ALU puede ser almacenado en un registro temporal (RT3) que también es invisible para el programador de ensamblador, o ser enviado directamente al bus interno a través del correspondiente triestado.
+WepSIM es un procesador de 32 bits que direcciona la memoria por bytes, que cuenta con un banco de 32 registros y dos registros adicionales (\emph{RT1} y \emph{RT2}) que no son visibles para el programador de ensamblador, pero que permiten el almacenamiento temporal de datos para la realización de operaciones intermedias. Desde los registros, es posible enviar los valores para operar en una \emph{ALU} que dispone de las 15 operaciones aritmético-lógicas más comunes. El registro \emph{PC} (contador de programa) tiene su propio operador de sumar cuatro, de forma que no es necesario hacer uso de la \emph{ALU} para esta operación. El resultado de las operaciones realizadas en la \emph{ALU} puede ser almacenado en un registro temporal (\emph{RT3}) que también es invisible para el programador de ensamblador, o ser enviado directamente al bus interno a través del correspondiente triestado.
 
-El registro de estado (SR) puede ser actualizado con los \emph{flags} resultantes de la última operación de la alu (O, N y Z). Para ello, SELEC/SelP representa un bloque de circuitos que permite indicar qué parte del registro de estado (SR) debe ser actualizado. A la derecha de SELEC/SelP llegan los bits del registro de estado SR como entrada (Input=O N Z I U) y SelP permite seleccionar qué grupo de estos bits se actualizará en el registro de estado: los bits O, N y Z con los valores procedentes de la ALU, el bit I con el valor indicado o el bit U con el valor indicado para el mismo.
+El registro de estado (\emph{SR}) puede ser actualizado con los \emph{flags} resultantes de la última operación de la alu (\emph{O, N y Z}). Para ello, \emph{SELEC/SelP} representa un bloque de circuitos que permite indicar qué parte del registro de estado (\emph{SR}) debe ser actualizado. A la derecha de \emph{SELEC/SelP} llegan los bits del registro de estado \emph{SR} como entrada (\emph{Input=O N Z I U}) y \emph{SelP} permite seleccionar qué grupo de estos bits se actualizará en el registro de estado: los bits \emph{O, N y Z} con los valores procedentes de la \emph{ALU}, el bit \emph{I} con el valor indicado o el bit U con el valor indicado para el mismo.
 
-El registro de instrucción (IR) tiene asociado un módulo selector (circuito de  más alto nivel que un multiplexor, etc.) que permite seleccionar un segmento del valor binario almacenado en el registro de instrucción que pasará hacia T3.
+El registro de instrucción (\emph{IR}) tiene asociado un módulo selector (circuito de  más alto nivel que un multiplexor, etc.) que permite seleccionar un segmento del valor binario almacenado en el registro de instrucción que pasará hacia \emph{T3}.
 
-En concreto, se indica la posición (Offset, donde 0 represente el bit menos significativo del registro IR) inicial y el número de bits (Size) a tomar a partir de dicha posición inicial, así como si se desea hacer extensión de signo (SE) antes de pasar el valor a la entrada de T3.
+En concreto, se indica la posición (\emph{Offset}, donde \emph{0} represente el bit menos significativo del registro \emph{IR}) inicial y el número de bits (\emph{Size}) a tomar a partir de dicha posición inicial, así como si se desea hacer extensión de signo (\emph{SE}) antes de pasar el valor a la entrada de \emph{T3}.
 
-Los registros MAR y MBR se usan para almacenar la dirección y el contenido asociado a esta dirección en las operaciones de lectura/escritura con la memoria. La memoria está diseñada para un funcionamiento síncrono o asíncrono. Actualmente funciona de forma síncrona, pero dispone de la señal MRdy para en un futuro trabajar de forma asíncrona. El circuito de selección permite indicar qué porción de la palabra de memoria es la que se desea (un byte, dos bytes o una palabra completa de cuatro bytes).
+Los registros \emph{MAR} y \emph{MBR} se usan para almacenar la dirección y el contenido asociado a esta dirección en las operaciones de lectura/escritura con la memoria. La memoria está diseñada para un funcionamiento síncrono o asíncrono. Actualmente funciona de forma síncrona, pero dispone de la señal \emph{MRdy} para en un futuro trabajar de forma asíncrona. El circuito de selección permite indicar qué porción de la palabra de memoria es la que se desea (un byte, dos bytes o una palabra completa de cuatro bytes).
 
 Se dispone también de tres dispositivos de E/S: un teclado, una pantalla y un dispositivo genérico que se puede configurar para generar diversos tipos de interrupciones.
 
-Finalmente, la Unidad de Control genera las señales de control para cada ciclo de reloj. La Figura \ref{fig:wepsimCU_figure} muestra la Unidad de Control con mayor detalle. Se trata de una unidad de control microprogramada con secuenciamiento implícito. Las señales de control para el ciclo de reloj actual se almacenan en el registro de micro-instrucción (aquel con los campos A0, B, C, SelA, etc.). El contenido de este registro proviene de la memoria de control, concretamente del contenido en la posición a la que apunta el registro de micro-dirección. La micro-dirección almacenada en este registro puede modificarse usando el multiplexor ``MUX ''. Hay cuatro opciones: la microdirección actual más uno, una micro-dirección indicada en la propia micro-instrucción (que se solapa con SelA, SelB y parcialmente con SelE), la primera micro-dirección asociada al campo de código de operación de la instrucción del registro IR, y finalmente el valor cero, que es la dirección de la memoria de control donde se almacena la microrrutina correspondiente al fetch. La microdirección se puede seleccionar de forma condicional, para ello se usa el multiplexor ``MUX C'' que permite seleccionar los bits del registro de estado (SR) o valores de las señales de control de E/S.
+Finalmente, la Unidad de Control genera las señales de control para cada ciclo de reloj. La Figura \ref{fig:wepsimCU_figure} muestra la Unidad de Control con mayor detalle. Se trata de una unidad de control microprogramada con secuenciamiento implícito. Las señales de control para el ciclo de reloj actual se almacenan en el registro de micro-instrucción (aquel con los campos \emph{A0, B, C, SelA, etc.}). El contenido de este registro proviene de la memoria de control, concretamente del contenido en la posición a la que apunta el registro de micro-dirección. La micro-dirección almacenada en este registro puede modificarse usando el multiplexor ``MUX ''. Hay cuatro opciones: la microdirección actual más uno, una micro-dirección indicada en la propia micro-instrucción (que se solapa con \emph{SelA, SelB} y parcialmente con \emph{SelE}), la primera micro-dirección asociada al campo de código de operación de la instrucción del registro \emph{IR}, y finalmente el valor cero, que es la dirección de la memoria de control donde se almacena la microrrutina correspondiente al \emph{fetch}. La microdirección se puede seleccionar de forma condicional, para ello se usa el multiplexor ``MUX C'' que permite seleccionar los bits del registro de estado (\emph{SR}) o valores de las señales de control de E/S.
 
-Para generar los valores correspondientes a las señales selectoras del banco de registros RA, RB y RE se usan los circuitos selectores SelRA, SelRB y SelRE. Estos selectores toman como entrada los 32 bits del registro de instrucción (IR) por un lado y el campo SelA, SelB y SelE por otro, de forma que toman SelX como el desplazamiento dentro del registro de instrucción (de 0 a 32) desde donde tomar los siguientes 5 bits correspondientes a las señales RA, RB o RE. Permiten por tanto seleccionar 5 bits consecutivos de los 32 bits del registro de instrucción.
+Para generar los valores correspondientes a las señales selectoras del banco de registros \emph{RA, RB y RE} se usan los circuitos selectores \emph{SelRA, SelRB y SelRE}. Estos selectores toman como entrada los 32 bits del registro de instrucción (\emph{IR}) por un lado y el campo \emph{SelA, SelB y SelE} por otro, de forma que toman \emph{SelX} como el desplazamiento dentro del registro de instrucción (de 0 a 32) desde donde tomar los siguientes 5 bits correspondientes a las señales \emph{RA, RB o RE}. Permiten por tanto seleccionar 5 bits consecutivos de los 32 bits del registro de instrucción.
 
-El multiplexor MR permite indicar si las señales RA, RB y RE serán literalmente los valores almacenados en SelA, SelB y SelE (MR=1) o bien si SelA, SelB y SelE indican el desplazamiento dentro de la instrucción donde están los valores a utilizar para RA, RB y RE. Esto último permite que en la instrucción se pueda indicar los registros a usar como operandos en el banco de registros, en lugar de indicarlos desde la micro-instrucción.
+El multiplexor ``MR'' permite indicar si las señales \emph{RA, RB y RE} serán literalmente los valores almacenados en \emph{SelA, SelB y SelE} (MR=1) o bien si \emph{SelA, SelB y SelE} indican el desplazamiento dentro de la instrucción donde están los valores a utilizar para \emph{RA, RB y RE}. Esto último permite que en la instrucción se pueda indicar los registros a usar como operandos en el banco de registros, en lugar de indicarlos desde la micro-instrucción.
 
-Para la señal Cop (código de operación en la ALU) la señal MC permite tomar el valor SelCop de la micro-instrucción (MC=1) o bien los 4 bits menos significativos del registro de instrucción (MC=0), es decir IR3-IR0.
+Para la señal \emph{Cop} (código de operación en la \emph{ALU}) la señal \emph{MC} permite tomar el valor \emph{SelCop} de la micro-instrucción (MC=1) o bien los 4 bits menos significativos del registro de instrucción (MC=0), es decir \emph{IR3-IR0}.
 
 En \cite{perez2015problemas} se puede encontrar una descripción más detallada del procesador descrito anteriormente.
 
