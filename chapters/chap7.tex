@@ -18,14 +18,14 @@
 \label{ch:planning_and_budget}
 \markboth{}{PLANNING AND BUDGET}
 
-Este capítulo presenta una planificación detallada del proyecto (Sección \ref{sec:planning}, \textit{\nameref{sec:planning}}). Luego, explicamos los costes del proyecto (Sección \ref{sec:budget}, \textit{\nameref{sec:budget}}). Al final del capítulo, explicamos el entorno socio-económico del proyecto ({Section \ref{sec:socioeconomic_environment}, \textit{\nameref{sec:socioeconomic_environment}}}).
+Este capítulo presenta una planificación detallada del proyecto (Sección \ref{sec:planning}, \textit{\nameref{sec:planning}}). Luego, se explican los costes del proyecto (Sección \ref{sec:budget}, \textit{\nameref{sec:budget}}). Al final del capítulo, se explica el entorno socio-económico del proyecto ({Sección \ref{sec:socioeconomic_environment}, \textit{\nameref{sec:socioeconomic_environment}}}).
 
 \section{Planificación}
 \label{sec:planning}
 
-Esta sección incluye la planificación completa del proyecto. En primer lugar, describimos la metodología de desarrollo de software utilizada. Después, detallamos la duración de cada fase del proyecto, indicando todos los tiempos en un diagrama Gantt.
+Esta sección incluye la planificación completa del proyecto. En primer lugar, se describe la metodología de desarrollo de software utilizada. Después, se detalla la duración de cada fase del proyecto, indicando todos los tiempos en un diagrama Gantt.
 
-\subsection{Justificación de la Metodología}
+\subsection{Justificación de la metodología}
 
 Debido a sus características, hemos dividido nuestro proyecto en tres iteraciones:
 
@@ -39,7 +39,7 @@ Debido a sus características, hemos dividido nuestro proyecto en tres iteracion
 
 Era necesario contar con una metodología iterativa para desarrollar cada una de las fases de manera independiente para unirlas todas en la última etapa y obtener el producto final. Para ello, hemos analizado tres metodologías de desarrollo de software diferentes: Prototipado de software \cite{grimm1998}, el Modelo en Cascada \cite{hebert1983} y el Modelo en Espiral \cite{boehm1988}. El  Prototipado de Software no encaja muy bien en nuestro proyecto, puesto que requiere la construcción de un prototipo de sofware en poco tiempo. El Modelo en Cascada es un proceso de diseño secuencial, utilizado en procesos de desarrollo de software en el cual el progreso es visto como un flujo constante hacia abajo (como una cascada) a través de diferentes fases. El problema con esta metodología es que no permite iteraciones dentro del desarrollo del software. Finalmente, el Modelo en Espiral permitió dividir el proyecto en diferentes iteraciones. Este modelo, combina las fortalezas de los otros dos modelos (simplicidad y flexibilidad), utilizando además un proceso iterativo. Aunque este modelo es más lento que los dos anteriores, nos permitió aplicar diferentes iteraciones por lo que decidimos aplicarlo a todo el proceso.
 
-\subsection{Ciclo de Vida}
+\subsection{Ciclo de vida}
 
 El proceso de desarrollo del ciclo de vida del proyecto ha seguido el Modelo de ciclo de vida en Espiral \cite{boehm1988}. La Figura \ref{fig:spiral_model} muestra el Modelo en Espiral usando un esquema.
 
@@ -53,22 +53,22 @@ El proceso de desarrollo del ciclo de vida del proyecto ha seguido el Modelo de 
 El modelo en Espiral tiene cuatro fases, que se repiten durante las diferentes iteraciones del modelo. Estas fases son:
 
 \begin{itemize}
-\item \textbf{Planificación} ('Determine objectives' en Figura \ref{fig:spiral_model}): Se reúnen los requisitos de los usuarios, se realiza un estudio de factibilidad del sistema y se determinan los objetivos de iteración.
+\item \textbf{Planificación} (\emph{``Determine objectives''} en Figura \ref{fig:spiral_model}): Se reúnen los requisitos de los usuarios, se realiza un estudio de factibilidad del sistema y se determinan los objetivos de iteración.
 
-\item \textbf{Análisis} ('Identify and resolve risks' en Figura \ref{fig:spiral_model}): Se realiza un análisis completo de los requisitos y se identifican los posibles riesgos. Esta fase termina con un diseño básico.
+\item \textbf{Análisis} (\emph{``dentify and resolve risks''} en Figura \ref{fig:spiral_model}): Se realiza un análisis completo de los requisitos y se identifican los posibles riesgos. Esta fase termina con un diseño básico.
 
-\item \textbf{Desarrollo y Pruebas}: Se lleva a cabo la implementación del código. Se realizan los casos de prueba y los resultados de la prueba.
+\item \textbf{Desarrollo y Pruebas} (\emph{``Development and Test''} en Figura \ref{fig:spiral_model}): Se lleva a cabo la implementación del código. Se realizan los casos de prueba y los resultados de la prueba.
 
-\item \textbf{Evaluación} ('Plan the next iteration' en Figura \ref{fig:spiral_model}): 
+\item \textbf{Evaluación} (\emph{``Plan the next iteration''} en Figura \ref{fig:spiral_model}): 
 Los clientes evalúan el software y proporcionan sus comentarios. En este caso, el estudiante intenta obtener la aprobación del supervisor. Esta es la \textit{tarea crítica} del ciclo de vida, ya que solo podemos pasar a la siguiente iteración del Modelo de ciclo de vida Espiral si esta tarea es aprobada.
 
 \end{itemize}
 
 Cada fase comienza con un objetivo de diseño y termina con el cliente (el supervisor) revisando el progreso hasta ahora. Como se explicó anteriormente, hemos dividido el desarrollo de software en tres iteraciones: modelo hardware, modelo software, y kernel del simulador. En la última iteración, el software completo debe someterse a pruebas exhaustivas para validar el simulador.
 
-\subsection{Tiempo Estimado}
+\subsection{Tiempo estimado}
 
-El diagrama de Gantt (Figura \ref{fig:gantt}) muestra todas las tareas realizadas durante el desarrollo del proyecto. El proyecto comenzó el 2 de noviembre de 2015 y finalizó el 30 de diciembre de 2016, lo que supone un total de casi 13 meses de trabajo (305 días laborables). Durante este tiempo, he trabajado de lunes a viernes, durante cuatro horas al día.
+El diagrama de Gantt (Figura \ref{fig:gantt}) muestra todas las tareas realizadas durante el desarrollo del proyecto. El proyecto comenzó el 2 de noviembre de 2015 y finalizó el 30 de diciembre de 2016, lo que supone un total de casi 13 meses de trabajo (305 días laborables). Durante este tiempo, he trabajado de lunes a viernes, durante cuatro horas al día, haciendo un total de 1.220 horas trabajadas.
 
 El diagrama de Gantt muestra todas las tareas realizadas en cada iteración del modelo de ciclo de vida espiral. Recuerde que las tres iteraciones fueron: Modelo hardware, Modelo software y kernel del simulador. Además de las tareas (fases) mencionadas anteriormente (Planificación, Análisis, Desarrollo y Prueba, y Evaluación), hemos incluido la tarea de Documentación al final de cada iteración. La tarea de documentación ha consistido principalmente en la redacción de este trabajo fin de grado.
 
@@ -84,14 +84,15 @@ El diagrama de Gantt muestra todas las tareas realizadas en cada iteración del 
 
 Esta sección detalla el presupuesto general del proyecto. Por un lado, presentamos los costes del proyecto y, por otro lado, damos a conocer la oferta presentada al cliente.
 
-\subsection{Coste del Proyecto}
+\subsection{Coste del proyecto}
 
-La tabla \ref{tab:project_information} resume las principales características del proyecto, incluído el presupuesto total.
+La Tabla \ref{tab:project_information} resume las principales características del proyecto, incluido el presupuesto total.
 
 \begin{center}
 \ra{1.2}
 \begin{table*}[htbp]
 \centering
+\caption{Información del Proyecto.}
 \begin{tabular}{@{}p{3.5cm} p{9cm}@{}} 
 \toprule
 \multicolumn{2}{c}{\textbf{\textit{Información del Proyecto}}}\\
@@ -113,7 +114,6 @@ La tabla \ref{tab:project_information} resume las principales características d
 \textbf{Presupuesto total} 			& 51.860,96 \\
 \bottomrule
 \end{tabular}
-\caption{Información del Proyecto.}
 \label{tab:project_information}
 \end{table*}
 \end{center}
@@ -138,6 +138,7 @@ En esta parte se presentan los costes directos del proyecto. La Tabla \ref{tab:d
 \ra{1.2}
 \begin{table*}[htbp]
 \centering
+\caption{Costes de recursos humanos.}
 \begin{tabular}{@{}p{3cm} R{3.5cm} R{2.2cm} R{2.4cm}@{}} 
 \toprule
 \textbf{Categoría} & \textbf{Coste por hora (\euro)} & \textbf{Horas} & \textbf{Total (\euro)} \\
@@ -150,12 +151,11 @@ Tester		 					& 25							& 428		& 10.700 \\
 \textbf{\textit{Total}}			&							&			& \textbf{42.320,00}\\
 \bottomrule
 \end{tabular}
-\caption{Costes de recursos humanos.}
 \label{tab:dhrc}
 \end{table*}
 \end{center}
 
-La Tabla \ref{tab:dec} muestra los costes directos causados por la adquisición y uso del equipo. El coste amortizado, C, es calculado utilizando la siguiente formula:
+La Tabla \ref{tab:dec} muestra los costes directos causados por la adquisición y uso del equipo. El coste amortizado, C, es calculado utilizando la siguiente fórmula:
 
 \begin{equation}
   C = \frac{d \cdot c \cdot u}{D}
@@ -182,19 +182,19 @@ Donde:
 \ra{1.2}
 \begin{table*}[htbp]
 \centering
+\caption{Costes de equipamiento.}
 \begin{tabular}{@{}p{2.5cm} C{1.8cm} C{2.1cm} C{2.1cm} C{2.7cm} C{2.3cm}@{}} 
 \toprule
 \textbf{Concepto} & \textbf{Coste, c (\euro)} & \textbf{Dedicación, u (\%)} & \textbf{Dedicación, d (meses)} & \textbf{Amortización, D (meses)} & \textbf{Coste amortizado, C (\euro)}\\
 \midrule
-Desktop \acrshort{pc}		 			& \multicolumn{1}{r}{799,99}		& \multicolumn{1}{r}{100}		& \multicolumn{1}{r}{13} 		& 	\multicolumn{1}{r}{36}	& 	\multicolumn{1}{r}{288,89} \\
-Laptop 						& \multicolumn{1}{r}{529,99} 	& \multicolumn{1}{r}{25}			& \multicolumn{1}{r}{13} 		& 	\multicolumn{1}{r}{36}	& 	\multicolumn{1}{r}{47,85} \\
+\acrshort{pc} sobremesa		 			& \multicolumn{1}{r}{799,99}		& \multicolumn{1}{r}{100}		& \multicolumn{1}{r}{13} 		& 	\multicolumn{1}{r}{36}	& 	\multicolumn{1}{r}{288,89} \\
+Portátil 						& \multicolumn{1}{r}{529,99} 	& \multicolumn{1}{r}{25}			& \multicolumn{1}{r}{13} 		& 	\multicolumn{1}{r}{36}	& 	\multicolumn{1}{r}{47,85} \\
 \acrshort{arcos} Mirlo					& \multicolumn{1}{r}{1.979,99}	& \multicolumn{1}{r}{50}			& \multicolumn{1}{r}{7} 		& 	\multicolumn{1}{r}{60}	& 	\multicolumn{1}{r}{115,50} \\
 Impresora						& \multicolumn{1}{r}{79,99}		& \multicolumn{1}{r}{5}			& \multicolumn{1}{r}{4}		& 	\multicolumn{1}{r}{60}	& 	\multicolumn{1}{r}{0,27} \\
 \midrule
-\textbf{\textit{Total}}		&			&			& 			& &  \multicolumn{1}{r}{\textbf{452,50}}\\
+\textbf{\textit{Total}}		&			&			& 			& &  \multicolumn{1}{r}{\textbf{452,51}}\\
 \bottomrule
 \end{tabular}
-\caption{Costes de equipamiento.}
 \label{tab:dec}
 \end{table*}
 \end{center}
@@ -203,9 +203,9 @@ Además, el equipo presentado en la Tabla \ref{tab:dec} es detallado a continuac
 
 \begin{itemize}
 
-\item \textbf{Desktop \acrshort{pc}:} All in One - Asus Z220ICUK, 21.5'', i5-6400T, 8GB, 1TB)		
+\item \textbf{\acrshort{pc} sobremesa:} All in One - Asus Z220ICUK, 21.5'', i5-6400T, 8GB, 1TB)		
 
-\item \textbf{Laptop:} Toshiba L50D-C-19D, A10-8700P, 8GB \gls{ram} and 1TB.
+\item \textbf{Portátil:} Toshiba L50D-C-19D, A10-8700P, 8GB \gls{ram} and 1TB.
 
 \item \textbf{\acrshort{arcos} Mirlo:} Servidor utilizado por el grupo de investigación \acrshort{arcos}. 32GB \gls{ram} y 8 procesadores  i7 a 2.67GHz cada uno.
 
@@ -221,6 +221,7 @@ Otros costes directos se muestran en la Tabla \ref{tab:odc}. Estos costes consis
 \ra{1.2}
 \begin{table*}[htbp]
 \centering
+\caption{Otros costes directos.}
 \begin{tabular}{@{}p{5cm} R{3.5cm}@{}} 
 \toprule
 \textbf{Concepto} & \textbf{Coste (\euro)} \\
@@ -232,12 +233,11 @@ Abono transporte (x13) 		& 260				\\
 \textbf{\textit{Total}}		&	\textbf{444,97}  	\\
 \bottomrule
 \end{tabular}
-\caption{Otros costes directos.}
 \label{tab:odc}
 \end{table*}
 \end{center}
 
-\subsubsection{Resumen de Costes}
+\subsubsection{Resumen de costes}
 
 La Tabla \ref{tab:cs} muestra el resumen completo de los costes del proyecto. Los costes indirectos (20\% de los costes directos) consisten en las facturas de electricidad y agua, teléfono, acceso a internet, etc.
 
@@ -245,60 +245,60 @@ La Tabla \ref{tab:cs} muestra el resumen completo de los costes del proyecto. Lo
 \ra{1.2}
 \begin{table*}[htbp]
 \centering
+\caption{Resumen de costes.}
 \begin{tabular}{@{}p{5cm} R{5cm}@{}} 
 \toprule
 \multicolumn{2}{c}{\textbf{\textit{Resumen de costes}}}\\
 \midrule
 \textbf{Recursos humanos} 				& 42.320,00 \\
-\textbf{Equipamiento} 						& 452,50 \\
+\textbf{Equipamiento} 						& 452,51 \\
 \textbf{Otros costes directos} 				& 444,97 \\
-\textbf{Costes indirectos}					& 8.643,49 \\
+\textbf{Costes indirectos}					& 8.643,50 \\
 \midrule
-\textbf{\textit{Presupuesto total}}			& \textbf{51.860,96} \\
+\textbf{\textit{Presupuesto total}}			& \textbf{51.860,98} \\
 \bottomrule
 \end{tabular}
-\caption{Resumen de costes.}
 \label{tab:cs}
 \end{table*}
 \end{center}
 
-El presupuesto total de este proyecto asciende a \textbf{51.860,96 \euro \ (cincuenta y uno mil ochocientos sesenta euros y noventa y seis céntimos)}.
+El presupuesto total de este proyecto asciende a \textbf{51.860,98 \euro \ (cincuenta y uno mil ochocientos sesenta euros y noventa y ocho céntimos)}.
 
 \subsection{Oferta de Proyecto Propuesta}
 
-La Tabla \ref{tab:offer} muestra la propuesta de oferta detallada. Esta oferta incluye los riesgos estimados (20\%), los beneficios esperados (15\%), y el Impuesto de Valor Agregado (\gls{iva}), que corresponde al 21\% \cite{iva2012}. Después de aplicar todos estos conceptos, la cantidad final para este proyecto en caso de venta a un cliente de terceros es \textbf{86.597,43 \euro \ 
-(Ochenta y seis mil quinientos noventa y siete euros y cuarenta y tres céntimos)}.
+La Tabla \ref{tab:offer} muestra la propuesta de oferta detallada. Esta oferta incluye los riesgos estimados (20\%), los beneficios esperados (15\%), y el Impuesto de Valor Agregado (\gls{iva}), que corresponde al 21\% \cite{iva2012}. Después de aplicar todos estos conceptos, la cantidad final para este proyecto en caso de venta a un cliente de terceros es \textbf{86.597,46 \euro \ 
+(Ochenta y seis mil quinientos noventa y siete euros y cuarenta y seis céntimos)}.
 
 \begin{center}
 \ra{1.2}
 \begin{table*}[htbp]
 \centering
+\caption{Oferta propuesta.}
 \begin{tabular}{@{}p{2.5cm} R{2.8cm} R{3.1cm} R{3.5cm}@{}} 
 \toprule
 \multicolumn{4}{c}{\textbf{\textit{Oferta propuesta}}}\\
 \midrule
 \textbf{Concepto} & \textbf{Incremento (\%)} & \textbf{Valor Parcial (\euro)} & \textbf{Coste agregado (\euro)} \\
 \midrule
-Costes del proyecto				& - 			& 51.860,96		& 51.860,96 \\
-Riesgos			 				& 20			& 10.372,19		& 62.233,15 \\
-Beneficios		 				& 15			& 9.334,97		& 71.568,13 \\
-IVA		 					& 21			& 15.029,31		& 86.597,43 \\
+Costes del proyecto				& - 			& 51.860,98		& 51.860,98 \\
+Riesgos			 				& 20			& 10.372,20		& 62.233,17 \\
+Beneficios		 				& 15			& 9.334,98		& 71.568,15 \\
+IVA		 					& 21			& 15.029,31		& 86.597,46 \\
 \midrule
-\textbf{\textit{Total}}		&			&			& \textbf{86.597,43}\\
+\textbf{\textit{Total}}		&			&			& \textbf{86.597,46}\\
 \bottomrule
 \end{tabular}
-\caption{Oferta propuesta.}
 \label{tab:offer}
 \end{table*}
 \end{center}
 
-\section{Entorno Socio-Económico}
+\section{Entorno socio-económico}
 \label{sec:socioeconomic_environment}
 
 Como se ha comentado en capítulos anteriores, WepSIM puede apoyar la enseñanza en Estructura y Arquitectura de Computadores. Esto significa que los profesores de estas asignaturas pueden utilizar esta herramienta como refuerzo en las explicaciones del temario para mostrar de forma visual y práctica a los estudiantes el comportamiento de un procesador elemental. Además, sirve para que los estudiantes puedan desarrollar las prácticas de estas asignaturas sin la necesidad de utilizar diferentes herramientas, evitando la pérdida de tiempo que esto supone y permitiendo a los estudiantes dedicar el mayor tiempo posible a la realización de los ejercicios. Este ahorro de tiempo, tiene un impacto en los estudiantes a la hora de minimizar el tiempo invertido en la realización de prácticas, de forma que la mayor parte del tiempo dedicado a la asignatura sea útil y sirva para comprender mejor el funcionamiento de un computador, sirviendo de base en el resto de la trayectoria académica de los estudiantes y mejorando su rendimiento.
 
 Debido al diseño modular realizado de este simulador, WepSIM permite la especificación tanto de diferentes juegos de instrucciones como de diferentes modelos hardware. Esto supone un gran avance  en el área docente, puesto que permite el uso de una misma herramienta para la enseñanza y simulación de diferentes dispositivos. Anteriormente se invertía mucho dinero para que los estudiantes pudieran realizar prácticas con diferentes tipos de procesadores, ya que se debían de adquirir los diferentes componentes hardware necesarios para la realización de las prácticas. Con WepSIM este concepto cambia, puesto que modelando el comportamiento del computador deseado, puede ser utilizado para diferentes tipos de prácticas, evitando costes de adquisición y mantenimiento y permitiendo una mayor variedad de opciones a la hora de diseñar las prácticas.
 
-Gracias al uso de este simulador en el ámbito docente, se puede mostrar el impacto energético que supone una programación eficiente. Esto es debido a que WepSIM es un simulador de microprogramación y programación en ensamblador, pudiendo hacer visible el coste a bajo nivel de unas malas prácticas de programación. El objetivo, es concienciar a los estudiantes de la importancia que tiene la optimización y eficiencia en el uso de los recursos de un computador, puesto que uno de los retos de la comunidad científica es diseñar sistemas cada vez más eficientes energéticamente, de forma que en un futuro estas técnicas sean llevadas acabo realizando sistemas más eficientes.
+Gracias al uso de este simulador en el ámbito docente, se puede mostrar el impacto energético que supone una programación eficiente. Esto es debido a que WepSIM es un simulador de microprogramación y programación en ensamblador, pudiendo hacer visible el coste a bajo nivel de unas malas prácticas de programación. El objetivo, es concienciar a los estudiantes de la importancia que tiene la optimización y eficiencia en el uso de los recursos de un computador, puesto que uno de los retos de la comunidad científica es diseñar sistemas cada vez más eficientes energéticamente, de forma que en un futuro estas técnicas sean llevadas a cabo realizando sistemas más eficientes.
 
 Por último, es necesario destacar el impacto que supone que WepSIM tenga licencia de código abierto. Esto supone que las universidades y centros docentes que quieran utilizar la herramienta, puedan hacerlo sin ningún tipo de coste, con el ahorro económico que supone la utilización de una herramienta de estas características. Además, gracias a este tipo de licencia, se favorece un entorno de colaboración entre diferentes universidades, de forma que se puedan añadir nuevos módulos a la herramienta sin coste económico para la comunidad docente.
