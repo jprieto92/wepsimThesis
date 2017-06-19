@@ -19,14 +19,14 @@
 \markboth{}{IMPLEMENTATION}
 
 
-Este capítulo trata de la implementación y despliegue del software. En cuanto a la implementación del sistema, se explican las partes más complicadas del código en (Sección  \ref{sec:implementation}, \textit{\nameref{sec:implementation}}). Por otro lado, explicamos los pasos necesarios para desplegar el sistema final (Sección \ref{sec:deployment}, \textit{\nameref{sec:deployment}})
+Este capítulo trata la implementación y despliegue del software. En cuanto a la implementación del sistema, se explican las partes más complicadas del código en (Sección  \ref{sec:implementation}, \textit{\nameref{sec:implementation}}). Por otro lado, explicamos los pasos necesarios para desplegar el sistema final (Sección \ref{sec:deployment}, \textit{\nameref{sec:deployment}})
 
 
 \section{Implementación}
 \label{sec:implementation}
 
 
-Como hemos explicado en el capítulo \ref{ch:analysis}, \textit{\nameref{ch:analysis}}, hemos implementado el simulador utilizando el lenguaje de programación JavaScript junto con HTML5, CSS y las bibliotecas/frameworks JQuery, JQueryUI, JQuery Mobile, Knockout y BootStrap. El motor de simulación es el encargado de ejecutar cada uno de los ciclos de reloj del simulador, tomando como entradas tanto el modelo hardware como el modelo software, pero el desarrollador ha debido de diseñar e implementar el algoritmo que posibilita esta ejecución.
+Como hemos explicado en el Capítulo \ref{ch:analysis}, \textit{\nameref{ch:analysis}}, hemos implementado el simulador utilizando el lenguaje de programación JavaScript junto con HTML5, CSS y las bibliotecas/frameworks JQuery, JQueryUI, JQuery Mobile, Knockout y BootStrap. El motor de simulación es el encargado de ejecutar cada uno de los ciclos de reloj del simulador, tomando como entradas tanto el modelo hardware como el modelo software, pero el desarrollador ha debido de diseñar e implementar el algoritmo que posibilita esta ejecución.
 
 Además, hemos trabajado en conseguir una herramienta que sea capaz de generar la memoria de control mediante la definición del juego de instrucciones por parte del usuario, y de generar el código binario asociado al código ensamblador definido por el usuario; el cual depende del juego de instrucciones definido previamente. Para ello, se han diseñado e implementado dos compiladores diferentes, capaces de generar los binarios correspondientes además de las estructuras de datos necesarias para ayudar al motor de simulación a lo largo de la ejecución.
 
@@ -86,12 +86,12 @@ Los ficheros que componen WepSIM son detallados a continuación:
 
 Para comprender funcionamiento tanto de los dos compiladores utilizados (compilador de firmware y compilador de ensamblador) como del kernel del simulador, se puede observar en \ref{alg:firmware_compiler_pseudocode}, mientras que en \ref{alg:assembly_compiler_pseudocode} podemos ver el proceso de compilación del código ensamblador definido por el usuario en función de la memoria de control previamente generada, detallando el proceso de compilación del segmento de datos en \ref{alg:data_segment_pseudocode} y el proceso de compilación del segmento de texto en \ref{alg:text_segment_pseudocode}. En \ref{alg:core_simulator_pseudocode} podemos ver el pseudocódigo de como se realiza una simulación, realizando la comprobación de segmentos de memoria, tipo de simulación, y ejecución del ciclo o instrucción correspondiente.
 
-El proceso de compilación del juego de instrucciones (Figura \ref{alg:firmware_compiler_pseudocode} se realiza mediante un análsis sintáctico basado en la técnica \textit{LEX and YACC}, que queda perfectamente descrita en \cite{bennett1996introduction}. De este modo, el proceso de compilación queda dividido en tres bloques importantes: instrucciones, nombrado de registros y pseudoinstrucciones. En primer lugar, se realiza la lectura del bloque de instrucciones, en donde se comprueba cada uno de los campos y parámetros que la conforman para posteriormente generar el binario asociado a cada ciclo de reloj. Después, se realiza la lectura del banco de registros, donde se forma el par \textit{id,nombre}, pudiendo realizar el nombrado deseado de los distintos registros que lo componen. Por último, se realiza la lectura de pseudoinstrucciones. Estas instrucciones no pertenecen al lenguaje, sino que están compuestas por instrucciones del lenguaje, pudiendo el usuario utilizar técnicas de alto nivel en donde con una única línea de código, genere más de una instrucción.
+El proceso de compilación del juego de instrucciones (Figura \ref{alg:firmware_compiler_pseudocode}) se realiza mediante un análsis sintáctico basado en la técnica \textit{LEX and YACC}, que queda perfectamente descrita en \cite{bennett1996introduction}. De este modo, el proceso de compilación queda dividido en tres bloques importantes: instrucciones, nombrado de registros y pseudoinstrucciones. En primer lugar, se realiza la lectura del bloque de instrucciones, en donde se comprueba cada uno de los campos y parámetros que la conforman para posteriormente generar el binario asociado a cada ciclo de reloj. Después, se realiza la lectura del banco de registros, donde se forma el par \textit{id,nombre}, pudiendo realizar el nombrado deseado de los distintos registros que lo componen. Por último, se realiza la lectura de pseudoinstrucciones. Estas instrucciones no pertenecen al lenguaje, sino que están compuestas por instrucciones del lenguaje, pudiendo el usuario utilizar técnicas de alto nivel en donde con una única línea de código, genere más de una instrucción.
 
 \clearpage
 
 \begin{algorithm}[h]
-	\caption{Proceso de compilación del juego de instrucciones}
+	\caption{Proceso de compilación del juego de instrucciones.}
 	\label{alg:firmware_compiler_pseudocode}
   	\scriptsize
   	\setstretch{1.35}
@@ -133,12 +133,12 @@ El proceso de compilación del juego de instrucciones (Figura \ref{alg:firmware_
 
 \clearpage
 
-El proceso de compilación del código ensamblador (Figura \ref{alg:firmware_compiler_pseudocode} está basado, al igual que el compilador del juego de instrucciones, en la técnica de compilación \textit{LEX and YACC}. Este proceso, está dividido en dos etapas: segmentos de datos y segmento de texto.
+El proceso de compilación del código ensamblador (Figura \ref{alg:firmware_compiler_pseudocode}) está basado, al igual que el compilador del juego de instrucciones, en la técnica de compilación \textit{LEX and YACC}. Este proceso, está dividido en dos etapas: segmentos de datos y segmento de texto.
 
 En la etapa de compilación del segmento de datos, se realiza el proceso de lectura y compilación de las diferentes directivas definidas por el usuario. En primer lugar, se realiza la identificación de las diferentes etiquetas que identifican a las directivas y que serán utilizadas posteriormente en el segmento de texto. Una vez identificadas estas etiquetas, se procede a la generación del binario asociado a este segmento, el cual depende directamente del tipo de directiva utilizado y del tamaño de la directiva.
 
 \begin{algorithm}[h]
-	\caption{Proceso de compilación de código ensamblador}
+	\caption{Proceso de compilación de código ensamblador.}
 	\label{alg:assembly_compiler_pseudocode}
   	\scriptsize
   	\setstretch{1.35}
@@ -164,12 +164,12 @@ En la etapa de compilación del segmento de datos, se realiza el proceso de lect
 
 En la etapa de compilación del segmento de texto, se realiza el proceso de compilación de las diferentes instrucciones ensamblador definidas por el usuario. Por ello, es necesario el uso del juego de instrucciones definido previamente, ya que la generación del binario de la instrucción depende de la definición previa. En primer lugar, se realiza la búsqueda de las diferentes etiquetas empleadas en este segmento, identificando las nuevas etiquetas definidas a las anteriores definidas en el segmento de datos, para la cambiar la etiqueta por el valor de la dirección de memoria asociada a la etiqueta. Una vez realizado este proceso, se procede a la compilación de cada una de las instrucciones, buscando para cada instrucción del segmento de texto una instrucción definida en el juego de instrucciones que cumple con la sintaxis. En caso de existir la instrucción, se procede a la generación del binario asociado, comprobando el valor de cada uno de los campos. Este proceso de realiza para cada una de las operaciones definidas en este segmento. Una vez traducidas todas las instrucciones, se genera la memoria principal asociada al código definido.
 
-Por último, se indica el proceso de simulación de la herramienta. Este proceso es realizado en el kernel del simulador como ha sido explicado anteriormente (Apartado \ref{sec:kernel_simulator}). Como podemos observar en el pseudocódigo \ref{alg:core_simulator_pseudocode}, en primer lugar se realiza la petición de ejecución. El controlador del simulador, comprobaría el contexto (\textit{breakpoints}, final de segmento, etc.) verificando si la ejecución es posible. En caso de ser posible, identificaría el tipo de simulación solicitada, llamando a la función correspondiente. Si la ejecución solicitada es de una microinstrucción, el motor de simulación únicamente generaría un ciclo de reloj, enviándolo al modelo hardware para su ejecución y actualizando posteriormente los valores mostrados en la interfaz de usuario. La ejecución de una instrucción completa se realiza ejecutando en bucle la secuencia de microinstrucciones correspondientes hasta que el registro de microdirección apunta a la dirección de comienzo del ciclo \textit{FETCH}, que indicaría el comienzo de la próxima instrucción, o apunta a una dirección de memoria fuera del rango del segmento de texto, lo cual indica que la simulación del código ensamblador ha finalizado.
+Por último, se indica el proceso de simulación de la herramienta. Este proceso es realizado en el kernel del simulador como ha sido explicado anteriormente (Sección \ref{sec:kernel_simulator}). Como podemos observar en el pseudocódigo \ref{alg:core_simulator_pseudocode}, en primer lugar se realiza la petición de ejecución. El controlador del simulador, comprobaría el contexto (\textit{breakpoints}, final de segmento, etc.) verificando si la ejecución es posible. En caso de ser posible, identificaría el tipo de simulación solicitada, llamando a la función correspondiente. Si la ejecución solicitada es de una microinstrucción, el motor de simulación únicamente generaría un ciclo de reloj, enviándolo al modelo hardware para su ejecución y actualizando posteriormente los valores mostrados en la interfaz de usuario. La ejecución de una instrucción completa se realiza ejecutando en bucle la secuencia de microinstrucciones correspondientes hasta que el registro de microdirección apunta a la dirección de comienzo del ciclo \textit{FETCH}, que indicaría el comienzo de la próxima instrucción, o apunta a una dirección de memoria fuera del rango del segmento de texto, lo cual indica que la simulación del código ensamblador ha finalizado.
 
 En \cite{wepsimManualUser} se presenta el manual completo de usuario de la herramienta, que incluye la especificación del modelo hardware implementado y la explicación de uso del simulador, indicando algunos ejemplos docentes para aprender el uso de esta herramienta y poder comprender mejor el funcionamiento de los distintos componentes que la forman.
 
 \begin{algorithm}[h]
-	\caption{Proceso de compilación de código ensamblador: segmento de datos}
+	\caption{Proceso de compilación de código ensamblador: segmento de datos.}
 	\label{alg:data_segment_pseudocode}
   	\scriptsize
   	\setstretch{1.35}
@@ -214,7 +214,7 @@ En \cite{wepsimManualUser} se presenta el manual completo de usuario de la herra
 \end{algorithm}
 
 \begin{algorithm}[h]
-	\caption{Proceso de compilación de código ensamblador: segmento de texto}
+	\caption{Proceso de compilación de código ensamblador: segmento de texto.}
 	\label{alg:text_segment_pseudocode}
   	\scriptsize
   	\setstretch{1.35}
@@ -242,7 +242,7 @@ En \cite{wepsimManualUser} se presenta el manual completo de usuario de la herra
 
 
 \begin{algorithm}[h]
-	\caption{Proceso de simulación}
+	\caption{Proceso de simulación.}
 	\label{alg:core_simulator_pseudocode}
   	\scriptsize
   	\setstretch{1.35}
