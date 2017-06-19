@@ -859,7 +859,7 @@ A continuación, se exponen los casos de uso.
 \textbf{Postcondiciones} 	& La ejecución de la simulación avanza una instrucción, siendo modificado el estado del simulador.   \\
 \midrule
 \textbf{Escenario Básico} 	&  \begin{itemize}
-\item El usuario selecciona la simulador.
+\item El usuario selecciona la pestaña simulador.
 \item Pulsa el botón siguiente instrucción.
 \end{itemize} \\
 \bottomrule
@@ -955,13 +955,14 @@ A continuación, se exponen los casos de uso.
 
 
 \clearpage
-\subsection{Requisitos Funcionales}
+\subsection{Requisitos funcionales}
 
 Esta subsección especifica los requisitos funcionales.
 
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F01.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F01 \\
@@ -979,7 +980,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe simular una arquitectura de 32 bits, implicando un banco de 32 registros, memoria principal con tamaño de  $2^{32}$ bits y registros y buses de 32 bits. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F01.}
 \label{tab:srff01}
 \end{table*}
 \end{center}
@@ -987,6 +987,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F02.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F02 \\
@@ -1004,7 +1005,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La unidad de control debe de ser microprogramable, con secuenciamiento implícito, saltos a nivel de microdirección y microsaltos condicionales. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F02.}
 \label{tab:srff02}
 \end{table*}
 \end{center}
@@ -1012,11 +1012,12 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F03.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F03 \\
 \midrule
-\textbf{Nombre} 			& Datos en complemento a2 \\
+\textbf{Nombre} 			& Datos en complemento a dos (\emph{Ca2}) \\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1026,10 +1027,9 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta operará con una ALU de números enteros en complemento a2. \\
+\textbf{Descripción} 	& La herramienta operará con una ALU de números enteros en complemento a dos. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F03.}
 \label{tab:srff03}
 \end{table*}
 \end{center}
@@ -1037,6 +1037,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F04.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F04 \\
@@ -1054,7 +1055,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe permitir al usuario la definición del juego de instrucciones a utilizar.\\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F04.}
 \label{tab:srff04}
 \end{table*}
 \end{center}
@@ -1062,6 +1062,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F05.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F05 \\
@@ -1079,7 +1080,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& El juego de instrucciones debe seguir el formato utilizado en la asignatura Estructura de Computadores, definiendo instrucciones del lenguaje ensamblador, su microcódigo asociado, nombrado de los registros y pseudoinstrucciones. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F05.}
 \label{tab:srff05}
 \end{table*}
 \end{center}
@@ -1087,6 +1087,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F06.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F06 \\
@@ -1104,7 +1105,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de permitir la modificación del juego de instrucciones a utilizar por el usuario. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F06.}
 \label{tab:srff06}
 \end{table*}
 \end{center}
@@ -1112,6 +1112,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F07.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F07 \\
@@ -1129,7 +1130,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe permitir la carga de un fichero que contenga el juego de instrucciones. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F07.}
 \label{tab:srff07}
 \end{table*}
 \end{center}
@@ -1137,6 +1137,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F08.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F08 \\
@@ -1154,7 +1155,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe permitir exportar el juego de instrucciones en un fichero. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F08.}
 \label{tab:srff08}
 \end{table*}
 \end{center}
@@ -1162,6 +1162,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F09.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F09 \\
@@ -1179,7 +1180,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de generar el firmware simulador a partir del juego de instrucciones definido y cargado por el usuario. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F09.}
 \label{tab:srff09}
 \end{table*}
 \end{center}
@@ -1187,6 +1187,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F10.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F10 \\
@@ -1204,7 +1205,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe permitir al usuario la definición del código ensamblador a utilizar en la simulación. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F10.}
 \label{tab:srff10}
 \end{table*}
 \end{center}
@@ -1212,6 +1212,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F11.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F11 \\
@@ -1229,7 +1230,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& El código ensamblador a simular debe de seguir el formato utilizado en la asignatura Estructura de Computadores, utilizando el lenguaje definido en el juego de instrucciones.\\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F11.}
 \label{tab:srff11}
 \end{table*}
 \end{center}
@@ -1237,6 +1237,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F12.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F12 \\
@@ -1254,7 +1255,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe permitir modificar el código ensamblador. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F12.}
 \label{tab:srff12}
 \end{table*}
 \end{center}
@@ -1262,6 +1262,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F13.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F13 \\
@@ -1279,7 +1280,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe permitir la carga de un fichero que contenga el código ensamblador. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F13.}
 \label{tab:srff13}
 \end{table*}
 \end{center}
@@ -1287,6 +1287,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F14.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F14 \\
@@ -1304,7 +1305,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe permitir exportar a un fichero el código ensamblador cargado en la herramienta. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F14.}
 \label{tab:srff14}
 \end{table*}
 \end{center}
@@ -1312,11 +1312,12 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F15.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F15 \\
 \midrule
-\textbf{Nombre} 			& Generación ejecutable del codigo ensamblador\\
+\textbf{Nombre} 			& Generación ejecutable del código ensamblador\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1329,7 +1330,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de generar el binario ejecutable asociado al código ensamblador definido para la simulación. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F15.}
 \label{tab:srff15}
 \end{table*}
 \end{center}
@@ -1337,6 +1337,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F16.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F16 \\
@@ -1354,7 +1355,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de permitir la simulación ciclo a ciclo de reloj del código ensamblador cargado por el usuario. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F16.}
 \label{tab:srff16}
 \end{table*}
 \end{center}
@@ -1362,6 +1362,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F17.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F17 \\
@@ -1379,7 +1380,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de permitir la simulación instrucción a instrucción del código ensamblador cargado por el usuario. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F17.}
 \label{tab:srff17}
 \end{table*}
 \end{center}
@@ -1387,6 +1387,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F18.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F18 \\
@@ -1404,7 +1405,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de permitir la simulación completa del código ensamblador cargado por el usuario. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F18.}
 \label{tab:srff18}
 \end{table*}
 \end{center}
@@ -1412,6 +1412,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F19.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F19 \\
@@ -1429,7 +1430,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de permitir al usuario elegir la velocidad de simulación del código ensamblador cargado. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F19.}
 \label{tab:srff19}
 \end{table*}
 \end{center}
@@ -1437,6 +1437,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F20.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F20 \\
@@ -1454,7 +1455,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de mostrar el esquema de la CPU del simulador, modificando el color de las señales activas y buses de datos actualizados en cada ciclo de reloj. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F20.}
 \label{tab:srff20}
 \end{table*}
 \end{center}
@@ -1462,11 +1462,12 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F21.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F21 \\
 \midrule
-\textbf{Nombre} 			& Esquema Unidad de Control\\
+\textbf{Nombre} 			& Esquema unidad de control\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1476,10 +1477,9 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de mostrar el esquema de la Unidad de Control del simulador, modificando el color de las señales activas y buses de datos actualizados en cada ciclo de reloj. \\
+\textbf{Descripción} 	& La herramienta debe de mostrar el esquema de la unidad de control del simulador, modificando el color de las señales activas y buses de datos actualizados en cada ciclo de reloj. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F21.}
 \label{tab:srff21}
 \end{table*}
 \end{center}
@@ -1487,6 +1487,7 @@ Esta subsección especifica los requisitos funcionales.
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\caption{Requisito funcional SR-F-F22.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 				& SR-F-F22\\
@@ -1504,7 +1505,6 @@ Esta subsección especifica los requisitos funcionales.
 \textbf{Descripción} 	& La herramienta debe de mostrar durante la ejecución el estado de los registros del simulador. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-F-F22.}
 \label{tab:srff22}
 \end{table*}
 \end{center}
@@ -1533,7 +1533,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \textbf{Descripción} 	& El simulador debe de ser diseñado como una aplicación web. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-NF-PL01.}
+\caption{Requisito funcional SR-NF-PL01.}
 \label{tab:srnfpl01}
 \end{table*}
 \end{center}
@@ -1558,7 +1558,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \textbf{Descripción} 	& El simulador debe poder ser ejecutado en los navegadores: Microsoft Edge 30+, Mozilla Firefox 45+, Google Chrome 50+ y Safari 10+. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-NF-PL02.}
+\caption{Requisito funcional SR-NF-PL02.}
 \label{tab:srnfpl02}
 \end{table*}
 \end{center}
@@ -1583,7 +1583,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \textbf{Descripción} 	& Las ejecuciones de la herramienta deben ser realizadas en el dispositivo del usuario. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-NF-PL03.}
+\caption{Requisito funcional SR-NF-PL03.}
 \label{tab:srnfpl03}
 \end{table*}
 \end{center}
@@ -1608,7 +1608,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \textbf{Descripción} 	& La herramienta podrá ser ejecutada sin conexión a internet. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-NF-PL04.}
+\caption{Requisito funcional SR-NF-PL04.}
 \label{tab:srnfpl04}
 \end{table*}
 \end{center}
@@ -1633,7 +1633,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \textbf{Descripción} 	& La herramienta debe ser desarrollada en el lenguaje de programación HTML5 (HTML + CSS + JavaScript). \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-NF-PL05.}
+\caption{Requisito funcional SR-NF-PL05.}
 \label{tab:srnfpl05}
 \end{table*}
 \end{center}
@@ -1658,7 +1658,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \textbf{Descripción} 	& La interfaz de usuario del simulador debe de ser compatible tanto con PCs como con plataformas móviles (tablets, smartphones, etc). \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-NF-UI01.}
+\caption{Requisito funcional SR-NF-UI01.}
 \label{tab:srnfui01}
 \end{table*}
 \end{center}
@@ -1683,7 +1683,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \textbf{Descripción} 	& El tiempo medio de ejecución de un ciclo de reloj no debe exceder 0,1 segundos. \\
 \bottomrule
 \end{tabular}
-\caption{Requisito Funcional SR-NF-P01.}
+\caption{Requisito funcional SR-NF-P01.}
 \label{tab:srnfp01}
 \end{table*}
 \end{center}
