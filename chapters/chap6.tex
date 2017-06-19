@@ -26,10 +26,10 @@ Para la realización de las simulaciones, hemos tomado la definición de un jueg
 \section{Verificación y validación}
 \label{sec:verification_and_validation}
 
-El principal objetivo de esta sección es verificar que todos los requisitos detallados en el Capítulo \ref{ch:analysis} (\textit{\nameref{ch:analysis}}) han sido cumplidos. Además, validamos los resultados obtenidos con WepSIM, comparándolos con los resultados teóricos esperados de la definición del juego de instrucciones de la asignatura Estructura de Computadores y los ejercicios especificados en el libro \cite{perez2015problemas}.
+El principal objetivo de esta sección es verificar que todos los requisitos detallados en el Capítulo \ref{ch:analysis} (\textit{\nameref{ch:analysis}}) han sido cumplidos. Además, validamos los resultados obtenidos con WepSIM, comparándolos con los resultados teóricos esperados de la definición del juego de instrucciones de la asignatura Estructura de Computadores y los ejercicios especificados en el libro de la asignatura \cite{perez2015problemas}.
 
 
-En la ingeniería de software, la verificación y validación son los procesos de comprobar que un sistema de software cumple con las especificaciones y que cumple con su propósito. Como se explica en el Capítulo \ref{ch:analysis} (\textit{\nameref{ch:analysis}}), el cliente fija inicialmente los requisitos deseados para el producto final (requisitos del usuario). A partir de ahí, los analistas especifican los requisitos de software (requisitos funcionales y no funcionales). Para verificar que se cumplen los requisitos del proyecto, se necesitan procesos de verificación y validación (ver Figura \ref{fig:verification_validation}).
+En la Ingeniería del Software, la verificación y validación son los procesos de comprobar que un sistema de software cumple con las especificaciones y que cumple con su propósito. Como se explica en el Capítulo \ref{ch:analysis} (\textit{\nameref{ch:analysis}}), el cliente fija inicialmente los requisitos deseados para el producto final (requisitos del usuario). A partir de ahí, los analistas especifican los requisitos de software (requisitos funcionales y no funcionales). Para verificar que se cumplen los requisitos del proyecto, se necesitan procesos de verificación y validación (ver Figura \ref{fig:verification_validation}).
 
 \vspace{1cm}
 
@@ -46,12 +46,13 @@ En la ingeniería de software, la verificación y validación son los procesos d
 
 \subsection{Pruebas de verificación}
 
-Con el fin de realizar las pruebas de verificación, hemos seguido un proceso dinámico durante la fase de desarrollo del software. Con estas pruebas queríamos responder a la pregunta: ``¿Estamos construyendo el producto correctamente?''. La tabla \ref{tab:verification_tests} proporciona la plantilla utilizada para los test de verificación. Tenga en cuenta que el formato del atributo ID es VET-XX, donde XX indica el número de test de verificación.
+Con el fin de realizar las pruebas de verificación, hemos seguido un proceso dinámico durante la fase de desarrollo del software. Con estas pruebas queríamos responder a la pregunta: \emph{``¿Estamos construyendo el producto correctamente?''}. La Tabla \ref{tab:verification_tests} proporciona la plantilla utilizada para los test de verificación. Es necesario tener en cuenta que el formato del atributo ID es VET-XX, donde XX indica el número de test de verificación.
 \clearpage
 
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Plantilla de pruebas de verificación.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& Test ID. \\
@@ -68,19 +69,19 @@ Con el fin de realizar las pruebas de verificación, hemos seguido un proceso di
 \midrule
 \textbf{Postcondiciones} 		& Las condiciones que siempre deben ser verdaderas justo después de realizar el test. \\
 \midrule
-\textbf{Evaluación} 			& \textit{OK} or \textit{Error}. \\
+\textbf{Evaluación} 			& \textit{OK} o \textit{Error}. \\
 \bottomrule
 \end{tabular}
-\caption{Plantilla de pruebas de verificación.}
 \label{tab:verification_tests}
 \end{table*}
 \end{center}
 
-A continuación, especificamos las pruebas de verificación.
+A continuación, se especifican las pruebas de verificación.
 
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-01.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-01. \\
@@ -104,7 +105,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-01.}
 \label{tab:vet01}
 \end{table*}
 \end{center}
@@ -112,6 +112,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-02.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-02. \\
@@ -135,7 +136,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-02.}
 \label{tab:vet02}
 \end{table*}
 \end{center}
@@ -143,6 +143,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-03.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-03. \\
@@ -162,7 +163,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-03.}
 \label{tab:vet03}
 \end{table*}
 \end{center}
@@ -170,6 +170,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-04.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-04. \\
@@ -193,7 +194,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-04.}
 \label{tab:vet04}
 \end{table*}
 \end{center}
@@ -201,6 +201,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-05.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-05. \\
@@ -223,7 +224,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-05.}
 \label{tab:vet05}
 \end{table*}
 \end{center}
@@ -231,6 +231,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-06.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-06. \\
@@ -254,7 +255,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-06.}
 \label{tab:vet06}
 \end{table*}
 \end{center}
@@ -262,6 +262,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-07.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-07. \\
@@ -286,7 +287,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-07.}
 \label{tab:vet07}
 \end{table*}
 \end{center}
@@ -294,6 +294,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-08.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-08. \\
@@ -322,7 +323,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-08.}
 \label{tab:vet08}
 \end{table*}
 \end{center}
@@ -330,6 +330,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-09.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-09. \\
@@ -352,7 +353,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-09.}
 \label{tab:vet09}
 \end{table*}
 \end{center}
@@ -360,6 +360,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-10.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-10. \\
@@ -384,7 +385,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-10.}
 \label{tab:vet10}
 \end{table*}
 \end{center}
@@ -392,6 +392,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-11.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-11. \\
@@ -415,7 +416,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-11.}
 \label{tab:vet11}
 \end{table*}
 \end{center}
@@ -423,6 +423,7 @@ A continuación, especificamos las pruebas de verificación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de verificación VET-12.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
 \textbf{ID} 					& VET-12. \\
@@ -443,7 +444,6 @@ A continuación, especificamos las pruebas de verificación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de verificación VET-12.}
 \label{tab:vet12}
 \end{table*}
 \end{center}
@@ -452,7 +452,7 @@ A continuación, especificamos las pruebas de verificación.
 
 
 
-La matriz de trazabilidad de las pruebas de verificación (Tabla \ref{tab:verification_matrix}) Determina que todos los requisitos de software se han verificado durante la fase de desarrollo del proyecto.
+La matriz de trazabilidad de las pruebas de verificación (Tabla \ref{tab:verification_matrix}) determina que todos los requisitos de software se han verificado durante la fase de desarrollo del proyecto.
 
 \vspace{2cm}
 
