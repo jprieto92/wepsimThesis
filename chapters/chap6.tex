@@ -460,6 +460,7 @@ La matriz de trazabilidad de las pruebas de verificación (Tabla \ref{tab:verifi
 \begin{table}[htb]
 \ra{1.3}
   \centering
+  \caption{Matriz de trazabilidad de pruebas de verificación.}
   \begin{tabular}{@{}L{3cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}@{}}
     \toprule
      \thead{Requisitos} & \rothead{VET-01} & \rothead{VET-02} & \rothead{VET-03} & \rothead{VET-04} & \rothead{VET-05} & \rothead{VET-06} & \rothead{VET-07} & \rothead{VET-08} & \rothead{VET-09} & \rothead{VET-10} & \rothead{VET-11} & \rothead{VET-12}\\
@@ -495,7 +496,6 @@ La matriz de trazabilidad de las pruebas de verificación (Tabla \ref{tab:verifi
     SR-NF-P01 & - & - & - & - & \ding{51} & - & - & - & - & - & - & - \\
     \bottomrule
 \end{tabular}
-\caption{Matriz de trazabilidad de pruebas de verificación.}
 \label{tab:verification_matrix}
 \end{table}    
 
@@ -504,12 +504,13 @@ La matriz de trazabilidad de las pruebas de verificación (Tabla \ref{tab:verifi
 \subsection{Pruebas de validación}
 
 
-Para realizar las pruebas de validación, hemos comprobado el software final, comparándolo con las necesidades del usuario especificadas en el Capítulo \ref{ch:analysis} \textit{\nameref{ch:analysis}}). Con estas pruebas queremos responder a la pregunta: ``¿Hemos construido el producto adecuado?''. La tabla \ref{tab:validation_tests} proporciona la plantilla utilizada para los test de validación. Tenga en cuenta que el formato del atributo ID es VAT-XX, donde XX indica el número de test de validación.
+Para realizar las pruebas de validación, hemos comprobado el software final, comparándolo con las necesidades del usuario especificadas en el Capítulo \ref{ch:analysis} \textit{\nameref{ch:analysis}}). Con estas pruebas queremos responder a la pregunta: \emph{``¿Hemos construido el producto adecuado?''}. La Tabla \ref{tab:validation_tests} proporciona la plantilla utilizada para los test de validación. Es necesario tener en cuenta que el formato del atributo ID es VAT-XX, donde XX indica el número de test de validación.
 
 
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Plantilla para test de validación.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& Test ID. \\
@@ -528,10 +529,9 @@ Para realizar las pruebas de validación, hemos comprobado el software final, co
 \midrule
 \textbf{Postcondiciones} 		& Las condiciones que siempre deben ser verdaderas justo después de realizar la prueba. \\
 \midrule
-\textbf{Evaluación} 			& \textit{OK} or \textit{Error}. \\
+\textbf{Evaluación} 			& \textit{OK} o \textit{Error}. \\
 \bottomrule
 \end{tabular}
-\caption{Plantilla para test de validación.}
 \label{tab:validation_tests}
 \end{table*}
 \end{center}
@@ -542,6 +542,7 @@ A continuación, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-01.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-01. \\
@@ -565,7 +566,6 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-01.}
 \label{tab:vat-01}
 \end{table*}
 \end{center}
@@ -574,11 +574,12 @@ A continuación, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-02.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-02. \\
 \midrule
-\textbf{Nombre} 				& Juego de instrucciones. \\
+\textbf{Nombre} 				& Código ensamblador. \\
 \midrule
 \textbf{Requisitos} 		& UR-C04, UR-C05 \\
 \midrule
@@ -598,7 +599,6 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-02.}
 \label{tab:vat-02}
 \end{table*}
 \end{center}
@@ -606,6 +606,7 @@ A continuación, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-03.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-03. \\
@@ -628,7 +629,6 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-03.}
 \label{tab:vat-03}
 \end{table*}
 \end{center}
@@ -636,6 +636,7 @@ A continuación, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-04.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-04. \\
@@ -660,7 +661,6 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-04.}
 \label{tab:vat-04}
 \end{table*}
 \end{center}
@@ -668,6 +668,7 @@ A continuación, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-05.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-05. \\
@@ -691,7 +692,6 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-05.}
 \label{tab:vat-05}
 \end{table*}
 \end{center}
@@ -699,6 +699,8 @@ A continuación, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-06.}
+\label{tab:vat-06}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-06. \\
@@ -719,14 +721,13 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-06.}
-\label{tab:vat-06}
 \end{table*}
 \end{center}
 
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-07.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-07. \\
@@ -750,7 +751,6 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-07.}
 \label{tab:vat-07}
 \end{table*}
 \end{center}
@@ -758,6 +758,7 @@ A continuación, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-08.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-08. \\
@@ -781,7 +782,6 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-08.}
 \label{tab:vat-08}
 \end{table*}
 \end{center}
@@ -789,6 +789,7 @@ A continuación, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-09.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-09. \\
@@ -811,7 +812,6 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-09.}
 \label{tab:vat-09}
 \end{table*}
 \end{center}
@@ -819,6 +819,7 @@ A continuación, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-10.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-10. \\
@@ -842,7 +843,6 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-10.}
 \label{tab:vat-10}
 \end{table*}
 \end{center}
@@ -850,6 +850,7 @@ A continuación, especificamos las pruebas de validación.
 \begin{center}
 \begin{table*}[htb]
 \centering
+\caption{Test de validación VAT-11.}
 \begin{tabular}{@{}p{2.5cm} p{9cm}@{}} 
 \toprule
 \textbf{ID} 					& VAT-11. \\
@@ -869,20 +870,20 @@ A continuación, especificamos las pruebas de validación.
 \textbf{Evaluación} 			& OK \\
 \bottomrule
 \end{tabular}
-\caption{Test de validación VAT-11.}
 \label{tab:vat-11}
 \end{table*}
 \end{center}
 
 \clearpage
 
-La matriz de trazabilidad de las pruebas de validación (Tabla \ref{tab:validation_matrix}) Determina que todos los requisitos de usuario han sido validados con el producto final.
+La matriz de trazabilidad de las pruebas de validación (Tabla \ref{tab:validation_matrix}) determina que todos los requisitos de usuario han sido validados con el producto final.
 
 \vspace{2cm}
 
 \begin{table}[htb]
 \ra{1.3}
   \centering
+  \caption{Matriz de trazabilidad de pruebas de validación.}
   \begin{tabular}{@{}L{3cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}C{0.7cm}@{}}
     \toprule
      \thead{Requisitos} & \rothead{VAT-01} & \rothead{VAT-02} & \rothead{VAT-03} & \rothead{VAT-04} & \rothead{VAT-05} & \rothead{VAT-06} & \rothead{VAT-07} & \rothead{VAT-08} & \rothead{VAT-09} & \rothead{VAT-10} & \rothead{VAT-11}\\
@@ -905,6 +906,5 @@ La matriz de trazabilidad de las pruebas de validación (Tabla \ref{tab:validati
     UR-R07 & - & - & - & - & - & - & - & - & - & - & \ding{51} \\
     \bottomrule
 \end{tabular}
-\caption{Matriz de trazabilidad de pruebas de validación.}
 \label{tab:validation_matrix}
 \end{table}    
