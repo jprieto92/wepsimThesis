@@ -440,7 +440,7 @@ reserved.\par\permission}}
   \signature{Certified by}{#1 \\ #2 \\ Supervisor}}
   \setbox\@abstractsupervisor\vbox{\unvbox\@abstractsupervisor
   \vskip\baselineskip \def\baselinestretch{1}\@normalsize 
-  \par\noindent Supervisor: #1 \\ Title: #2}}
+  \par\noindent Tutor: #1 \\ #2}}
 
 % department chairman, not thesis committee chairman
 \def\chairman#1#2{\gdef\@chairmanname{#1}\gdef\@chairmantitle{#2}}
@@ -479,7 +479,7 @@ at the
 % basic abstract environment
 \def\abstractpage{\cleardoublepage
 \begin{center}{\large{\bf \@title} \\
-by \\
+por \\
 \@author \\[\baselineskip]}
 \par
 \def\baselinestretch{1}\@normalsize
@@ -521,6 +521,6 @@ by \\
 \def\signature#1#2{\par\noindent#1\dotfill\null\\*
   {\raggedleft #2\par}}
 
-\def\abstract{\subsection*{Abstract}\small\def\baselinestretch{1}\@normalsize}
+\def\abstract{\subsection*{Resumen}\small\def\baselinestretch{1}\@normalsize}
 \def\endabstract{\par}
 
