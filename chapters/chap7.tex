@@ -111,7 +111,7 @@ La Tabla \ref{tab:project_information} resume las principales características d
 \midrule
 \textbf{Ratio de costes indirectos} 	& 20 \% \\
 \midrule
-\textbf{Presupuesto total} 			& 51.860,96 \\
+\textbf{Presupuesto total} 			& 51.860,96 \euro \\
 \bottomrule
 \end{tabular}
 \label{tab:project_information}
@@ -250,12 +250,12 @@ La Tabla \ref{tab:cs} muestra el resumen completo de los costes del proyecto. Lo
 \toprule
 \multicolumn{2}{c}{\textbf{\textit{Resumen de costes}}}\\
 \midrule
-\textbf{Recursos humanos} 				& 42.320,00 \\
-\textbf{Equipamiento} 						& 452,51 \\
-\textbf{Otros costes directos} 				& 444,97 \\
-\textbf{Costes indirectos}					& 8.643,50 \\
+\textbf{Recursos humanos} 				& 42.320,00 \euro \\
+\textbf{Equipamiento} 						& 452,51 \euro \\
+\textbf{Otros costes directos} 				& 444,97 \euro \\
+\textbf{Costes indirectos}					& 8.643,50 \euro \\
 \midrule
-\textbf{\textit{Presupuesto total}}			& \textbf{51.860,98} \\
+\textbf{\textit{Presupuesto total}}			& \textbf{51.860,98} \euro \\
 \bottomrule
 \end{tabular}
 \label{tab:cs}
@@ -295,10 +295,51 @@ IVA		 					& 21			& 15.029,31		& 86.597,46 \\
 \section{Entorno socio-económico}
 \label{sec:socioeconomic_environment}
 
+
+
+Gracias al trabajo realizado en este proyecto, se consiguen las siguientes mejoras que ahorran costes en la enseñanza de ``Estructura de Computadores'' y mejoran la calidad de la misma:
+
+\begin{itemize}
+
+\item \textbf{\textit{Mejor aprovechamiento del tiempo dedicado al laboratorio de prácticas}}, debido al uso de una herramienta que integra todos los conceptos necesarios para las prácticas, evitando aprender diferentes entornos.
+
+\item \textbf{\textit{Ampliar el tiempo de realización de las prácticas}}, ya que al permitir el uso en diferentes dispositivos (\emph{smartphones, tablets, etc.}) se aumentan los momentos aptos para realizar las prácticas.
+
+\item \textbf{\textit{Aumento de los casos prácticos}}, dado que es posible trabajar con diferentes juegos de instrucciones, diferentes tipos de procesadores, diferentes elementos hardware, etc.
+
+\item \textbf{\textit{Colaboraciones con instituciones docentes}}, ya que al ser una herramienta con licencia de código abierto favorece las colaboraciones entre diferentes instituciones promocionando a la universidad mediante las herramientas que desarrolla. Además, esta herramienta puede ser integrada con facilidad en \emph{SPOCs} y \emph{MOOCs}.
+
+\item \textbf{\textit{Disponer de la solución de forma gratuita}}, ayuda tanto a otras universidades que deseen hacer uso de la herramienta como a los estudiantes a ahorrar dinero puesto que no tienen que adquirir material adicional para la realización de las prácticas de laboratorio.
+
+\end{itemize}
+
+Por tanto, WepSIM ayuda a optimizar el tiempo dedicado por los estudiantes al estudio de la asignatura puesto que aumenta la posibilidad de disponer de tiempo para la realización de la práctica aumenta y el tiempo invertido en el aprendizaje de entornos de desarrollo disminuye, al disponer únicamente de un único entorno de desarrollo. De esta forma:
+
+\begin{equation}
+ Tent + \sum_{i=1}^{n}((Tefec_{i} + Tperd_{i}) + Tteor_{i}) < \sum_{j=1}^{n}((Tefec_{j} + Tperd_{j}) + Tteor_{j}+ Tent_{j})
+\label{eq:tiempo_invertido}
+\end{equation}
+
+Donde:
+
+\begin{itemize}
+
+\item \textbf{\textit{Tent:}} Tiempo invertido en el aprendizaje del entorno de desarrollo.
+
+\item \textbf{\textit{Tefec:}} Tiempo efectivo en el desarrollo de la práctica.
+
+\item \textbf{\textit{Tperd:}} Tiempo perdido por dependencias del entorno de desarrollo.
+
+\item \textbf{\textit{Tteor:}} Tiempo invertido al estudio de la teoría necesaria para el desarrollo de la práctica.
+
+\end{itemize}
+
+Con respecto al aumento de los casos prácticos, un ejemplo sería mostrar al estudiante el impacto energético que supone una programación eficiente, pudiendo ser comparado entre diferentes computadores. Esto es debido a que WepSIM simula la microprogramación de un computador y la programación en lenguaje ensamblador, pudiendo hacer visible el coste a bajo nivel de unas malas prácticas de programación. El objetivo, es concienciar a los estudiantes de la importancia que tiene la optimización y eficiencia en el uso de los recursos de un computador, puesto que uno de los retos de la comunidad científica es diseñar sistemas cada vez más eficientes energéticamente, de forma que en un futuro estas técnicas sean llevadas a cabo realizando sistemas más eficientes.
+
+Con todo ello, los estudiantes están más capacitados con los mismos recursos tanto materiales como de tiempo, sin la necesidad de adquirir material adicional para la realización de los casos prácticos.
+
+
 \iffalse
-
-
-
 % resumen
 Gracias al trabajo realizado en este proyecto, se consiguen diferentes mejoras, que ahorran costes en la enseñanza y mejoran la calidad de la misma:
 
@@ -332,7 +373,7 @@ Gracias a ser portable y no requerir instalación, el estudiante no precisa de u
 
 Otro aspecto positivo del diseño multiplataforma de esta herramienta, es el aprovechamiento del tiempo libre que en ocasiones los estudiantes tienen en los trayectos al centro de estudios. Anteriormente, al utilizar herramientas específicas para pc, suponían que si no se disponía de un computador, no se podía utilizar la plataforma. De esta manera, el estudiante puede aprovechar cualquier instante de tiempo disponible para hacer uso de la herramienta, puesto que tan solo necesita de un dispositivo con navegador web.
 
-\fi
+
 
 Como se ha comentado en capítulos anteriores, WepSIM puede apoyar la enseñanza en Estructura y Arquitectura de Computadores. Esto significa que los profesores de estas asignaturas pueden utilizar esta herramienta como refuerzo en las explicaciones del temario para mostrar de forma visual y práctica a los estudiantes el comportamiento de un procesador elemental. Además, sirve para que los estudiantes puedan desarrollar las prácticas de estas asignaturas sin la necesidad de utilizar diferentes herramientas, evitando la pérdida de tiempo que esto supone y permitiendo a los estudiantes dedicar el mayor tiempo posible a la realización de los ejercicios. Este ahorro de tiempo, tiene un impacto en los estudiantes a la hora de minimizar el tiempo invertido en la realización de prácticas, de forma que la mayor parte del tiempo dedicado a la asignatura sea útil y sirva para comprender mejor el funcionamiento de un computador, sirviendo de base en el resto de la trayectoria académica de los estudiantes y mejorando su rendimiento.
 
@@ -341,3 +382,5 @@ Debido al diseño modular realizado de este simulador, WepSIM permite la especif
 Gracias al uso de este simulador en el ámbito docente, se puede mostrar el impacto energético que supone una programación eficiente. Esto es debido a que WepSIM es un simulador de microprogramación y programación en ensamblador, pudiendo hacer visible el coste a bajo nivel de unas malas prácticas de programación. El objetivo, es concienciar a los estudiantes de la importancia que tiene la optimización y eficiencia en el uso de los recursos de un computador, puesto que uno de los retos de la comunidad científica es diseñar sistemas cada vez más eficientes energéticamente, de forma que en un futuro estas técnicas sean llevadas a cabo realizando sistemas más eficientes.
 
 Por último, es necesario destacar el impacto que supone que WepSIM tenga licencia de código abierto. Esto supone que las universidades y centros docentes que quieran utilizar la herramienta, puedan hacerlo sin ningún tipo de coste, con el ahorro económico que supone la utilización de una herramienta de estas características. Además, gracias a este tipo de licencia, se favorece un entorno de colaboración entre diferentes universidades, de forma que se puedan añadir nuevos módulos a la herramienta sin coste económico para la comunidad docente.
+
+\fi
