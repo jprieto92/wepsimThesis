@@ -1,4 +1,4 @@
-\lhead[\thepage]{CAPÍTULO \thechapter. SUMMARY}
+\lhead[\thepage]{ANEXO 1.  Summary}
 \chead[]{}
 \rhead[WepSIM: Simulador de un procesador elemental con unidad de control microprogramada\leftmark]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
@@ -8,10 +8,14 @@
 \rfoot[]{}
 \renewcommand{\footrulewidth}{0pt}
 
-\chapter{Summary}
+
+
+
+\chapter*{Anexo 1: Summary}
+\addcontentsline{toc}{chapter}{Anexo 1: Summary}
 \markboth{}{APPENDIX A}
 
-\section{Introduction}
+\section*{Introduction}
 
 Teaching the architecture of a computer is a basic and fundamental part of the training of computer science students, through which students achieve a low-level vision and understanding of behavior in a computer. In order to get students to understand and correctly understand the theoretical foundations, it is necessary to use practical classes, where the student can be able to interact with a computer of architecture similar or similar to that explained in theory and also manage to extrapolate the theoretical foundations To actual behavior.
 
@@ -28,7 +32,7 @@ In addition to having a portable simulator to different platforms, the simulator
 Therefore, we have considered how to offer a simulator that is simple and modular, and that allows to integrate the teaching of the microprogramming with the programming in assembler. In particular, it can be used to microprogram an instruction set and see the basic operation of a processor, and to create assembler programs based on the assembler defined by the above microcode. This is of great help, for example, for the programming of systems since it is possible to see how the software interacts in assembler with the hardware in the treatment of interruptions. The idea is to offer a simulator that offers a global vision of what happens in hardware and software, also avoiding the extra time involved in learning different tools.
 
 
-\section{Objectives}
+\section*{Objectives}
 
 The main objective of this project is to develop a simulator, which unlike the existing ones, can fully simulate the behavior of an elementary processor allowing to check the state of the components in each clock cycle, so that it helps the students To understand and assimilate in a simple and visual way the operation of a processor. The secondary objectives, derived from the main objective, are:
 
@@ -45,7 +49,7 @@ The main objective of this project is to develop a simulator, which unlike the e
 
 \end{itemize}
 
-\section{WepSIM Elemental Processor}
+\section*{WepSIM Elemental Processor}
 
 WepSIM is an elementary processor with microprogrammed control unit designed by the staff of the research group ARCOS of the University Carlos III of Madrid for teaching in the subject Computer Structure.
 
@@ -87,7 +91,7 @@ The MR multiplexer is used to indicate whether the RA, RB and RE signals are lit
 
 For the Cop signal (operation code in the ALU), the MC signal can be used to take the SelCop value of the micro-instruction (MC = 1) or the 4 least significant bits of the instruction register (MC = 0), ie IR3 -IR 0.
 
-\section{Simulator design}
+\section*{Simulator design}
 
 In order for the teachers of the Computer Structure subject to use a tool that helps to explain the theoretical concepts of the subject, and students can use it to understand these concepts and to carry out the subject's practices later, Proposes the design and implementation of a web tool that realistically simulates an elementary processor with a microprogrammable control unit.
 
@@ -97,7 +101,7 @@ To achieve this portability, the simulator has been developed in HTML5 (HTML + J
 
 Therefore, the chosen solution is able to unify in a single tool all the functionalities required for the teaching of Structure of computers with a high level of detail, with high availability by facilitating its as a web tool, and with a great portability since Can be executed on a large number of different devices, always looking for a solution without the need for a server.
 
-\subsection{Simulator Architecture}
+\subsection*{Simulator Architecture}
 
 The architecture of the solution presented in this work consists of three main elements:
 
@@ -131,11 +135,11 @@ The simulation kernel asks the subsystem of the software model for the defined m
 
 WepSIM has a simulation controller that is responsible for updating the clock cycle and displaying the global status. The simulation interface subsystem updates the user interface. When the user uses the user interface to request an operation, the simulation interface subsystem moves the request to the simulation controller. In this way, a basic Model-View-Controller (MVC) is used for the WepSIM architecture.
 
-\section{Conclusions and future work}
+\section*{Conclusions and future work}
 
 This section presents the conclusions of the paper, reviews the objectives set out at the beginning of this document, and includes some personal conclusions. In addition, we discuss the main contributions of our work, also indicating the publications resulting from this work. Finally, future work is discussed.
 
-\section{Conclusions}
+\section*{Conclusions}
 
 In this work we have described the design of WepSIM, a simulator of an elementary processor with microprogrammed control unit. This work presents a new simulator that is intuitive, portable and extensible, serving as a teaching complement for teaching in Computer Structure. This simulator allows you to define different sets of instructions and to execute and debug source code using the defined set of instructions. It also allows to define the behavior of the processor by microprogramming.
 
@@ -157,7 +161,7 @@ The main objective of this project was to develop a simulator, which, in contras
 
 On a personal level, this work has helped me to enter the world of scientific research. I have been able to apply a great deal of the knowledge acquired throughout the degree. In addition, I have learned important techniques of hardware modeling, compilation and simulation, which have a great utility and complexity and have served me to deepen even more in the knowledge acquired in the degree. For all this, it is very satisfying to see the final result obtained, since I have managed to overcome all the problems that have arisen throughout the project.
 
-\subsection{Contributions}
+\subsection*{Contributions}
 
 The project carried out during this Work End of Degree fits with many of the subjects studied in the Degree in Computer Engineering of the Carlos III University of Madrid, highlighting the following topics in particular:
 
@@ -179,7 +183,7 @@ The project carried out during this Work End of Degree fits with many of the sub
 
 \end{itemize}
 
-\subsection{Publications}
+\subsection*{Publications}
 
 This bachelor thesis has allowed to make an important contribution to the field of teaching in Structure and Computer Architecture. In addition, the following scientific articles have been published:
 
@@ -195,7 +199,7 @@ In addition, at the time of delivery of this document, also another item sent wa
 
 \vspace{1cm}
 
-\section{Future works}
+\section*{Future works}
 
 Currently, there are several lines of future work in which we are working.
 
@@ -234,6 +238,4 @@ Currently, there are several lines of future work in which we are working.
 \end{itemize}
 
 \end{itemize}
-
-
 
