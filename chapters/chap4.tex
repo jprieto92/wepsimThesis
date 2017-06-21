@@ -31,7 +31,7 @@ Existen diferentes modelos arquitectónicos a la hora de realizar el diseño de 
 
 Debido a los requisitos de usuario establecidos en este proyecto (Sección \ref{sec:user_requirements}), la segunda opción es la que cumple con la necesidad de no necesitar acceso a internet, de forma que la funcionalidad total del simulador quede en el dispositivo del usuario.
 
-Una vez decidido el modelo de diseño, es necesario tener en cuenta las diferentes tecnologías a utilizar. Como se indicó en la sección \ref{sec:user_requirements}, es necesario que la aplicación sea diseñada siguiendo el lenguaje de marcado \acrshort{html}5, que está formado por \acrshort{html}, \acrshort{css} y JavaScript. De este modo, es necesario contemplar los diferentes frameworks y bibliotecas existentes que ayudan a la hora de realizar el diseño de la aplicación, posibilitando el funcionamiento de ésta tanto en ordenadores como en dispositivos móviles. Estas tecnologías descritas anteriormente en la Sección \ref{sec:tecnologias_web}, proporcionan distintas funcionalidades y enfoques a la hora de diseñar la aplicación, permitiendo la compatibilidad de la aplicación con la amplia mayoría de los navegadores web. En la Tabla \ref{tab:comparison_webframeworks}, se analizan las funcionalidades y compatibilidades que proporcionan estas tecnologías, valorando si cumplen con los requisitos establecidos en este proyecto.
+Una vez decidido el modelo de diseño, es necesario tener en cuenta las diferentes tecnologías a utilizar. Como se indicó en la sección \ref{sec:user_requirements}, es necesario que la aplicación sea diseñada siguiendo el lenguaje de marcado \acrshort{html}5, que está formado por \acrshort{html}, \acrshort{css} y JavaScript. De este modo, es necesario contemplar los diferentes \gls{framework} y bibliotecas existentes que ayudan a la hora de realizar el diseño de la aplicación, posibilitando el funcionamiento de ésta tanto en ordenadores como en dispositivos móviles. Estas tecnologías descritas anteriormente en la Sección \ref{sec:tecnologias_web}, proporcionan distintas funcionalidades y enfoques a la hora de diseñar la aplicación, permitiendo la compatibilidad de la aplicación con la amplia mayoría de los navegadores web. En la Tabla \ref{tab:comparison_webframeworks}, se analizan las funcionalidades y compatibilidades que proporcionan estas tecnologías, valorando si cumplen con los requisitos establecidos en este proyecto.
 
 \begin{table}[htbp]
 \ra{1.2}
@@ -41,7 +41,7 @@ Una vez decidido el modelo de diseño, es necesario tener en cuenta las diferent
 \resizebox{\textwidth}{!}{
 \begin{tabular}{@{}llllllll@{}}
 \toprule
-\textbf{Framework} & \textbf{Angular.js} & \textbf{jQuery.js} & \textbf{BootStrap} & \textbf{Dojo} \\ 
+\textbf{\Gls{framework}} & \textbf{Angular.js} & \textbf{jQuery.js} & \textbf{BootStrap} & \textbf{Dojo} \\ 
 \midrule
 Funcionalidad requerida			& \ding{51}  &  \ding{51} & \ding{51} & \ding{51} \\
 \midrule
@@ -104,7 +104,7 @@ El \gls{microcodigo} (el contenido de la memoria de control) junto con el format
 El kernel de simulación pregunta al subsistema del modelo \gls{software} por el \gls{microcodigo} definido, la descripción del formato de instrucción y el contenido de la memoria principal. Los binarios se cargan en los elementos del modelo \gls{hardware}, y a continuación el kernel de simulación actualiza el estado global en cada ciclo de reloj.
 
 
-\acrshort{wepsim} dispone de un controlador de simulación que se encarga de actualizar el ciclo de reloj y mostrar el estado global. El subsistema de interfaz de simulación actualiza la interfaz de usuario. Cuando el usuario usa la interfaz de usuario para solicitar una operación, el subsistema de interfaz de simulación traslada la petición al controlador de simulación. De este modo, se usa un Modelo- Vista-Controlador (MVC) básico para la arquitectura de \acrshort{wepsim}.
+\acrshort{wepsim} dispone de un controlador de simulación que se encarga de actualizar el ciclo de reloj y mostrar el estado global. El subsistema de interfaz de simulación actualiza la interfaz de usuario. Cuando el usuario usa la interfaz de usuario para solicitar una operación, el subsistema de interfaz de simulación traslada la petición al controlador de simulación. De este modo, se usa un \acrshort{mvc} básico para la arquitectura de \acrshort{wepsim}.
 
 \subsection{Modelo \gls{hardware}}
 
