@@ -545,7 +545,7 @@ Un caso de uso representa un uso típico que realizará alguno de los futuros us
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=13.5cm]{figures/user_cases_2}
+ 	\includegraphics[width=11.4cm]{figures/user_cases_2}
  	\caption{Diagrama modelo casos de uso 2.}
 	\label{fig:user_cases2}
 \end{figure}
@@ -555,6 +555,7 @@ Para realizar la especificación clara, completa y detallada de cada uno de los 
 \begin{center}
 \begin{table*}[htbp]
 \centering
+\ra{0,9}
 \caption{Plantilla de caso de uso.}
 \begin{tabular}{@{}p{2.5cm} p{13cm}@{}} 
 \toprule
@@ -576,6 +577,8 @@ Para realizar la especificación clara, completa y detallada de cada uno de los 
 \label{tab:uc_template}
 \end{table*}
 \end{center}
+
+\clearpage
 
 La Tabla \ref{tab:uc_template} proporciona la plantilla utilizada para la especificación de casos de uso. Es necesario tener en cuenta que el formato de identificación será UC-XX, donde XX corresponde al número del caso de uso. 
 
@@ -1703,9 +1706,10 @@ Esta subsección especifica los requisitos no-funcionales.
 La matriz de trazabilidad de entre requisitos de usuario y requisitos de \gls{software} (Tabla \ref{tab:requirements_matrix}) determina que todos los requisitos de usuario quedan reflejados en los requisitos de \gls{software}.
 
 \begin{table}[htb]
-\ra{1.3}
+\ra{1.1}
   \centering
   \caption{Matriz de trazabilidad de requisitos.}
+\resizebox{\textwidth}{!}{
   \begin{tabular}{@{}L{3cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}C{0.5cm}@{}}
     \toprule
      \thead{Requisitos} & \rothead{UR-C01} & \rothead{UR-C02} & \rothead{UR-C03} & \rothead{UR-C04}& \rothead{UR-C05} & \rothead{UR-C06} & \rothead{UR-C07} & \rothead{UR-C08} & \rothead{UR-C09} & \rothead{UR-R01} & \rothead{UR-R02} & \rothead{UR-R03} & \rothead{UR-R04} & \rothead{UR-R05} & \rothead{UR-R06} & \rothead{UR-R07} \\
@@ -1741,6 +1745,7 @@ La matriz de trazabilidad de entre requisitos de usuario y requisitos de \gls{so
     SR-NF-P01 & - & - & - & - & - & - & - & - & - & - & - & - & \ding{51} & - & - & - \\
     \bottomrule
 \end{tabular}
+}
 \label{tab:requirements_matrix}
 \end{table}    
 
