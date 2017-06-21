@@ -69,6 +69,8 @@ Para lograr dicha portabilidad, el simulador ha sido desarrollado en \acrshort{h
 
 Por tanto, la solución elegida es capaz de unificar en una misma herramienta todas las funcionalidades requeridas para la enseñanza de Estructura de computadores con un alto nivel de detalle, con alta disponibilidad al facilitarse su como una herramienta web, y con una gran portabilidad puesto que podrá ser ejecutada sobre un gran número de diversos dispositivos, buscando en todo momento una solución sin la necesidad de servidor.
 
+\clearpage
+
 \section{Arquitectura de \acrshort{wepsim}}
 \label{sec:simulator_architecture}
 
@@ -82,7 +84,7 @@ La arquitectura de la solución presentada en este trabajo consta de tres elemen
 
 El modelo \gls{hardware} permite definir los distintos elementos típicos de un computador (memoria principal, procesador, etc.) de una forma modular. La forma de definir estos elementos equilibra dos objetivos contrapuestos: es suficientemente completa como para imitar los principales aspectos de la realidad, pero es lo suficientemente mínima para facilitar su uso. Ante todo se persigue que sea una herramienta didáctica.
 
-El modelo \gls{software} permite definir el \gls{microcodigo} y el \gls{ensamblador} basado en este \gls{microcodigo} de la forma más intuitiva posible. El \gls{ensamblador} a usar viene dado por un conjunto de instrucciones que puede ser definido por el usuario e intenta ser lo suficientemente flexible como para poder definir diferentes tipos y juegos de instrucciones, como por ejemplo MIPS o ARM.
+El modelo \gls{software} permite definir el \gls{microcodigo} y el \gls{ensamblador} basado en este \gls{microcodigo} de la forma más intuitiva posible. El \gls{ensamblador} a usar viene dado por un conjunto de instrucciones que puede ser definido por el usuario e intenta ser lo suficientemente flexible como para poder definir diferentes tipos y juegos de instrucciones, como por ejemplo \acrshort{mips} o ARM.
 
 El tercer elemento de la arquitectura propuesta es un kernel que toma como entrada el modelo \gls{hardware} descrito y el modelo \gls{software} de trabajo, y se encarga de mostrar el funcionamiento del \gls{hardware} con el \gls{software} dado.
 

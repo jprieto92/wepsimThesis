@@ -22,7 +22,7 @@ Este capítulo presenta el estado del arte, la última y más avanzada etapa de 
 
 \section{Simuladores para la enseñanza de la Estructura y Arquitectura de Computadores}
 
-Son muchos los tipos de simuladores existentes en el ámbito docente para la explicación de las distintas partes que componen un computador. Estos simuladores, pueden ser de diferentes ámbitos como, por ejemplo, cachés, \emph{pipeline}, circuitos integrados, microprogramación, programación en \gls{ensamblador}, etc.
+Son muchos los tipos de simuladores existentes en el ámbito docente para la explicación de las distintas partes que componen un computador. Estos simuladores, pueden ser de diferentes ámbitos como, por ejemplo, cachés, \emph{\gls{pipeline}}, circuitos integrados, microprogramación, programación en \gls{ensamblador}, etc.
 
 En esta sección, nos centramos en los tipos de simuladores que tienen relación directa con la propuesta realizada, como lo son los simuladores para la microprogramación y los simuladores para la programación en \gls{ensamblador}.
 
@@ -91,7 +91,7 @@ MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado e
 
 \item La velocidad de ejecución puede modificarse de forma que, si se ralentiza, el usuario puede observar cómo cada instrucción se resalta cuando está siendo ejecutada y ver los cambios que se producen en los valores del banco de registros y de las ubicaciones de memoria.
 
-\item  La memoria y los registros se pueden modificar de una manera \acrfull{wysiwyg}.
+\item  La memoria y los registros se pueden modificar de una manera ``\acrfull{wysiwyg}''.
 
 \item Incorpora un editor de texto, eliminando dependencias externas para el uso del simulador.
 
@@ -101,22 +101,22 @@ MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado e
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=14cm]{figures/mars_figure}
+ 	\includegraphics[width=15cm]{figures/mars_figure}
  	\caption{Interfaz MARS.}
 	\label{fig:mars_figure}
 \end{figure}
 
-P88110 es un emulador descrito en \cite{garcia2009p88110} que se basa en la emulación de un procesador superescalar. El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del \emph{pipeline} y las dependencias existentes (Figura \ref{fig:p88110_figure}). Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
+P88110 es un emulador descrito en \cite{garcia2009p88110} que se basa en la emulación de un procesador superescalar. El propósito fundamental de este emulador, es mostrar el funcionamiento de este tipo de procesadores, haciendo visible el funcionamiento del \emph{\gls{pipeline}} y las dependencias existentes (Figura \ref{fig:p88110_figure}). Está basado en una arquitectura específica (MC88110) y pese a integrar el efecto de un procesador superescalar no integra la microprogramación, que haría de él un emulador completo.
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=8cm]{figures/em88110}
+ 	\includegraphics[width=9cm]{figures/em88110}
  	\caption{Interfaz em88110.}
 	\label{fig:p88110_figure}
 \end{figure}
 
 
-Web\acrshort{mips} \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web (Figura \ref{fig:webmips_figure}), de forma que no requiere de su instalación en computador local. No soporta el juego completo de instrucciones de \acrshort{mips}, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de la arquitectura del computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las cinco etapas de \emph{pipeline} de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura ``Arquitectura de Computadores'' impartida por los creadores del simulador.
+Web\acrshort{mips} \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web (Figura \ref{fig:webmips_figure}), de forma que no requiere de su instalación en computador local. No soporta el juego completo de instrucciones de \acrshort{mips}, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de la arquitectura del computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las cinco etapas de \emph{\gls{pipeline}} de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura ``Arquitectura de Computadores'' impartida por los creadores del simulador.
 
 Entre las diferentes características a destacar de este simulador, se encuentran:
 
@@ -216,17 +216,17 @@ En la actualidad, todos los navegadores realizan la interpretación del código 
 \subsection{Frameworks}
 \label{sec:frameworks}
 
-Como se indica en \cite{garrido2004arquitectura} las aplicaciones web se han convertido en los últimos años en complejos sistemas \gls{software} con interfaces de usuario cada vez más parecidas a las aplicaciones de escritorio, dando servicio a procesos de negocio de considerable envergadura y estableciéndose sobre ellas requisitos estrictos de accesibilidad y respuesta. Para ayudar al desarrollo de estas aplicaciones web, se hace uso de diferentes \emph{frameworks} y bibliotecas que añaden funcionalidad al entorno de trabajo. Los \emph{frameworks} son una estructura conceptual para el desarrollo e implementación de aplicaciones web, teniendo como objetivos principales la aceleración del proceso de desarrollo, reutilización de código ya existente y promover buenas prácticas de desarrollo, como el uso de patrones. Entre los \emph{frameworks} más utilizados en la actualidad, se encuentran:
+Como se indica en \cite{garrido2004arquitectura} las aplicaciones web se han convertido en los últimos años en complejos sistemas \gls{software} con interfaces de usuario cada vez más parecidas a las aplicaciones de escritorio, dando servicio a procesos de negocio de considerable envergadura y estableciéndose sobre ellas requisitos estrictos de accesibilidad y respuesta. Para ayudar al desarrollo de estas aplicaciones web, se hace uso de diferentes \emph{\gls{framework}} y bibliotecas que añaden funcionalidad al entorno de trabajo. Los \emph{\gls{framework}} son una estructura conceptual para el desarrollo e implementación de aplicaciones web, teniendo como objetivos principales la aceleración del proceso de desarrollo, reutilización de código ya existente y promover buenas prácticas de desarrollo, como el uso de patrones. Entre los \emph{\gls{framework}} más utilizados en la actualidad, se encuentran:
 
 \begin{itemize}
 
-\item \textbf{Angular.js}: Es un \emph{framework} MVC (Modelo-Vista-Controlador) de JavaScript de código abierto mantenido por Google para el desarrollo Web Front End, que permite crear aplicaciones \textit{Single-Page}. Este \emph{framework} ha supuesto un avance puesto que al implementar el patrón MVC ayuda al desarrollador a separar conceptos. De este modo, adapta y amplía el \acrshort{html} tradicional para servir mejor contenido dinámico a través de un \textit{data binding} bidireccional que permite la sincronización automática de modelos y vistas. Además facilita la creación de test unitarios, lo cual resulta de gran ayuda para los desarrolladores.
+\item \textbf{Angular.js}: Es un \emph{\gls{framework}} \acrfull{mvc} de JavaScript de código abierto mantenido por Google para el desarrollo Web Front End, que permite crear aplicaciones \textit{Single-Page}. Este \emph{\gls{framework}} ha supuesto un avance puesto que al implementar el patrón \acrshort{mvc} ayuda al desarrollador a separar conceptos. De este modo, adapta y amplía el \acrshort{html} tradicional para servir mejor contenido dinámico a través de un \textit{data binding} bidireccional que permite la sincronización automática de modelos y vistas. Además facilita la creación de test unitarios, lo cual resulta de gran ayuda para los desarrolladores.
 
 \item \textbf{jQuery.js}: Es una biblioteca de JavaScript rápida, pequeña y característica. Ofrece una infraestructura que proporciona una mayor facilidad para la creación de aplicaciones complejas del lado del cliente. De esta forma, al utilizar esta biblioteca, el desarrollador se asegura que funcionará correctamente en los navegadores de los usuarios.
 
-\item \textbf{BootStrap}: Es un \emph{framework} de código abierto para el diseño de aplicaciones web, en el cual se incluyen diferentes plantillas de diseño con tipografía, formularios, botones, menús de navegación y otros elementos de diseño basados en \acrshort{html} y \acrshort{css} que proporcionan el desarrollador ayuda a la hora de implementar la interfaz de usuario de su aplicación. Además, es compatible con la mayoría de los navegadores web.
+\item \textbf{BootStrap}: Es un \emph{\gls{framework}} de código abierto para el diseño de aplicaciones web, en el cual se incluyen diferentes plantillas de diseño con tipografía, formularios, botones, menús de navegación y otros elementos de diseño basados en \acrshort{html} y \acrshort{css} que proporcionan el desarrollador ayuda a la hora de implementar la interfaz de usuario de su aplicación. Además, es compatible con la mayoría de los navegadores web.
 
-\item \textbf{Dojo}: Es un \emph{framework} que contiene APIs que facilitan el desarrollo de aplicaciones web que utilizan la tecnología \acrfull{ajax}, conteniendo un sistema de empaquetado inteligente, efecto de interfaz de usuario, abstracción de eventos, almacenamiento de APIs en el cliente e interacción de APIs con \acrshort{ajax}.
+\item \textbf{Dojo}: Es un \emph{\gls{framework}} que contiene \acrfull{api} que facilitan el desarrollo de aplicaciones web que utilizan la tecnología \acrfull{ajax}, conteniendo un sistema de empaquetado inteligente, efecto de interfaz de usuario, abstracción de eventos, almacenamiento de \acrshort{api}s en el cliente e interacción de \acrshort{api}s con \acrshort{ajax}.
 
 \end{itemize}
 
@@ -239,17 +239,11 @@ En la Figura \ref{fig:wepsimCPU_figure} se muestra la estructura del Procesador 
 
 \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=11cm]{figures/processor6}
+ 	\includegraphics[width=0.9\textwidth]{figures/processor6}
  	\caption{Arquitectura \acrshort{cpu} \acrshort{wepsim} .}
 	\label{fig:wepsimCPU_figure}
 \end{figure}
 
-\begin{figure}[htbp]
- 	\centering
- 	\includegraphics[width=11cm]{figures/controlunit6}
- 	\caption{Arquitectura unidad de control \acrshort{wepsim}.}
-	\label{fig:wepsimCU_figure}
-\end{figure}
 
 \acrshort{wepsim} es un procesador de 32 bits que direcciona la memoria por bytes, que cuenta con un banco de 32 registros y dos registros adicionales (\emph{RT1} y \emph{RT2}) que no son visibles para el programador de \gls{ensamblador}, pero que permiten el almacenamiento temporal de datos para la realización de operaciones intermedias. Desde los registros, es posible enviar los valores para operar en una \acrfull{alu} que dispone de las 15 operaciones aritmético-lógicas más comunes. El registro \emph{PC} (Contador de Programa) tiene su propio operador de sumar cuatro, de forma que no es necesario hacer uso de la \acrshort{alu} para esta operación. El resultado de las operaciones realizadas en la \acrshort{alu} puede ser almacenado en un registro temporal (\emph{RT3}) que también es invisible para el programador de \gls{ensamblador}, o ser enviado directamente al bus interno a través del correspondiente triestado.
 
@@ -258,6 +252,13 @@ El registro de estado (\emph{SR}) puede ser actualizado con los \emph{flags} res
 El registro de instrucción (\emph{IR}) tiene asociado un módulo selector (circuito de  más alto nivel que un multiplexor, etc.) que permite seleccionar un segmento del valor binario almacenado en el registro de instrucción que pasará hacia \emph{T3}.
 
 En concreto, se indica la posición (\emph{Offset}, donde \emph{0} represente el bit menos significativo del registro \emph{IR}) inicial y el número de bits (\emph{Size}) a tomar a partir de dicha posición inicial, así como si se desea hacer extensión de signo (\emph{SE}) antes de pasar el valor a la entrada de \emph{T3}.
+
+\begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=0.9\textwidth]{figures/controlunit6}
+ 	\caption{Arquitectura unidad de control \acrshort{wepsim}.}
+	\label{fig:wepsimCU_figure}
+\end{figure}
 
 Los registros \emph{MAR} y \emph{MBR} se usan para almacenar la dirección y el contenido asociado a esta dirección en las operaciones de lectura/escritura con la memoria. La memoria está diseñada para un funcionamiento síncrono o asíncrono. Actualmente funciona de forma síncrona, pero dispone de la señal \emph{MRdy} para en un futuro trabajar de forma asíncrona. El circuito de selección permite indicar qué porción de la palabra de memoria es la que se desea (un byte, dos bytes o una palabra completa de cuatro bytes).
 
