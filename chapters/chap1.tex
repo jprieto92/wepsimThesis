@@ -27,15 +27,15 @@ La enseñanza de la arquitectura de un computador es una parte básica y fundame
 
 Uno de los principales problemas a la hora de diseñar estas clases prácticas es lograr obtener los recursos necesarios para que los estudiantes puedan hacer uso de un computador similar al visto en las clases teóricas. Actualmente, existen distintas herramientas que permiten simular diferentes componentes de un computador, pero no existe una herramienta que unifique la simulación de estos componentes, siendo un problema a la hora de obtener una visión global del funcionamiento de un computador.
 
-Estas herramientas, pueden ser de dos tipos: emuladores y simuladores. Un emulador es un software que se encarga de imitar el comportamiento de una computadora de forma que programas pensados para una arquitectura concreta, puedan ser ejecutados en otra diferente. Por otro lado, un simulador es un software que trata reproducir el comportamiento de un computador, pero con un menor nivel de realismo que los emuladores, puesto que estos se encargan de modelar de forma precisa el dispositivo de manera que los programas ejecutados sobre él funcionen como si estuvieran siendo ejecutados en el dispositivo original.
+Estas herramientas, pueden ser de dos tipos: emuladores y simuladores. Un emulador es un \gls{software} que se encarga de imitar el comportamiento de una computadora de forma que programas pensados para una arquitectura concreta, puedan ser ejecutados en otra diferente. Por otro lado, un simulador es un \gls{software} que trata reproducir el comportamiento de un computador, pero con un menor nivel de realismo que los emuladores, puesto que estos se encargan de modelar de forma precisa el dispositivo de manera que los programas ejecutados sobre él funcionen como si estuvieran siendo ejecutados en el dispositivo original.
 
-Hay distintos simuladores que se pueden utilizar para trabajar con los principales aspectos que se tratan en las asignaturas de Estructura y Arquitectura de Computadores: ensamblador, caché, etc. La mayoría de estos simuladores se centran en un tipo de simulación concreto, lo que implica una pérdida de la visión del conjunto al necesitar el uso de diferentes simuladores. Por lo tanto, es mucho mejor tener siempre una visión centralizada de cualquier servicio, siendo más favorable el uso de una herramienta que reúna las máximas funcionalidades posibles.
+Hay distintos simuladores que se pueden utilizar para trabajar con los principales aspectos que se tratan en las asignaturas de Estructura y Arquitectura de Computadores: \gls{ensamblador}, caché, etc. La mayoría de estos simuladores se centran en un tipo de simulación concreto, lo que implica una pérdida de la visión del conjunto al necesitar el uso de diferentes simuladores. Por lo tanto, es mucho mejor tener siempre una visión centralizada de cualquier servicio, siendo más favorable el uso de una herramienta que reúna las máximas funcionalidades posibles.
 
-Hay otro problema no menos importante: la mayoría de los simuladores están pensados para PC. Uno de los objetivos que nos planteamos con WepSIM es que pudiera ser utilizado en dispositivos móviles (\emph{smartphones} o \emph{tablets}), para ofrecer al estudiante una mayor flexibilidad en su uso.
+Hay otro problema no menos importante: la mayoría de los simuladores están pensados para \acrshort{pc}. Uno de los objetivos que nos planteamos con \acrshort{wepsim} es que pudiera ser utilizado en dispositivos móviles (\emph{smartphones} o \emph{tablets}), para ofrecer al estudiante una mayor flexibilidad en su uso.
 
 Además de tener un simulador portable a distintas plataformas, el simulador ha de ser lo más autocontenido posible, de manera que integre la ayuda principal para su uso (no como un documento separado que sirva de manual de uso para ser impreso) permitiendo al usuario hacer un uso completo de la aplicación sin la necesidad de salir de ella.
 
-Por todo ello, proponemos ofrecer un simulador que sea simple y modular, y que permita integrar la enseñanza de la microprogramación con la programación en ensamblador. En concreto, puede utilizarse para microprogramar un juego de instrucciones y ver el funcionamiento básico de un procesador, y para crear programas en ensamblador basados en el ensamblador definido por el anterior \gls{microcodigo}. Este planteamiento permite una mejor comprensión de la programación de sistemas dado que es posible ver cómo interactúa el software en ensamblador con el hardware en el tratamiento de interrupciones. Finalmente, desde el punto de vista de la docencia, nuestro simulador ofrece una visión global de lo que pasa en hardware y software, evitando además el tiempo extra que supone el aprendizaje de distintas herramientas.
+Por todo ello, proponemos ofrecer un simulador que sea simple y modular, y que permita integrar la enseñanza de la microprogramación con la programación en \gls{ensamblador}. En concreto, puede utilizarse para microprogramar un juego de instrucciones y ver el funcionamiento básico de un procesador, y para crear programas en \gls{ensamblador} basados en el \gls{ensamblador} definido por el anterior \gls{microcodigo}. Este planteamiento permite una mejor comprensión de la programación de sistemas dado que es posible ver cómo interactúa el \gls{software} en \gls{ensamblador} con el \gls{hardware} en el tratamiento de interrupciones. Finalmente, desde el punto de vista de la docencia, nuestro simulador ofrece una visión global de lo que pasa en \gls{hardware} y \gls{software}, evitando además el tiempo extra que supone el aprendizaje de distintas herramientas.
 
 
 \section{Objetivos}
@@ -45,11 +45,11 @@ El objetivo principal de este proyecto, es desarrollar un simulador, que a difer
 
 \begin{itemize}
 
-\item \textbf{O1:} Simular la ejecución del juego de instrucciones especificado en un computador denominado WepSIM desde el punto de vista de la microprogramación y la programación en ensamblador.
+\item \textbf{O1:} Simular la ejecución del juego de instrucciones especificado en un computador denominado \acrshort{wepsim} desde el punto de vista de la microprogramación y la programación en \gls{ensamblador}.
 
 \item \textbf{O2:} Permitir la especificación de diferentes juegos de instrucciones.
 
-\item \textbf{O3:} Permitir unificar la microprogramación en un computador y la programación en lenguaje ensamblador.
+\item \textbf{O3:} Permitir unificar la microprogramación en un computador y la programación en lenguaje \gls{ensamblador}.
 
 \item \textbf{O4:} Permitir al usuario la visualización en cada ciclo de reloj del estado y comportamiento del computador simulado.
 
@@ -64,13 +64,13 @@ El documento contiene los siguientes capítulos:
 
 \item Capítulo \ref{ch:introduction}, \textit{\nameref{ch:introduction}}, presenta una breve descripción del contenido del documento. También incluye la motivación y los objetivos del proyecto.
 
-\item Capítulo \ref{ch:state_of_the_art}, \textit{\nameref{ch:state_of_the_art}}, incluye una descripción de los diferentes tipos de simuladores (de lenguaje ensamblador y de \gls{microcodigo}), presentando el trabajo relacionado y una descripción de las tecnologías web actuales.
+\item Capítulo \ref{ch:state_of_the_art}, \textit{\nameref{ch:state_of_the_art}}, incluye una descripción de los diferentes tipos de simuladores (de lenguaje \gls{ensamblador} y de \gls{microcodigo}), presentando el trabajo relacionado y una descripción de las tecnologías web actuales.
 
 \item Capítulo \ref{ch:analysis}, \textit{\nameref{ch:analysis}}, describe brevemente el proyecto, establece los requisitos y presenta el marco regulador del proyecto.
 
 \item Capítulo \ref{ch:design}, \textit{\nameref{ch:design}}, explica la solución elegida y detalla el diseño del sistema, incluyendo todos sus componentes.
 
-\item Capítulo \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}}, incluye los detalles de implementación de las partes principales del software desarrollado y las características necesarias para la implementación de la aplicación.
+\item Capítulo \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}}, incluye los detalles de implementación de las partes principales del \gls{software} desarrollado y las características necesarias para la implementación de la aplicación.
 
 \item Capítulo \ref{ch:verification_validation_and_evaluation}, \textit{\nameref{ch:verification_validation_and_evaluation}}, detalla una verificación y validación completa del proyecto.
 
@@ -81,8 +81,6 @@ El documento contiene los siguientes capítulos:
 \item Apéndice A, \textit{\nameref{ch:apendicea}}, incluye el resumen del proyecto en inglés.
 
 \item Apéndice B, \textit{\nameref{ch:apendiceb}}, incluye un manual de usuario de la herramienta.
-
-\label{ch:apendicea}
 
 \end{itemize}
 

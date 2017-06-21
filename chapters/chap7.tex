@@ -23,21 +23,21 @@ Este capítulo presenta una planificación detallada del proyecto (Sección \ref
 \section{Planificación}
 \label{sec:planning}
 
-Esta sección incluye la planificación completa del proyecto. En primer lugar, se describe la metodología de desarrollo de software utilizada. Después, se detalla la duración de cada fase del proyecto, indicando todos los tiempos en un diagrama Gantt.
+Esta sección incluye la planificación completa del proyecto. En primer lugar, se describe la metodología de desarrollo de \gls{software} utilizada. Después, se detalla la duración de cada fase del proyecto, indicando todos los tiempos en un diagrama Gantt.
 
 \subsection{Justificación de la metodología}
 
 Debido a sus características, hemos dividido nuestro proyecto en tres iteraciones:
 
 \begin{itemize}
-\item \textbf{Modelo hardware:} la primera iteración ha consistido en lograr el modelado del hardware que compone el procesador WepSIM. El objetivo de esta fase, ha sido lograr el modelado y funcionamiento básico de cada componente hardware por separado.
+\item \textbf{Modelo \gls{hardware}:} la primera iteración ha consistido en lograr el modelado del \gls{hardware} que compone el procesador \acrshort{wepsim}. El objetivo de esta fase, ha sido lograr el modelado y funcionamiento básico de cada componente \gls{hardware} por separado.
 
-\item \textbf{Modelo software:} esta fase ha consistido en lograr el modelo software utilizado en la asignatura Estructura de computadores para la definición del juego de instrucciones y el lenguaje ensamblador. El objetivo de esta fase, ha sido lograr interpretar el juego de instrucciones definido y código ensamblador definidos por el usuario, generando la memoria de control y memoria principal en el orden correspondiente.
+\item \textbf{Modelo \gls{software}:} esta fase ha consistido en lograr el modelo \gls{software} utilizado en la asignatura Estructura de computadores para la definición del juego de instrucciones y el lenguaje \gls{ensamblador}. El objetivo de esta fase, ha sido lograr interpretar el juego de instrucciones definido y código \gls{ensamblador} definidos por el usuario, generando la memoria de control y memoria principal en el orden correspondiente.
 
-\item \textbf{Kernel del simulador:} esta fase ha consistido en lograr unir el modelo hardware y modelo software, realizando el kernel del simulador. El objetivo de esta fase, ha sido diseñar e implementar el kernel de simulador encargado de unir el modelo hardware y el modelo software, generando la simulación y la vista del simulador.
+\item \textbf{Kernel del simulador:} esta fase ha consistido en lograr unir el modelo \gls{hardware} y modelo \gls{software}, realizando el kernel del simulador. El objetivo de esta fase, ha sido diseñar e implementar el kernel de simulador encargado de unir el modelo \gls{hardware} y el modelo \gls{software}, generando la simulación y la vista del simulador.
 \end{itemize}
 
-Era necesario contar con una metodología iterativa para desarrollar cada una de las fases de manera independiente para unirlas todas en la última etapa y obtener el producto final. Para ello, hemos analizado tres metodologías de desarrollo de software diferentes: Prototipado de software \cite{grimm1998}, el Modelo en Cascada \cite{hebert1983} y el Modelo en Espiral \cite{boehm1988}. El  Prototipado de Software no encaja muy bien en nuestro proyecto, puesto que requiere la construcción de un prototipo de sofware en poco tiempo. El Modelo en Cascada es un proceso de diseño secuencial, utilizado en procesos de desarrollo de software en el cual el progreso es visto como un flujo constante hacia abajo (como una cascada) a través de diferentes fases. El problema con esta metodología es que no permite iteraciones dentro del desarrollo del software. Finalmente, el Modelo en Espiral permitió dividir el proyecto en diferentes iteraciones. Este modelo, combina las fortalezas de los otros dos modelos (simplicidad y flexibilidad), utilizando además un proceso iterativo. Aunque este modelo es más lento que los dos anteriores, nos permitió aplicar diferentes iteraciones por lo que decidimos aplicarlo a todo el proceso.
+Era necesario contar con una metodología iterativa para desarrollar cada una de las fases de manera independiente para unirlas todas en la última etapa y obtener el producto final. Para ello, hemos analizado tres metodologías de desarrollo de \gls{software} diferentes: Prototipado de \gls{software} \cite{grimm1998}, el Modelo en Cascada \cite{hebert1983} y el Modelo en Espiral \cite{boehm1988}. El  Prototipado de \Gls{software} no encaja muy bien en nuestro proyecto, puesto que requiere la construcción de un prototipo de sofware en poco tiempo. El Modelo en Cascada es un proceso de diseño secuencial, utilizado en procesos de desarrollo de \gls{software} en el cual el progreso es visto como un flujo constante hacia abajo (como una cascada) a través de diferentes fases. El problema con esta metodología es que no permite iteraciones dentro del desarrollo del \gls{software}. Finalmente, el Modelo en Espiral permitió dividir el proyecto en diferentes iteraciones. Este modelo, combina las fortalezas de los otros dos modelos (simplicidad y flexibilidad), utilizando además un proceso iterativo. Aunque este modelo es más lento que los dos anteriores, nos permitió aplicar diferentes iteraciones por lo que decidimos aplicarlo a todo el proceso.
 
 \subsection{Ciclo de vida}
 
@@ -55,22 +55,22 @@ El modelo en Espiral tiene cuatro fases, que se repiten durante las diferentes i
 \begin{itemize}
 \item \textbf{Planificación} (\emph{``Determine objectives''} en Figura \ref{fig:spiral_model}): Se reúnen los requisitos de los usuarios, se realiza un estudio de factibilidad del sistema y se determinan los objetivos de iteración.
 
-\item \textbf{Análisis} (\emph{``dentify and resolve risks''} en Figura \ref{fig:spiral_model}): Se realiza un análisis completo de los requisitos y se identifican los posibles riesgos. Esta fase termina con un diseño básico.
+\item \textbf{Análisis} (\emph{``Identify and resolve risks''} en Figura \ref{fig:spiral_model}): Se realiza un análisis completo de los requisitos y se identifican los posibles riesgos. Esta fase termina con un diseño básico.
 
 \item \textbf{Desarrollo y Pruebas} (\emph{``Development and Test''} en Figura \ref{fig:spiral_model}): Se lleva a cabo la implementación del código. Se realizan los casos de prueba y los resultados de la prueba.
 
 \item \textbf{Evaluación} (\emph{``Plan the next iteration''} en Figura \ref{fig:spiral_model}): 
-Los clientes evalúan el software y proporcionan sus comentarios. En este caso, el estudiante intenta obtener la aprobación del supervisor. Esta es la \textit{tarea crítica} del ciclo de vida, ya que solo podemos pasar a la siguiente iteración del Modelo de ciclo de vida Espiral si esta tarea es aprobada.
+Los clientes evalúan el \gls{software} y proporcionan sus comentarios. En este caso, el estudiante intenta obtener la aprobación del supervisor. Esta es la \textit{tarea crítica} del ciclo de vida, ya que solo podemos pasar a la siguiente iteración del Modelo de ciclo de vida Espiral si esta tarea es aprobada.
 
 \end{itemize}
 
-Cada fase comienza con un objetivo de diseño y termina con el cliente (el supervisor) revisando el progreso hasta ahora. Como se explicó anteriormente, hemos dividido el desarrollo de software en tres iteraciones: modelo hardware, modelo software, y kernel del simulador. En la última iteración, el software completo debe someterse a pruebas exhaustivas para validar el simulador.
+Cada fase comienza con un objetivo de diseño y termina con el cliente (el supervisor) revisando el progreso hasta ahora. Como se explicó anteriormente, hemos dividido el desarrollo de \gls{software} en tres iteraciones: modelo \gls{hardware}, modelo \gls{software}, y kernel del simulador. En la última iteración, el \gls{software} completo debe someterse a pruebas exhaustivas para validar el simulador.
 
 \subsection{Tiempo estimado}
 
 El diagrama de Gantt (Figura \ref{fig:gantt}) muestra todas las tareas realizadas durante el desarrollo del proyecto. El proyecto comenzó el 2 de noviembre de 2015 y finalizó el 30 de diciembre de 2016, lo que supone un total de casi 13 meses de trabajo (305 días laborables). Durante este tiempo, he trabajado de lunes a viernes, durante cuatro horas al día, haciendo un total de 1.220 horas trabajadas.
 
-El diagrama de Gantt muestra todas las tareas realizadas en cada iteración del modelo de ciclo de vida espiral. Recuerde que las tres iteraciones fueron: Modelo hardware, Modelo software y kernel del simulador. Además de las tareas (fases) mencionadas anteriormente (Planificación, Análisis, Desarrollo y Prueba, y Evaluación), hemos incluido la tarea de Documentación al final de cada iteración. La tarea de documentación ha consistido principalmente en la redacción de este trabajo fin de grado.
+El diagrama de Gantt muestra todas las tareas realizadas en cada iteración del modelo de ciclo de vida espiral. Recuerde que las tres iteraciones fueron: Modelo \gls{hardware}, Modelo \gls{software} y kernel del simulador. Además de las tareas (fases) mencionadas anteriormente (Planificación, Análisis, Desarrollo y Prueba, y Evaluación), hemos incluido la tarea de Documentación al final de cada iteración. La tarea de documentación ha consistido principalmente en la redacción de este trabajo fin de grado.
 
 \begin{figure}[htbp]
  	\centering
@@ -97,7 +97,7 @@ La Tabla \ref{tab:project_information} resume las principales características d
 \toprule
 \multicolumn{2}{c}{\textbf{\textit{Información del Proyecto}}}\\
 \midrule
-\textbf{Título} 					& WepSIM: Simulador de procesador elemental con unidad de control microprogramada \\
+\textbf{Título} 					& \acrshort{wepsim}: Simulador de un procesador elemental con unidad de control microprogramada \\
 \midrule
 \textbf{Autor} 					& Javier Prieto Cepeda \\
 \midrule
@@ -305,7 +305,7 @@ Gracias al trabajo realizado en este proyecto, se consiguen las siguientes mejor
 
 \item \textbf{\textit{Ampliar el tiempo de realización de las prácticas}}, ya que al permitir el uso en diferentes dispositivos (\emph{smartphones, tablets, etc.}) se aumentan los momentos aptos para realizar las prácticas.
 
-\item \textbf{\textit{Aumento de los casos prácticos}}, dado que es posible trabajar con diferentes juegos de instrucciones, diferentes tipos de procesadores, diferentes elementos hardware, etc.
+\item \textbf{\textit{Aumento de los casos prácticos}}, dado que es posible trabajar con diferentes juegos de instrucciones, diferentes tipos de procesadores, diferentes elementos \gls{hardware}, etc.
 
 \item \textbf{\textit{Colaboraciones con instituciones docentes}}, ya que al ser una herramienta con licencia de código abierto favorece las colaboraciones entre diferentes instituciones promocionando a la universidad mediante las herramientas que desarrolla. Además, esta herramienta puede ser integrada con facilidad en \emph{SPOCs} y \emph{MOOCs}.
 
@@ -313,7 +313,7 @@ Gracias al trabajo realizado en este proyecto, se consiguen las siguientes mejor
 
 \end{itemize}
 
-Por tanto, WepSIM ayuda a optimizar el tiempo dedicado por los estudiantes al estudio de la asignatura puesto que aumenta la posibilidad de disponer de tiempo para la realización de la práctica aumenta y el tiempo invertido en el aprendizaje de entornos de desarrollo disminuye, al disponer únicamente de un único entorno de desarrollo. De esta forma:
+Por tanto, \acrshort{wepsim} ayuda a optimizar el tiempo dedicado por los estudiantes al estudio de la asignatura puesto que aumenta la posibilidad de disponer de tiempo para la realización de la práctica aumenta y el tiempo invertido en el aprendizaje de entornos de desarrollo disminuye, al disponer únicamente de un único entorno de desarrollo. De esta forma:
 
 \begin{equation}
  Tent + \sum_{i=1}^{n}((Tefec_{i} + Tperd_{i}) + Tteor_{i}) < \sum_{j=1}^{n}((Tefec_{j} + Tperd_{j}) + Tteor_{j}+ Tent_{j})
@@ -324,17 +324,21 @@ Donde:
 
 \begin{itemize}
 
-\item \textbf{\textit{Tent:}} Tiempo invertido en el aprendizaje del entorno de desarrollo.
+\item \textbf{\textit{$Tent_{x}$:}} Tiempo invertido en el aprendizaje del entorno de desarrollo, siendo x cada una de las prácticas de laboratorio.
 
-\item \textbf{\textit{Tefec:}} Tiempo efectivo en el desarrollo de la práctica.
+\item \textbf{\textit{$Tefec_{x}$:}} Tiempo efectivo en el desarrollo de la práctica, siendo x cada una de las prácticas de laboratorio.
 
-\item \textbf{\textit{Tperd:}} Tiempo perdido por dependencias del entorno de desarrollo.
+\item \textbf{\textit{$Tperd_{x}$:}} Tiempo perdido por dependencias del entorno de desarrollo, siendo x cada una de las prácticas de laboratorio.
 
-\item \textbf{\textit{Tteor:}} Tiempo invertido al estudio de la teoría necesaria para el desarrollo de la práctica.
+\item \textbf{\textit{$Tteor_{x}$:}} Tiempo invertido al estudio de la teoría necesaria para el desarrollo de la práctica, siendo x cada una de las prácticas de laboratorio.
+
+\item \textbf{\textit{n:}} Número de prácticas de laboratorio en la asignatura.
 
 \end{itemize}
 
-Con respecto al aumento de los casos prácticos, un ejemplo sería mostrar al estudiante el impacto energético que supone una programación eficiente, pudiendo ser comparado entre diferentes computadores. Esto es debido a que WepSIM simula la microprogramación de un computador y la programación en lenguaje ensamblador, pudiendo hacer visible el coste a bajo nivel de unas malas prácticas de programación. El objetivo, es concienciar a los estudiantes de la importancia que tiene la optimización y eficiencia en el uso de los recursos de un computador, puesto que uno de los retos de la comunidad científica es diseñar sistemas cada vez más eficientes energéticamente, de forma que en un futuro estas técnicas sean llevadas a cabo realizando sistemas más eficientes.
+De este modo en la ecuación \ref{eq:tiempo_invertido} podemos observar como el tiempo total invertido en la realización de las prácticas por los estudiantes es menor haciendo uso de esta herramienta (\emph{miembro izquierdo}) que con el sistema anterior (\emph{miembro derecho}), que hacía uso de diferentes herramientas. En el nuevo sistema, se aprende un único entorno de desarrollo (\emph{Tent}) y además, el tiempo pérdido por dependencias del entorno (\emph{Tperd}) se ve reducido debido a la portabilidad que ofrece la nueva herramienta.
+
+Con respecto al aumento de los casos prácticos, un ejemplo sería mostrar al estudiante el impacto energético que supone una programación eficiente, pudiendo ser comparado entre diferentes computadores. Esto es debido a que \acrshort{wepsim} simula la microprogramación de un computador y la programación en lenguaje \gls{ensamblador}, pudiendo hacer visible el coste a bajo nivel de unas malas prácticas de programación. El objetivo, es concienciar a los estudiantes de la importancia que tiene la optimización y eficiencia en el uso de los recursos de un computador, puesto que uno de los retos de la comunidad científica es diseñar sistemas cada vez más eficientes energéticamente, de forma que en un futuro estas técnicas sean llevadas a cabo realizando sistemas más eficientes.
 
 Con todo ello, los estudiantes están más capacitados con los mismos recursos tanto materiales como de tiempo, sin la necesidad de adquirir material adicional para la realización de los casos prácticos.
 
@@ -348,7 +352,7 @@ Gracias al trabajo realizado en este proyecto, se consiguen diferentes mejoras, 
 
 \item Ampliar el tiempo en el que se pueden realizar las prácticas, ya que al permitir el uso de diferentes dispositivos (smartphones, tablets) los momentos para realizar las prácticas se aumentan.
 
-\item Ampliación de los casos prácticos, dado que es posible trabajar con distintos juegos de instrucciones, diferentes tipos de procesadores, diferentes elementos hardware, etc. (Como ejemplo del punto 3, metemos energía y optimización).
+\item Ampliación de los casos prácticos, dado que es posible trabajar con distintos juegos de instrucciones, diferentes tipos de procesadores, diferentes elementos \gls{hardware}, etc. (Como ejemplo del punto 3, metemos energía y optimización).
 
 \item Colaboraciones con instituciones docentes, ya que al ser una herramienta con licencia de código abierto, favorece esa colaboración promocionando la universidad mediante las herramientas que desarrolla.
 Esta herramienta puede ser integrada con facilidad en spoc's (versión del moc en la universidad, privados) y mooc's (masivos) para la realización de los casos prácticos.
@@ -365,22 +369,22 @@ costes socioeconomicos de la situación actual de la asignatura
 
 En la enseñanza de estructura de computadores son importantes las practicas. Habitualmente el tiempo total dedicado a la asiguntura es:teoria del entorno + aprendizaje de entorno + realización de practica + tiempo teoría. Para realizar las practicas se necesitan unos medios especificos, ya sea mediante el uso de recursos compartidos en la universidad en los laboratorios o mediante la adquisición de los componentes necesarios, cosa que para estudiantes con recursos limitados es malo, y para aquellos que no pueden tener asistir por diferentes motivos (trabajo, aprendizaje a distancia).
 
-Cada una de estas caracteristicas tienen un impacto. Para mejorar el impacto anterior, wepsim ha trabajo en mejorar estas caracteristicas. Integración de microprogramación y programacion en ensamblador en una misma herramienta, reduciendo el tiempo de aprendizaje de entornos de trabajo. 
+Cada una de estas caracteristicas tienen un impacto. Para mejorar el impacto anterior, \acrshort{wepsim} ha trabajo en mejorar estas caracteristicas. Integración de microprogramación y programacion en \gls{ensamblador} en una misma herramienta, reduciendo el tiempo de aprendizaje de entornos de trabajo. 
 
 El diseño modular da mayor flexibilidad para poner al estudiante en diferentes situaciones que antes no tenia. La alternativa sería comprar distintos tipos de procesadores y distintos tipos de componentes, con un coste elevado tanto de adquisición como de mantenimiento.
 
 Gracias a ser portable y no requerir instalación, el estudiante no precisa de una plataforma concreta para la realización de  las prácticas, pudiendo utilizar un smartphone o tablet, con la movilidad que proporciona, permitiendo su uso fuera de los laboratorios de prácticas. Además, se incluye la ventaja de facilitar su uso a quienes por diferentes motivos, no pueden asistir a clase (por enfermedad, ...), de forma que pueden hacer uso de la herramienta sin limitarse al tiempo disponible para asisitir a la universidad.
 
-Otro aspecto positivo del diseño multiplataforma de esta herramienta, es el aprovechamiento del tiempo libre que en ocasiones los estudiantes tienen en los trayectos al centro de estudios. Anteriormente, al utilizar herramientas específicas para pc, suponían que si no se disponía de un computador, no se podía utilizar la plataforma. De esta manera, el estudiante puede aprovechar cualquier instante de tiempo disponible para hacer uso de la herramienta, puesto que tan solo necesita de un dispositivo con navegador web.
+Otro aspecto positivo del diseño multiplataforma de esta herramienta, es el aprovechamiento del tiempo libre que en ocasiones los estudiantes tienen en los trayectos al centro de estudios. Anteriormente, al utilizar herramientas específicas para \acrshort{pc}, suponían que si no se disponía de un computador, no se podía utilizar la plataforma. De esta manera, el estudiante puede aprovechar cualquier instante de tiempo disponible para hacer uso de la herramienta, puesto que tan solo necesita de un dispositivo con navegador web.
 
 
 
-Como se ha comentado en capítulos anteriores, WepSIM puede apoyar la enseñanza en Estructura y Arquitectura de Computadores. Esto significa que los profesores de estas asignaturas pueden utilizar esta herramienta como refuerzo en las explicaciones del temario para mostrar de forma visual y práctica a los estudiantes el comportamiento de un procesador elemental. Además, sirve para que los estudiantes puedan desarrollar las prácticas de estas asignaturas sin la necesidad de utilizar diferentes herramientas, evitando la pérdida de tiempo que esto supone y permitiendo a los estudiantes dedicar el mayor tiempo posible a la realización de los ejercicios. Este ahorro de tiempo, tiene un impacto en los estudiantes a la hora de minimizar el tiempo invertido en la realización de prácticas, de forma que la mayor parte del tiempo dedicado a la asignatura sea útil y sirva para comprender mejor el funcionamiento de un computador, sirviendo de base en el resto de la trayectoria académica de los estudiantes y mejorando su rendimiento.
+Como se ha comentado en capítulos anteriores, \acrshort{wepsim} puede apoyar la enseñanza en Estructura y Arquitectura de Computadores. Esto significa que los profesores de estas asignaturas pueden utilizar esta herramienta como refuerzo en las explicaciones del temario para mostrar de forma visual y práctica a los estudiantes el comportamiento de un procesador elemental. Además, sirve para que los estudiantes puedan desarrollar las prácticas de estas asignaturas sin la necesidad de utilizar diferentes herramientas, evitando la pérdida de tiempo que esto supone y permitiendo a los estudiantes dedicar el mayor tiempo posible a la realización de los ejercicios. Este ahorro de tiempo, tiene un impacto en los estudiantes a la hora de minimizar el tiempo invertido en la realización de prácticas, de forma que la mayor parte del tiempo dedicado a la asignatura sea útil y sirva para comprender mejor el funcionamiento de un computador, sirviendo de base en el resto de la trayectoria académica de los estudiantes y mejorando su rendimiento.
 
-Debido al diseño modular realizado de este simulador, WepSIM permite la especificación tanto de diferentes juegos de instrucciones como de diferentes modelos hardware. Esto supone un gran avance  en el área docente, puesto que permite el uso de una misma herramienta para la enseñanza y simulación de diferentes dispositivos. Anteriormente se invertía mucho dinero para que los estudiantes pudieran realizar prácticas con diferentes tipos de procesadores, ya que se debían de adquirir los diferentes componentes hardware necesarios para la realización de las prácticas. Con WepSIM este concepto cambia, puesto que modelando el comportamiento del computador deseado, puede ser utilizado para diferentes tipos de prácticas, evitando costes de adquisición y mantenimiento y permitiendo una mayor variedad de opciones a la hora de diseñar las prácticas.
+Debido al diseño modular realizado de este simulador, \acrshort{wepsim} permite la especificación tanto de diferentes juegos de instrucciones como de diferentes modelos \gls{hardware}. Esto supone un gran avance  en el área docente, puesto que permite el uso de una misma herramienta para la enseñanza y simulación de diferentes dispositivos. Anteriormente se invertía mucho dinero para que los estudiantes pudieran realizar prácticas con diferentes tipos de procesadores, ya que se debían de adquirir los diferentes componentes \gls{hardware} necesarios para la realización de las prácticas. Con \acrshort{wepsim} este concepto cambia, puesto que modelando el comportamiento del computador deseado, puede ser utilizado para diferentes tipos de prácticas, evitando costes de adquisición y mantenimiento y permitiendo una mayor variedad de opciones a la hora de diseñar las prácticas.
 
-Gracias al uso de este simulador en el ámbito docente, se puede mostrar el impacto energético que supone una programación eficiente. Esto es debido a que WepSIM es un simulador de microprogramación y programación en ensamblador, pudiendo hacer visible el coste a bajo nivel de unas malas prácticas de programación. El objetivo, es concienciar a los estudiantes de la importancia que tiene la optimización y eficiencia en el uso de los recursos de un computador, puesto que uno de los retos de la comunidad científica es diseñar sistemas cada vez más eficientes energéticamente, de forma que en un futuro estas técnicas sean llevadas a cabo realizando sistemas más eficientes.
+Gracias al uso de este simulador en el ámbito docente, se puede mostrar el impacto energético que supone una programación eficiente. Esto es debido a que \acrshort{wepsim} es un simulador de microprogramación y programación en \gls{ensamblador}, pudiendo hacer visible el coste a bajo nivel de unas malas prácticas de programación. El objetivo, es concienciar a los estudiantes de la importancia que tiene la optimización y eficiencia en el uso de los recursos de un computador, puesto que uno de los retos de la comunidad científica es diseñar sistemas cada vez más eficientes energéticamente, de forma que en un futuro estas técnicas sean llevadas a cabo realizando sistemas más eficientes.
 
-Por último, es necesario destacar el impacto que supone que WepSIM tenga licencia de código abierto. Esto supone que las universidades y centros docentes que quieran utilizar la herramienta, puedan hacerlo sin ningún tipo de coste, con el ahorro económico que supone la utilización de una herramienta de estas características. Además, gracias a este tipo de licencia, se favorece un entorno de colaboración entre diferentes universidades, de forma que se puedan añadir nuevos módulos a la herramienta sin coste económico para la comunidad docente.
+Por último, es necesario destacar el impacto que supone que \acrshort{wepsim} tenga licencia de código abierto. Esto supone que las universidades y centros docentes que quieran utilizar la herramienta, puedan hacerlo sin ningún tipo de coste, con el ahorro económico que supone la utilización de una herramienta de estas características. Además, gracias a este tipo de licencia, se favorece un entorno de colaboración entre diferentes universidades, de forma que se puedan añadir nuevos módulos a la herramienta sin coste económico para la comunidad docente.
 
 \fi

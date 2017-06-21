@@ -19,16 +19,16 @@
 \markboth{}{IMPLEMENTATION}
 
 
-Este capítulo trata la implementación y despliegue del software. En cuanto a la implementación del sistema, se explican las partes más complicadas del código en (Sección  \ref{sec:implementation}, \textit{\nameref{sec:implementation}}). Por otro lado, explicamos los pasos necesarios para desplegar el sistema final (Sección \ref{sec:deployment}, \textit{\nameref{sec:deployment}})
+Este capítulo trata la implementación y despliegue del \gls{software}. En cuanto a la implementación del sistema, se explican las partes más complicadas del código en (Sección  \ref{sec:implementation}, \textit{\nameref{sec:implementation}}). Por otro lado, explicamos los pasos necesarios para desplegar el sistema final (Sección \ref{sec:deployment}, \textit{\nameref{sec:deployment}})
 
 
 \section{Implementación}
 \label{sec:implementation}
 
 
-Como hemos explicado en el Capítulo \ref{ch:analysis}, \textit{\nameref{ch:analysis}}, hemos implementado el simulador utilizando el lenguaje de programación JavaScript junto con HTML, CSS y las bibliotecas/frameworks JQuery, JQueryUI, JQuery Mobile, Knockout y BootStrap. El motor de simulación es el encargado de ejecutar cada uno de los ciclos de reloj del simulador, tomando como entradas tanto el modelo hardware como el modelo software, pero el desarrollador ha debido de diseñar e implementar el algoritmo que posibilita esta ejecución.
+Como hemos explicado en el Capítulo \ref{ch:analysis}, \textit{\nameref{ch:analysis}}, hemos implementado el simulador utilizando el lenguaje de programación JavaScript junto con \acrshort{html}, \acrshort{css} y las bibliotecas/frameworks JQuery, JQueryUI, JQuery Mobile, Knockout y BootStrap. El motor de simulación es el encargado de ejecutar cada uno de los ciclos de reloj del simulador, tomando como entradas tanto el modelo \gls{hardware} como el modelo \gls{software}, pero el desarrollador ha debido de diseñar e implementar el algoritmo que posibilita esta ejecución.
 
-Además, hemos trabajado en conseguir una herramienta que sea capaz de generar la memoria de control mediante la definición del juego de instrucciones por parte del usuario, y de generar el código binario asociado al código ensamblador definido por el usuario; el cual depende del juego de instrucciones definido previamente. Para ello, se han diseñado e implementado dos compiladores diferentes, capaces de generar los binarios correspondientes además de las estructuras de datos necesarias para ayudar al motor de simulación a lo largo de la ejecución.
+Además, hemos trabajado en conseguir una herramienta que sea capaz de generar la memoria de control mediante la definición del juego de instrucciones por parte del usuario, y de generar el código binario asociado al código \gls{ensamblador} definido por el usuario; el cual depende del juego de instrucciones definido previamente. Para ello, se han diseñado e implementado dos compiladores diferentes, capaces de generar los binarios correspondientes además de las estructuras de datos necesarias para ayudar al motor de simulación a lo largo de la ejecución.
 
 \begin{figure}[htbp]
  	\centering
@@ -46,13 +46,13 @@ Como resultado de este diseño e implementación, el código fuente de la herram
 	\label{fig:files_dependencies}
 \end{figure}
 
-Los ficheros que componen WepSIM son detallados a continuación:
+Los ficheros que componen \acrshort{wepsim} son detallados a continuación:
 
 \begin{itemize}
 
 \item \textbf{index.html: } este fichero se encarga de la vista de la herramienta, generando la interfaz de usuario de la herramienta.
 
-\item \textbf{gpl.txt y lgpl.txt: } estos ficheros contienen la especificación de las licencias del software.
+\item \textbf{gpl.txt y lgpl.txt: } estos ficheros contienen la especificación de las licencias del \gls{software}.
 
 \item \textbf{sim\char`_cfg.js} este fichero contiene las estructuras de datos de la configuración de la herramienta.
 
@@ -60,23 +60,23 @@ Los ficheros que componen WepSIM son detallados a continuación:
 
 \item \textbf{sim\char`_core\char`_ui.js: } este fichero contiene la implementación del motor de la interfaz de usuario de la herramienta.
 
-\item \textbf{sim\char`_hw\char`_cpu.js: } este fichero contiene la definición del modelo hardware de la cpu del simulador.
+\item \textbf{sim\char`_hw\char`_cpu.js: } este fichero contiene la definición del modelo \gls{hardware} de la \acrshort{cpu} del simulador.
 
-\item \textbf{sim\char`_hw\char`_io.js: } este fichero contiene la definición del modelo hardware del módulo de generación de interrupciones del simulador.
+\item \textbf{sim\char`_hw\char`_io.js: } este fichero contiene la definición del modelo \gls{hardware} del módulo de generación de interrupciones del simulador.
 
-\item \textbf{sim\char`_hw\char`_kbd.js: } este fichero contiene la definición del modelo hardware del módulo del teclado del simulador.
+\item \textbf{sim\char`_hw\char`_kbd.js: } este fichero contiene la definición del modelo \gls{hardware} del módulo del teclado del simulador.
 
-\item \textbf{sim\char`_hw\char`_scr.js: } este fichero contiene la definición del modelo hardware de la memoria principal del simulador.
+\item \textbf{sim\char`_hw\char`_scr.js: } este fichero contiene la definición del modelo \gls{hardware} de la memoria principal del simulador.
 
-\item \textbf{sim\char`_hw\char`_mem.js: } este fichero contiene la definición del modelo hardware de la pantalla del simulador.
+\item \textbf{sim\char`_hw\char`_mem.js: } este fichero contiene la definición del modelo \gls{hardware} de la pantalla del simulador.
 
 \item \textbf{sim\char`_lang.js: } este fichero contiene la implementación de las funciones principales del parser de ficheros de la herramienta.
 
-\item \textbf{sim\char`_lang\char`_asm.js: } este fichero contiene la implementación del compilador de código ensamblador de la herramienta.
+\item \textbf{sim\char`_lang\char`_asm.js: } este fichero contiene la implementación del compilador de código \gls{ensamblador} de la herramienta.
 
-\item \textbf{sim\char`_lang\char`_firm.js: } este fichero contiene la implementación del compilador de microcódigo de la herramienta.
+\item \textbf{sim\char`_lang\char`_firm.js: } este fichero contiene la implementación del compilador de \gls{microcodigo} de la herramienta.
 
-\item \textbf{images/cpu.svg: } este fichero contiene la definición de la imagen vectorial de la cpu de la herramienta.
+\item \textbf{images/cpu.svg: } este fichero contiene la definición de la imagen vectorial de la \acrshort{cpu} de la herramienta.
 
 \item \textbf{images/cpu.svg: } este fichero contiene la definición de la imagen vectorial de la unidad de control de la herramienta.
 
@@ -84,7 +84,7 @@ Los ficheros que componen WepSIM son detallados a continuación:
 
 \end{itemize}
 
-Para comprender funcionamiento tanto de los dos compiladores utilizados (compilador de microcódigo y compilador de ensamblador) como del kernel del simulador, se puede observar en el Pseudocódigo \ref{alg:firmware_compiler_pseudocode}, mientras que en el Pseudocódigo \ref{alg:assembly_compiler_pseudocode} podemos ver el proceso de compilación del código ensamblador definido por el usuario en función de la memoria de control previamente generada, detallando el proceso de compilación del segmento de datos en el Pseudocódigo \ref{alg:data_segment_pseudocode} y el proceso de compilación del segmento de texto en el Pseudocódigo \ref{alg:text_segment_pseudocode}. En el Pseudocódigo \ref{alg:core_simulator_pseudocode} podemos ver como se realiza una simulación, realizando la comprobación de segmentos de memoria, tipo de simulación, y ejecución del ciclo o instrucción correspondiente.
+Para comprender funcionamiento tanto de los dos compiladores utilizados (compilador de \gls{microcodigo} y compilador de \gls{ensamblador}) como del kernel del simulador, se puede observar en el Pseudocódigo \ref{alg:firmware_compiler_pseudocode}, mientras que en el Pseudocódigo \ref{alg:assembly_compiler_pseudocode} podemos ver el proceso de compilación del código \gls{ensamblador} definido por el usuario en función de la memoria de control previamente generada, detallando el proceso de compilación del segmento de datos en el Pseudocódigo \ref{alg:data_segment_pseudocode} y el proceso de compilación del segmento de texto en el Pseudocódigo \ref{alg:text_segment_pseudocode}. En el Pseudocódigo \ref{alg:core_simulator_pseudocode} podemos ver como se realiza una simulación, realizando la comprobación de segmentos de memoria, tipo de simulación, y ejecución del ciclo o instrucción correspondiente.
 
 El proceso de compilación del juego de instrucciones (Pseudocódigo \ref{alg:firmware_compiler_pseudocode}) se realiza mediante un análsis sintáctico basado en la técnica \textit{\gls{lexyacc}}, que queda perfectamente descrita en \cite{bennett1996introduction}. De este modo, el proceso de compilación queda dividido en tres bloques importantes: instrucciones, nombrado de registros y pseudoinstrucciones. En primer lugar, se realiza la lectura del bloque de instrucciones, en donde se comprueba cada uno de los campos y parámetros que la conforman para posteriormente generar el binario asociado a cada ciclo de reloj. Después, se realiza la lectura del banco de registros, donde se forma el par \textit{id,nombre}, pudiendo realizar el nombrado deseado de los distintos registros que lo componen. Por último, se realiza la lectura de pseudoinstrucciones. Estas instrucciones no pertenecen al lenguaje, sino que están compuestas por instrucciones del lenguaje, pudiendo el usuario utilizar técnicas de alto nivel en donde con una única línea de código, genere más de una instrucción.
 
@@ -133,12 +133,12 @@ El proceso de compilación del juego de instrucciones (Pseudocódigo \ref{alg:fi
 
 \clearpage
 
-El proceso de compilación del código ensamblador (Figura \ref{alg:firmware_compiler_pseudocode}) está basado, al igual que el compilador del juego de instrucciones, en la técnica de compilación \textit{\gls{lexyacc}}. Este proceso, está dividido en dos etapas: segmentos de datos y segmento de texto.
+El proceso de compilación del código \gls{ensamblador} (Figura \ref{alg:firmware_compiler_pseudocode}) está basado, al igual que el compilador del juego de instrucciones, en la técnica de compilación \textit{\gls{lexyacc}}. Este proceso, está dividido en dos etapas: segmentos de datos y segmento de texto.
 
 En la etapa de compilación del segmento de datos, se realiza el proceso de lectura y compilación de las diferentes directivas definidas por el usuario. En primer lugar, se realiza la identificación de las diferentes etiquetas que identifican a las directivas y que serán utilizadas posteriormente en el segmento de texto. Una vez identificadas estas etiquetas, se procede a la generación del binario asociado a este segmento, el cual depende directamente del tipo de directiva utilizado y del tamaño de la directiva.
 
 \begin{algorithm}[h]
-	\caption{Proceso de compilación de código ensamblador.}
+	\caption{Proceso de compilación de código \gls{ensamblador}.}
 	\label{alg:assembly_compiler_pseudocode}
   	\scriptsize
   	\setstretch{1.35}
@@ -162,14 +162,14 @@ En la etapa de compilación del segmento de datos, se realiza el proceso de lect
 \end{algorithmic}
 \end{algorithm}
 
-En la etapa de compilación del segmento de texto, se realiza el proceso de compilación de las diferentes instrucciones ensamblador definidas por el usuario. Por ello, es necesario el uso del juego de instrucciones definido previamente, ya que la generación del binario de la instrucción depende de la definición previa. En primer lugar, se realiza la búsqueda de las diferentes etiquetas empleadas en este segmento, identificando las nuevas etiquetas definidas a las anteriores definidas en el segmento de datos, para la cambiar la etiqueta por el valor de la dirección de memoria asociada a la etiqueta. Una vez realizado este proceso, se procede a la compilación de cada una de las instrucciones, buscando para cada instrucción del segmento de texto una instrucción definida en el juego de instrucciones que cumple con la sintaxis. En caso de existir la instrucción, se procede a la generación del binario asociado, comprobando el valor de cada uno de los campos. Este proceso se realiza para cada una de las operaciones definidas en este segmento. Una vez traducidas todas las instrucciones, se genera la memoria principal asociada al código definido.
+En la etapa de compilación del segmento de texto, se realiza el proceso de compilación de las diferentes instrucciones \gls{ensamblador} definidas por el usuario. Por ello, es necesario el uso del juego de instrucciones definido previamente, ya que la generación del binario de la instrucción depende de la definición previa. En primer lugar, se realiza la búsqueda de las diferentes etiquetas empleadas en este segmento, identificando las nuevas etiquetas definidas a las anteriores definidas en el segmento de datos, para la cambiar la etiqueta por el valor de la dirección de memoria asociada a la etiqueta. Una vez realizado este proceso, se procede a la compilación de cada una de las instrucciones, buscando para cada instrucción del segmento de texto una instrucción definida en el juego de instrucciones que cumple con la sintaxis. En caso de existir la instrucción, se procede a la generación del binario asociado, comprobando el valor de cada uno de los campos. Este proceso se realiza para cada una de las operaciones definidas en este segmento. Una vez traducidas todas las instrucciones, se genera la memoria principal asociada al código definido.
 
-Por último, se indica el proceso de simulación de la herramienta. Este proceso es realizado en el kernel del simulador como ha sido explicado anteriormente (Sección \ref{sec:kernel_simulator}). Como podemos observar en el Pseudocódigo \ref{alg:core_simulator_pseudocode}, en primer lugar se realiza la petición de ejecución. El controlador del simulador, comprobaría el contexto (\textit{breakpoints}, final de segmento, etc.) verificando si la ejecución es posible. En caso de ser posible, identificaría el tipo de simulación solicitada, llamando a la función correspondiente. Si la ejecución solicitada es de una microinstrucción, el motor de simulación únicamente generaría un ciclo de reloj, enviándolo al modelo hardware para su ejecución y actualizando posteriormente los valores mostrados en la interfaz de usuario. La ejecución de una instrucción completa se realiza ejecutando en bucle la secuencia de microinstrucciones correspondientes hasta que el registro de microdirección apunta a la dirección de comienzo del ciclo \textit{FETCH}, que indicaría el comienzo de la próxima instrucción, o apunta a una dirección de memoria fuera del rango del segmento de texto, lo cual indica que la simulación del código ensamblador ha finalizado.
+Por último, se indica el proceso de simulación de la herramienta. Este proceso es realizado en el kernel del simulador como ha sido explicado anteriormente (Sección \ref{sec:kernel_simulator}). Como podemos observar en el Pseudocódigo \ref{alg:core_simulator_pseudocode}, en primer lugar se realiza la petición de ejecución. El controlador del simulador, comprobaría el contexto (\textit{breakpoints}, final de segmento, etc.) verificando si la ejecución es posible. En caso de ser posible, identificaría el tipo de simulación solicitada, llamando a la función correspondiente. Si la ejecución solicitada es de una microinstrucción, el motor de simulación únicamente generaría un ciclo de reloj, enviándolo al modelo \gls{hardware} para su ejecución y actualizando posteriormente los valores mostrados en la interfaz de usuario. La ejecución de una instrucción completa se realiza ejecutando en bucle la secuencia de microinstrucciones correspondientes hasta que el registro de microdirección apunta a la dirección de comienzo del ciclo \textit{FETCH}, que indicaría el comienzo de la próxima instrucción, o apunta a una dirección de memoria fuera del rango del segmento de texto, lo cual indica que la simulación del código \gls{ensamblador} ha finalizado.
 
-En \cite{wepsimManualUser} se presenta el manual completo de usuario de la herramienta, que incluye la especificación del modelo hardware implementado y la explicación de uso del simulador, indicando algunos ejemplos docentes para aprender el uso de esta herramienta y poder comprender mejor el funcionamiento de los distintos componentes que la forman.
+En \cite{wepsimManualUser} se presenta el manual completo de usuario de la herramienta, que incluye la especificación del modelo \gls{hardware} implementado y la explicación de uso del simulador, indicando algunos ejemplos docentes para aprender el uso de esta herramienta y poder comprender mejor el funcionamiento de los distintos componentes que la forman.
 
 \begin{algorithm}[h]
-	\caption{Proceso de compilación de código ensamblador: segmento de datos.}
+	\caption{Proceso de compilación de código \gls{ensamblador}: segmento de datos.}
 	\label{alg:data_segment_pseudocode}
   	\scriptsize
   	\setstretch{1.35}
@@ -214,7 +214,7 @@ En \cite{wepsimManualUser} se presenta el manual completo de usuario de la herra
 \end{algorithm}
 
 \begin{algorithm}[h]
-	\caption{Proceso de compilación de código ensamblador: segmento de texto.}
+	\caption{Proceso de compilación de código \gls{ensamblador}: segmento de texto.}
 	\label{alg:text_segment_pseudocode}
   	\scriptsize
   	\setstretch{1.35}
@@ -291,7 +291,7 @@ En \cite{wepsimManualUser} se presenta el manual completo de usuario de la herra
 \section{Despliegue}
 \label{sec:deployment}
 
-En esta sección se presenta el despliegue de la herramienta, el cual queda dividido en tres partes: especificaciones técnicas recomendadas, el proceso de despliegue del software para que sea accesible, y por último el proceso de ejecución de la herramienta.
+En esta sección se presenta el despliegue de la herramienta, el cual queda dividido en tres partes: especificaciones técnicas recomendadas, el proceso de despliegue del \gls{software} para que sea accesible, y por último el proceso de ejecución de la herramienta.
 
 Las especificaciones técnicas recomendadas para que el usuario final obtenga la mejor experiencia posible con la herramienta son:
 
@@ -299,7 +299,7 @@ Las especificaciones técnicas recomendadas para que el usuario final obtenga la
 
 \item \textbf{Sistema Operativo}: Ubuntu 16.04.2 LTS (\emph{Linux distribution}) /Windows 10 / MacOS 10.12.5.
 
-\item \textbf{Procesador}: Intel(R) Core(TM) i3 CPU 6300 @3.8GHz o superior.
+\item \textbf{Procesador}: Intel(R) Core(TM) i3 \acrshort{cpu} 6300 @3.8GHz o superior.
 
 \item \textbf{\gls{ram}}: 2 GB o superior.
 
@@ -307,7 +307,7 @@ Las especificaciones técnicas recomendadas para que el usuario final obtenga la
 
 \item \textbf{Red}: La conexión a internet no es necesaria para la ejecución de la herramienta, únicamente para el acceso a ella.
 
-\item \textbf{Software}: Los siguientes navegadores web son los recomendados para el uso de la herramienta:
+\item \textbf{\gls{software}}: Los siguientes navegadores web son los recomendados para el uso de la herramienta:
 
 	\begin{itemize}
 
@@ -323,7 +323,7 @@ Las especificaciones técnicas recomendadas para que el usuario final obtenga la
 
 \end{itemize}
 
-Para el proceso de despliegue de la herramienta, se requiere que el usuario disponga de un servidor web \textit{Apache}  o \textit{Nginx} instalado en su computador para que el software sea accesible. Una vez instalado el servidor web, se deben de seguir los siguientes pasos:
+Para el proceso de despliegue de la herramienta, se requiere que el usuario disponga de un servidor web \textit{Apache}  o \textit{Nginx} instalado en su computador para que el \gls{software} sea accesible. Una vez instalado el servidor web, se deben de seguir los siguientes pasos:
 
 \begin{itemize}
 

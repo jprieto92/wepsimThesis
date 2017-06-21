@@ -22,25 +22,25 @@ En este capítulo se presentan las conclusiones del trabajo, se revisan los obje
 
 \section{Conclusiones}
 
-En este trabajo se ha descrito el diseño de WepSIM, un simulador de un procesador elemental con unidad de control microprogramada. Este trabajo presenta un nuevo simulador que resulta intuitivo, portable y extensible, sirviendo como complemento docente para la docencia en Estructura de Computadores. Este simulador, permite definir diferentes juegos de instrucciones y ejecutar y depurar código fuente que use el conjunto de instrucciones definido. También permite definir el comportamiento del procesador mediante microprogramación.
+En este trabajo se ha descrito el diseño de \acrshort{wepsim}, un simulador de un procesador elemental con unidad de control microprogramada. Este trabajo presenta un nuevo simulador que resulta intuitivo, portable y extensible, sirviendo como complemento docente para la docencia en Estructura de Computadores. Este simulador, permite definir diferentes juegos de instrucciones y ejecutar y depurar código fuente que use el conjunto de instrucciones definido. También permite definir el comportamiento del procesador mediante microprogramación.
 
-WepSIM, permite a los estudiante entender el funcionamiento de un procesador elemental de una forma sencilla, pudiendo ser usado desde un dispositivo móvil o un ordenador con un navegador Web moderno, sin la necesidad de ser instalado. De esta forma, los estudiantes pueden interactuar con el simulador aprendiendo y comprendiendo el funcionamiento del procesador elemental WepSIM, incluyendo los mecanismos de interacción con el software de sistema e integrando en una misma herramienta tanto la microprogramación como la programación en ensamblador.
+\acrshort{wepsim}, permite a los estudiante entender el funcionamiento de un procesador elemental de una forma sencilla, pudiendo ser usado desde un dispositivo móvil o un ordenador con un navegador Web moderno, sin la necesidad de ser instalado. De esta forma, los estudiantes pueden interactuar con el simulador aprendiendo y comprendiendo el funcionamiento del procesador elemental \acrshort{wepsim}, incluyendo los mecanismos de interacción con el \gls{software} de sistema e integrando en una misma herramienta tanto la microprogramación como la programación en \gls{ensamblador}.
 
 El objetivo principal de este proyecto era desarrollar un simulador, que a diferencia de los existentes, pudiera simular de forma completa el comportamiento de un procesador elemental permitiendo comprobar el estado de los componentes en cada ciclo de reloj, de manera que ayudáse a los estudiantes a comprender y asimilar de forma sencilla y visual el funcionamiento de un procesador.  También hemos cumplido con todos los demás objetivos presentados en la introducción del documento:
 
 \begin{itemize}
 
-\item \textbf{O1}, Se ha diseñado una herramienta que simula la ejecución del juego de instrucciones especificado en un computador llamado WepSIM, desde el punto de vista de la microprogramación y la programación en ensamblador.
+\item \textbf{O1}, Se ha diseñado una herramienta que simula la ejecución del juego de instrucciones especificado en un computador llamado \acrshort{wepsim}, desde el punto de vista de la microprogramación y la programación en \gls{ensamblador}.
 
 \item \textbf{O2}, La herramienta permite la especificación de diferentes juegos de instrucciones.
 
-\item \textbf{O3}, La herramienta unifica la microprogramación de un computador y la programación en lenguaje ensamblador.
+\item \textbf{O3}, La herramienta unifica la microprogramación de un computador y la programación en lenguaje \gls{ensamblador}.
 
 \item \textbf{O4}, La herramienta permite al usuario visualizar en cada ciclo de reloj el estado y el comportamiento del computador simulado.
 
 \end{itemize}
 
-A nivel personal, este trabajo me ha ayudado a adentrarme en el mundo de la investigación científica. He logrado aplicar una gran cantidad de los conocimientos adquiridos a lo largo del grado. Además, he aprendido importantes técnicas de modelado de hardware, compilación y simulación, las cuáles tienen una gran utilidad y complejidad y me han servido parar profundizar aún más en los conocimientos adquiridos en el grado. Por todo ello, es muy satisfactorio ver el resultado final obtenido, puesto que he logrado superar todos los problemas que han surgido a lo largo del proyecto.
+A nivel personal, este trabajo me ha ayudado a adentrarme en el mundo de la investigación científica. He logrado aplicar una gran cantidad de los conocimientos adquiridos a lo largo del grado. Además, he aprendido importantes técnicas de modelado de \gls{hardware}, compilación y simulación, las cuáles tienen una gran utilidad y complejidad y me han servido parar profundizar aún más en los conocimientos adquiridos en el grado. Por todo ello, es muy satisfactorio ver el resultado final obtenido, puesto que he logrado superar todos los problemas que han surgido a lo largo del proyecto.
 
 \subsection{Contribuciones}
 
@@ -48,7 +48,7 @@ El proyecto llevado a cabo durante este Trabajo Fin de Grado encaja con muchas d
 
 \begin{itemize}
 
-\item \textbf{Tecnología de Computadores} (asignatura obligatoria, Primer curso) en donde se introducen los componentes hardware y la lógica binaria.
+\item \textbf{Tecnología de Computadores} (asignatura obligatoria, Primer curso) en donde se introducen los componentes \gls{hardware} y la lógica binaria.
 
 \item \textbf{Estructura de Computadores} (asignatura obligatoria, Segundo curso) en donde se introducen las bases de la estructura y funcionamiento de un computador.
 
@@ -60,7 +60,7 @@ El proyecto llevado a cabo durante este Trabajo Fin de Grado encaja con muchas d
 
 \item \textbf{Diseño de Sistemas Operativos} (asignatura obligatoria, Tercer curso) en donde se introducen las bases del diseño de los distintos módulos de un sistema operativo.
 
-\item \textbf{Dirección de proyectos de desarrollo de software} (asignatura obligatoria, Tercer curso) en donde se introducen las bases para la dirección y gestión de un proyecto de desarrollo de software.
+\item \textbf{Dirección de proyectos de desarrollo de \gls{software}} (asignatura obligatoria, Tercer curso) en donde se introducen las bases para la dirección y gestión de un proyecto de desarrollo de \gls{software}.
 
 \end{itemize}
 
@@ -86,25 +86,25 @@ Actualmente, hay varias líneas de trabajos futuros en las cuáles estamos traba
 
 \begin{itemize}
 
-\item En cuanto a mejoras en el modelo hardware:
+\item En cuanto a mejoras en el modelo \gls{hardware}:
 
 \begin{itemize}
 
-\item[1.] Introducir más elementos hardware, como por ejemplo una caché, de forma que se amplíen los contenidos de la asignatura incluídos en la herramienta.
+\item[1.] Introducir más elementos \gls{hardware}, como por ejemplo una caché, de forma que se amplíen los contenidos de la asignatura incluídos en la herramienta.
 
-\item[2.] Introducir un modelo hardware basado en \textit{pipeline}, permitiendo el uso de la herramienta en aquellas asignaturas que utilizan este modelo de arquitectura. 
+\item[2.] Introducir un modelo \gls{hardware} basado en \textit{pipeline}, permitiendo el uso de la herramienta en aquellas asignaturas que utilizan este modelo de arquitectura. 
 
 \end{itemize}
 
-\item En cuanto a mejoras en el modelo software:
+\item En cuanto a mejoras en el modelo \gls{software}:
 
 \begin{itemize}
 
 \item[3.] Añadir revisión semántica del código, permitiendo identificar y notificar los errores de programación al usuario.
 
-\item[4.] Añadir nuevos juegos de instrucciones a la herramienta como por ejemplo el ensamblador ARM, permitiendo la utilización de diferentes lenguajes en la herramienta.
+\item[4.] Añadir nuevos juegos de instrucciones a la herramienta como por ejemplo el \gls{ensamblador} ARM, permitiendo la utilización de diferentes lenguajes en la herramienta.
 
-\item[5.] Estudiar el ensamblador de MIPS/ARM generado con GCC/Clang de forma que pueda ser usado directamente en WepSIM.
+\item[5.] Estudiar el \gls{ensamblador} de MIPS/ARM generado con GCC/Clang de forma que pueda ser usado directamente en \acrshort{wepsim}.
 
 \end{itemize}
 

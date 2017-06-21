@@ -18,34 +18,34 @@
 \label{ch:state_of_the_art}
 \markboth{}{STATE OF THE ART}
 
-Este capítulo presenta el estado del arte, la última y más avanzada etapa de las tecnologías relacionadas con nuestra aplicación. En primer lugar, se presentan los diferentes simuladores existentes en el ámbito docente tanto para microprogramación (Sección \ref{sec:simuladores_microprogramacion}) como para la programación en código ensamblador (Sección \ref{sec:simuladores_ensamblador}), realizando una comparación de nuestro trabajo con el contexto actual de los distintos simuladores expuestos previamente (Sección \ref{sec:propuesta_simulacion}). Después, se presentan las diferentes tecnologías web más utilizadas en la actualidad (Sección \ref{sec:tecnologias_web}). Por último se describe el procesador en el cual se basa WepSIM (Sección \ref{sec:wepsim}).
+Este capítulo presenta el estado del arte, la última y más avanzada etapa de las tecnologías relacionadas con nuestra aplicación. En primer lugar, se presentan los diferentes simuladores existentes en el ámbito docente tanto para microprogramación (Sección \ref{sec:simuladores_microprogramacion}) como para la programación en código \gls{ensamblador} (Sección \ref{sec:simuladores_ensamblador}), realizando una comparación de nuestro trabajo con el contexto actual de los distintos simuladores expuestos previamente (Sección \ref{sec:propuesta_simulacion}). Después, se presentan las diferentes tecnologías web más utilizadas en la actualidad (Sección \ref{sec:tecnologias_web}). Por último se describe el procesador en el cual se basa \acrshort{wepsim} (Sección \ref{sec:wepsim}).
 
 \section{Simuladores para la enseñanza de la Estructura y Arquitectura de Computadores}
 
-Son muchos los tipos de simuladores existentes en el ámbito docente para la explicación de las distintas partes que componen un computador. Estos simuladores, pueden ser de diferentes ámbitos como, por ejemplo, cachés, \emph{pipeline}, circuitos integrados, microprogramación, programación en ensamblador, etc.
+Son muchos los tipos de simuladores existentes en el ámbito docente para la explicación de las distintas partes que componen un computador. Estos simuladores, pueden ser de diferentes ámbitos como, por ejemplo, cachés, \emph{pipeline}, circuitos integrados, microprogramación, programación en \gls{ensamblador}, etc.
 
-En esta sección, nos centramos en los tipos de simuladores que tienen relación directa con la propuesta realizada, como lo son los simuladores para la microprogramación y los simuladores para la programación en ensamblador.
+En esta sección, nos centramos en los tipos de simuladores que tienen relación directa con la propuesta realizada, como lo son los simuladores para la microprogramación y los simuladores para la programación en \gls{ensamblador}.
 
 \subsection{Simuladores para microprogramación}
 \label{sec:simuladores_microprogramacion}
 
 En esta sección, se explican las diferentes herramientas existentes para el aprendizaje de microprogramación a través de simulaciones. Cabe destacar que, actualmente, existen pocos simuladores que nos proporcionen esta funcionalidad, principalmente debido a que una gran parte de ellos son utilizados de forma interna por las empresas para verificar el correcto funcionamiento de sus unidades en la fase de diseño y desarrollo. 
 
-P8080E \cite{p8080E} es un simulador desarrollado por el grupo de investigación DATSI en la Facultad de Informática de la Universidad Politécnica de Madrid. Este simulador, no consta de una interfaz gráfica portable e interactiva que se ajuste a las tecnologías actuales. Para poder realizar el desarrollo del microcódigo, el simulador requiere el binario completo de cada ciclo, de forma que resulta un tanto complejo su uso. Pese a ser un simulador bastante completo, no está orientado para la enseñanza de ensamblador y microprogramación con la misma herramienta, puesto que no permite la definición del juego de instrucciones con un formato diferente al definido por defecto.
+P8080E \cite{p8080E} es un simulador desarrollado por el grupo de investigación DATSI en la Facultad de Informática de la Universidad Politécnica de Madrid. Este simulador, no consta de una interfaz gráfica portable e interactiva que se ajuste a las tecnologías actuales. Para poder realizar el desarrollo del \gls{microcodigo}, el simulador requiere el binario completo de cada ciclo, de forma que resulta un tanto complejo su uso. Pese a ser un simulador bastante completo, no está orientado para la enseñanza de \gls{ensamblador} y microprogramación con la misma herramienta, puesto que no permite la definición del juego de instrucciones con un formato diferente al definido por defecto.
 
 \begin{figure}[htbp]
  	\centering
  	\includegraphics[width=5cm]{figures/ejemploTanenbaum}
- 	\caption{Ejemplo de definición de microcódigo en simulador Tanenbaum.}
+ 	\caption{Ejemplo de definición de \gls{microcodigo} en simulador Tanenbaum.}
 	\label{fig:tanenbaum_figure}
 \end{figure}
 
 En \cite{yen1986development}, se describe el desarrollo y la implementación de un simulador para una arquitectura de microprogramación específica (Figura \ref{fig:tanenbaum_figure}). Fue publicado en el año 1986 y está basado en la arquitectura definida en el entonces popular libro de ingeniería de computadores de \textit{Tanembaum et al.} \cite{tanenbaum1984}. El simulador, requería de la definición de cada uno de los ciclos de ejecución de las instrucciones para la posterior generación de la memoria de control. Esta definición, se realizaba mediante la sintaxis definida en el libro, lo que hacía de este simulador una herramienta bastante completa para aprender junto con el libro. 
 
 
-\subsection{Simuladores para programación en ensamblador}
+\subsection{Simuladores para programación en \gls{ensamblador}}
 \label{sec:simuladores_ensamblador}
-En esta sección, se explican los diferentes simuladores existentes para la programación en ensamblador. Los simuladores más conocidos para labores docentes son SPIM, MARS y WebMIPS.
+En esta sección, se explican los diferentes simuladores existentes para la programación en \gls{ensamblador}. Los simuladores más conocidos para labores docentes son SPIM, MARS y Web\acrshort{mips}.
 
 \begin{figure}[htbp]
  	\centering
@@ -54,7 +54,7 @@ En esta sección, se explican los diferentes simuladores existentes para la prog
 	\label{fig:spim_figure}
 \end{figure}
 
-SPIM \cite{larus1990spim} es un simulador de un procesador MIPS de 32 bits desarrollado a principios de 1990. En un primer momento implementaba el juego de instrucciones MIPS-1, utilizado por los computadores MIPS R2000/R3000. Actualmente, implementa la arquitectura MIPS32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en ensamblador para esta arquitectura. Además, también permite depurar el código implementado, de forma que el estudiante pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque el diseño de su interfaz gráfica no está pensada para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador MIPS, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción \emph{syscall}. 
+SPIM \cite{larus1990spim} es un simulador de un procesador ``\acrfull{mips}'' de 32 bits desarrollado a principios de 1990. En un primer momento implementaba el juego de instrucciones \acrshort{mips}-1, utilizado por los computadores \acrshort{mips} R2000/R3000. Actualmente, implementa la arquitectura \acrshort{mips}32 más reciente y sus instrucciones adicionales. Permite ejecutar programas en \gls{ensamblador} para esta arquitectura. Además, también permite depurar el código implementado, de forma que el estudiante pueda corregir con mayor facilidad los errores cometidos. Este simulador, fue creado por James R. Larus y tiene versiones compiladas para Windows, Mac OS X y Unix/Linux e incluso tiene una versión básica para Android, aunque el diseño de su interfaz gráfica no está pensada para dispositivos móviles. Puesto que el simulador está totalmente enfocado al procesador \acrshort{mips}, posee el juego completo de instrucciones para la versión de 32 bits del procesador y todas las directivas de las que consta el lenguaje. Otra característica que hace de SPIM un potente simulador, es proveer de un pequeño sistema operativo que soporta las principales llamadas al sistema mediante la instrucción \emph{syscall}. 
 
 SPIM es un simulador que permite múltiples configuraciones mediante su interfaz de usuario (Figura \ref{fig:spim_figure}), de manera que se puede indicar:
 
@@ -81,7 +81,7 @@ SPIM, además cuenta con una versión más actualizada del simulador, que posee 
 	\label{fig:qtspim_figure}
 \end{figure}
 
-MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado en JAVA para el lenguaje ensamblador MIPS. Fue creado en el año 2005 como una alternativa del simulador SPIM y diseñado específicamente para las necesidades limitadas de grado. Está basado en la arquitectura MIPS RISC, que tiene un número pequeño de elementos del lenguaje e instrucciones. Consta de operaciones de entrada/salida, saltos, condiciones y operaciones aritmético-lógicas tanto enteras como en coma flotante. Alguna de las mejoras que incorpora MARS con respecto a SPIM son \cite{vegdahl2008mipspilot}: 
+MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado en JAVA para el lenguaje \gls{ensamblador} \acrshort{mips}. Fue creado en el año 2005 como una alternativa del simulador SPIM y diseñado específicamente para las necesidades limitadas de grado. Está basado en la arquitectura \acrshort{mips} \acrfull{risc}, que tiene un número pequeño de elementos del lenguaje e instrucciones. Consta de operaciones de entrada/salida, saltos, condiciones y operaciones aritmético-lógicas tanto enteras como en coma flotante. Alguna de las mejoras que incorpora MARS con respecto a SPIM son \cite{vegdahl2008mipspilot}: 
 
 \begin{itemize}
 
@@ -91,7 +91,7 @@ MARS \cite{vollmar2006mars} es un simulador con interfaz gráfica desarrollado e
 
 \item La velocidad de ejecución puede modificarse de forma que, si se ralentiza, el usuario puede observar cómo cada instrucción se resalta cuando está siendo ejecutada y ver los cambios que se producen en los valores del banco de registros y de las ubicaciones de memoria.
 
-\item  La memoria y los registros se pueden modificar de una manera \emph{``What You See Is What You Get''}( \emph{WYSIWYG}).
+\item  La memoria y los registros se pueden modificar de una manera \acrfull{wysiwyg}.
 
 \item Incorpora un editor de texto, eliminando dependencias externas para el uso del simulador.
 
@@ -116,13 +116,13 @@ P88110 es un emulador descrito en \cite{garcia2009p88110} que se basa en la emul
 \end{figure}
 
 
-WebMIPS \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web (Figura \ref{fig:webmips_figure}), de forma que no requiere de su instalación en computador local. No soporta el juego completo de instrucciones de MIPS, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de la arquitectura del computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las cinco etapas de \emph{pipeline} de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura ``Arquitectura de Computadores'' impartida por los creadores del simulador.
+Web\acrshort{mips} \cite{branovic2004webmips}, es un simulador desarrollado en la Facultad de Ingeniería de la Información de Sienna, Italia. Está escrito en el lenguaje de programación ASP.NET y se utiliza mediante una página web (Figura \ref{fig:webmips_figure}), de forma que no requiere de su instalación en computador local. No soporta el juego completo de instrucciones de \acrshort{mips}, sino que consta de un juego reducido de instrucciones que sirve de introducción al estudio de la arquitectura del computador. Con respecto a los anteriores simuladores mencionados, difiere al mostrar el esquema arquitectónico, indicando las cinco etapas de \emph{pipeline} de las que consta el computador que simula. Otra característica, es la indicación del número de ciclos de reloj que consume la ejecución del programa. Tiene como objetivo principal la demostración de la ejecución del juego de instrucciones básico explicado durante la asignatura ``Arquitectura de Computadores'' impartida por los creadores del simulador.
 
 Entre las diferentes características a destacar de este simulador, se encuentran:
 
 \begin{itemize}
 	
-\item Verificación del código ensamblador, comprobando que no existen errores en la definición el código.
+\item Verificación del código \gls{ensamblador}, comprobando que no existen errores en la definición el código.
 
 \item Dispone de códigos simples de ejemplo (\textit{``load-and-play''}) que facilitan la comprensión del funcionamiento del procesador.
 
@@ -135,7 +135,7 @@ Entre las diferentes características a destacar de este simulador, se encuentra
 \begin{figure}[htbp]
  	\centering
  	\includegraphics[width=15cm]{figures/webmips_figure}
- 	\caption{ Interfaz WebMIPS.}
+ 	\caption{ Interfaz Web\acrshort{mips}.}
 	\label{fig:webmips_figure}
 \end{figure}
 
@@ -143,28 +143,28 @@ Entre las diferentes características a destacar de este simulador, se encuentra
 
 \subsection{Propuesta de simulación unificada}
 \label{sec:propuesta_simulacion}
-Hay distintas herramientas muy útiles para labores docentes relacionadas con la asignatura ``Estructura de Computadores'', aunque como se comentó previamente, no existe una herramienta que nos proporcione el desarrollo y simulación tanto a nivel de microcódigo como a nivel de ensamblador (Figura \ref{tab:comparison_frameworks}). WepSIM, une ambos aspectos ofreciendo:
+Hay distintas herramientas muy útiles para labores docentes relacionadas con la asignatura ``Estructura de Computadores'', aunque como se comentó previamente, no existe una herramienta que nos proporcione el desarrollo y simulación tanto a nivel de \gls{microcodigo} como a nivel de \gls{ensamblador} (Figura \ref{tab:comparison_frameworks}). \acrshort{wepsim}, une ambos aspectos ofreciendo:
 
 \begin{itemize}
-	\item Visión interrelacionada de la microprogramación y la programación en ensamblador.
+	\item Visión interrelacionada de la microprogramación y la programación en \gls{ensamblador}.
 	\item Flexibilidad en la plataforma usada, pensando en dispositivos móviles.
 	\item Herramienta autocontenida, de forma que incorpora en sí misma tanto la ayuda como distintos ejemplos que favorecen la comprensión del simulador.
-	\item Consta de un modelo hardware que puede ser modificado o ampliado en caso de ser necesario.
+	\item Consta de un modelo \gls{hardware} que puede ser modificado o ampliado en caso de ser necesario.
 	\item Permite definir un amplio conjunto de instrucciones máquina.
-	\item Puede ser usado como herramienta de microprogramación o de programación en ensamblador.
+	\item Puede ser usado como herramienta de microprogramación o de programación en \gls{ensamblador}.
 \end{itemize}
 
 \begin{table}[htbp]
 \ra{1.2}
 \centering
 %\resizebox{\textwidth}{%
-\caption{Comparación de simuladores de ensamblador y microcódigo.}
+\caption{Comparación de simuladores de \gls{ensamblador} y \gls{microcodigo}.}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{@{}lllllllll@{}}
 \toprule
-Simulador & SPIM & QtSPIM & MARS & PC88110 & WebMIPS & WepSIM  & P8080E & MicMac\\ 
+Simulador & SPIM & QtSPIM & MARS & PC88110 & Web\acrshort{mips} & \acrshort{wepsim}  & P8080E & MicMac\\ 
 \midrule
-Ensamblador				& \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} &  &  \\
+\gls{ensamblador}				& \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} &  &  \\
 \midrule
 Microprogramación				& & &  &  &  & \ding{51} & \ding{51} & \ding{51} \\
 \midrule
@@ -179,81 +179,81 @@ Juego de instrucciones personalizable				& &  &  &  &  & \ding{51} &  &  \\
 \label{tab:comparison_frameworks}
 \end{table}
 
-De este modo, con WepSIM se pretende crear un simulador unificado, abarcando los aspectos más relevantes de la asignatura ``Estructura de Computadores'' y permitiendo que todas las prácticas de la asignatura puedan realizarse en la misma plataforma, evitando la pérdida de tiempo y dificultad que supone para el estudiante el habituarse a diferentes entornos para cada una de las prácticas.
+De este modo, con \acrshort{wepsim} se pretende crear un simulador unificado, abarcando los aspectos más relevantes de la asignatura ``Estructura de Computadores'' y permitiendo que todas las prácticas de la asignatura puedan realizarse en la misma plataforma, evitando la pérdida de tiempo y dificultad que supone para el estudiante el habituarse a diferentes entornos para cada una de las prácticas.
 
-WepSIM se puede definir por tanto como un simulador de programación en ensamblador y microprogramación, flexible puesto que permite la personalización del juego de instrucciones del computador, multiplataforma puesto que permite su uso desde diferentes tipos de dispositivos, e interactivo al poder modificar la configuración del computador en tiempo de ejecución.
+\acrshort{wepsim} se puede definir por tanto como un simulador de programación en \gls{ensamblador} y microprogramación, flexible puesto que permite la personalización del juego de instrucciones del computador, multiplataforma puesto que permite su uso desde diferentes tipos de dispositivos, e interactivo al poder modificar la configuración del computador en tiempo de ejecución.
 
 
 \section{Tecnologías web}
 \label{sec:tecnologias_web}
 
-Actualmente, gran parte de los recursos digitales disponibles son ofrecidos a través de Internet y su distribución es posible gracias a las tecnologías web. Estas tecnologías permiten la construcción de las páginas web haciendo uso de las tecnologías para el desarrollo de páginas web y las tecnologías de interconexión de computadores permitiendo a los usuarios el intercambio en formato de hipertexto de todo tipo de datos y de aplicaciones software.
+Actualmente, gran parte de los recursos digitales disponibles son ofrecidos a través de Internet y su distribución es posible gracias a las tecnologías web. Estas tecnologías permiten la construcción de las páginas web haciendo uso de las tecnologías para el desarrollo de páginas web y las tecnologías de interconexión de computadores permitiendo a los usuarios el intercambio en formato de hipertexto de todo tipo de datos y de aplicaciones \gls{software}.
 
 \subsection{HTML5}
 \label{sec:html5}
 
-Cuando se realiza el desarrollo de una página web, son tres las tecnologías que se emplean con mayor frecuencia: HTML, CSS y JavaScript. Todas estas tecnologías vienen definidas y estandarizadas por el organismo internacional W3C, y conforman el lenguaje de marcado HTML5. Cada una de ellas tiene una función concreta en el funcionamiento de la página web:
+Cuando se realiza el desarrollo de una página web, son tres las tecnologías que se emplean con mayor frecuencia: \acrfull{html}, \acrfull{css} y JavaScript. Todas estas tecnologías vienen definidas y estandarizadas por el organismo internacional \acrfull{w3c}, y conforman el lenguaje de marcado \acrshort{html}5. Cada una de ellas tiene una función concreta en el funcionamiento de la página web \cite{duckett2014web}:
 
 \begin{itemize}
-\item \textbf{HTML}: Es un lenguaje de marcas con el que se realiza la estructuración de la página web. Es un estándar que sirve de referencia para el software que conecta con la elaboración de páginas web en sus diferentes versiones. HTML define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, vídeos, juegos, entre otros. 
+\item \textbf{\acrshort{html}}: Es un lenguaje de marcas con el que se realiza la estructuración de la página web. Es un estándar que sirve de referencia para el \gls{software} que conecta con la elaboración de páginas web en sus diferentes versiones. \acrshort{html} define una estructura básica y un código (denominado código \acrshort{html}) para la definición de contenido de una página web, como texto, imágenes, vídeos, juegos, entre otros. 
 
-El lenguaje HTML basa su filosofía de desarrollo en la diferenciación. Para añadir un elemento externo a la página (imagen, vídeo, script, entre otros.), éste no se incrusta directamente en el código de la página, sino que se hace una referencia a la ubicación de dicho elemento mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web (interpretador del código) la tarea de unir todos los elementos y renderizar la página final. Al ser un estándar, HTML busca ser un lenguaje que permita que cualquier página web escrita en una determinada versión, pueda ser interpretada de la misma forma (estándar) por cualquier navegador web actualizado.
+El lenguaje \acrshort{html} basa su filosofía de desarrollo en la diferenciación. Para añadir un elemento externo a la página (imagen, vídeo, script, entre otros.), éste no se incrusta directamente en el código de la página, sino que se hace una referencia a la ubicación de dicho elemento mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web (interpretador del código) la tarea de unir todos los elementos y renderizar la página final. Al ser un estándar, \acrshort{html} busca ser un lenguaje que permita que cualquier página web escrita en una determinada versión, pueda ser interpretada de la misma forma (estándar) por cualquier navegador web actualizado.
 
-En cambio, a lo largo de las diferentes versiones, se han añadido y eliminado diferentes características con la finalidad de hacer el lenguaje más eficiente y facilitar el desarrollo de páginas web con diferentes plataformas y navegadores. Un navegador web  desactualizado no será capaz de interpretar correctamente una página web escrita en una versión superior de HTML a la que pueda interpretar.  
+En cambio, a lo largo de las diferentes versiones, se han añadido y eliminado diferentes características con la finalidad de hacer el lenguaje más eficiente y facilitar el desarrollo de páginas web con diferentes plataformas y navegadores. Un navegador web  desactualizado no será capaz de interpretar correctamente una página web escrita en una versión superior de \acrshort{html} a la que pueda interpretar.  
 
-\item \textbf{CSS}: Es un lenguaje de diseño gráfico utilizado para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado, como puede ser HTML. Su principal finalidad es establecer el diseño visual de las páginas web e interfaces de usuario escritas en los lenguajes HTML o XHTML. Este lenguaje, además, permite aplicar estilos no visuales como pueden ser las hojas de estilo audibles.
+\item \textbf{\acrshort{css}}: Es un lenguaje de diseño gráfico utilizado para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado, como puede ser \acrshort{html}. Su principal finalidad es establecer el diseño visual de las páginas web e interfaces de usuario escritas en los lenguajes \acrshort{html} o \acrfull{xhtml}. Este lenguaje, además, permite aplicar estilos no visuales como pueden ser las hojas de estilo audibles.
 
-Esta tecnología web es usada por la mayoría de sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web, y GUIs para muchas de las aplicaciones móviles existentes en el mercado. Con ella se pretende separar el contenido de la página web de la presentación, buscando mejorar la accesibilidad del documento y dando una mayor flexibilidad y control en la especificación de las características de la presentación, permitiendo que varios documentos HTML compartan un mismo estilo, usando una única hoja de estilos reduciendo la complejidad y la repetición de código en la estructura del documento.
+Esta tecnología web es usada por la mayoría de sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web, y GUIs para muchas de las aplicaciones móviles existentes en el mercado. Con ella se pretende separar el contenido de la página web de la presentación, buscando mejorar la accesibilidad del documento y dando una mayor flexibilidad y control en la especificación de las características de la presentación, permitiendo que varios documentos \acrshort{html} compartan un mismo estilo, usando una única hoja de estilos reduciendo la complejidad y la repetición de código en la estructura del documento.
 
-\item \textbf{JavaScript}: Es un lenguaje de programación interpretado orientado a las páginas web, que surgió de la necesidad de ampliar las posibilidades del HTML. Su principal función en las páginas web es realizar tareas y operaciones en el marco de la aplicación cliente como la mejora de la interfaz de usuario y la generación de páginas web dinámicas, aunque también es utilizado en el lado del servidor .
+\item \textbf{JavaScript}: Es un lenguaje de programación interpretado orientado a las páginas web, que surgió de la necesidad de ampliar las posibilidades del \acrshort{html}. Su principal función en las páginas web es realizar tareas y operaciones en el marco de la aplicación cliente como la mejora de la interfaz de usuario y la generación de páginas web dinámicas, aunque también es utilizado en el lado del servidor .
 
 Este lenguaje fue diseñado con una sintaxis similar a la del lenguaje de programación C, aunque adopta nombres y convenciones del lenguaje de programación Java. En cambio, Java y Javascript tienen propósitos y semánticas distintos.
 
-En la actualidad, todos los navegadores realizan la interpretación del código JavaScript integrado en las páginas web. Para poder interactuar con una página web, el lenguaje está provisto de una implementación del DOM que facilita el control y manejo de las interacciones del usuario.
+En la actualidad, todos los navegadores realizan la interpretación del código JavaScript integrado en las páginas web. Para poder interactuar con una página web, el lenguaje está provisto de una implementación del \acrfull{dom} que facilita el control y manejo de las interacciones del usuario.
 
 \end{itemize}
 
 \subsection{Frameworks}
 \label{sec:frameworks}
 
-Como se indica en \cite{garrido2004arquitectura} las aplicaciones web se han convertido en los últimos años en complejos sistemas software con interfaces de usuario cada vez más parecidas a las aplicaciones de escritorio, dando servicio a procesos de negocio de considerable envergadura y estableciéndose sobre ellas requisitos estrictos de accesibilidad y respuesta. Para ayudar al desarrollo de estas aplicaciones web, se hace uso de diferentes \emph{frameworks} y bibliotecas que añaden funcionalidad al entorno de trabajo. Los \emph{frameworks} son una estructura conceptual para el desarrollo e implementación de aplicaciones web, teniendo como objetivos principales la aceleración del proceso de desarrollo, reutilización de código ya existente y promover buenas prácticas de desarrollo, como el uso de patrones. Entre los \emph{frameworks} más utilizados en la actualidad, se encuentran:
+Como se indica en \cite{garrido2004arquitectura} las aplicaciones web se han convertido en los últimos años en complejos sistemas \gls{software} con interfaces de usuario cada vez más parecidas a las aplicaciones de escritorio, dando servicio a procesos de negocio de considerable envergadura y estableciéndose sobre ellas requisitos estrictos de accesibilidad y respuesta. Para ayudar al desarrollo de estas aplicaciones web, se hace uso de diferentes \emph{frameworks} y bibliotecas que añaden funcionalidad al entorno de trabajo. Los \emph{frameworks} son una estructura conceptual para el desarrollo e implementación de aplicaciones web, teniendo como objetivos principales la aceleración del proceso de desarrollo, reutilización de código ya existente y promover buenas prácticas de desarrollo, como el uso de patrones. Entre los \emph{frameworks} más utilizados en la actualidad, se encuentran:
 
 \begin{itemize}
 
-\item \textbf{Angular.js}: Es un \emph{framework} MVC (Modelo-Vista-Controlador) de JavaScript de código abierto mantenido por Google para el desarrollo Web Front End, que permite crear aplicaciones \textit{Single-Page}. Este \emph{framework} ha supuesto un avance puesto que al implementar el patrón MVC ayuda al desarrollador a separar conceptos. De este modo, adapta y amplía el HTML tradicional para servir mejor contenido dinámico a través de un \textit{data binding} bidireccional que permite la sincronización automática de modelos y vistas. Además facilita la creación de test unitarios, lo cual resulta de gran ayuda para los desarrolladores.
+\item \textbf{Angular.js}: Es un \emph{framework} MVC (Modelo-Vista-Controlador) de JavaScript de código abierto mantenido por Google para el desarrollo Web Front End, que permite crear aplicaciones \textit{Single-Page}. Este \emph{framework} ha supuesto un avance puesto que al implementar el patrón MVC ayuda al desarrollador a separar conceptos. De este modo, adapta y amplía el \acrshort{html} tradicional para servir mejor contenido dinámico a través de un \textit{data binding} bidireccional que permite la sincronización automática de modelos y vistas. Además facilita la creación de test unitarios, lo cual resulta de gran ayuda para los desarrolladores.
 
 \item \textbf{jQuery.js}: Es una biblioteca de JavaScript rápida, pequeña y característica. Ofrece una infraestructura que proporciona una mayor facilidad para la creación de aplicaciones complejas del lado del cliente. De esta forma, al utilizar esta biblioteca, el desarrollador se asegura que funcionará correctamente en los navegadores de los usuarios.
 
-\item \textbf{BootStrap}: Es un \emph{framework} de código abierto para el diseño de aplicaciones web, en el cual se incluyen diferentes plantillas de diseño con tipografía, formularios, botones, menús de navegación y otros elementos de diseño basados en HTML y CSS que proporcionan el desarrollador ayuda a la hora de implementar la interfaz de usuario de su aplicación. Además, es compatible con la mayoría de los navegadores web.
+\item \textbf{BootStrap}: Es un \emph{framework} de código abierto para el diseño de aplicaciones web, en el cual se incluyen diferentes plantillas de diseño con tipografía, formularios, botones, menús de navegación y otros elementos de diseño basados en \acrshort{html} y \acrshort{css} que proporcionan el desarrollador ayuda a la hora de implementar la interfaz de usuario de su aplicación. Además, es compatible con la mayoría de los navegadores web.
 
-\item \textbf{Dojo}: Es un \emph{framework} que contiene APIs que facilitan el desarrollo de aplicaciones web que utilizan la tecnología AJAX, conteniendo un sistema de empaquetado inteligente, efecto de interfaz de usuario, abstracción de eventos, almacenamiento de APIs en el cliente e interacción de APIs con AJAX.
+\item \textbf{Dojo}: Es un \emph{framework} que contiene APIs que facilitan el desarrollo de aplicaciones web que utilizan la tecnología \acrfull{ajax}, conteniendo un sistema de empaquetado inteligente, efecto de interfaz de usuario, abstracción de eventos, almacenamiento de APIs en el cliente e interacción de APIs con \acrshort{ajax}.
 
 \end{itemize}
 
-\section{Procesador elemental WepSIM}
+\section{Procesador elemental \acrshort{wepsim}}
 \label{sec:wepsim}
 
-WepSIM es un procesador elemental con unidad de control microprogramada diseñado por el Dr. Félix García Carballeira y el Dr. Alejandro Calderón Mateos del grupo de investigación \acrshort{arcos} de la Universidad Carlos III de Madrid para la docencia en la asignatura ``Estructura de Computadores''.
+\acrshort{wepsim} es un procesador elemental con unidad de control microprogramada diseñado por el Dr. Félix García Carballeira y el Dr. Alejandro Calderón Mateos del grupo de investigación \acrshort{arcos} (\acrlong{arcos} de la Universidad Carlos III de Madrid para la docencia en la asignatura ``Estructura de Computadores''.
 
-En la Figura \ref{fig:wepsimCPU_figure} se muestra la estructura del Procesador Elemental WepSIM. WepSIM, consta de un módulo de memoria, un dispositivo teclado, un dispositivo pantalla y un dispositivo de E/S genérico que se puede utilizar para trabajar con interrupciones.
+En la Figura \ref{fig:wepsimCPU_figure} se muestra la estructura del Procesador Elemental \acrshort{wepsim}. \acrshort{wepsim}, consta de un módulo de memoria, un dispositivo teclado, un dispositivo pantalla y un dispositivo de E/S genérico que se puede utilizar para trabajar con interrupciones.
 
 \begin{figure}[htbp]
  	\centering
  	\includegraphics[width=11cm]{figures/processor6}
- 	\caption{Arquitectura CPU WepSIM .}
+ 	\caption{Arquitectura \acrshort{cpu} \acrshort{wepsim} .}
 	\label{fig:wepsimCPU_figure}
 \end{figure}
 
 \begin{figure}[htbp]
  	\centering
  	\includegraphics[width=11cm]{figures/controlunit6}
- 	\caption{Arquitectura unidad de control WepSIM.}
+ 	\caption{Arquitectura unidad de control \acrshort{wepsim}.}
 	\label{fig:wepsimCU_figure}
 \end{figure}
 
-WepSIM es un procesador de 32 bits que direcciona la memoria por bytes, que cuenta con un banco de 32 registros y dos registros adicionales (\emph{RT1} y \emph{RT2}) que no son visibles para el programador de ensamblador, pero que permiten el almacenamiento temporal de datos para la realización de operaciones intermedias. Desde los registros, es posible enviar los valores para operar en una \emph{ALU} que dispone de las 15 operaciones aritmético-lógicas más comunes. El registro \emph{PC} (contador de programa) tiene su propio operador de sumar cuatro, de forma que no es necesario hacer uso de la \emph{ALU} para esta operación. El resultado de las operaciones realizadas en la \emph{ALU} puede ser almacenado en un registro temporal (\emph{RT3}) que también es invisible para el programador de ensamblador, o ser enviado directamente al bus interno a través del correspondiente triestado.
+\acrshort{wepsim} es un procesador de 32 bits que direcciona la memoria por bytes, que cuenta con un banco de 32 registros y dos registros adicionales (\emph{RT1} y \emph{RT2}) que no son visibles para el programador de \gls{ensamblador}, pero que permiten el almacenamiento temporal de datos para la realización de operaciones intermedias. Desde los registros, es posible enviar los valores para operar en una \acrfull{alu} que dispone de las 15 operaciones aritmético-lógicas más comunes. El registro \emph{PC} (Contador de Programa) tiene su propio operador de sumar cuatro, de forma que no es necesario hacer uso de la \acrshort{alu} para esta operación. El resultado de las operaciones realizadas en la \acrshort{alu} puede ser almacenado en un registro temporal (\emph{RT3}) que también es invisible para el programador de \gls{ensamblador}, o ser enviado directamente al bus interno a través del correspondiente triestado.
 
-El registro de estado (\emph{SR}) puede ser actualizado con los \emph{flags} resultantes de la última operación de la alu (\emph{O, N y Z}). Para ello, \emph{SELEC/SelP} representa un bloque de circuitos que permite indicar qué parte del registro de estado (\emph{SR}) debe ser actualizado. A la derecha de \emph{SELEC/SelP} llegan los bits del registro de estado \emph{SR} como entrada (\emph{Input=O N Z I U}) y \emph{SelP} permite seleccionar qué grupo de estos bits se actualizará en el registro de estado: los bits \emph{O, N y Z} con los valores procedentes de la \emph{ALU}, el bit \emph{I} con el valor indicado o el bit U con el valor indicado para el mismo.
+El registro de estado (\emph{SR}) puede ser actualizado con los \emph{flags} resultantes de la última operación de la \acrshort{alu} (\emph{O, N y Z}). Para ello, \emph{SELEC/SelP} representa un bloque de circuitos que permite indicar qué parte del registro de estado (\emph{SR}) debe ser actualizado. A la derecha de \emph{SELEC/SelP} llegan los bits del registro de estado \emph{SR} como entrada (\emph{Input=O N Z I U}) y \emph{SelP} permite seleccionar qué grupo de estos bits se actualizará en el registro de estado: los bits \emph{O, N y Z} con los valores procedentes de la \acrshort{alu}, el bit \emph{I} con el valor indicado o el bit U con el valor indicado para el mismo.
 
 El registro de instrucción (\emph{IR}) tiene asociado un módulo selector (circuito de  más alto nivel que un multiplexor, etc.) que permite seleccionar un segmento del valor binario almacenado en el registro de instrucción que pasará hacia \emph{T3}.
 
@@ -269,7 +269,7 @@ Para generar los valores correspondientes a las señales selectoras del banco de
 
 El multiplexor ``MR'' permite indicar si las señales \emph{RA, RB y RE} serán literalmente los valores almacenados en \emph{SelA, SelB y SelE} (MR=1) o bien si \emph{SelA, SelB y SelE} indican el desplazamiento dentro de la instrucción donde están los valores a utilizar para \emph{RA, RB y RE}. Esto último permite que en la instrucción se pueda indicar los registros a usar como operandos en el banco de registros, en lugar de indicarlos desde la micro-instrucción.
 
-Para la señal \emph{Cop} (código de operación en la \emph{ALU}) la señal \emph{MC} permite tomar el valor \emph{SelCop} de la micro-instrucción (MC=1) o bien los 4 bits menos significativos del registro de instrucción (MC=0), es decir \emph{IR3-IR0}.
+Para la señal \emph{Cop} (código de operación en la \acrshort{alu}) la señal \emph{MC} permite tomar el valor \emph{SelCop} de la micro-instrucción (MC=1) o bien los 4 bits menos significativos del registro de instrucción (MC=0), es decir \emph{IR3-IR0}.
 
 En \cite{perez2015problemas} se puede encontrar una descripción más detallada del procesador descrito anteriormente.
 

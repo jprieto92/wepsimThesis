@@ -18,37 +18,37 @@
 \label{ch:analysis}
 \markboth{}{ANALYSIS}
 
-El objetivo principal de este capítulo, es describir el proyecto mediante la obtención y especificación de los requisitos del simulador, que puede proporcionar información suficiente para un análisis detallado que, por lo tanto, puede servir para continuar diseñando e implementando (Capítulos \ref{ch:design}, \textit{\nameref{ch:design}}; y \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}}) un software que cumpla con esos requisitos. 
+El objetivo principal de este capítulo, es describir el proyecto mediante la obtención y especificación de los requisitos del simulador, que puede proporcionar información suficiente para un análisis detallado que, por lo tanto, puede servir para continuar diseñando e implementando (Capítulos \ref{ch:design}, \textit{\nameref{ch:design}}; y \ref{ch:implementation_and_deployment}, \textit{\nameref{ch:implementation_and_deployment}}) un \gls{software} que cumpla con esos requisitos. 
 
 Con el fin de obtener los requisitos del sistema, el tutor ha desempeñado el papel del cliente en diferentes reuniones, mientras que el estudiante ha desempeñado los roles de analista, diseñador, programador y \emph{tester}.
 
-La Sección \ref{sec:project_description} resume brevemente la descripción del proyecto. La Sección \ref{sec:requirements} especifica los requisitos del sistema, empezando con los requisitos de usuario y finalizando con los requisitos funcionales y no-funcionales. La Sección \ref{sec:user_cases} especifica los caso de uso del sistema. Finalmente, la Sección \ref{sec:regulatory_framework} indica el conjunto de leyes y regulaciones para la gestión del software.  
+La Sección \ref{sec:project_description} resume brevemente la descripción del proyecto. La Sección \ref{sec:requirements} especifica los requisitos del sistema, empezando con los requisitos de usuario y finalizando con los requisitos funcionales y no-funcionales. La Sección \ref{sec:user_cases} especifica los caso de uso del sistema. Finalmente, la Sección \ref{sec:regulatory_framework} indica el conjunto de leyes y regulaciones para la gestión del \gls{software}.  
 
 \section{Descripción del proyecto}
 \label{sec:project_description}
 
 El objetivo de este proyecto es construir una herramienta que permita simular con realismo el comportamiento de un procesador basado en la arquitectura indicada por el el tutor del proyecto, de forma que sirva como única herramienta para los estudiantes a lo largo de la asignatura Estructura de Computadores.
 
-Los simuladores actuales para la enseñanza de Estructura de Computadores, están focalizados a una función concreta, como puede ser la simulación de cachés, la simulación de código ensamblador o la simulación de microcódigo entre otros, pero a la hora de unificar todas estas funcionalidades en una única herramienta, existe un vacío que genera una pérdida de tiempo en el aprendizaje de cada herramienta y la no posibilidad de ver una simulación completa.
+Los simuladores actuales para la enseñanza de Estructura de Computadores, están focalizados a una función concreta, como puede ser la simulación de cachés, la simulación de código \gls{ensamblador} o la simulación de \gls{microcodigo} entre otros, pero a la hora de unificar todas estas funcionalidades en una única herramienta, existe un vacío que genera una pérdida de tiempo en el aprendizaje de cada herramienta y la no posibilidad de ver una simulación completa.
 
 El reto al que se enfrente cualquier simulador educativo es el de ser capaz de simular fielmente el funcionamiento de un dispositivo, permitiendo al estudiante poder observar con el mayor detalle posible el comportamiento éste.
 
-El sistema que se propone debe ser capaz de simular con realismo el comportamiento del procesador, permitiendo la definición del juego de instrucciones a utilizar para el posterior desarrollo de código ensamblador y su ejecución en el simulador con un alto nivel de detalle en cada uno de los ciclos de ejecución. De esta forma, los estudiantes podrán comprender fácilmente los contenidos teóricos expuestos en la asignatura y serán capaces de realizar todas las prácticas en una misma herramienta, pudiendo ver de forma incremental el desarrollo de software de bajo nivel sobre un procesador elemental.
+El sistema que se propone debe ser capaz de simular con realismo el comportamiento del procesador, permitiendo la definición del juego de instrucciones a utilizar para el posterior desarrollo de código \gls{ensamblador} y su ejecución en el simulador con un alto nivel de detalle en cada uno de los ciclos de ejecución. De esta forma, los estudiantes podrán comprender fácilmente los contenidos teóricos expuestos en la asignatura y serán capaces de realizar todas las prácticas en una misma herramienta, pudiendo ver de forma incremental el desarrollo de \gls{software} de bajo nivel sobre un procesador elemental.
 
 
 \section{Requisitos}
 \label{sec:requirements}
 
-Esta sección proporciona una descripción detallada de los requisitos de la aplicación. Para la tarea de la especificación de requisitos, se han seguido las prácticas recomendadas por IEEE \cite{ieee1998}. De acuerdo con estas prácticas, una buena especificación debe abordar la funcionalidad del software, los problemas de rendimiento, las interfaces externas, otras características no funcionales y las limitaciones de diseño o implementación.
+Esta sección proporciona una descripción detallada de los requisitos de la aplicación. Para la tarea de la especificación de requisitos, se han seguido las prácticas recomendadas por IEEE \cite{ieee1998}. De acuerdo con estas prácticas, una buena especificación debe abordar la funcionalidad del \gls{software}, los problemas de rendimiento, las interfaces externas, otras características no funcionales y las limitaciones de diseño o implementación.
 Además, la especificación de los requisitos debe ser:
 
 \begin{itemize}
 
-\item \textbf{Completa:} el documento refleja todos los requisitos de software importantes.
+\item \textbf{Completa:} el documento refleja todos los requisitos de \gls{software} importantes.
 
 \item \textbf{Consistente:} los requisitos no deben generar conflictos entre sí.
 
-\item \textbf{Correcta:} cada requisito debe ser cumplido por el software según las necesidades del usuario.
+\item \textbf{Correcta:} cada requisito debe ser cumplido por el \gls{software} según las necesidades del usuario.
 
 % every requirement is one that the software shall meet according to the user needs.
 
@@ -60,11 +60,11 @@ Además, la especificación de los requisitos debe ser:
 
 \item \textbf{Inequívoco:} cada requisito tiene una sola interpretación.
 
-\item \textbf{Verificable:} Cada requisito debe ser verificable, es decir, existe algún proceso para verificar que el software cumple con cada requisito.
+\item \textbf{Verificable:} Cada requisito debe ser verificable, es decir, existe algún proceso para verificar que el \gls{software} cumple con cada requisito.
 
 \end{itemize}
 
-A partir de los requisitos de los usuarios, que constituyen una referencia informal al comportamiento del producto que el cliente espera, derivamos los requisitos de software (en este caso, requisitos funcionales y no funcionales) que guiaron el proceso de diseño con información específica sobre la funcionalidad del sistema y otras características. Los requisitos recuperados se estructuraron de acuerdo con el siguiente esquema:
+A partir de los requisitos de los usuarios, que constituyen una referencia informal al comportamiento del producto que el cliente espera, derivamos los requisitos de \gls{software} (en este caso, requisitos funcionales y no funcionales) que guiaron el proceso de diseño con información específica sobre la funcionalidad del sistema y otras características. Los requisitos recuperados se estructuraron de acuerdo con el siguiente esquema:
 
 %Starting from the user requirements, which constitute an informal reference to the product p%erformance that the client expects, we derived the software requirements (in this case, functional r%equirements and non-functional requirements) that guided the design process with specific %nformation on the functionality of the system and other characteristics. The retrieved requirements %were structured according with the following schema:
 
@@ -77,7 +77,7 @@ A partir de los requisitos de los usuarios, que constituyen una referencia infor
 \end{itemize}
 
 \begin{itemize}
-\item[2.] \textbf{Requisitos de software}
+\item[2.] \textbf{Requisitos de \gls{software}}
 	\begin{itemize}
 	\item[(a)] 	\textbf{Funcionales}
 		\begin{itemize}
@@ -90,12 +90,12 @@ A partir de los requisitos de los usuarios, que constituyen una referencia infor
 		\item[i.] 	\textbf{Rendimiento:} el requisito se relaciona con el rendimiento mínimo requerido del sistema resultante.
 		\item[ii.] 	\textbf{Interfaz:} el requisito está relacionado con la interfaz de usuario de la aplicación.
 		\item[iii.] 	\textbf{Escalabilidad:} el requisito está relacionado con la capacidad del sistema para adaptarse a cargas de trabajo cada vez mayores.
-		\item[iv.] 	\textbf{Plataforma:} el requisito especifica las plataformas subyacentes de software y hardware en las que funcionará el sistema.
+		\item[iv.] 	\textbf{Plataforma:} el requisito especifica las plataformas subyacentes de \gls{software} y \gls{hardware} en las que funcionará el sistema.
 		\end{itemize}			
 	\end{itemize}
 \end{itemize}
 
-La Tabla \ref{tab:requirements_template} proporciona la plantilla utilizada para la especificación de requisitos. Es necesario tener en cuenta que para los requisitos del usuario, el formato de identificación será UR-XYY, donde X indica el subtipo de requisito: requisitos de capacidad (C) o restricciones (R). YY corresponde al número de requisito en su subcategoría. Para los requisitos de software, se utilizará el formato de identificación SR-X-YZZ, donde X indica si es un requisito funcional (F) o no funcional (NF), e Y representa su subcategoría: funcional (F), inversa (I) ), Rendimiento (P), interfaz (UI), escalabilidad (S) o plataforma (PL). ZZ corresponde al número de requisito en su subcategoría.
+La Tabla \ref{tab:requirements_template} proporciona la plantilla utilizada para la especificación de requisitos. Es necesario tener en cuenta que para los requisitos del usuario, el formato de identificación será UR-XYY, donde X indica el subtipo de requisito: requisitos de capacidad (C) o restricciones (R). YY corresponde al número de requisito en su subcategoría. Para los requisitos de \gls{software}, se utilizará el formato de identificación SR-X-YZZ, donde X indica si es un requisito funcional (F) o no funcional (NF), e Y representa su subcategoría: funcional (F), inversa (I) ), Rendimiento (P), interfaz (UI), escalabilidad (S) o plataforma (PL). ZZ corresponde al número de requisito en su subcategoría.
 
 \begin{center}
 \begin{table*}[htbp]
@@ -136,7 +136,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-C01 \\
 \midrule
-\textbf{Nombre} 			& Simulación del modelo hardware propuesto\\
+\textbf{Nombre} 			& Simulación del modelo \gls{hardware} propuesto\\
 \midrule
 \textbf{Tipo} 			& Capacidad \\
 \midrule
@@ -196,7 +196,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe permitir al usuario las siguientes operaciones con el juego de instrucciones: cargar desde fichero, exportar a un fichero y generar el microcódigo. \\
+\textbf{Descripción} 	& La herramienta debe permitir al usuario las siguientes operaciones con el juego de instrucciones: cargar desde fichero, exportar a un fichero y generar el \gls{microcodigo}. \\
 \bottomrule
 \end{tabular}
 \label{tab:urc03}
@@ -211,7 +211,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-C04 \\
 \midrule
-\textbf{Nombre} 			& Definición de juego del código ensamblador \\
+\textbf{Nombre} 			& Definición de juego del código \gls{ensamblador} \\
 \midrule
 \textbf{Tipo} 			& Capacidad \\
 \midrule
@@ -221,7 +221,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe permitir la definición del código ensamblador a simular siguiendo el formato utilizado en la asignatura Estructura de Computadores y el juego de instrucciones cargado previamente. \\
+\textbf{Descripción} 	& La herramienta debe permitir la definición del código \gls{ensamblador} a simular siguiendo el formato utilizado en la asignatura Estructura de Computadores y el juego de instrucciones cargado previamente. \\
 \bottomrule
 \end{tabular}
 \label{tab:urc04}
@@ -236,7 +236,7 @@ Esta subsección especifica los requisitos de usuario.
 \toprule
 \textbf{ID} 				& UR-C05 \\
 \midrule
-\textbf{Nombre} 			& Operaciones con el código ensamblador \\
+\textbf{Nombre} 			& Operaciones con el código \gls{ensamblador} \\
 \midrule
 \textbf{Tipo} 			& Capacidad \\
 \midrule
@@ -246,7 +246,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe permitir al usuario las siguientes operaciones con el código ensamblador: cargar desde fichero, exportar a un fichero y generar el binario asociado. \\
+\textbf{Descripción} 	& La herramienta debe permitir al usuario las siguientes operaciones con el código \gls{ensamblador}: cargar desde fichero, exportar a un fichero y generar el binario asociado. \\
 \bottomrule
 \end{tabular}
 \label{tab:urc05}
@@ -321,7 +321,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe mostrar la arquitectura de la CPU y la Unidad de Control que forman el simulador. \\
+\textbf{Descripción} 	& La herramienta debe mostrar la arquitectura de la \acrshort{cpu} y la Unidad de Control que forman el simulador. \\
 \bottomrule
 \end{tabular}
 \label{tab:urc08}
@@ -422,7 +422,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La interfaz de usuario debe de ser compatible para uso en PCs y smartphones. \\
+\textbf{Descripción} 	& La interfaz de usuario debe de ser compatible para uso en \acrshort{pc}s y smartphones. \\
 \bottomrule
 \end{tabular}
 \label{tab:urr03}
@@ -522,7 +522,7 @@ Esta subsección especifica los requisitos de usuario.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El simulador debe de ser desarrollado mediante el lenguaje de programación HTML5. \\
+\textbf{Descripción} 	& El simulador debe de ser desarrollado mediante el lenguaje de programación \acrshort{html}5. \\
 \bottomrule
 \end{tabular}
 \label{tab:urr07}
@@ -597,7 +597,7 @@ A continuación, se exponen los casos de uso.
 \midrule
 \textbf{Precondiciones}	&	Ninguna.   \\
 \midrule
-\textbf{Postcondiciones} 	&	El juego de instrucciones se carga en la herramienta, mostrándose en el editor de texto correspondiente al microcódigo.   \\
+\textbf{Postcondiciones} 	&	El juego de instrucciones se carga en la herramienta, mostrándose en el editor de texto correspondiente al \gls{microcodigo}.   \\
 \midrule
 \textbf{Escenario Básico} 	&  \begin{itemize}
 \item El usuario selecciona la pestaña firmware.
@@ -656,7 +656,7 @@ A continuación, se exponen los casos de uso.
 \midrule
 \textbf{Precondiciones}	&	Ninguna.   \\
 \midrule
-\textbf{Postcondiciones} 	& Las modificaciones realizadas por el usuario en el juego de instrucciones son mostradas en el editor de texto correspondiente al microcódigo.   \\
+\textbf{Postcondiciones} 	& Las modificaciones realizadas por el usuario en el juego de instrucciones son mostradas en el editor de texto correspondiente al \gls{microcodigo}.   \\
 \midrule
 \textbf{Escenario Básico} 	&  \begin{itemize}
 \item El usuario selecciona la pestaña firmware.
@@ -676,7 +676,7 @@ A continuación, se exponen los casos de uso.
 \toprule
 \textbf{ID}	& UC-04  \\
 \midrule
-\textbf{Nombre} 		& Generar microcódigo   \\
+\textbf{Nombre} 		& Generar \gls{microcodigo}   \\
 \midrule
 \textbf{Actores} 		&	Usuario  \\
 \midrule
@@ -705,19 +705,19 @@ A continuación, se exponen los casos de uso.
 \toprule
 \textbf{ID}	& UC-05  \\
 \midrule
-\textbf{Nombre} 		& Cargar ensamblador   \\
+\textbf{Nombre} 		& Cargar \gls{ensamblador}   \\
 \midrule
 \textbf{Actores} 		&	Usuario  \\
 \midrule
-\textbf{Objetivo} 	&	Cargar en la herramienta un nuevo código ensamblador desde un fichero que indica el usuario. 	 \\
+\textbf{Objetivo} 	&	Cargar en la herramienta un nuevo código \gls{ensamblador} desde un fichero que indica el usuario. 	 \\
 \midrule
 \textbf{Precondiciones}	&	Ninguna.   \\
 \midrule
-\textbf{Postcondiciones} 	& El código ensamblador se carga en la herramienta, mostrándose en el editor de texto correspondiente al ensamblador.   \\
+\textbf{Postcondiciones} 	& El código \gls{ensamblador} se carga en la herramienta, mostrándose en el editor de texto correspondiente al \gls{ensamblador}.   \\
 \midrule
 \textbf{Escenario Básico} 	&  \begin{itemize}
-\item El usuario selecciona la pestaña ensamblador.
-\item Pulsa el botón cargar ensamblador.
+\item El usuario selecciona la pestaña \gls{ensamblador}.
+\item Pulsa el botón cargar \gls{ensamblador}.
 \item Selecciona el fichero deseado y acepta.
 \end{itemize} \\
 \bottomrule
@@ -734,19 +734,19 @@ A continuación, se exponen los casos de uso.
 \toprule
 \textbf{ID}	& UC-06  \\
 \midrule
-\textbf{Nombre} 		& Exportar ensamblador   \\
+\textbf{Nombre} 		& Exportar \gls{ensamblador}   \\
 \midrule
 \textbf{Actores} 		&	Usuario  \\
 \midrule
-\textbf{Objetivo} 	&	Exportar a un fichero el código ensamblador cargado para la simulación. 	 \\
+\textbf{Objetivo} 	&	Exportar a un fichero el código \gls{ensamblador} cargado para la simulación. 	 \\
 \midrule
-\textbf{Precondiciones}	&	El código ensamblador ha sido cargado en el simulador.   \\
+\textbf{Precondiciones}	&	El código \gls{ensamblador} ha sido cargado en el simulador.   \\
 \midrule
-\textbf{Postcondiciones} 	& Se genera un fichero en el dispositivo del usuario con el código ensamblador cargado previamente en el simulador.   \\
+\textbf{Postcondiciones} 	& Se genera un fichero en el dispositivo del usuario con el código \gls{ensamblador} cargado previamente en el simulador.   \\
 \midrule
 \textbf{Escenario Básico} 	&  \begin{itemize}
-\item El usuario selecciona la pestaña ensamblador.
-\item Pulsa el botón guardar ensamblador.
+\item El usuario selecciona la pestaña \gls{ensamblador}.
+\item Pulsa el botón guardar \gls{ensamblador}.
 \item Selecciona el nombre de fichero deseado y acepta.
 \end{itemize} \\
 \bottomrule
@@ -763,18 +763,18 @@ A continuación, se exponen los casos de uso.
 \toprule
 \textbf{ID}	& UC-07  \\
 \midrule
-\textbf{Nombre} 		& Modificar ensamblador   \\
+\textbf{Nombre} 		& Modificar \gls{ensamblador}   \\
 \midrule
 \textbf{Actores} 		&	Usuario  \\
 \midrule
-\textbf{Objetivo} 	&	Editar el código ensamblador desde la herramienta. 	 \\
+\textbf{Objetivo} 	&	Editar el código \gls{ensamblador} desde la herramienta. 	 \\
 \midrule
 \textbf{Precondiciones}	&	Ninguna.   \\
 \midrule
-\textbf{Postcondiciones} 	& Las modificaciones realizadas por el usuario en el juego de instrucciones son mostradas en el editor de texto correspondiente al microcódigo.   \\
+\textbf{Postcondiciones} 	& Las modificaciones realizadas por el usuario en el juego de instrucciones son mostradas en el editor de texto correspondiente al \gls{microcodigo}.   \\
 \midrule
 \textbf{Escenario Básico} 	&  \begin{itemize}
-\item El usuario selecciona la pestaña ensamblador.
+\item El usuario selecciona la pestaña \gls{ensamblador}.
 \item Realiza las modificaciones deseadas en el editor de texto.
 \end{itemize} \\
 \bottomrule
@@ -795,15 +795,15 @@ A continuación, se exponen los casos de uso.
 \midrule
 \textbf{Actores} 		&	Usuario  \\
 \midrule
-\textbf{Objetivo} 	&	Cargar el código ensamblador definido por el usuario en el simulador, generando el contenido de la memoria principal correspondiente al ensamblador. 	 \\
+\textbf{Objetivo} 	&	Cargar el código \gls{ensamblador} definido por el usuario en el simulador, generando el contenido de la memoria principal correspondiente al \gls{ensamblador}. 	 \\
 \midrule
-\textbf{Precondiciones}	&	El código ensamblador debe estar definido en la herramienta.  \\
+\textbf{Precondiciones}	&	El código \gls{ensamblador} debe estar definido en la herramienta.  \\
 \midrule
-\textbf{Postcondiciones} 	& Se genera la memoria principal asociada al código ensamblador definido por el usuario.   \\
+\textbf{Postcondiciones} 	& Se genera la memoria principal asociada al código \gls{ensamblador} definido por el usuario.   \\
 \midrule
 \textbf{Escenario Básico} 	&  \begin{itemize}
-\item El usuario selecciona la pestaña ensamblador.
-\item Define el código ensamblador deseado en la herramienta.
+\item El usuario selecciona la pestaña \gls{ensamblador}.
+\item Define el código \gls{ensamblador} deseado en la herramienta.
 \item Pulsa el botón compilar.
 \end{itemize} \\
 \bottomrule
@@ -880,7 +880,7 @@ A continuación, se exponen los casos de uso.
 \midrule
 \textbf{Actores} 		&	Usuario  \\
 \midrule
-\textbf{Objetivo} 	&	Insertar un punto de detención en una instrucción del código ensamblador a simular.	 \\
+\textbf{Objetivo} 	&	Insertar un punto de detención en una instrucción del código \gls{ensamblador} a simular.	 \\
 \midrule
 \textbf{Precondiciones}	&	La memoria de control y la memoria principal deben de estar generadas.  \\
 \midrule
@@ -1027,7 +1027,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta operará con una ALU de números enteros en complemento a dos. \\
+\textbf{Descripción} 	& La herramienta operará con una \acrshort{alu} de números enteros en complemento a dos. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff03}
@@ -1077,7 +1077,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El juego de instrucciones debe seguir el formato utilizado en la asignatura Estructura de Computadores, definiendo instrucciones del lenguaje ensamblador, su microcódigo asociado, nombrado de los registros y pseudoinstrucciones. \\
+\textbf{Descripción} 	& El juego de instrucciones debe seguir el formato utilizado en la asignatura Estructura de Computadores, definiendo instrucciones del lenguaje \gls{ensamblador}, su \gls{microcodigo} asociado, nombrado de los registros y pseudoinstrucciones. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff05}
@@ -1167,7 +1167,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F09 \\
 \midrule
-\textbf{Nombre} 			& Generación microcódigo del simulador\\
+\textbf{Nombre} 			& Generación \gls{microcodigo} del simulador\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1177,7 +1177,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de generar el microcódigo simulado a partir del juego de instrucciones definido y cargado por el usuario. \\
+\textbf{Descripción} 	& La herramienta debe de generar el \gls{microcodigo} simulado a partir del juego de instrucciones definido y cargado por el usuario. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff09}
@@ -1192,7 +1192,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F10 \\
 \midrule
-\textbf{Nombre} 			& Definición del código ensamblador\\
+\textbf{Nombre} 			& Definición del código \gls{ensamblador}\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1202,7 +1202,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe permitir al usuario la definición del código ensamblador a utilizar en la simulación. \\
+\textbf{Descripción} 	& La herramienta debe permitir al usuario la definición del código \gls{ensamblador} a utilizar en la simulación. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff10}
@@ -1217,7 +1217,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F11 \\
 \midrule
-\textbf{Nombre} 			& Formato del código ensamblador\\
+\textbf{Nombre} 			& Formato del código \gls{ensamblador}\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1227,7 +1227,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& El código ensamblador a simular debe de seguir el formato utilizado en la asignatura Estructura de Computadores, utilizando el lenguaje definido en el juego de instrucciones.\\
+\textbf{Descripción} 	& El código \gls{ensamblador} a simular debe de seguir el formato utilizado en la asignatura Estructura de Computadores, utilizando el lenguaje definido en el juego de instrucciones.\\
 \bottomrule
 \end{tabular}
 \label{tab:srff11}
@@ -1242,7 +1242,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F12 \\
 \midrule
-\textbf{Nombre} 			& Edición del código ensamblador\\
+\textbf{Nombre} 			& Edición del código \gls{ensamblador}\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1252,7 +1252,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe permitir modificar el código ensamblador. \\
+\textbf{Descripción} 	& La herramienta debe permitir modificar el código \gls{ensamblador}. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff12}
@@ -1267,7 +1267,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F13 \\
 \midrule
-\textbf{Nombre} 			& Carga del código ensamblador\\
+\textbf{Nombre} 			& Carga del código \gls{ensamblador}\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1277,7 +1277,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe permitir la carga de un fichero que contenga el código ensamblador. \\
+\textbf{Descripción} 	& La herramienta debe permitir la carga de un fichero que contenga el código \gls{ensamblador}. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff13}
@@ -1292,7 +1292,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F14 \\
 \midrule
-\textbf{Nombre} 			& Exportar código ensamblador\\
+\textbf{Nombre} 			& Exportar código \gls{ensamblador}\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1302,7 +1302,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe permitir exportar a un fichero el código ensamblador cargado en la herramienta. \\
+\textbf{Descripción} 	& La herramienta debe permitir exportar a un fichero el código \gls{ensamblador} cargado en la herramienta. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff14}
@@ -1317,7 +1317,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F15 \\
 \midrule
-\textbf{Nombre} 			& Generación ejecutable del código ensamblador\\
+\textbf{Nombre} 			& Generación ejecutable del código \gls{ensamblador}\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1327,7 +1327,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de generar el binario ejecutable asociado al código ensamblador definido para la simulación. \\
+\textbf{Descripción} 	& La herramienta debe de generar el binario ejecutable asociado al código \gls{ensamblador} definido para la simulación. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff15}
@@ -1352,7 +1352,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de permitir la simulación ciclo a ciclo de reloj del código ensamblador cargado por el usuario. \\
+\textbf{Descripción} 	& La herramienta debe de permitir la simulación ciclo a ciclo de reloj del código \gls{ensamblador} cargado por el usuario. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff16}
@@ -1377,7 +1377,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de permitir la simulación instrucción a instrucción del código ensamblador cargado por el usuario. \\
+\textbf{Descripción} 	& La herramienta debe de permitir la simulación instrucción a instrucción del código \gls{ensamblador} cargado por el usuario. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff17}
@@ -1402,7 +1402,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de permitir la simulación completa del código ensamblador cargado por el usuario. \\
+\textbf{Descripción} 	& La herramienta debe de permitir la simulación completa del código \gls{ensamblador} cargado por el usuario. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff18}
@@ -1427,7 +1427,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de permitir al usuario elegir la velocidad de simulación del código ensamblador cargado. \\
+\textbf{Descripción} 	& La herramienta debe de permitir al usuario elegir la velocidad de simulación del código \gls{ensamblador} cargado. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff19}
@@ -1442,7 +1442,7 @@ Esta subsección especifica los requisitos funcionales.
 \toprule
 \textbf{ID} 				& SR-F-F20 \\
 \midrule
-\textbf{Nombre} 			& Esquema CPU\\
+\textbf{Nombre} 			& Esquema \acrshort{cpu}\\
 \midrule
 \textbf{Tipo} 			& Funcional \\
 \midrule
@@ -1452,7 +1452,7 @@ Esta subsección especifica los requisitos funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe de mostrar el esquema de la CPU del simulador, modificando el color de las señales activas y buses de datos actualizados en cada ciclo de reloj. \\
+\textbf{Descripción} 	& La herramienta debe de mostrar el esquema de la \acrshort{cpu} del simulador, modificando el color de las señales activas y buses de datos actualizados en cada ciclo de reloj. \\
 \bottomrule
 \end{tabular}
 \label{tab:srff20}
@@ -1621,7 +1621,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \toprule
 \textbf{ID} 				& SR-NF-PL05 \\
 \midrule
-\textbf{Nombre} 			& Lenguaje de programación HTML5 \\
+\textbf{Nombre} 			& Lenguaje de programación \acrshort{html}5 \\
 \midrule
 \textbf{Tipo} 			& Plataforma \\
 \midrule
@@ -1631,7 +1631,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La herramienta debe ser desarrollada en el lenguaje de programación HTML5 (HTML + CSS + JavaScript). \\
+\textbf{Descripción} 	& La herramienta debe ser desarrollada en el lenguaje de programación \acrshort{html}5 (\acrshort{html} + \acrshort{css} + JavaScript). \\
 \bottomrule
 \end{tabular}
 \label{tab:srnfpl05}
@@ -1656,7 +1656,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \midrule
 \textbf{Estabilidad} 		& Estable \\
 \midrule
-\textbf{Descripción} 	& La interfaz de usuario del simulador debe de ser compatible tanto con PCs como con plataformas móviles (tablets, smartphones, etc). \\
+\textbf{Descripción} 	& La interfaz de usuario del simulador debe de ser compatible tanto con \acrshort{pc}s como con plataformas móviles (tablets, smartphones, etc). \\
 \bottomrule
 \end{tabular}
 \label{tab:srnfui01}
@@ -1688,7 +1688,7 @@ Esta subsección especifica los requisitos no-funcionales.
 \end{table*}
 \end{center}
 
-La matriz de trazabilidad de entre requisitos de usuario y requisitos de software (Tabla \ref{tab:requirements_matrix}) determina que todos los requisitos de usuario quedan reflejados en los requisitos de software.
+La matriz de trazabilidad de entre requisitos de usuario y requisitos de \gls{software} (Tabla \ref{tab:requirements_matrix}) determina que todos los requisitos de usuario quedan reflejados en los requisitos de \gls{software}.
 
 \begin{table}[htb]
 \ra{1.3}
@@ -1746,7 +1746,7 @@ Para el uso de la mayoría de aplicaciones web, los usuarios deben de registrars
 A diferencia de lo anteriormente citado, la aplicación desarrollada no utiliza datos privados de los usuarios y tampoco transmite información confidencial a terceros, ya que es un simulador que únicamente utiliza los códigos generados por el usuario para ejecutarlos de forma local en el dispositivo del usuario.
 
 
-Por otro lado, es crucial que el simulador esté disponible como software de código abierto. Queremos que cualquiera pueda redistribuir el código o modificarlo por los términos de la Licencia Pública General Menor de GNU (LGPL) \cite{gnulgpl}. Para ello, nuestro simulador está disponible en los siguientes sitios web: 
+Por otro lado, es crucial que el simulador esté disponible como \gls{software} de código abierto. Queremos que cualquiera pueda redistribuir el código o modificarlo por los términos de la Licencia Pública General Menor de GNU (LGPL) \cite{gnulgpl}. Para ello, nuestro simulador está disponible en los siguientes sitios web: 
 
 \url{https://www.arcos.inf.uc3m.es/wepsim/}.
 
